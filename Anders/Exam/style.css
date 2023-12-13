@@ -1,6 +1,5 @@
 body {
     font-family: 'Nunito', sans-serif;
-    margin: 0;
 }
 
 .main__center {
@@ -16,12 +15,12 @@ body {
 
 
 .main__text--blue {
-    font-size: 18px;
+    font-size: 1.125rem;
     color: rgba(10, 160, 214, 1);
     font-weight: normal;
 }
 .main__headline {
-    font-size: 18px;
+    font-size: 1.125rem;
     color: rgba(10, 160, 214, 1);
     font-weight: bold;
 }
@@ -30,11 +29,11 @@ body {
    margin-right: 2%;
 }
 .main__text--grey {
-    font-size: 14px;
+    font-size: 0.875rem;
     color: rgba(154, 154, 154, 1);
 }
 .text__grey--medium {
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 /*headers*/
@@ -45,8 +44,7 @@ header {
     min-height: 6.25em;
     margin: 0;
     color: whitesmoke;
-    margin-bottom: 5%;
-
+    margin-bottom: 0.313rem;
 }
 .header__info {
     display: flex;
@@ -110,36 +108,36 @@ header {
     text-decoration: none;
     color: whitesmoke;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-    height: 50px;
-    font-size: 18px;
+    height: 3.125rem;
+    font-size: 1.125rem;
     margin-bottom: 5%;
 }
 .button--medium {
     background: linear-gradient(90deg, rgba(9,160,213,1) 0%, rgba(6,29,72,1) 100%);
-    width: 216px;
+    width: 13.5rem;
 }
 .button--medium--white {
-   width: 216px;
+   width: 13.5rem;
     color: rgba(154, 154, 154, 1);
     border: solid 1px rgba(6,29,72,1);
     font-weight: normal;
 }
 .button--small {
     background: linear-gradient(90deg, rgba(9,160,213,1) 0%, rgba(6,29,72,1) 100%);
-    width: 136px;
+    width: 8.5rem;
 }
 .button--small--white {
-    width: 136px;
+    width: 8.5rem;
     color: rgba(154, 154, 154, 1);
     border: solid 1px rgba(6,29,72,1);
     font-weight: normal;
 }
 .button--blue {
     background: linear-gradient(90deg, rgba(9,160,213,1) 0%, rgba(6,29,72,1) 100%);
-    width: 330px;
+    width: 20.625rem;
 }
 .button--large {
-    width: 330px;
+    width: 20.625rem;
     background-color: rgba(44, 45, 44, 1);
     color: whitesmoke;
 }
@@ -162,7 +160,7 @@ header {
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
     padding: 2%;
     margin-top: 2%;
-    max-width: 360px;
+    max-width: 22.5rem;
 }
 .parcelcard__info {
     display: flex;
@@ -174,29 +172,29 @@ header {
     justify-content: space-between;
 }
 .parcelcard__headline {
-    font-size: 18px;
+    font-size: 1.125rem;
     color: rgba(9, 160, 213, 1);
     font-weight: bold;
     margin-bottom: 1%;
 }
 .parcelcard__parcelnumber {
     color: rgba(116, 114, 114, 1);
-    font-size: 16px;
+    font-size: 1rem;
     margin-bottom: 1%;
 }
 .parcelcard__text-red {
     color: red;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 .parcelcard__box-text {
     color: rgba(9, 160, 213, 1);
-    font-size: 14px;
+    font-size: 0.875rem;
     margin-bottom: 1%;
     margin-right: 3%;
-    min-width: 200px;
+    min-width: 12.5rem;
 }
 .parcelcard__city-text {
-    font-size: 14px;
+    font-size: 0.875rem;
     color: rgba(116, 114, 114, 1);
     margin: 0;
 }
@@ -226,8 +224,8 @@ header {
     margin-bottom: 5%;
 }
 .main__box {
-    min-width: 296px;
-    min-height: 150px;
+    min-width: 18.5rem;
+    min-height: 9.375rem;
 }
 .voting__text {
     margin-bottom: 0;
@@ -257,15 +255,15 @@ header {
     justify-content: center;
     align-items: center;
     padding: 2%;
-    min-height: 200px;
-    min-width: 200px;
+    min-height: 12.5rem;
+    min-width: 12.5rem;
     background-color: rgba(0, 60, 114, 1);
     border-radius: 360%;
     margin: 2%;
 }
 .main__img {
-    max-width: 150px;
-    max-height: 150px;
+    max-width: 9.375rem;
+    max-height: 9.375rem;
 }
 .main__img-circle {
     width: 80%;
@@ -294,8 +292,8 @@ header {
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    width: 250px;
-    height: 150px;
+    width: 15.625rem;
+    height: 9.375rem;
     border: solid 1px red;
 }
 
@@ -309,7 +307,7 @@ footer {
     width: 100%;
     border-top: solid 1px  rgba(154, 154, 154, 1);
     padding: 2%;
-    margin-top: 10%;
+    /*max-height: 4.125rem;*/
 }
 .footer__link {
     margin: 0;
@@ -390,8 +388,8 @@ footer {
     border: 8px solid #f3f3f3;
     border-top: 8px solid rgba(9,160,213,1);
     border-radius: 50%;
-    width: 45px;
-    height: 45px;
+    width: 2.813rem;
+    height: 2.813rem;
     animation: spin 1s linear infinite;
   }
  
@@ -399,8 +397,8 @@ footer {
     border: 8px solid #f3f3f3;
     border-top: 8px solid rgba(9,160,213,1);
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 6.25rem;
+    height: 6.25rem;
     animation: spin 1s linear infinite;
   }
  
