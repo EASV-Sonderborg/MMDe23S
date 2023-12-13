@@ -18,7 +18,6 @@ body {
     font-size: 18px;
     color: rgba(10, 160, 214, 1);
     font-weight: normal;
-
 }
 .main__headline {
     font-size: 18px;
@@ -286,7 +285,15 @@ header {
 .parcel__map {
     margin-bottom: 5%;
 }
-
+.main__error-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 250px;
+    height: 150px;
+    border: solid 1px red;
+}
 
 
 footer {
@@ -301,7 +308,7 @@ footer {
     margin-top: 10%;
 }
 .footer__link {
-    line-height: 1px;
+    margin: 0;
     text-align: center;
     color: rgba(154, 154, 154, 1);
 }
