@@ -1,5 +1,6 @@
 body {
     font-family: 'Nunito', sans-serif;
+    
 }
 
 .main__center {
@@ -8,9 +9,9 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    /*min-height: 80vh;*/
     margin: 0;
     position: relative;
+    min-height: 70vh;
 }
 
 
@@ -35,13 +36,58 @@ body {
 .text__grey--medium {
     font-size: 1rem;
 }
+@media (min-width: 450px) {
+    .button__respons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row-end: auto;
+        gap: 0.8rem;
+    }
+}
+@media (min-width: 500px) {
+    .main__text--blue {
+        font-size: 1.25rem;
+    }
+    .main__headline {
+        font-size: 1.25rem;
+    }
+    .main__text--grey {
+       font-size: 1rem;
+    }
+    .text__grey--medium {
+       font-size: 1.125rem;
+    }
+}
+@media (min-width: 600px) {
+    .main__text--blue {
+        font-size: 1.375rem;
+    }
+    .main__headline {
+        font-size: 1.375rem;
+    }
+    .main__text--grey {
+       font-size: 1.125rem;
+    }
+    .text__grey--medium {
+       font-size: 1.25rem;
+    }
+}
+@media (min-width: 700px) {
+    .main__respons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
 
 /*headers*/
 header {
     display: flex;
     flex-direction: column;
     background: linear-gradient(90deg, rgba(9,160,213,1) 0%, rgba(6,29,72,1) 100%);
-    min-height: 6.25em;
+    min-height: 6.25rem;
+    width: 100%;
     margin: 0;
     color: whitesmoke;
     margin-bottom: 0.313rem;
@@ -281,11 +327,12 @@ header {
     border-radius: 10px;
 }
 .main__img--large {
-    width: 80%;
     border-radius: 10px;
+    max-width: 18.75rem;
 }
 .parcel__map {
     margin-bottom: 5%;
+    margin-top: 0;
 }
 .main__error-box {
     display: flex;
@@ -313,6 +360,9 @@ footer {
     margin: 0;
     text-align: center;
     color: rgba(154, 154, 154, 1);
+}
+.footer__link p {
+    margin-top: 0;
 }
 
 .footer__link a {
@@ -405,4 +455,10 @@ footer {
   @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+  }
+
+
+
+  @media (min-width: 500px) {
+
   }
