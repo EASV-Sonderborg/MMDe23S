@@ -17,6 +17,8 @@ body {
 .OneCloud {
   width: 100px;
   margin-bottom: 10px;
+  display: block;
+  margin-inline: auto;
   animation: driftCloud 8s linear infinite;
 }
 
@@ -62,11 +64,115 @@ body {
   }
 }
 
-.frontPage__image {
+.loadingPage__image {
   width: 300px;
   transform: scaleX(-1);
   position: fixed;
   bottom: -50px;
   right: -50px;
   opacity: 75%;
+}
+
+@media (min-width: 740px) {
+  @keyframes driftCloud {
+    0% {
+      transform: translateX(-145%);
+    }
+    100% {
+      transform: translateX(180%);
+    }
+  }
+  @keyframes driftClouds {
+    0% {
+      transform: translateX(-75%);
+    }
+    100% {
+      transform: translateX(90%);
+    }
+  }
+  @keyframes loading {
+    from {
+      transform: rotate(0turn);
+    }
+    to {
+      transform: rotate(1turn);
+    }
+  }
+  .loadingPage__image {
+    width: 450px;
+  }
+  .TwoClouds {
+    margin-top: 20px;
+    width: 380px;
+    animation: driftClouds 8s linear infinite;
+  }
+  .OneCloud {
+    width: 150px;
+    animation: driftCloud 6s linear infinite;
+  }
+  .loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #eeeeee;
+    border-top-color: #00a0d6;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+  }
+  .logo {
+    margin-top: 3rem;
+    width: 300px;
+  }
+}
+@media (min-width: 1020px) {
+  @keyframes driftCloud {
+    0% {
+      transform: translateX(-130%);
+    }
+    100% {
+      transform: translateX(180%);
+    }
+  }
+  @keyframes driftClouds {
+    0% {
+      transform: translateX(-90%);
+    }
+    100% {
+      transform: translateX(110%);
+    }
+  }
+  @keyframes loading {
+    from {
+      transform: rotate(0turn);
+    }
+    to {
+      transform: rotate(1turn);
+    }
+  }
+  .loadingPage__image {
+    width: 650px;
+    bottom: -180px;
+  }
+  .TwoClouds {
+    margin-top: 20px;
+    width: 550px;
+    animation: driftClouds 8s linear infinite;
+  }
+  .OneCloud {
+    width: 250px;
+    animation: driftCloud 6s linear infinite;
+  }
+  .loader::after {
+    content: "";
+    width: 125px;
+    height: 125px;
+    border: 15px solid #eeeeee;
+    border-top-color: #00a0d6;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+  }
+  .logo {
+    margin-top: 3rem;
+    width: 500px;
+  }
 }
