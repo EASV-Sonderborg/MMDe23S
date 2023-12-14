@@ -1,7 +1,6 @@
 body {
     font-family: 'Nunito', sans-serif;
     margin: 0;
-    
 }
 
 .main__center {
@@ -10,19 +9,19 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    /*min-height: 80vh;*/
     margin: 0;
     position: relative;
-    min-height: 70vh;
 }
 
 
 .main__text--blue {
-    font-size: 1.125rem;
+    font-size: 18px;
     color: rgba(10, 160, 214, 1);
     font-weight: normal;
 }
 .main__headline {
-    font-size: 1.125rem;
+    font-size: 18px;
     color: rgba(10, 160, 214, 1);
     font-weight: bold;
 }
@@ -31,68 +30,23 @@ body {
    margin-right: 2%;
 }
 .main__text--grey {
-    font-size: 0.875rem;
+    font-size: 14px;
     color: rgba(154, 154, 154, 1);
 }
 .text__grey--medium {
-    font-size: 1rem;
+    font-size: 16px;
 }
-@media (min-width: 450px) {
-    .button__respons {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-row-end: auto;
-        gap: 0.8rem;
-    }
-}
-@media (min-width: 500px) {
-    .main__text--blue {
-        font-size: 1.25rem;
-    }
-    .main__headline {
-        font-size: 1.25rem;
-    }
-    .main__text--grey {
-       font-size: 1rem;
-    }
-    .text__grey--medium {
-       font-size: 1.125rem;
-    }
-}
-@media (min-width: 600px) {
-    .main__text--blue {
-        font-size: 1.375rem;
-    }
-    .main__headline {
-        font-size: 1.375rem;
-    }
-    .main__text--grey {
-       font-size: 1.125rem;
-    }
-    .text__grey--medium {
-       font-size: 1.25rem;
-    }
-}
-@media (min-width: 700px) {
-    .main__respons {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-    }
-}
-
-
 
 /*headers*/
 header {
     display: flex;
     flex-direction: column;
     background: linear-gradient(90deg, rgba(9,160,213,1) 0%, rgba(6,29,72,1) 100%);
-    min-height: 6.25rem;
-    width: 100%;
+    min-height: 6.25em;
     margin: 0;
     color: whitesmoke;
-    margin-bottom: 0.313rem;
+    margin-bottom: 5%;
+
 }
 .header__info {
     display: flex;
@@ -156,36 +110,36 @@ header {
     text-decoration: none;
     color: whitesmoke;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-    height: 3.125rem;
-    font-size: 1.125rem;
+    height: 50px;
+    font-size: 18px;
     margin-bottom: 5%;
 }
 .button--medium {
     background: linear-gradient(90deg, rgba(9,160,213,1) 0%, rgba(6,29,72,1) 100%);
-    width: 13.5rem;
+    width: 216px;
 }
 .button--medium--white {
-   width: 13.5rem;
+   width: 216px;
     color: rgba(154, 154, 154, 1);
     border: solid 1px rgba(6,29,72,1);
     font-weight: normal;
 }
 .button--small {
     background: linear-gradient(90deg, rgba(9,160,213,1) 0%, rgba(6,29,72,1) 100%);
-    width: 8.5rem;
+    width: 136px;
 }
 .button--small--white {
-    width: 8.5rem;
+    width: 136px;
     color: rgba(154, 154, 154, 1);
     border: solid 1px rgba(6,29,72,1);
     font-weight: normal;
 }
 .button--blue {
     background: linear-gradient(90deg, rgba(9,160,213,1) 0%, rgba(6,29,72,1) 100%);
-    width: 20.625rem;
+    width: 330px;
 }
 .button--large {
-    width: 20.625rem;
+    width: 330px;
     background-color: rgba(44, 45, 44, 1);
     color: whitesmoke;
 }
@@ -208,7 +162,7 @@ header {
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
     padding: 2%;
     margin-top: 2%;
-    max-width: 22.5rem;
+    max-width: 360px;
 }
 .parcelcard__info {
     display: flex;
@@ -220,29 +174,29 @@ header {
     justify-content: space-between;
 }
 .parcelcard__headline {
-    font-size: 1.125rem;
+    font-size: 18px;
     color: rgba(9, 160, 213, 1);
     font-weight: bold;
     margin-bottom: 1%;
 }
 .parcelcard__parcelnumber {
     color: rgba(116, 114, 114, 1);
-    font-size: 1rem;
+    font-size: 16px;
     margin-bottom: 1%;
 }
 .parcelcard__text-red {
     color: red;
-    font-size: 0.875rem;
+    font-size: 14px;
 }
 .parcelcard__box-text {
     color: rgba(9, 160, 213, 1);
-    font-size: 0.875rem;
+    font-size: 14px;
     margin-bottom: 1%;
     margin-right: 3%;
-    min-width: 12.5rem;
+    min-width: 200px;
 }
 .parcelcard__city-text {
-    font-size: 0.875rem;
+    font-size: 14px;
     color: rgba(116, 114, 114, 1);
     margin: 0;
 }
@@ -272,8 +226,8 @@ header {
     margin-bottom: 5%;
 }
 .main__box {
-    min-width: 18.5rem;
-    min-height: 9.375rem;
+    min-width: 296px;
+    min-height: 150px;
 }
 .voting__text {
     margin-bottom: 0;
@@ -303,18 +257,18 @@ header {
     justify-content: center;
     align-items: center;
     padding: 2%;
-    min-height: 12.5rem;
-    min-width: 12.5rem;
+    min-height: 200px;
+    min-width: 200px;
     background-color: rgba(0, 60, 114, 1);
     border-radius: 360%;
     margin: 2%;
 }
 .main__img {
-    max-width: 9.375rem;
-    max-height: 9.375rem;
+    max-width: 150px;
+    max-height: 150px;
 }
 .main__img-circle {
-    width: 10rem;
+    width: 80%;
     border-radius: 360%;
     border: solid 1px rgba(9, 160, 213, 1);
 }
@@ -329,20 +283,19 @@ header {
     border-radius: 10px;
 }
 .main__img--large {
+    width: 80%;
     border-radius: 10px;
-    max-width: 18.75rem;
 }
 .parcel__map {
     margin-bottom: 5%;
-    margin-top: 0;
 }
 .main__error-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    width: 15.625rem;
-    height: 9.375rem;
+    width: 250px;
+    height: 150px;
     border: solid 1px red;
 }
 
@@ -356,15 +309,12 @@ footer {
     width: 100%;
     border-top: solid 1px  rgba(154, 154, 154, 1);
     padding: 2%;
-    /*max-height: 4.125rem;*/
+    margin-top: 10%;
 }
 .footer__link {
     margin: 0;
     text-align: center;
     color: rgba(154, 154, 154, 1);
-}
-.footer__link p {
-    margin-top: 0;
 }
 
 .footer__link a {
@@ -440,8 +390,8 @@ footer {
     border: 8px solid #f3f3f3;
     border-top: 8px solid rgba(9,160,213,1);
     border-radius: 50%;
-    width: 2.813rem;
-    height: 2.813rem;
+    width: 45px;
+    height: 45px;
     animation: spin 1s linear infinite;
   }
  
@@ -449,18 +399,12 @@ footer {
     border: 8px solid #f3f3f3;
     border-top: 8px solid rgba(9,160,213,1);
     border-radius: 50%;
-    width: 6.25rem;
-    height: 6.25rem;
+    width: 100px;
+    height: 100px;
     animation: spin 1s linear infinite;
   }
  
   @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-  }
-
-
-
-  @media (min-width: 500px) {
-
   }
