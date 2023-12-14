@@ -1,0 +1,46 @@
+/*generel styling*/
+/* link som skal indsættes mellem link til style sheet og <head>: <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">*/
+body{
+    background-color: #F4F5F6;
+}
+.text{
+    font-family: inter, Arial, Helvetica, sans-serif;
+}
+/*button styling*/
+.button {
+    width: 283px;
+    height: 56px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 5px 0px #A5B7C1, -3px -3px 5px 0px #E4EFF6;
+    border: none;
+    text-align: center;
+    font-size: 24px;
+    box-shadow: 3px 3px 5px 0px #A5B7C1, -3px -3px 5px 0px #E4EFF6;
+}
+.button--primary{
+    background: #479DD1;
+    color: #ffffff;
+}
+.button--secondary{
+    background: #F4F5F6;
+    color: #274C77;
+}
+/*index*/
+.startscreen{
+    background-image: ;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.64) 0%, rgba(255, 255, 255, 0.64) 0%, rgba(252, 253, 254, 0.64) 0.01%, rgba(71, 157, 209, 0.64) 99.99%);
+}
+.logo{
+
+}
+.startscreen__text{
+
+} 
+.text{
+
+}
+
+/*searching*/
+.searching__button{
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25), -5px -5px 10px 0px #FFF;
+}
