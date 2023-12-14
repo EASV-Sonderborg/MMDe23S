@@ -196,7 +196,7 @@ header {
     gap: 5%;
 }
 .button__margin {
-    margin-top: 20%;
+    margin:1rem;
 }
 
 /*parcel_cards*/
