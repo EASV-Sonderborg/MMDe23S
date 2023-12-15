@@ -41,74 +41,89 @@ body{
 }
 
 /*searching*/
+
+.searching__body{
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.searching__images {
+    width: 100%;
+    display: flex;
+    align-self: center;
+}
+
+.searching__button{
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25), -5px -5px 10px 0px #FFF;
+    justify-self: center;
+}
+
+.searching__text {
+    justify-self: center;
+}
+
+.searching__image--packagebox{
+    flex-shrink: 0;
+    width: 11.5rem;
+    align-self: flex-end;
+}
+.searching__image--phone{
+    width: 6rem;
+    align-self: flex-start;
+    
+}
+.searching__image--bluetooth{
+    width: 2.8rem;
+    position: absolute;
+    top: 86%; 
+    left: 45%; 
+    transform: translate(-50%, -50%);
+}
+
+
 @keyframes loadingAnimation {
   0%, 100% {
       opacity: 1;
   }
   25%, 75% {
-      opacity: 0.3;
+      opacity: 0.1;
   }
 }
-.searching__body{
-  display: grid;
-  grid-template-rows: 100px 1fr 100px;
-  align-items: center;
-  justify-content: center;
-  margin: 0%;
-}
 
-.searching__button{
-  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25), -5px -5px 10px 0px #FFF;
-}
-.searching__image--packagebox{
-  flex-shrink: 0;
-  width: 11.5rem;
-  align-self: flex-end;
-}
-.searching__image--phone{
-  width: 8rem;
-  align-self: flex-start;
-}
-.searching__image--bluetooth{
-  width: 2.8rem;
-  position: absolute;
-  top: 60%; 
-  left: 50%; 
-  transform: translate(-50%, -50%);
-}
 .searching__ball--first{
   width: 30px;
   position: absolute;
-  top: 40%; 
-  left: 45%; 
+  top: 58%; 
+  left: 39%; 
   transform: translate(-50%, -50%);
   animation: loadingAnimation 4s infinite 0s;
 }
 .searching__ball--second{
   width: 28px;
   position: absolute;
-  top: 45%; 
-  left: 37%; 
+  top: 64%; 
+  left: 31%; 
   transform: translate(-50%, -50%);
   animation: loadingAnimation 4s infinite -1s;
 }
 .searching__ball--third{
   width: 24px;
   position: absolute;
-  top: 50%; 
-  left: 32%; 
+  top: 70%; 
+  left: 26%; 
   transform: translate(-50%, -50%);
   animation: loadingAnimation 4s infinite -2s;
 }
 .searching__ball--forth{
   width: 20px;
   position: absolute;
-  top: 55%; 
-  left: 29%; 
+  top: 76%; 
+  left: 23%; 
   transform: translate(-50%, -50%);
   animation: loadingAnimation 4s infinite -3s;
 }
-
 
 /*connected*/
 .connected__body{
