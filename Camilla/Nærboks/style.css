@@ -1,14 +1,20 @@
 .body {
   background-color: #d9ddf1;
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
 }
 .frontPage__image {
   width: 250px;
   position: fixed;
+  bottom: -20px;
 }
 .login__headline {
   text-align: center;
   color: #565c77;
+  font-size: 20px;
+  font-weight: 100;
+  margin-bottom: 5px;
+  margin-top: 60px;
 }
 .login {
   display: flex;
@@ -16,9 +22,10 @@
   flex-direction: column;
 }
 .login__textField {
+  font-size: 18px;
   border: none;
   border-radius: 10px;
-  height: 50px;
+  height: 40px;
   width: 70%;
   box-shadow: 0 4px 7px rgba(0, 0, 0, 0.375);
   text-align: center;
@@ -37,11 +44,150 @@
   border-radius: 10px;
   width: 55%;
   text-align: center;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   margin: 5px 0 10px 0;
   box-shadow: 0 4px 7px rgba(0, 0, 0, 0.375);
 }
+.button--slim {
+  width: 70%;
+  padding: 8px 0 8px 0;
+  margin-bottom: 50px;
+}
 .link {
   color: #565c77;
+}
+.site__headline {
+  text-align: center;
+  color: #000720;
+  margin-top: 70px;
+}
+.site__subHeadline {
+  text-align: center;
+  color: #54555f;
+}
+.site__description {
+  color: #54555f;
+  padding: 0 40px 0 40px;
+  place-self: center;
+}
+.displayImage__img {
+  height: 95px;
+}
+.displayImage__wrapper {
+  display: inline;
+  position: relative;
+  perspective: 1000px;
+}
+.displayImage {
+  display: flex;
+  justify-content: center;
+}
+.displayImage__gate {
+  position: absolute;
+  background-image: url(images/nærboks-gate.png);
+  background-size: 173px;
+  width: 170px;
+  height: 95px;
+  animation: open 3s forwards;
+  transform-origin: left;
+}
+
+@keyframes open {
+  to {
+    transform: rotateY(-140deg);
+  }
+}
+.main__packages {
+  display: flex;
+  flex-direction: column;
+}
+.packages {
+  background-color: white;
+  height: 292px;
+  width: 337px;
+  border-radius: 15px;
+  margin-inline: auto;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.375);
+  padding: 0px 15px 0 15px;
+  overflow: auto;
+  margin-bottom: 30px;
+}
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
+}
+.package {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid;
+  border-color: #d9d9d9;
+}
+.package__number {
+  margin-left: 15px;
+  font-size: 24px;
+}
+.package__button {
+  border-radius: 10px;
+  background-color: #00a0d6;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  padding: 20px 10px 0 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.returnButton {
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  background-color: #f3f4ff;
+  padding: 20px 20px 20px 20px;
+  border-radius: 15px;
+  width: 337px;
+  place-self: center;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.375);
+}
+.packages__icon {
+  fill: #00a0d6;
+  display: block;
+  margin-inline: auto;
+  margin-top: 45px;
+}
+.packages__description {
+  text-align: center;
+  color: #54555f;
+  font-size: 20px;
+}
+
+/*footer*/
+
+.footer {
+  margin-top: 20px;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  min-width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+.footer__icon {
+  fill: #d9ddf1;
+}
+.footer__icon--active {
+  fill: #00a0d6;
 }
