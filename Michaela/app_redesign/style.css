@@ -17,7 +17,7 @@ body {
   );
   height: 640px;
 }
-
+ 
 /*button styling*/
 .button {
   width: 283px;
@@ -59,7 +59,7 @@ body {
   margin: 0;
   margin-top: -0.5rem;
 }
-
+ 
 /*login*/
 .card {
   margin: auto;
@@ -106,7 +106,7 @@ body {
   border-top: 0.1rem solid #1f3561;
   align-self: center;
 }
-
+ 
 /*Sign up*/
 .signUp__checkBox {
   margin-left: 11px;
@@ -151,7 +151,7 @@ body {
 .pageIndicator__dot--inactive {
   background: #d9d9d9;
 }
-
+ 
 /*activation code*/
 .activationCode__button {
   margin-left: 23px;
@@ -159,7 +159,7 @@ body {
 .activationCode {
   margin-top: 104px;
 }
-
+ 
 /*create account*/
 .createAccount {
   margin-top: 35px;
@@ -168,31 +168,31 @@ body {
   margin-left: 23px;
   margin-top: 61px;
 }
-
+ 
 /*searching*/
-
+ 
 .searching__body {
   margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
+ 
 .searching__images {
   width: 100%;
   display: flex;
   align-self: center;
 }
-
+ 
 .searching__button {
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25), -5px -5px 10px 0px #fff;
   justify-self: center;
 }
-
+ 
 .searching__text {
   justify-self: center;
 }
-
+ 
 .searching__image--packagebox {
   flex-shrink: 0;
   width: 11.5rem;
@@ -209,7 +209,7 @@ body {
   left: 45%;
   transform: translate(-50%, -50%);
 }
-
+ 
 @keyframes loadingAnimation {
   0%,
   100% {
@@ -220,7 +220,7 @@ body {
     opacity: 0.1;
   }
 }
-
+ 
 .searching__ball--first {
   width: 30px;
   position: absolute;
@@ -253,7 +253,108 @@ body {
   transform: translate(-50%, -50%);
   animation: loadingAnimation 4s infinite -3s;
 }
-
+ 
+/*searching media res*/
+@media screen and (min-height: 600px){
+  .searching__ball--first {
+    width: 30px;
+    position: absolute;
+    top: 38%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    animation: loadingAnimation 4s infinite 0s;
+  }
+  .searching__ball--second {
+    width: 28px;
+    position: absolute;
+    top: 44%;
+    left: 39%;
+    transform: translate(-50%, -50%);
+    animation: loadingAnimation 4s infinite -1s;
+  }
+  .searching__ball--third {
+    width: 24px;
+    position: absolute;
+    top: 50%;
+    left: 32%;
+    transform: translate(-50%, -50%);
+    animation: loadingAnimation 4s infinite -2s;
+  }
+  .searching__ball--forth {
+    width: 20px;
+    position: absolute;
+    top: 55%;
+    left: 28%;
+    transform: translate(-50%, -50%);
+    animation: loadingAnimation 4s infinite -3s;
+  }
+  .searching__image--bluetooth {
+    width: 2.8rem;
+    position: absolute;
+    top: 59%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+  }
+}
+/*searching media res*/
+@media screen and (min-width: 500px){
+  .searching__image--packagebox {
+    flex-shrink: 0;
+    width: 15.5rem;
+    align-self: flex-end;
+  }
+  .searching__image--phone {
+    width: 9rem;
+    align-self: flex-start;
+  }
+  .searching__image--bluetooth {
+    width: 2.8rem;
+    position: absolute;
+    top: 86%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+  }
+  .searching__ball--first {
+    width: 30px;
+    position: absolute;
+    top: 43%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    animation: loadingAnimation 4s infinite 0s;
+  }
+  .searching__ball--second {
+    width: 28px;
+    position: absolute;
+    top: 49%;
+    left: 39%;
+    transform: translate(-50%, -50%);
+    animation: loadingAnimation 4s infinite -1s;
+  }
+  .searching__ball--third {
+    width: 24px;
+    position: absolute;
+    top: 55%;
+    left: 32%;
+    transform: translate(-50%, -50%);
+    animation: loadingAnimation 4s infinite -2s;
+  }
+  .searching__ball--forth {
+    width: 20px;
+    position: absolute;
+    top: 60%;
+    left: 28%;
+    transform: translate(-50%, -50%);
+    animation: loadingAnimation 4s infinite -3s;
+  }
+  .searching__image--bluetooth {
+    width: 2.8rem;
+    position: absolute;
+    top: 64%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+  }
+}
+ 
 /*connected*/
 .connected__body {
   display: flex;
@@ -262,7 +363,7 @@ body {
   justify-content: flex-start;
   margin: 0%;
 }
-
+ 
 /*open*/
 .body__open {
   display: flex;
@@ -284,17 +385,6 @@ body {
   height: 10.125rem;
   margin: 0 auto;
 }
-<<<<<<< HEAD
-.open__image {
-  width: 15rem;
-}
-/*complete*/
-.complete__body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-=======
 .open__text{
   display: flex;
   flex-direction: column;
@@ -306,7 +396,7 @@ body {
   display: block;
   margin: 0 auto;
 }
-
+ 
 /*complete*/
 .complete__body{
   margin: 0;
@@ -337,7 +427,6 @@ body {
   text-align: center;
   margin: 0;
   padding-top: 11px;
->>>>>>> 75d5688c81b26141db95cdb8b64148b16a533fcf
 }
 .complete {
   margin: auto;
@@ -358,7 +447,7 @@ body {
   margin-bottom: 5px;
   margin-top: 5px;
 }
-
+ 
 /* my packages */
 .myPackages__image {
   width: 340px;
@@ -382,9 +471,6 @@ body {
 .adress__link {
   color: black;
 }
-<<<<<<< HEAD
-.collectPackage {
-=======
 .collectPackage__text{
   grid-column: span 2;
   margin: 0;
@@ -397,13 +483,14 @@ body {
   grid-row: span 2;
 }
 .collectPackage__information{
->>>>>>> 75d5688c81b26141db95cdb8b64148b16a533fcf
   display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 10px;
+  grid-template-columns:auto 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 6px;
 }
 .text--warning {
   color: #f00;
+  font-weight: 600;
 }
 /*button styling*/
 .button {
