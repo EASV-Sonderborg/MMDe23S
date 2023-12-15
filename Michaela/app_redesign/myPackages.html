@@ -1,97 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nærboks</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <nav class="navigationbar">
-        <a class="navigationbar__menu" href="">
-            <span class="menu__line">
-                -
-            </span>
-            <span class="menu__line">
-                -
-            </span>
-            <span class="menu__line">
-                -
-            </span>
-        </a>
-        <h1 class="navigationbar__text text">
-            Mine pakker
-        </h1>
+      <section>
+        <span></span>
+        <span></span>
+        <span></span>
+      </section>
+      <ul>
+        <li class="navigationbar__menu"><a href="#">Mine pakker</a></li>
+        <li class="navigationbar__menu"><a href="#">Retuner pakker</a></li>
+        <li class="navigationbar__menu"><a href="#">Pakke historik</a></li>
+        <li class="navigationbar__menu">
+          <a href="#">Kontakt kundeservice</a>
+        </li>
+        <li class="navigationbar__menu">
+          <a href="#">Sådan bruges nærboks</a>
+        </li>
+        <li class="navigationbar__menu"><a href="#">Log af</a></li>
+      </ul>
+      <h1 class="navigationbar__text text">Mine pakker</h1>
     </nav>
     <main class="myPackages">
-        <section class="myPackages__information">
-        <img class="myPackages__image" src="" alt="pakkebox foran swipbox hovedindgang">
+      <section class="myPackages__information">
+        <img
+          class="myPackages__image"
+          src="images/pakkeboks__swipboks.png"
+          alt="pakkebox foran swipbox hovedindgang"
+        />
         <address class="adress">
-            <h2 class="adress__text text text--bold">
-                Pakkeboks befinder sig på:
-            </h2>
-            <p class="adress__text text">
-                Ellegårdvej 7
-            </p>
-            <p class="adress__text text">
-                6400 Sønderborg
-            </p>
-            <img class="adress__icon" src="" alt="kort markør">
-            <a class="adress__link" href="">Vis mig vej hen til pakkeboksen</a>
+          <h2 class="adress__text text text--bold">
+            Pakkeboks befinder sig på:
+          </h2>
+          <p class="adress__text text">Ellegårdvej 7</p>
+          <p class="adress__text text">6400 Sønderborg</p>
+          <img
+            class="adress__icon"
+            src="images/map__icon.png"
+            alt="kort markør"
+          />
+          <a class="adress__link" href="">Vis mig vej hen til pakkeboksen</a>
         </address>
         <section class="collectPackage">
-            <img src="" alt="pakke">
-            <p class="collectPackage__text text text--warning">
-               Udløber om 5 dage 
-            </p>
-            <p class="collectPackage__text text">
-                Pakkenummer: SB1620726656
-            </p>
-            <button class="collectPackage__button button button--primary">
-                Hent pakke
-            </button>
+          <img
+            class="collectPackage__image"
+            src="images/package.png"
+            alt="pakke"
+          />
+          <p class="collectPackage__text text text--warning">
+            Udløber om 5 dage
+          </p>
+          <p class="collectPackage__text text">Pakkenummer: SB1620726656</p>
+          <button class="collectPackage__button button button--primary">
+            Hent pakke
+          </button>
         </section>
         <section class="collectPackage">
-            <img src="" alt="pakke">
-            <p class="collectPackage__text text text--warning">
-               Udløber om 7 dage 
-            </p>
-            <p class="collectPackage__text text">
-                Pakkenummer: SB1620726132
-            </p>
-            <button class="collectPackage__button button button--primary">
-                Hent pakke
-            </button>
+          <img src="images/package.png" alt="pakke" />
+          <p class="collectPackage__text text text--warning">
+            Udløber om 7 dage
+          </p>
+          <p class="collectPackage__text text">Pakkenummer: SB1620726132</p>
+          <button class="collectPackage__button button button--primary">
+            Hent pakke
+          </button>
         </section>
+      </section>
+      <section class="myPackages__information">
+        <img
+          class="myPackages__image"
+          src="images/pakkeboks__lidl.jpg"
+          alt="pakkebox på Lidl parkerings plads"
+        />
+        <address class="adress">
+          <h2 class="adress__text text text--bold">
+            Pakkeboks befinder sig på:
+          </h2>
+          <p class="adress__text text">Centerpassagen 5</p>
+          <p class="adress__text text">6400 Sønderborg</p>
+          <img
+            class="adress__icon"
+            src="images/map__icon.png"
+            alt="kort markør"
+          />
+          <a class="adress__link" href="">Vis mig vej hen til pakkeboksen</a>
+        </address>
+        <section class="collectPackage">
+          <img src="images/package.png" alt="pakke" />
+          <p class="collectPackage__text text text--warning">
+            Udløber om 7 dage
+          </p>
+          <p class="collectPackage__text text">Pakkenummer: SB1620726321</p>
+          <button class="collectPackage__button button button--primary">
+            Hent pakke
+          </button>
         </section>
-        <section class="myPackages__information">
-            <img class="myPackages__image" src="" alt="pakkebox foran swipbox hovedindgang">
-            <address class="adress">
-                <h2 class="adress__text text text--bold">
-                    Pakkeboks befinder sig på:
-                </h2>
-                <p class="adress__text text">
-                    Centerpassagen 5
-                </p>
-                <p class="adress__text text">
-                    6400 Sønderborg
-                </p>
-                <img class="adress__icon" src="" alt="kort markør">
-                <a class="adress__link" href="">Vis mig vej hen til pakkeboksen</a>
-            </address>
-            <section class="collectPackage">
-                <img src="" alt="pakke">
-                <p class="collectPackage__text text text--warning">
-                   Udløber om 7 dage 
-                </p>
-                <p class="collectPackage__text text">
-                    Pakkenummer: SB1620726321
-                </p>
-                <button class="collectPackage__button button button--primary">
-                    Hent pakke
-                </button>
-            </section>
-            </section>
+      </section>
     </main>
-</body>
+  </body>
 </html>
