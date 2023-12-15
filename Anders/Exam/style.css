@@ -196,7 +196,7 @@ header {
     gap: 5%;
 }
 .button__margin {
-    margin-top: 20%;
+    margin:1rem;
 }
 
 /*parcel_cards*/
@@ -344,6 +344,28 @@ header {
     width: 15.625rem;
     height: 9.375rem;
     border: solid 1px red;
+    border-radius: 10px;
+    padding: 0.125rem;
+    position: absolute;
+    background-color: white;
+}
+.warning {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main__error--headline {
+    margin: 0;
+}
+.main__error--text {
+    margin-top: 0;
+}
+.red__warning {
+    color: red;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+    font-size: 2rem;
 }
 
 
