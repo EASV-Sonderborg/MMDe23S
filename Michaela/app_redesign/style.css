@@ -95,6 +95,17 @@ body {
   margin-left: 23px;
   margin-top: 34px;
 }
+.login__text {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1rem;
+}
+.login__text::before,
+.login__text::after {
+  content: "";
+  border-top: 0.1rem solid #1f3561;
+  align-self: center;
+}
 
 /*Sign up*/
 .signUp__checkBox {
