@@ -157,7 +157,18 @@ body {
   margin-left: 23px;
 }
 .activationCode {
-  margin-top: 104px;
+  margin-top: 104px; 
+}
+.activationCode__texts{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3px;
+}
+.activationCode__inform{
+
+}
+.activationCode__timer{
 }
  
 /*create account*/
@@ -385,19 +396,6 @@ body {
   width: 20.625rem;
   height: 10.125rem;
   margin: 0 auto;
-}
-.open__text{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.open__image{
-  width: 300px;
-  display: block;
-  margin: 0 auto;
-}
-.open__button{
 
 }
 .open__text{
@@ -405,6 +403,27 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0;
+  
+}
+.open__image{
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+  z-index: -1;
+}
+.open__button{
+margin-top: 5px;
+margin-bottom: 5px;
+}
+.open__text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.open__text__container{
+  margin-top: 20px;
 }
 .open__image{
   width: 229px;
