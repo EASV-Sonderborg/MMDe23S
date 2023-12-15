@@ -254,107 +254,6 @@ body {
   animation: loadingAnimation 4s infinite -3s;
 }
 
-/*searching media res*/
-@media screen and (min-height: 600px){
-  .searching__ball--first {
-    width: 30px;
-    position: absolute;
-    top: 38%;
-    left: 45%;
-    transform: translate(-50%, -50%);
-    animation: loadingAnimation 4s infinite 0s;
-  }
-  .searching__ball--second {
-    width: 28px;
-    position: absolute;
-    top: 44%;
-    left: 39%;
-    transform: translate(-50%, -50%);
-    animation: loadingAnimation 4s infinite -1s;
-  }
-  .searching__ball--third {
-    width: 24px;
-    position: absolute;
-    top: 50%;
-    left: 32%;
-    transform: translate(-50%, -50%);
-    animation: loadingAnimation 4s infinite -2s;
-  }
-  .searching__ball--forth {
-    width: 20px;
-    position: absolute;
-    top: 55%;
-    left: 28%;
-    transform: translate(-50%, -50%);
-    animation: loadingAnimation 4s infinite -3s;
-  }
-  .searching__image--bluetooth {
-    width: 2.8rem;
-    position: absolute;
-    top: 59%;
-    left: 45%;
-    transform: translate(-50%, -50%);
-  }
-}
-/*searching media res*/
-@media screen and (min-width: 500px){
-  .searching__image--packagebox {
-    flex-shrink: 0;
-    width: 15.5rem;
-    align-self: flex-end;
-  }
-  .searching__image--phone {
-    width: 9rem;
-    align-self: flex-start;
-  }
-  .searching__image--bluetooth {
-    width: 2.8rem;
-    position: absolute;
-    top: 86%;
-    left: 45%;
-    transform: translate(-50%, -50%);
-  }
-  .searching__ball--first {
-    width: 30px;
-    position: absolute;
-    top: 43%;
-    left: 45%;
-    transform: translate(-50%, -50%);
-    animation: loadingAnimation 4s infinite 0s;
-  }
-  .searching__ball--second {
-    width: 28px;
-    position: absolute;
-    top: 49%;
-    left: 39%;
-    transform: translate(-50%, -50%);
-    animation: loadingAnimation 4s infinite -1s;
-  }
-  .searching__ball--third {
-    width: 24px;
-    position: absolute;
-    top: 55%;
-    left: 32%;
-    transform: translate(-50%, -50%);
-    animation: loadingAnimation 4s infinite -2s;
-  }
-  .searching__ball--forth {
-    width: 20px;
-    position: absolute;
-    top: 60%;
-    left: 28%;
-    transform: translate(-50%, -50%);
-    animation: loadingAnimation 4s infinite -3s;
-  }
-  .searching__image--bluetooth {
-    width: 2.8rem;
-    position: absolute;
-    top: 64%;
-    left: 45%;
-    transform: translate(-50%, -50%);
-  }
-}
-
 /*connected*/
 .connected__body {
   display: flex;
@@ -384,8 +283,15 @@ body {
   width: 20.625rem;
   height: 10.125rem;
 }
+.open__image {
+  width: 15rem;
+}
 /*complete*/
 .complete__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .complete {
   display: flex;
@@ -430,28 +336,12 @@ body {
   color: black;
 }
 .collectPackage {
-
-}
-.collectPackage__text{
-  grid-column: span 2;
-  margin: 0;
-  margin-top: 3px;
-}
-.collectPackage__button{
-  margin-top: 12px;
-}
-.collectPackage__image{
-  grid-row: span 2;
-}
-.collectPackage__information{
   display: grid;
-  grid-template-columns:auto 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  column-gap: 6px;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
 }
 .text--warning {
   color: #f00;
-  font-weight: 600;
 }
 /*button styling*/
 .button {
@@ -467,42 +357,4 @@ body {
 .button--primary {
   background: #479dd1;
   color: #ffffff;
-}
-/*complete*/
-.complete__body {
-}
-.complete {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0.625rem;
-  background: rgba(244, 245, 246, 0.7);
-  box-shadow: -2px -2px 4px 0px rgba(255, 255, 255, 0.25),
-    0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(5px);
-  width: 20.625rem;
-  height: 10.125rem;
-}
-
-
-
-.guide__text{
-  text-align: center;
-  margin: 0;
-  padding-top: 11px;
-}
-.idk{
-  position: absolute;
-  z-index: -1;
-  bottom: 0;
-  right: 0;
-  max-width: 100%;
-}
-.guide__information {
-  width: 330px;
-  height: 45px;
-  border-radius: 10px;
-background: rgba(244, 245, 246, 0.70);
-backdrop-filter: blur(5px);
 }
