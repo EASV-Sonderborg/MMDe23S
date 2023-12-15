@@ -176,6 +176,7 @@ body {
 .searching__button {
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25), -5px -5px 10px 0px #fff;
   justify-self: center;
+  
 }
 
 .searching__text {
@@ -372,6 +373,21 @@ body {
   backdrop-filter: blur(5px);
   width: 20.625rem;
   height: 10.125rem;
+  margin: 0 auto;
+}
+.open__text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.open__image{
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+.open__button{
+
 }
 /*complete*/
 .complete__body {
