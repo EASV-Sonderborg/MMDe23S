@@ -486,18 +486,31 @@ body {
 }
 
 /* my packages */
+.myPackages__information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .myPackages__image {
-  width: 340px;
+  width: 320px;
   border-radius: 5px;
   background: lightgray 0px -72.795px / 100% 183.577% no-repeat;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px #f4f5f6;
   margin-bottom: 8px;
 }
+.collectPackage {
+}
+.adress {
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-template-columns: auto 1fr;
+}
 .adress__text {
   font-size: 20px;
   font-style: normal;
-  padding-left: 20px;
   margin: 0px;
+  grid-column: span 2;
+  margin-left: 21px;
 }
 .adress__icon {
   width: 21px;
@@ -506,15 +519,26 @@ body {
   font-weight: 700;
 }
 .adress__link {
+  text-decoration: none;
   color: black;
+  font-style: normal;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin-bottom: 37px;
+  text-decoration-line: underline;
+  align-items: flex-start;
 }
 .collectPackage__text {
   grid-column: span 2;
   margin: 0;
   margin-top: 3px;
+  font-size: 18px;
 }
 .collectPackage__button {
   margin-top: 12px;
+  width: 325px;
+  height: 54px;
+  margin-bottom: 42px;
 }
 .collectPackage__image {
   grid-row: span 2;
