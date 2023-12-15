@@ -1,4 +1,4 @@
-/*connected*/
+/*connected we have borrowed from this codepen: https://codepen.io/Qualley/pen/jvZMJy*/
 body {
     display: flex;
     flex-direction: column;
@@ -104,3 +104,7 @@ body {
     100% {
       opacity: 1;
       transform: scale(1); } }
+
+      .connected__text{
+        margin-bottom: 100px;
+      }
