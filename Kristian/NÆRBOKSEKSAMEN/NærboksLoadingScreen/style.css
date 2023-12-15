@@ -7,19 +7,11 @@ body {
   margin-top: 3rem;
   width: 200px;
 }
-.TwoClouds {
-  margin-top: 10px;
+.clouds {
   width: 250px;
   display: block;
   margin-inline: auto;
-  animation: driftClouds 6s linear infinite;
 }
-.OneCloud {
-  width: 100px;
-  margin-bottom: 10px;
-  animation: driftCloud 8s linear infinite;
-}
-
 .loader {
   margin-top: 1rem;
   width: 100vw;
@@ -36,22 +28,6 @@ body {
   border-top-color: #00a0d6;
   border-radius: 50%;
   animation: loading 0.75s ease infinite;
-}
-@keyframes driftCloud {
-  0% {
-    transform: translateX(-115%);
-  }
-  100% {
-    transform: translateX(410%);
-  }
-}
-@keyframes driftClouds {
-  0% {
-    transform: translateX(-60%);
-  }
-  100% {
-    transform: translateX(70%);
-  }
 }
 @keyframes loading {
   from {
