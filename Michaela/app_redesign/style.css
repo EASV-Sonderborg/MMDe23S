@@ -17,7 +17,7 @@ body {
   );
   height: 640px;
 }
-
+ 
 /*button styling*/
 .button {
   width: 283px;
@@ -59,7 +59,7 @@ body {
   margin: 0;
   margin-top: -0.5rem;
 }
-
+ 
 /*login*/
 .card {
   margin: auto;
@@ -95,7 +95,18 @@ body {
   margin-left: 23px;
   margin-top: 34px;
 }
-
+.login__text {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1rem;
+}
+.login__text::before,
+.login__text::after {
+  content: "";
+  border-top: 0.1rem solid #1f3561;
+  align-self: center;
+}
+ 
 /*Sign up*/
 .signUp__checkBox {
   margin-left: 11px;
@@ -140,7 +151,7 @@ body {
 .pageIndicator__dot--inactive {
   background: #d9d9d9;
 }
-
+ 
 /*activation code*/
 .activationCode__button {
   margin-left: 23px;
@@ -148,7 +159,7 @@ body {
 .activationCode {
   margin-top: 104px;
 }
-
+ 
 /*create account*/
 .createAccount {
   margin-top: 35px;
@@ -157,32 +168,32 @@ body {
   margin-left: 23px;
   margin-top: 61px;
 }
-
+ 
 /*searching*/
-
+ 
 .searching__body {
   margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
+ 
 .searching__images {
   width: 100%;
   display: flex;
   align-self: center;
 }
-
+ 
 .searching__button {
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25), -5px -5px 10px 0px #fff;
   justify-self: center;
   
 }
-
+ 
 .searching__text {
   justify-self: center;
 }
-
+ 
 .searching__image--packagebox {
   flex-shrink: 0;
   width: 11.5rem;
@@ -199,7 +210,7 @@ body {
   left: 45%;
   transform: translate(-50%, -50%);
 }
-
+ 
 @keyframes loadingAnimation {
   0%,
   100% {
@@ -210,7 +221,7 @@ body {
     opacity: 0.1;
   }
 }
-
+ 
 .searching__ball--first {
   width: 30px;
   position: absolute;
@@ -243,7 +254,7 @@ body {
   transform: translate(-50%, -50%);
   animation: loadingAnimation 4s infinite -3s;
 }
-
+ 
 /*searching media res*/
 @media screen and (min-height: 600px){
   .searching__ball--first {
@@ -344,7 +355,7 @@ body {
     transform: translate(-50%, -50%);
   }
 }
-
+ 
 /*connected*/
 .connected__body {
   display: flex;
@@ -353,7 +364,7 @@ body {
   justify-content: flex-start;
   margin: 0%;
 }
-
+ 
 /*open*/
 .body__open {
   display: flex;
@@ -389,10 +400,51 @@ body {
 .open__button{
 
 }
+.open__text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.open__image{
+  width: 229px;
+  display: block;
+  margin: 0 auto;
+}
+ 
 /*complete*/
-.complete__body {
+.complete__body{
+  margin: 0;
+  background: #F4F5F6;
+}
+.complete__image{
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  right: 0;
+  max-width: 100%;
+}
+.guide{
+  margin-top: 43px;
+}
+.guide__information {
+  margin: auto;
+  width: 330px;
+  height: 45px;
+  border-radius: 10px;
+  background: rgba(244, 245, 246, 0.70);
+  backdrop-filter: blur(5px);
+  margin-top: 14px;
+}
+.guide__text{
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+  padding-top: 11px;
 }
 .complete {
+  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -402,15 +454,15 @@ body {
   box-shadow: -2px -2px 4px 0px rgba(255, 255, 255, 0.25),
     0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(5px);
-  width: 20.625rem;
-  height: 10.125rem;
+  width: 330px;
+  height: 162px;
+  margin-top: 316px;
 }
-.guide__information {
-  background: rgba(244, 245, 246, 0.7);
-  box-shadow: -2px -2px 4px 0px rgba(255, 255, 255, 0.25),
-    0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+.complete__button{
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
-
+ 
 /* my packages */
 .myPackages__image {
   width: 340px;
@@ -433,9 +485,6 @@ body {
 }
 .adress__link {
   color: black;
-}
-.collectPackage {
-
 }
 .collectPackage__text{
   grid-column: span 2;
@@ -472,42 +521,4 @@ body {
 .button--primary {
   background: #479dd1;
   color: #ffffff;
-}
-/*complete*/
-.complete__body {
-}
-.complete {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0.625rem;
-  background: rgba(244, 245, 246, 0.7);
-  box-shadow: -2px -2px 4px 0px rgba(255, 255, 255, 0.25),
-    0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(5px);
-  width: 20.625rem;
-  height: 10.125rem;
-}
-
-
-
-.guide__text{
-  text-align: center;
-  margin: 0;
-  padding-top: 11px;
-}
-.idk{
-  position: absolute;
-  z-index: -1;
-  bottom: 0;
-  right: 0;
-  max-width: 100%;
-}
-.guide__information {
-  width: 330px;
-  height: 45px;
-  border-radius: 10px;
-background: rgba(244, 245, 246, 0.70);
-backdrop-filter: blur(5px);
 }
