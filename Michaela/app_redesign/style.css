@@ -1,24 +1,308 @@
-.text {
-  color: #274c77;
-  font-family: Inter;
+/*generel styling*/
+/* link som skal indsættes mellem link til style sheet og <head>: <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">*/
+body {
+  background-color: #f4f5f6;
 }
+.text {
+  font-family: inter, Arial, Helvetica, sans-serif;
+  color: #1f3561;
+}
+.indexBackground {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.64) 0%,
+    rgba(255, 255, 255, 0.64) 0%,
+    rgba(252, 253, 254, 0.64) 0.01%,
+    rgba(71, 157, 209, 0.64) 99.99%
+  );
+  height: 640px;
+}
+
+/*button styling*/
+.button {
+  width: 283px;
+  height: 56px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 5px 0px #a5b7c1, -3px -3px 5px 0px #e4eff6;
+  border: none;
+  text-align: center;
+  font-size: 24px;
+  box-shadow: 3px 3px 5px 0px #a5b7c1, -3px -3px 5px 0px #e4eff6;
+}
+.button--primary {
+  background: #479dd1;
+  color: #ffffff;
+}
+.button--secondary {
+  background: #f4f5f6;
+  color: #274c77;
+}
+/*index*/
+.startscreen {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.64) 0%,
+    rgba(255, 255, 255, 0.64) 0%,
+    rgba(252, 253, 254, 0.64) 0.01%,
+    rgba(71, 157, 209, 0.64) 99.99%
+  );
+  height: 640px;
+}
+.logo {
+  margin: 55px 1rem 0 1rem;
+  max-width: 100%;
+}
+.startscreen__text {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 900;
+  margin: 0;
+  margin-top: -0.5rem;
+}
+
+/*login*/
+.card {
+  margin: auto;
+  margin-top: 89px;
+  padding-top: 44px;
+  width: 330px;
+  height: 480px;
+  border-radius: 10px;
+  background: rgba(244, 245, 246, 0.7);
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25),
+    -2px -2px 4px 0px rgba(255, 255, 255, 0.25);
+}
+.label__text {
+  margin-left: 44px;
+  font-size: 20px;
+}
+.login__label {
+  margin-top: 44px;
+}
+.input {
+  border-style: none;
+  margin-bottom: 18px;
+  margin-top: 3px;
+  margin-left: 23px;
+  width: 283px;
+  height: 56px;
+  border-radius: 20px;
+  background: rgba(244, 245, 246, 0.67);
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25) inset,
+    -5px -5px 10px 0px #fff inset;
+}
+.login__button {
+  margin-left: 23px;
+  margin-top: 34px;
+}
+
+/*Sign up*/
+.signUp__checkBox {
+  margin-left: 11px;
+  border-style: none;
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
+  fill: #f4f5f6;
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.25) inset,
+    -3px -3px 5px 0px #fff inset;
+}
+.signUp__text {
+  text-align: center;
+}
+.signUp__button {
+  margin-top: 4px;
+  margin-left: 23px;
+}
+.signUp__title {
+  margin: 0;
+  margin-bottom: 33px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 32px;
+  margin-top: 32px;
+}
+.pageIndicator {
+  justify-content: center;
+  position: relative;
+  display: grid;
+  grid-template-columns: 35px 35px 18px;
+}
+.pageIndicator__dot {
+  display: block;
+  border-radius: 100%;
+  width: 18px;
+  height: 18px;
+}
+.pageIndicator__dot--active {
+  background: #479dd1;
+}
+.pageIndicator__dot--inactive {
+  background: #d9d9d9;
+}
+
+/*activation code*/
+.activationCode__button {
+  margin-left: 23px;
+}
+.activationCode {
+  margin-top: 104px;
+}
+
+/*create account*/
+.createAccount {
+  margin-top: 35px;
+}
+.createAccount__button {
+  margin-left: 23px;
+  margin-top: 61px;
+}
+
+/*searching*/
+
+.searching__body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.searching__images {
+  width: 100%;
+  display: flex;
+  align-self: center;
+}
+
+.searching__button {
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25), -5px -5px 10px 0px #fff;
+  justify-self: center;
+}
+
+.searching__text {
+  justify-self: center;
+}
+
+.searching__image--packagebox {
+  flex-shrink: 0;
+  width: 11.5rem;
+  align-self: flex-end;
+}
+.searching__image--phone {
+  width: 6rem;
+  align-self: flex-start;
+}
+.searching__image--bluetooth {
+  width: 2.8rem;
+  position: absolute;
+  top: 86%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes loadingAnimation {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0.1;
+  }
+}
+
+.searching__ball--first {
+  width: 30px;
+  position: absolute;
+  top: 58%;
+  left: 39%;
+  transform: translate(-50%, -50%);
+  animation: loadingAnimation 4s infinite 0s;
+}
+.searching__ball--second {
+  width: 28px;
+  position: absolute;
+  top: 64%;
+  left: 31%;
+  transform: translate(-50%, -50%);
+  animation: loadingAnimation 4s infinite -1s;
+}
+.searching__ball--third {
+  width: 24px;
+  position: absolute;
+  top: 70%;
+  left: 26%;
+  transform: translate(-50%, -50%);
+  animation: loadingAnimation 4s infinite -2s;
+}
+.searching__ball--forth {
+  width: 20px;
+  position: absolute;
+  top: 76%;
+  left: 23%;
+  transform: translate(-50%, -50%);
+  animation: loadingAnimation 4s infinite -3s;
+}
+
+/*connected*/
+.connected__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0%;
+}
+
+/*open*/
+.body__open {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.open {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.625rem;
+  background: rgba(244, 245, 246, 0.7);
+  box-shadow: -2px -2px 4px 0px rgba(255, 255, 255, 0.25),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(5px);
+  width: 20.625rem;
+  height: 10.125rem;
+}
+.open__image {
+  width: 15rem;
+}
+/*complete*/
+.complete__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.complete {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.625rem;
+  background: rgba(244, 245, 246, 0.7);
+  box-shadow: -2px -2px 4px 0px rgba(255, 255, 255, 0.25),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(5px);
+  width: 20.625rem;
+  height: 10.125rem;
+}
+.guide__information {
+  background: rgba(244, 245, 246, 0.7);
+  box-shadow: -2px -2px 4px 0px rgba(255, 255, 255, 0.25),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
 /* my packages */
 
-.navigationbar {
-
-}
-.navigationbar__menu {
-
-}
-.navigationbar__text {
-
-}
-.myPackages {
-}
-
-.myPackages__information {
-
-}
 .myPackages__image {
   width: 340px;
   border-radius: 5px;
@@ -26,7 +310,6 @@
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px #f4f5f6;
 }
 .adress {
-  
 }
 .adress__text {
   font-size: 20px;
@@ -44,13 +327,7 @@
   color: black;
 }
 .collectPackage {
-    display: grid;
-  grid-template-columns: :
-}
-.collectPackage__image {
-}
-.collectPackage__text{
-
+  display: grid;
 }
 .text--warning {
   color: #f00;
@@ -70,4 +347,3 @@
   background: #479dd1;
   color: #ffffff;
 }
-
