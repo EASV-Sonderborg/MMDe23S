@@ -5,9 +5,15 @@ body{
 }
 .text{
     font-family: inter, Arial, Helvetica, sans-serif;
+    color: #1F3561;
 }
+.indexBackground{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.64) 0%, rgba(255, 255, 255, 0.64) 0%, rgba(252, 253, 254, 0.64) 0.01%, rgba(71, 157, 209, 0.64) 99.99%);
+    height: 640px;
+}
+
 /*button styling*/
-.button {
+.button{
     width: 283px;
     height: 56px;
     border-radius: 20px;
@@ -27,17 +33,114 @@ body{
 }
 /*index*/
 .startscreen{
-    background-image: ;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.64) 0%, rgba(255, 255, 255, 0.64) 0%, rgba(252, 253, 254, 0.64) 0.01%, rgba(71, 157, 209, 0.64) 99.99%);
+    height: 640px;
 }
 .logo{
-
+    margin: 55px 1rem 0 1rem;
+    max-width: 100%;
 }
 .startscreen__text{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 900;
+    margin: 0;
+    margin-top: -0.5rem;
+}
 
-} 
-.text{
+/*login*/
+.card{
+    margin: auto;
+    margin-top: 89px;
+    padding-top: 44px;
+    width: 330px;
+    height: 480px;
+    border-radius: 10px;
+    background: rgba(244, 245, 246, 0.70);
+    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25), -2px -2px 4px 0px rgba(255, 255, 255, 0.25);
+}
+.label__text{
+    margin-left: 44px;
+    font-size: 20px;
+}
+.login__label{
+    margin-top: 44px;
+}
+.input{
+    border-style: none;
+    margin-bottom: 18px;
+    margin-top: 3px;
+    margin-left: 23px;
+    width: 283px;
+    height: 56px;
+    border-radius: 20px;
+    background: rgba(244, 245, 246, 0.67);
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25) inset, -5px -5px 10px 0px #FFF inset;
+}
+.login__button{
+    margin-left: 23px;
+    margin-top: 34px ;
+}
 
+/*Sign up*/
+.signUp__checkBox{
+    margin-left: 11px;
+    border-style: none;
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
+    fill: #F4F5F6;
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.25) inset, -3px -3px 5px 0px #FFF inset;
+}
+.signUp__text{
+    text-align: center;
+}
+.signUp__button{
+    margin-top: 4px;
+    margin-left: 23px;
+}
+.signUp__title{
+    margin: 0;
+    margin-bottom: 33px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 32px;
+    margin-top: 32px;
+}
+.pageIndicator{
+    justify-content: center;
+    position: relative;
+    display: grid;
+    grid-template-columns: 35px 35px 18px;
+}
+.pageIndicator__dot{
+    display: block;
+    border-radius: 100%;
+    width: 18px;
+    height: 18px;
+}
+.pageIndicator__dot--active{
+    background: #479DD1;
+}
+.pageIndicator__dot--inactive{
+    background: #D9D9D9;
+}
+
+/*activation code*/
+.activationCode__button{
+    margin-left: 23px;
+}
+.activationCode{
+    margin-top: 104px;
+}
+
+/*create account*/
+.createAccount{
+    margin-top: 35px;
+}
+.createAccount__button{
+    margin-left: 23px;
+    margin-top: 61px;
 }
 
 /*searching*/
