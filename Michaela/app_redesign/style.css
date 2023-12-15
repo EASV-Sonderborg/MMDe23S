@@ -17,7 +17,6 @@ body {
   );
   height: 640px;
 }
- 
 /*button styling*/
 .button {
   width: 283px;
@@ -47,19 +46,26 @@ body {
     rgba(71, 157, 209, 0.64) 99.99%
   );
   height: 640px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.logo {
-  margin: 55px 1rem 0 1rem;
+.startscreen__image {
+  width: 360px;
+}
+.startscreen__logo {
+  margin: 55px auto 20px auto;
   max-width: 100%;
 }
 .startscreen__text {
   text-align: center;
   font-size: 24px;
   font-weight: 900;
-  margin: 0;
+  margin: -0.5rem 0 20px 0;
   margin-top: -0.5rem;
+  text-align: center;
 }
- 
+
 /*login*/
 .card {
   margin: auto;
@@ -72,6 +78,7 @@ body {
   box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25),
     -2px -2px 4px 0px rgba(255, 255, 255, 0.25);
 }
+
 .label__text {
   margin-left: 44px;
   font-size: 20px;
@@ -106,7 +113,7 @@ body {
   border-top: 0.1rem solid #1f3561;
   align-self: center;
 }
- 
+
 /*Sign up*/
 .signUp__checkBox {
   margin-left: 11px;
@@ -151,26 +158,25 @@ body {
 .pageIndicator__dot--inactive {
   background: #d9d9d9;
 }
- 
+
 /*activation code*/
 .activationCode__button {
   margin-left: 23px;
 }
 .activationCode {
-  margin-top: 104px; 
+  margin-top: 104px;
 }
-.activationCode__texts{
+.activationCode__texts {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 3px;
 }
-.activationCode__inform{
+.activationCode__inform {
+}
+.activationCode__timer {
+}
 
-}
-.activationCode__timer{
-}
- 
 /*create account*/
 .createAccount {
   margin-top: 35px;
@@ -179,32 +185,31 @@ body {
   margin-left: 23px;
   margin-top: 61px;
 }
- 
+
 /*searching*/
- 
+
 .searching__body {
   margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
- 
+
 .searching__images {
   width: 100%;
   display: flex;
   align-self: center;
 }
- 
+
 .searching__button {
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25), -5px -5px 10px 0px #fff;
   justify-self: center;
-  
 }
- 
+
 .searching__text {
   justify-self: center;
 }
- 
+
 .searching__image--packagebox {
   flex-shrink: 0;
   width: 11.5rem;
@@ -221,7 +226,7 @@ body {
   left: 45%;
   transform: translate(-50%, -50%);
 }
- 
+
 @keyframes loadingAnimation {
   0%,
   100% {
@@ -232,7 +237,7 @@ body {
     opacity: 0.1;
   }
 }
- 
+
 .searching__ball--first {
   width: 30px;
   position: absolute;
@@ -265,9 +270,9 @@ body {
   transform: translate(-50%, -50%);
   animation: loadingAnimation 4s infinite -3s;
 }
- 
+
 /*searching media res*/
-@media screen and (min-height: 600px){
+@media screen and (min-height: 600px) {
   .searching__ball--first {
     width: 30px;
     position: absolute;
@@ -309,7 +314,7 @@ body {
   }
 }
 /*searching media res*/
-@media screen and (min-width: 500px){
+@media screen and (min-width: 500px) {
   .searching__image--packagebox {
     flex-shrink: 0;
     width: 15.5rem;
@@ -366,7 +371,7 @@ body {
     transform: translate(-50%, -50%);
   }
 }
- 
+
 /*connected*/
 .connected__body {
   display: flex;
@@ -375,7 +380,7 @@ body {
   justify-content: flex-start;
   margin: 0%;
 }
- 
+
 /*open*/
 .body__open {
   display: flex;
@@ -396,54 +401,52 @@ body {
   width: 20.625rem;
   height: 10.125rem;
   margin: 0 auto;
-
 }
-.open__text{
+.open__text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0;
-  
 }
-.open__image{
+.open__image {
   width: 300px;
   display: block;
   margin: 0 auto;
   z-index: -1;
 }
-.open__button{
-margin-top: 5px;
-margin-bottom: 5px;
+.open__button {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
-.open__text{
+.open__text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.open__text__container{
+.open__text__container {
   margin-top: 20px;
 }
-.open__image{
+.open__image {
   width: 229px;
   display: block;
   margin: 0 auto;
 }
- 
+
 /*complete*/
-.complete__body{
+.complete__body {
   margin: 0;
-  background: #F4F5F6;
+  background: #f4f5f6;
 }
-.complete__image{
+.complete__image {
   position: absolute;
   z-index: -1;
   bottom: 0;
   right: 0;
   max-width: 100%;
 }
-.guide{
+.guide {
   margin-top: 43px;
 }
 .guide__information {
@@ -451,11 +454,11 @@ margin-bottom: 5px;
   width: 330px;
   height: 45px;
   border-radius: 10px;
-  background: rgba(244, 245, 246, 0.70);
+  background: rgba(244, 245, 246, 0.7);
   backdrop-filter: blur(5px);
   margin-top: 14px;
 }
-.guide__text{
+.guide__text {
   font-weight: 600;
   font-size: 20px;
   text-align: center;
@@ -477,11 +480,11 @@ margin-bottom: 5px;
   height: 162px;
   margin-top: 316px;
 }
-.complete__button{
+.complete__button {
   margin-bottom: 5px;
   margin-top: 5px;
 }
- 
+
 /* my packages */
 .menutoggle{
   display: block;
@@ -591,17 +594,25 @@ margin-bottom: 5px;
 }
 
 .myPackages__image {
-  width: 340px;
+  width: 320px;
   border-radius: 5px;
   background: lightgray 0px -72.795px / 100% 183.577% no-repeat;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px #f4f5f6;
   margin-bottom: 8px;
 }
+.collectPackage {
+}
+.adress {
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-template-columns: auto 1fr;
+}
 .adress__text {
   font-size: 20px;
   font-style: normal;
-  padding-left: 20px;
   margin: 0px;
+  grid-column: span 2;
+  margin-left: 21px;
 }
 .adress__icon {
   width: 21px;
@@ -610,22 +621,33 @@ margin-bottom: 5px;
   font-weight: 700;
 }
 .adress__link {
+  text-decoration: none;
   color: black;
+  font-style: normal;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin-bottom: 37px;
+  text-decoration-line: underline;
+  align-items: flex-start;
 }
-.collectPackage__text{
+.collectPackage__text {
   grid-column: span 2;
   margin: 0;
   margin-top: 3px;
+  font-size: 18px;
 }
-.collectPackage__button{
+.collectPackage__button {
   margin-top: 12px;
+  width: 325px;
+  height: 54px;
+  margin-bottom: 42px;
 }
-.collectPackage__image{
+.collectPackage__image {
   grid-row: span 2;
 }
-.collectPackage__information{
+.collectPackage__information {
   display: grid;
-  grid-template-columns:auto 1fr 1fr;
+  grid-template-columns: auto 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   column-gap: 6px;
 }
