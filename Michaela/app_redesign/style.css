@@ -97,7 +97,6 @@ body {
 }
 
 /*Sign up*/
-<<<<<<< Updated upstream
 .signUp__checkBox {
   margin-left: 11px;
   border-style: none;
@@ -107,17 +106,6 @@ body {
   fill: #f4f5f6;
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.25) inset,
     -3px -3px 5px 0px #fff inset;
-=======
-
-.signUp__checkBox{
-    margin-left: 11px;
-    border-style: none;
-    width: 25px;
-    height: 25px;
-    flex-shrink: 0;
-    fill: #F4F5F6;
-    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.25) inset, -3px -3px 5px 0px #FFF inset;
->>>>>>> Stashed changes
 }
 .signUp__text {
   text-align: center;
@@ -356,4 +344,104 @@ body {
 .button--primary {
   background: #479dd1;
   color: #ffffff;
+}
+/*searching media res*/
+@media screen and (min-height: 600px){
+  .searching__ball--first {
+    width: 30px;
+    position: absolute;
+    top: 38%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    animation: loadingAnimation 4s infinite 0s;
+  }
+  .searching__ball--second {
+    width: 28px;
+    position: absolute;
+    top: 44%;
+    left: 39%;
+    transform: translate(-50%, -50%);
+    animation: loadingAnimation 4s infinite -1s;
+  }
+  .searching__ball--third {
+    width: 24px;
+    position: absolute;
+    top: 50%;
+    left: 32%;
+    transform: translate(-50%, -50%);
+    animation: loadingAnimation 4s infinite -2s;
+  }
+  .searching__ball--forth {
+    width: 20px;
+    position: absolute;
+    top: 55%;
+    left: 28%;
+    transform: translate(-50%, -50%);
+    animation: loadingAnimation 4s infinite -3s;
+  }
+  .searching__image--bluetooth {
+    width: 2.8rem;
+    position: absolute;
+    top: 59%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+  }
+}
+/*searching media res*/
+@media screen and (min-width: 500px){
+  .searching__image--packagebox {
+    flex-shrink: 0;
+    width: 15.5rem;
+    align-self: flex-end;
+  }
+  .searching__image--phone {
+    width: 9rem;
+    align-self: flex-start;
+  }
+  .searching__image--bluetooth {
+    width: 2.8rem;
+    position: absolute;
+    top: 86%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+  }
+  .searching__ball--first {
+    width: 30px;
+    position: absolute;
+    top: 43%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    animation: loadingAnimation 4s infinite 0s;
+  }
+  .searching__ball--second {
+    width: 28px;
+    position: absolute;
+    top: 49%;
+    left: 39%;
+    transform: translate(-50%, -50%);
+    animation: loadingAnimation 4s infinite -1s;
+  }
+  .searching__ball--third {
+    width: 24px;
+    position: absolute;
+    top: 55%;
+    left: 32%;
+    transform: translate(-50%, -50%);
+    animation: loadingAnimation 4s infinite -2s;
+  }
+  .searching__ball--forth {
+    width: 20px;
+    position: absolute;
+    top: 60%;
+    left: 28%;
+    transform: translate(-50%, -50%);
+    animation: loadingAnimation 4s infinite -3s;
+  }
+  .searching__image--bluetooth {
+    width: 2.8rem;
+    position: absolute;
+    top: 64%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+  }
 }
