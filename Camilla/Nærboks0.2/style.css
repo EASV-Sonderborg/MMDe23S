@@ -1,7 +1,16 @@
 /*stylings til alle sider*/
+
+:root {
+  --text: #565c77;
+  --bg: #d9ddf1;
+  --altText: #565c77;
+  --footer: white;
+  --footerIcon: #d9ddf1;
+  --footerActive: #00a0d6;
+}
 body {
   margin: 0;
-  background-color: #d9ddf1;
+  background-color: var(--bg);
   font-family: Arial, Helvetica, sans-serif;
 }
 .primaryButton {
@@ -19,7 +28,7 @@ body {
 }
 .primaryText {
   font-size: 24px;
-  color: #565c77;
+  color: var(--text);
 }
 
 /*forside*/
@@ -30,7 +39,7 @@ body {
   flex-direction: column;
 }
 .frontpage__image {
-  max-width: 300px;
+  max-width: 60%;
   position: absolute;
   bottom: 0;
 }
@@ -59,7 +68,7 @@ body {
   margin: 0 0 0 60px;
   padding-left: 10px;
   font-size: 18px;
-  color: #565c77;
+  color: var(--text);
   text-align: left;
   font-weight: lighter;
 }
@@ -121,11 +130,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 20px 0 20px;
 }
 .packages {
   background-color: white;
   height: 292px;
-  width: 337px;
+  width: 310px;
   border-radius: 15px;
   margin-inline: auto;
   box-shadow: 0 4px 7px rgba(0, 0, 0, 0.375);
@@ -155,15 +165,17 @@ body {
   margin-top: 10px;
 }
 .returnButton {
+  font-weight: bold;
   text-align: center;
-  color: black;
+  color: #54555f;
   text-decoration: none;
   background-color: #f3f4ff;
   padding: 20px 20px 20px 20px;
   border-radius: 15px;
-  width: 337px;
+  width: 292px;
   place-self: center;
   box-shadow: 0 4px 7px rgba(0, 0, 0, 0.375);
+  margin-bottom: 80px;
 }
 /*scrollbar fra https://dev.to/xtrp/how-to-create-a-beautiful-custom-scrollbar-for-your-site-in-plain-css-1mjg */
 ::-webkit-scrollbar {
@@ -197,20 +209,20 @@ body {
 }
 
 /*support side*/
-.supportHeader {
+.header {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.supportHeader__item {
+.header__item {
   background-color: #00a0d6;
   text-decoration: none;
   text-align: center;
   padding: 22px 0 22px 0;
   font-size: 24px;
-  color: #000720;
+  color: var(--altText);
 }
-.supportHeader__item--active {
-  background-color: #d9ddf1;
+.header__item--active {
+  background-color: var(--bg);
 }
 .support {
   display: flex;
@@ -236,13 +248,13 @@ body {
 .support__info {
   text-align: center;
   margin-top: 45px;
-  color: #54555f;
+  color: var(--text);
   font-size: 22px;
 }
 /*footer*/
 .footer {
   margin-top: 20px;
-  background-color: white;
+  background-color: var(--footer);
   display: flex;
   justify-content: space-around;
   min-width: 100%;
@@ -251,8 +263,214 @@ body {
   z-index: 999;
 }
 .footer__icon {
-  fill: #d9ddf1;
+  fill: var(--footerIcon);
 }
 .footer__icon--active {
-  fill: #00a0d6;
+  fill: var(--footerActive);
+}
+
+/*loader*/
+.loader {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg);
+  z-index: 1000;
+  transition: opacity 0.75s, visability 0.75s;
+  transition-delay: 2s;
+}
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #eeeeee;
+  border-top-color: #00a0d6;
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+}
+.loader__image {
+  position: fixed;
+  max-width: 60%;
+  transform: scaleX(-1);
+  bottom: 0;
+  right: 0;
+}
+.loader__logo {
+  position: fixed;
+  width: 200px;
+  top: 25px;
+}
+.loader--hidden {
+  opacity: 0;
+  visibility: 0;
+}
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+/*Skyer*/
+.TwoClouds {
+  position: fixed;
+  top: 20px;
+  margin-top: 10px;
+  width: 250px;
+  display: block;
+  margin-inline: auto;
+  animation: driftClouds 6s linear infinite;
+}
+.OneCloud {
+  position: fixed;
+  top: 80px;
+  width: 100px;
+  margin-bottom: 10px;
+  display: block;
+  margin-inline: auto;
+  animation: driftCloud 8s linear infinite;
+}
+@keyframes driftCloud {
+  0% {
+    transform: translateX(-115%);
+  }
+  100% {
+    transform: translateX(410%);
+  }
+}
+@keyframes driftClouds {
+  0% {
+    transform: translateX(-60%);
+  }
+  100% {
+    transform: translateX(70%);
+  }
+}
+/*FAQ*/
+.FAQ {
+  background-color: white;
+  width: 90%;
+  padding: 20px 10px 20px 10px;
+  border-radius: 15px;
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+  font-weight: lighter;
+  color: #54555f;
+  margin: 40px auto;
+}
+
+.FAQ__description {
+  margin: 20px 0 0 0;
+}
+
+.FAQ__image {
+  position: fixed;
+  bottom: 7%;
+  right: 0%;
+  width: 80%;
+  z-index: -500;
+}
+/*Ipad størrelse*/
+@media (min-width: 700px) {
+  .primaryText {
+    font-size: 35px;
+  }
+  .primaryButton {
+    width: 400px;
+    font-size: 25px;
+  }
+  .frontpage__image {
+    max-width: 50%;
+  }
+  .inputBox__title {
+    margin-left: 230px;
+    font-size: 22px;
+  }
+  /*pakker*/
+  .displayImage__img {
+    height: 150px;
+  }
+  .displayImage__gate {
+    height: 150px;
+    background-size: 277px;
+  }
+  .packages {
+    height: 400px;
+    width: 415px;
+  }
+  .package__button {
+    font-size: 24px;
+    padding-top: 22px;
+  }
+  .package__number {
+    font-size: 30px;
+  }
+  .returnButton {
+    width: 400px;
+    font-size: 25px;
+  }
+  /*support*/
+  .support__button {
+    top: 220px;
+    left: 427px;
+    font-size: 38px;
+  }
+  .header__item {
+    font-size: 30px;
+  }
+  .support__info {
+    font-size: 28px;
+  }
+  /*loader*/
+  .loader__image {
+    max-width: 40%;
+  }
+  .OneCloud {
+    width: 200px;
+    top: 115px;
+  }
+  .TwoClouds {
+    width: 400px;
+    top: 40px;
+  }
+  .loader__logo {
+    width: 300px;
+  }
+  .loader::after {
+    width: 125px;
+    height: 125px;
+    border: 20px solid #eeeeee;
+    border-top-color: #00a0d6;
+  }
+}
+@media (min-width: 1000px) {
+  .frontpage__image {
+    max-width: 40%;
+  }
+  .inputBox__title {
+    margin-left: 360px;
+  }
+  .support__button {
+    top: 285px;
+    left: 550px;
+    font-size: 50px;
+  }
+  .support__info {
+    margin-bottom: 110px;
+  }
+}
+/*sætter automatisk siderne til darkmode hvis det er slået til på device - https://dev.to/arnu515/auto-dark-light-theme-using-css-only-2e0m */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #578ef8;
+    --bg: #000720;
+    --altText: white;
+    --footer: #2e354c;
+    --footerIcon: #b3b9d6;
+    --footerActive: #00a0d6;
+  }
 }
