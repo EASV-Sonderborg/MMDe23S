@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/navbar.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,300&family=Roboto:ital,wght@1,300&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/fad0c0357f.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+    <title>Activation</title>
+  </head>
+  <body>
+    <section class="header">
+      <p class="header__title">Aktivering</p>
+    </section>
+    <div class="activationPic">
+      <img src="images/activation.png" alt="Man with activation code" />
+    </div>
+    <section class="activation">
+      <div class="formGroup">
+        <p>Telefonnummer</p>
+        <input type="tel" name="phone" id="phone" />
+      </div>
+      <div class="activation__terms">
+        <input type="checkbox" name="conditions" /><span
+          >Jeg accepterer Nærboks' <a href="#">betingelser</a></span
+        >
+      </div>
+      <button class="mainButton">Aktivere</button>
+    </section>
+    <script>
+      const phoneInputField = document.querySelector("#phone");
+      const phoneInput = window.intlTelInput(phoneInputField, {
+        localizedCountries: {
+          dk: "Denmark",
+          se: "Sweden",
+          no: "Norway",
+          fi: "Finland",
+          de: "Germany",
+        },
+        onlyCountries: ["dk", "se", "no", "fi", "de"],
+        utilsScript: "/intl-tel-input/js/utils.js?1701962297307",
+        initialCountry: "dk",
+      });
+    </script>
+  </body>
+</html>
