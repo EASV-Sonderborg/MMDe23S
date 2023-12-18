@@ -1,0 +1,117 @@
+body {
+  margin: 0px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  background-color: #7412eb;
+}
+
+header {
+  align-items: center;
+}
+
+h2 {
+  margin: 100px;
+  padding: 0px;
+  font-size: 40px;
+  color: #edeae7;
+}
+
+.connect {
+  border: 25px solid #be3e26;
+  border-top: 25px solid #be3e26;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+  animation: blink 1s infinite alternate;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  background-color: #2638ab;
+}
+/*Connect (Index.html) Slut-*/
+
+/*Connecting (Connecting.html) Start+*/
+.connecting {
+  border: 25px solid #be3e26;
+  border-top: 25px solid #96ec3e;
+  border-radius: 150%;
+  width: 150px;
+  height: 150px;
+  background-color: #2638ab;
+  animation: spin 1s linear infinite;
+  margin-right: 10px;
+}
+/*Connecting (Connecting.html) Slut-*/
+
+/*Connected (Connected.html) Start+*/
+.ready {
+  background-color: #043f14; /* Green color */
+  color: white;
+  border: 25px solid #5eec3e;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  animation: blink 0, 2s infinite alternate, grow 2s infinite;
+}
+.info {
+  margin: 23px;
+}
+/*Connected (Connected.html) Slut-*/
+
+h3 {
+  margin: 100px;
+  padding: 0px;
+  align-items: center;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  color: red;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+/*Animations used*/
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes grow {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
