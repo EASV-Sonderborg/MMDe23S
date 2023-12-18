@@ -4,18 +4,24 @@ body {
   background-color: #f4f5f6;
 }
 .text {
-  font-family: inter, Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   color: #1f3561;
 }
-.indexBackground {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.64) 0%,
-    rgba(255, 255, 255, 0.64) 0%,
-    rgba(252, 253, 254, 0.64) 0.01%,
-    rgba(71, 157, 209, 0.64) 99.99%
-  );
-  height: 640px;
+.background{
+  background-image:
+  linear-gradient(180deg,
+  rgba(255, 255, 255, 0.64) 0%,
+  rgba(255, 255, 255, 0.64) 0%,
+  rgba(252, 253, 254, 0.64) 0.01%,
+  rgba(71, 157, 209, 0.64) 99.99%),
+  url('images/DanmarkskortBlå\ 1.webp');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height:100vh;
 }
 /*button styling*/
 .button {
@@ -37,33 +43,30 @@ body {
   color: #274c77;
 }
 /*index*/
-.startscreen {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.64) 0%,
-    rgba(255, 255, 255, 0.64) 0%,
-    rgba(252, 253, 254, 0.64) 0.01%,
-    rgba(71, 157, 209, 0.64) 99.99%
-  );
+.indexBackground{
+  background-image:
+  linear-gradient(180deg,
+  rgba(255, 255, 255, 0.64) 0%,
+  rgba(255, 255, 255, 0.64) 0%,
+  rgba(252, 253, 254, 0.64) 0.01%,
+  rgba(71, 157, 209, 0.64) 99.99%),
+  url('images/DanmarkskortBlå\ 1.webp');
+  background-size: contain;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.startscreen__image {
-  max-width: 100%;
-  height: auto;
+  background-repeat: no-repeat;
+  background-position: 50% 80%;
+  height:100vh;
 }
 .startscreen__logo {
-  margin: 55px auto 20px auto;
-  max-width: 100%;
+  margin-top: 4rem;
+  max-width: 90%;
 }
 .startscreen__text {
-  text-align: center;
   font-size: 24px;
   font-weight: 900;
-  margin: -0.5rem 0 20px 0;
-  margin-top: -0.5rem;
-  text-align: center;
+  margin-top: -0.25rem;
 }
 
 /*login*/
@@ -100,18 +103,26 @@ body {
 }
 .login__button {
   margin-left: 23px;
-  margin-top: 34px;
+  margin-top: 19px;
 }
 .login__text {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   gap: 1rem;
+  font-size: 20px;
+  margin: 0;
+  padding-top: 19px;
 }
 .login__text::before,
 .login__text::after {
+  display: flex;
   content: "";
   border-top: 0.1rem solid #1f3561;
   align-self: center;
+}
+.login__lines{
+  margin: auto;
+  width: 283px;
 }
 
 /*Sign up*/
@@ -124,6 +135,7 @@ body {
   fill: #f4f5f6;
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.25) inset,
     -3px -3px 5px 0px #fff inset;
+  border-radius: 50%;
 }
 .signUp__text {
   text-align: center;
@@ -171,10 +183,6 @@ body {
   flex-direction: row;
   justify-content: center;
   gap: 3px;
-}
-.activationCode__inform {
-}
-.activationCode__timer {
 }
 
 /*create account*/
@@ -485,6 +493,28 @@ body {
   margin-top: 5px;
 }
 
+/* my packages */
+body{
+  margin: 0;
+}
+.navigationbar{
+  display: flex;
+  height: 78px;
+  background: rgba(244, 245, 246, 0.70);
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25), -2px -2px 4px 0px rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(5px);
+  margin-bottom: 29px;
+}
+.navigationbar__text{
+  margin: 0;
+  margin-top: 24px;
+  margin-left: 61px;
+}
+.menuToggle{
+  display: block;
+  position: relative;
+  }
+  
 /* my packages we have used codepen:https://codepen.io/erikterwan/pen/EVzeRP to make menu*/
 .menutoggle{
   display: block;
@@ -495,11 +525,13 @@ body {
   
   -webkit-user-select: none;
   user-select: none;
+  margin-left: 21px;
+  margin-top: 25px;
 }
 .menuToggle a
 {
   text-decoration: none;
-  color: #232323;
+  color: #1f3561;
   
   transition: color 0.3s ease;
 }
@@ -527,7 +559,7 @@ body {
   margin-bottom: 5px;
   position: relative;
   
-  background: #cdcdcd;
+  background: #1f3561;
   border-radius: 3px;
   
   z-index: 1;
@@ -581,7 +613,6 @@ body {
   
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
-
 .menu li
 {
   padding: 10px 0;
@@ -591,20 +622,22 @@ body {
 {
   transform: none;
 }
-
+.myPackages__information{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .myPackages__image {
   width: 320px;
   border-radius: 5px;
   background: lightgray 0px -72.795px / 100% 183.577% no-repeat;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px #f4f5f6;
-  margin-bottom: 8px;
-}
-.collectPackage {
+  margin-bottom: 16px;
 }
 .adress {
   display: grid;
   grid-template-rows: auto auto auto auto;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto 1fr 25.32px;
 }
 .adress__text {
   font-size: 20px;
@@ -654,18 +687,4 @@ body {
   color: #f00;
   font-weight: 600;
 }
-/*button styling*/
-.button {
-  width: 283px;
-  height: 56px;
-  border-radius: 20px;
-  box-shadow: 3px 3px 5px 0px #a5b7c1, -3px -3px 5px 0px #e4eff6;
-  border: none;
-  text-align: center;
-  font-size: 24px;
-  box-shadow: 3px 3px 5px 0px #a5b7c1, -3px -3px 5px 0px #e4eff6;
-}
-.button--primary {
-  background: #479dd1;
-  color: #ffffff;
-}
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/navbar.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,300&family=Roboto:ital,wght@1,300&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/fad0c0357f.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="main navBar">
+      <section class="topNav">
+        <input id="menu-toggle" type="checkbox" />
+        <label class="menu-button-container" for="menu-toggle">
+          <div class="menu-button"></div>
+        </label>
+        <ul class="menu">
+          <li style="margin-left: 10px">Dine pakker</li>
+          <li style="margin-left: 10px">Send reture</li>
+          <li style="margin-left: 10px">Hisorik</li>
+          <li style="margin-left: 10px">Kunderservice</li>
+          <li style="margin-left: 10px">Brug nærboks</li>
+          <li style="margin-left: 10px">Log af</li>
+        </ul>
+      </section>
+      <section class="main__title">Afhent pakke</section>
+      <dialog>
+        <h2>Luk venligst Lågen</h2>
+        <h3>Lågen er ikke lukket ordentligt</h3>
+        <button autofocus class="mainButton dialog__okButton">OK</button>
+      </dialog>
+    </section>
+    <div class="package__details">
+      <h1>1. Tag din pakke</h1>
+      <h2>Pakkenr: SB283281038</h2>
+      <div class="box"><img src="images/kasseboks.png" alt="" /></div>
+      <h1>2. Luk lågen</h1>
+      <div class="package__fetch pickup">
+        <button class="mainButton">Åbn igen</button>
+        <button class="mainButton mainButton--transfer">Færdig</button>
+      </div>
+    </div>
+
+    <script>
+      const dialog = document.querySelector("dialog");
+      const showButton = document.querySelector(".mainButton--transfer");
+      const closeButton = document.querySelector("dialog button");
+
+      showButton.addEventListener("click", () => {
+        dialog.showModal();
+      });
+
+      closeButton.addEventListener("click", () => {
+        dialog.close();
+      });
+    </script>
+  </body>
+</html>
