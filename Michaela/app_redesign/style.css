@@ -373,7 +373,7 @@ body {
   }
   .searching__image--bluetooth {
     width: 2.8rem;
-    position: absolute;
+    position: absolute; 
     top: 64%;
     left: 45%;
     transform: translate(-50%, -50%);
