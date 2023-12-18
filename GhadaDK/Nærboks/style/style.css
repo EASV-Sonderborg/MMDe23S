@@ -1,0 +1,599 @@
+body {
+  margin: 0;
+  margin-top: 0;
+  height: 100%;
+  background-color: #efd8e1;
+  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.main {
+  display: grid;
+}
+
+.mainButton {
+  background-color: #613f75;
+  color: white;
+  text-transform: capitalize;
+  font-weight: bolder;
+  font-size: 20px;
+  border: 0;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  height: 10vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.header:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #613f75;
+  border-radius: 0 0 50% 50%/0 0 100% 100%;
+  transform: scaleX(1.5);
+}
+
+.header__title {
+  z-index: 1;
+  width: 100%;
+  color: #f5f6fa;
+  text-align: center;
+}
+
+.header__help {
+  position: fixed;
+  color: white;
+  right: 0;
+  margin-right: 10px;
+  top: 25px;
+}
+
+.header__language {
+  position: fixed;
+  color: white;
+  left: 0;
+  margin-left: 10px;
+  top: 25px;
+  background-color: #613f75;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #000;
+}
+
+input[type="text"] {
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  border: 0;
+  padding: 2px;
+}
+
+.mainButton--transfer {
+  color: #363434;
+  background-color: white;
+}
+
+.welcome {
+  display: grid;
+  grid-template-rows: 2fr 1fr 1fr;
+  margin-top: 15rem;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+.welcomePic,
+.welcomeLogo {
+  text-align: center;
+}
+
+.activation {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: center;
+  justify-items: center;
+}
+
+.formGroup {
+  display: grid;
+}
+
+.formGroup p {
+  margin-left: 15px;
+}
+
+.signUp button {
+  margin-top: 40px;
+}
+
+.activation__terms {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  width: 100%;
+  align-items: center;
+}
+
+.activationPic,
+.signUpPic,
+.smsCodePic {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.smsCode {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: center;
+  justify-items: center;
+  gap: 50px;
+  margin-top: 70px;
+}
+
+.signUp {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: center;
+  justify-items: center;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.getStarted {
+  display: grid;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.createUser {
+  display: grid;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+.createUser__girlPic img {
+  opacity: 0.4;
+}
+
+.language {
+  position: relative;
+  margin: 10px;
+  top: 10px;
+}
+
+.language i,
+.login__header i {
+  color: #bbd0ff;
+}
+
+.navBar {
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  background-color: #613f75;
+}
+
+.package__header {
+  padding: 10px;
+}
+
+.main__title {
+  color: #000;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.package__titleText,
+.review__titleText {
+  padding-left: 30px;
+}
+
+.package__details {
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.package__details h1 {
+  font-size: 30px;
+}
+
+.package__showDirection {
+  padding: 20px;
+}
+
+.package__showDirection a {
+  color: #000;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.package__fetch {
+  display: grid;
+  margin-top: 200px;
+  gap: 20px;
+  justify-items: center;
+}
+
+.package {
+  display: grid;
+  grid-template-columns: 65% 25% 10%;
+  align-items: center;
+  width: 90%;
+  background-color: #fefae0;
+  color: #363434;
+  margin: 0 auto;
+  padding: 8px;
+  margin-top: 50px;
+  box-shadow: 5px 5px 2px #8a8787;
+}
+
+.package__expireDate {
+  color: rgb(255, 95, 95);
+}
+
+.package__icon {
+  text-align: left;
+}
+
+.package__icon i {
+  font-size: 70px;
+}
+
+.package__backButton {
+  margin-left: 5px;
+}
+
+.languageSelector {
+  height: 30px;
+  border: 0;
+  background-color: #613f75;
+  font-size: 1em;
+}
+
+.box {
+  text-align: center;
+}
+
+.pickup,
+.review {
+  margin-top: 40px;
+}
+
+.main dialog {
+  width: 80%;
+  text-align: center;
+}
+
+.dialog__okButton {
+  width: 150px;
+  font-size: 20px;
+  height: 40px;
+}
+
+.rating {
+  margin: 0 1rem;
+  padding: 1rem;
+  width: 80%;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.star {
+  font-size: 50px;
+}
+
+.purpleStars {
+  color: #613f75;
+}
+
+.comment {
+  text-align: center;
+}
+.comment textarea {
+  width: 70%;
+  height: 200px;
+  border: 1px solid #363434;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 5px;
+}
+
+.createUser {
+  margin-top: 30rem;
+  display: grid;
+  grid-template-rows: repeat(5, 50px);
+  gap: 30px;
+  justify-content: center;
+}
+
+.createUser__conditions a {
+  text-decoration: underline;
+}
+
+.createUser input[type="text"],
+.login input[type="text"],
+.forgtPassword input[type="text"],
+input[type="tel"] {
+  padding: 5px;
+}
+
+.createUser input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+.login {
+  display: grid;
+  grid-template-rows: repeat(4, 50px);
+  gap: 30px;
+  justify-content: center;
+  margin-top: 30rem;
+}
+
+.login p {
+  text-align: center;
+}
+
+.login__header {
+  margin: 15px;
+  text-align: right;
+}
+
+.login dialog {
+  margin-top: 50px;
+  margin-right: 10px;
+  position: absolute;
+}
+
+.helpNav__container {
+  display: grid;
+  gap: 30px;
+  width: 200px;
+}
+
+.helpNav__item {
+  display: grid;
+  grid-template-columns: 90% 10%;
+}
+
+.forgtPassword {
+  margin-top: 50px;
+  display: grid;
+  grid-template-rows: auto;
+  justify-items: center;
+  gap: 30px;
+}
+
+.forgtPassword p {
+  text-align: center;
+}
+
+.terms {
+  margin-top: 20px;
+  line-height: 25px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.history {
+  grid-template-columns: 75% 25%;
+}
+
+.pickupDate {
+  color: rgb(4, 161, 4);
+}
+
+.guide {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  justify-content: center;
+  gap: 20px;
+}
+
+.guide__item {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  align-items: center;
+  background-color: #fefae0;
+  text-align: center;
+}
+
+.return {
+  margin-top: 30px;
+  display: grid;
+  grid-template-rows: auto;
+  justify-items: center;
+  gap: 20px;
+}
+
+.return img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.history__empty {
+  margin-top: 50px;
+  display: grid;
+  grid-template-rows: auto;
+  justify-items: center;
+}
+
+.history__empty img {
+  width: 200px;
+}
+
+@media screen and (max-width: 1200px) {
+  .welcome__logo img {
+    width: 400px;
+    height: auto;
+  }
+
+  .createUser__girlPic img {
+    width: 300px;
+    height: auto;
+  }
+  .box img {
+    width: 350px;
+  }
+
+  input[type="text"] {
+    width: 500px;
+    height: 65px;
+    border-radius: 50px;
+  }
+
+  .mainButton,
+  input[type="tel"] {
+    width: 515px;
+    height: 80px;
+    border-radius: 50px;
+    border: 0;
+    font-size: 30px;
+  }
+  .mainButton:hover {
+    background-color: #c4a8ff;
+  }
+  input:hover {
+    background-color: #f3effb;
+  }
+
+  .welcome__welcomePic img,
+  .signUpPic img {
+    width: 500px;
+  }
+
+  .header__title {
+    font-size: 42px;
+    font-weight: 600;
+  }
+
+  .formGroup p {
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  .activation__terms span {
+    font-size: 30px;
+  }
+
+  .activation__terms input[type="checkbox"] {
+    height: 20px;
+  }
+
+  .activationPic img {
+    width: 340px;
+  }
+
+  .signUpPic img {
+    width: 400px;
+  }
+
+  .smsCodePic img {
+    width: 500px;
+  }
+
+  .signUp {
+    margin-top: 20px;
+  }
+
+  .formGroup {
+    grid-template-rows: repeat(2, 70px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .welcome__logo img {
+    width: 200px;
+    height: auto;
+  }
+
+  .createUser__girlPic img {
+    width: 300px;
+    height: auto;
+  }
+
+  .box img {
+    width: 350px;
+  }
+
+  input[type="text"],
+  input[type="tel"] {
+    width: 290px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  input[type="text"] {
+    width: 290px;
+    height: 43px;
+    font-size: 20px;
+  }
+
+  .mainButton {
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+  }
+  .mainButton:hover {
+    background-color: #c4a8ff;
+  }
+  input:hover {
+    background-color: #f3effb;
+  }
+
+  .welcome__welcomePic img {
+    width: 300px;
+  }
+
+  .header__title {
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  .formGroup {
+    grid-template-rows: repeat(2, 45px);
+  }
+
+  .formGroup p {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .activation__terms span {
+    font-size: 18px;
+  }
+
+  .activation__terms input[type="checkbox"] {
+    height: 13px;
+  }
+
+  .activationPic img,
+  .signUpPic img {
+    width: 200px;
+  }
+
+  .smsCodePic img {
+    width: 300px;
+  }
+}
