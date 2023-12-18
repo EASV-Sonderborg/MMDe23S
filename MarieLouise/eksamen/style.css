@@ -121,33 +121,38 @@ body{
 .footer__icon--active{
     fill: #00A0D6;
 }
-
-.FAQ{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 1;
+.FAQ--all{
+    display: grid;
+    gap: 2rem;
+    margin-top: 15px;
 }
 
-.FAQ__question{
+.FAQ{
     background-color: white;
     width: 90%;
     padding-top: 20px;
-    padding-bottom: 16px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     border-radius: 15px;
     box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
-    margin: 0;
     font-size: 20px;
     font-weight: lighter;
     color: #54555F;
-    text-align: center;
+    margin: auto;
 }
 
-.FAQ__arrow{
-    width: 20px;
-    margin-bottom: 20px;
+.FAQ__answer{
+    margin: 0;
+    margin-top: 8px;
 }
+
 
 .background--image{
-    position: sticky ;
+    position: fixed ;
+    bottom: 7%;
+    right: 0%;
+    width: 360px;
+    z-index: -500;
 }
+    

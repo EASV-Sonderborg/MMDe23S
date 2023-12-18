@@ -48,6 +48,25 @@ body {
         stroke-linecap: round;
         stroke: green;
         transform: scale(1); }
+        #circle > .st0 {
+          fill: none;
+          stroke-width: 4;
+          stroke-miterlimit: 10;
+        }
+        
+        #check > .st0 {
+          fill: none;
+          stroke: #000000;
+          stroke-width: 4;
+          stroke-miterlimit: 10;
+        }
+        
+        #button > .st0 {
+          fill: none;
+          stroke: #274C77;
+          stroke-width: 8;
+          stroke-miterlimit: 10;
+        }
   
   @keyframes circle {
     0% {
