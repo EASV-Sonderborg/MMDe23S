@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="dk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naerboks Registrering</title>
+    <link rel="stylesheet" href="../stylesheet.css">
+    <link rel="stylesheet" href="https://use.typekit.net/vnr1nmp.css">
+</head>
+<body>
+    <section class="progressBackground">
+        <img class="progressBackground__ground" src="../Images/background_ground.png" alt="dark blue background symbolizing the ground">
+        <img class="progressBackground__sky" src="../Images/background_sky.png" alt="a light blue sky with some clouds">
+    </section>
+    <header class="language">
+        <img id="language__icon" src="../Icons/globe-svgrepo-com.svg" alt="globe icon">
+        <select id="language__options">
+            <option value="danish">Dansk</option>
+            <option value="english">English</option>
+            <option value="german">Deutsch</option>
+        </select>
+    </header>
+    <main class="mainContent">
+        <section class="progressBar">
+            <img class="progressBar__person" src="../Images/delivery_man_vector.png" alt="delivery man on a scooter">
+            <section class="progressBar__elements">
+                <span class="progressBar__elements__dot progressBar__elements__dots--active"></span>
+                <span class="progressBar__elements__line"></span>
+                <span class="progressBar__elements__dot"></span>
+                <span class="progressBar__elements__line"></span>
+                <span class="progressBar__elements__dot"></span>
+            </section>
+        </section>
+        <article class="progressPageContent  registrationStep1 registrationStep--active">
+            <section class="telephone">
+                <select id="telephone__countryCode">
+                    <option value="danish">+45</option>
+                    <option value="english">+44</option>
+                    <option value="german">+49</option>
+                </select>
+                <label for="telephone__number" class="inputLabel">Telefonnummer</label>
+                <input name="telephone__number" class="inputNumber" type="number" required>
+            </section>
+            <section class="infoBox">
+                <p>Opret din konto med dit telefonnummer. Du modtager en aktiveringskode via sms.</p>
+            </section>
+            <section id="conditions">
+                <input class="checkbox" type="checkbox" name="conditions__accept" required>
+                <label for="conditions__accept">Jeg accepterer Nærboks' <a class="externLink" href="https://www.xn--nrboks-pua.dk/app-privacy-policy/">betingelser</a></label>
+            </section>
+            <section class="actions">
+                <button class="primaryButton">send aktiveringskode</button>
+                <button class="backstepButton">tilbage</button>
+            </section>
+        </article>
+        <article class="registrationStep2" hidden>
+            <section class="activation">
+                <label for="activation__code" class="inputLabel">Aktiveringskode</label>
+                <input name="activation__code" class="inputNumber" type="number" required>
+            </section>
+            <section class="infoBox">
+                <p>Venligst indtast koden du har modtaget via sms.</p>
+            </section>
+            <section class="alert">
+                <p>Din kode udløber om 38 sekunder</p>
+            </section>
+            <section class="actions">
+                <button class="primaryButton">OK</button>
+                <button class="backstepButton">send koden igen</button>
+            </section>
+        </article>
+        <article class="registrationStep3" hidden>
+            <section class="infoBox">
+                <p>Du har mulighed for at oprette en personlig pinkode. Du kan også fortsætte uden pinkode.</p>
+            </section>
+            <section class="pincode">
+                <label for="pincode__input" class="inputLabel">Pinkode</label>
+                <input name="pincode__input" class="inputNumber" type="number">
+            </section>
+            <section class="actions">
+                <button class="primaryButton">opret pinkode</button>
+                <section class="actions__choice">
+                    <span class="actions__choice__line"></span>
+                    <span class="actions__choice__word">eller</span>
+                    <span class="actions__choice__line"></span>
+                </section>
+                <button class="primaryButton  primaryButton__choice"></button>
+            </section>
+        </article>
+    </main>
+</body>
+</html>
