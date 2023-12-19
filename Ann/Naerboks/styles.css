@@ -18,6 +18,7 @@ h2 {
   padding: 0px;
   font-size: 40px;
   color: #edeae7;
+  position: relative;
 }
 
 .connect {
@@ -66,7 +67,7 @@ h2 {
   animation: blink 0, 2s infinite alternate, grow 2s infinite;
 }
 .info {
-  margin: 23px;
+  margin: 6px;
 }
 /*Connected (Connected.html) Slut-*/
 
