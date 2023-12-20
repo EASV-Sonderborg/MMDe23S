@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naerboks Registrering</title>
-    <link rel="stylesheet" href="../stylesheet.css">
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://use.typekit.net/vnr1nmp.css">
 </head>
 <body>
     <section class="progressBackground">
-        <img class="progressBackground__ground" src="../Images/background_ground.png" alt="dark blue background symbolizing the ground">
-        <img class="progressBackground__sky" src="../Images/background_sky.png" alt="a light blue sky with some clouds">
+        <img class="progressBackground__ground" src="../Images/Background_Ground.png" alt="dark blue background symbolizing the ground">
+        <img class="progressBackground__sky" src="../Images/Background_Sky.png" alt="a light blue sky with some clouds">
     </section>
     <header class="header">
-        <img class="language  language--icon" src="../Icons/globe-svgrepo-com.svg" alt="globe icon">
-        <select class="language  language--options">
-            <option value="danish">Dansk</option>
-            <option value="english">English</option>
-            <option value="german">Deutsch</option>
+        <img class="header__languageSelect  languageSelect__icon" src="../Icons/language.png" alt="globe icon">
+        <select class="header__languageSelect  languageSelect__options">
+            <option class="languageSelect__option" value="danish">Dansk</option>
+            <option class="languageSelect__option" value="english">English</option>
+            <option class="languageSelect__option" value="german">Deutsch</option>
         </select>
     </header>
     <main class="mainContent">
@@ -33,37 +33,37 @@
         </section>
         <section class="progressPageContent  registrationStep1">
             <section class="telephone">
-                <select name="" class="inputNumber  inputNumber--countryCode">
-                    <option value="danisch">Dansk</option>
-                    <option value="englisch">English</option>
-                    <option value="german">Deutsch</option>
+                <select name="" class=" progressPageContent__select  inputNumber  inputNumber--countryCode">
+                    <option value="danisch">+45</option>
+                    <option value="englisch">+44</option>
+                    <option value="german">+49</option>
                 </select>
-                <label for="inputNumber--telephone">Telefonnummer</label>
-                <input type="number" name="inputNumber--telephone" class="inputNumber inputNumber--telephone" required>
+                <label for="inputNumber--telephone" class="progressPageContent__label  label">Telefonnummer</label>
+                <input type="number" name="inputNumber--telephone" class="progressPageContent__input  progressPageContent__input--telephone" required>
             </section>  
             <p class="infoBox">Opret din konto med dit telefonnummer. Du modtager en aktiveringskode via sms.</p>
-            <input type="checkbox" class="conditions  conditions--checkbox" name="checkbox" required>
-            <label for="checkbox" class="conditions  conditions--label">Jeg accepterer Nærboks' <a class="externalLink" href="https://www.xn--nrboks-pua.dk/app-privacy-policy/">betingelser</a></label>
-            <section class="actions  actions--secondaryChoice">
+            <input type="checkbox" class="progressPageContent__checkbox  checkbox" name="checkbox" required>
+            <label for="checkbox" class="progressPageContent__label  label">Jeg accepterer Nærboks' <a class="externalLink" href="https://www.xn--nrboks-pua.dk/app-privacy-policy/">betingelser</a></label>
+            <section class="actions  actions__secondaryChoice">
                 <button class="primaryButton  primaryButton--filled">send aktiveringskode</button>
                 <a href="index.html" class="backstepButton">tilbage</a>
             </section>  
         </section>
-        <section class="progressPageContent  registrationStep2">
-            <label for="inputNumber--activation">Aktiveringskode</label>
-            <input type="number" name="inputNumber--activation" class="inputNumber inputNumber--activation" required>
+        <section class="progressPageContent  registrationStep2" hidden>
+            <label for="inputNumber--activation" class="progressPageContent__label  label">Aktiveringskode</label>
+            <input type="number" name="inputNumber--activation" class="progressPageContent__input  progressPageContent__input--activation" required>
             <p class="infoBox">Venligst indtast koden du har modtaget via sms.</p>
             <p class="notice  notice--alert">Din kode udløber om 38 sekunder</p>
-            <section class="actions  actions--secondaryChoice">
+            <section class="actions  actions__secondaryChoice">
                 <button class="primaryButton  primaryButton--filled">OK</button>
                 <button class="backstepButton">send koden igen</button>
             </section>
         </section>
-        <section class="progressPageContent  registrationStep3">
+        <section class="progressPageContent  registrationStep3" hidden>
             <p class="infoBox">Du har mulighed for at oprette en personlig pinkode. Du kan også fortsætte uden pinkode.</p>
-            <label for="inputNumber--pincode">Pinkode (4cifre)</label>
-            <input type="number" name="inputNumber--pincode" class="inputNumber inputNumber--pincode">
-            <section class="actions  actions--primaryChoice">
+            <label for="inputNumber--pincode" class="progressPageContent__label  label">Pinkode (4cifre)</label>
+            <input type="number" name="inputNumber--pincode" class="progressPageContent__input  progressPageContent__input--pincode">
+            <section class="actions  actions__primaryChoice">
                 <a href="home.html" class="primaryButton  primaryButton--filled">opret pinkode</a>
                 <span class="actions__line"></span>
                 <span class="actions__choice">eller</span>

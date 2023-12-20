@@ -1,0 +1,107 @@
+:root {
+    --primaryBackground: #E7F4F8 ;
+    --primaryText: #181A32 ;
+    --primaryButton: #E1A72A ;
+    --secondaryButton: #2A316B ;
+    --white: #fff ;
+    --secondaryContainer: #F1F4FF ;
+    --tertiaryContainer: #FAF5ED ;
+}
+
+html {
+    overflow: auto;
+    font-family: "nunito-sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--primaryText);
+}
+
+body {
+    width: 100svw;
+    height: 100svh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.progressBackground__ground {
+    width: 101vw;
+    height: 55svh;
+    position: fixed;
+    bottom: -1px;
+    left: -1px;
+    z-index: -1;
+}
+
+.progressBackground__sky {
+    position: fixed;
+    height: 60svh;
+    left: 0;
+    z-index: -2;
+}
+
+.header {
+    width: 100svw;
+    display: flex;
+    flex-direction: row;
+    margin: 5svh 5svw;
+}
+
+.languageSelect__icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+}
+
+.languageSelect__options {
+    border: none;
+    -webkit-appearance: none;
+    background: none;
+    font-size: 16px;
+}
+
+.mainContent {
+    background-color: var(--white);
+    position: fixed;
+    /* position fixed because i wanted the white mainbox to be at the same place 
+    (right under the first cloud), no matter which format the device has */
+    left: 5svw;
+    top: 21svh;
+    height: calc(100svh - 17svh - 60px);
+    width: 90svw;
+    border-radius: 16px;    
+}
+
+.progressBar {
+    width: 100%;
+    margin: 40px 0;
+}
+
+.progressBar__image {
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    top: -95px;
+}
+
+.progressBar__elements {
+    display: grid;
+    grid-template-columns: 21px auto 21px auto 21px;
+    column-gap: 10px; 
+    align-items: center;
+    margin: 0 8%;
+}
+
+.progressBar__dot {
+    width: 15px;
+    height: 15px;
+    border: solid 3px var(--primaryButton);
+    border-radius: 100%;
+}
+
+.progressBar__line {
+    border-bottom: solid 1px var(--primaryText);
+}
+
+.progressBar__dot--active {
+    background-color: var(--primaryButton);
+}
