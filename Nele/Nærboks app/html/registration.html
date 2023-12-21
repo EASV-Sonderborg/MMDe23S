@@ -6,6 +6,7 @@
     <title>Naerboks Registrering</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://use.typekit.net/vnr1nmp.css">
+
 </head>
 <body>
     <section class="progressBackground">
@@ -24,34 +25,38 @@
         <section class="progressBar">
             <img class="progressBar__image" src="../Images/Delivery man vector.png" alt="delivery man on a scooter, transporting 3 cardboard boxes">
             <section class="progressBar__elements">
-                <span class="progressBar__dot progressBar__dot--active"></span>
+                <span class="progressBar__dot progressBar__dot--active" description="1. Registrering"></span>
                 <span class="progressBar__line"></span>
-                <span class="progressBar__dot"></span>
+                <span class="progressBar__dot" description="2. Aktiveringskode"></span>
                 <span class="progressBar__line"></span>
-                <span class="progressBar__dot"></span>
+                <span class="progressBar__dot" description="3. Pinkode"></span>
             </section>
         </section>
-        <section class="progressPageContent  registrationStep1">
+        <section class="progressPageContent  registrationStep1  progressPageContent--active">
             <section class="telephone">
-                <select name="" class=" progressPageContent__select  inputNumber  inputNumber--countryCode">
+                <select name="" class="progressPageContent__input  progressPageContent__input--countryCode">
                     <option value="danisch">+45</option>
                     <option value="englisch">+44</option>
                     <option value="german">+49</option>
                 </select>
-                <label for="inputNumber--telephone" class="progressPageContent__label  label">Telefonnummer</label>
-                <input type="number" name="inputNumber--telephone" class="progressPageContent__input  progressPageContent__input--telephone" required>
+                <section class="telephone__number">
+                    <label for="input--telephone" class="progressPageContent__inputAndLabel  progressPageContent__label">Telefonnummer</label>
+                    <input type="number" name="input--telephone" class="progressPageContent__inputAndLabel  progressPageContent__input  progressPageContent__input--telephone" required>
+                </section>
             </section>  
             <p class="infoBox">Opret din konto med dit telefonnummer. Du modtager en aktiveringskode via sms.</p>
-            <input type="checkbox" class="progressPageContent__checkbox  checkbox" name="checkbox" required>
-            <label for="checkbox" class="progressPageContent__label  label">Jeg accepterer Nærboks' <a class="externalLink" href="https://www.xn--nrboks-pua.dk/app-privacy-policy/">betingelser</a></label>
+            <section class="progressPageContent__conditions">
+                <input type="checkbox" class="progressPageContent__checkbox" name="checkbox" required>
+                <label for="checkbox" class="progressPageContent__label--checkbox ">Jeg accepterer Nærboks' <a class="externalLink" href="https://www.xn--nrboks-pua.dk/app-privacy-policy/">betingelser</a></label>
+            </section>
             <section class="actions  actions__secondaryChoice">
                 <button class="primaryButton  primaryButton--filled">send aktiveringskode</button>
                 <a href="index.html" class="backstepButton">tilbage</a>
             </section>  
         </section>
         <section class="progressPageContent  registrationStep2" hidden>
-            <label for="inputNumber--activation" class="progressPageContent__label  label">Aktiveringskode</label>
-            <input type="number" name="inputNumber--activation" class="progressPageContent__input  progressPageContent__input--activation" required>
+            <label for="input--activation" class="progressPageContent__label  label">Aktiveringskode</label>
+            <input type="number" name="input--activation" class="progressPageContent__input  progressPageContent__input--activation" required>
             <p class="infoBox">Venligst indtast koden du har modtaget via sms.</p>
             <p class="notice  notice--alert">Din kode udløber om 38 sekunder</p>
             <section class="actions  actions__secondaryChoice">
@@ -61,8 +66,8 @@
         </section>
         <section class="progressPageContent  registrationStep3" hidden>
             <p class="infoBox">Du har mulighed for at oprette en personlig pinkode. Du kan også fortsætte uden pinkode.</p>
-            <label for="inputNumber--pincode" class="progressPageContent__label  label">Pinkode (4cifre)</label>
-            <input type="number" name="inputNumber--pincode" class="progressPageContent__input  progressPageContent__input--pincode">
+            <label for="input--pincode" class="progressPageContent__label  label">Pinkode (4cifre)</label>
+            <input type="number" name="input--pincode" class="progressPageContent__input  progressPageContent__input--pincode">
             <section class="actions  actions__primaryChoice">
                 <a href="home.html" class="primaryButton  primaryButton--filled">opret pinkode</a>
                 <span class="actions__line"></span>
