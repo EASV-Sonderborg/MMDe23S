@@ -23,24 +23,36 @@ body {
     margin: 0;
 }
 
-.progressBackground__ground {
+a {
+    text-decoration: none;
+}
+
+.background__sky {
+    position: fixed;
+    height: 60svh;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.background__city {
+    height: 38svh;
+    transform: translateX(35svw) translateY(20svh);
+ }
+
+.background__ground {
     width: 101vw;
     height: 55svh;
     position: fixed;
     bottom: -1px;
     left: -1px;
-    z-index: -1;
-}
-
-.progressBackground__sky {
-    position: fixed;
-    height: 60svh;
-    left: 0;
-    z-index: -2;
+    z-index: 1;
 }
 
 .header {
     width: 100svw;
+    position: absolute;
+    top: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -60,6 +72,14 @@ body {
     font-size: 16px;
 }
 
+.logo {
+    height: 5svh;
+    position: fixed;
+    left: 49%;
+    transform: translateX(-50%);
+    top: 12svh;
+}
+
 .mainContent {
     background-color: var(--white);
     position: fixed;
@@ -71,7 +91,8 @@ body {
     height: calc(100svh - 21svh - 5svw);
     width: 90svw;
     max-width: 500px;
-    border-radius: 16px;  
+    border-radius: 16px; 
+    z-index: 3; 
 }
 
 .progressBar {
@@ -87,6 +108,15 @@ body {
     left: calc(12% + 9.5px);
     transform: translateX(-50%);
     /* to get the image right above the dot -> __elements has 12% margin and the dot is 19px */
+}
+
+.progressBar__image--welcome {
+    height: 20svh;
+    position: absolute;
+    bottom: 38svh;
+    left: 4svw;
+    transform: rotate(-5deg);
+    z-index: 4;
 }
 
 .progressBar__elements {
@@ -122,20 +152,20 @@ body {
     font-size: 16px;
 }
 
-.progressPageContent {
+.pageContent {
     height: calc(100% - 70px - 64px);
     padding: 40px 7%;
     box-sizing: border-box;
     /* borders are part of height */
-    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     overflow-y: auto;  
     overflow-x: hidden;  
 }
 
-.progressPageContent--active {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.pageContent--inactive {
+    display: none;
 }
 
 .telephone {
@@ -145,7 +175,7 @@ body {
     margin: 50px 0px 0 00px;
 }
 
-.progressPageContent__input {
+.pageContent__input {
     padding-bottom: 3px;
     border: none;
     border-bottom: solid 1px var(--primaryText);
@@ -154,14 +184,14 @@ body {
     max-width: 250px;
 }
 
-.progressPageContent__inputAndLabel {
+.pageContent__inputAndLabel {
     display: block;
 }
  
 .telephone__number {
     position: relative;
 }
-.progressPageContent__label {
+.pageContent__label {
     font-size: 18px;
     position: absolute;
     height: fit-content;
@@ -175,22 +205,24 @@ body {
     font-size: 16px;
 }
 
-.progressPageContent__conditions {
+.pageContent__conditions {
     font-size: 16px;
     margin: 30px 0  40px 0;
 }
 
-.progressPageContent__checkbox {
+.pageContent__checkbox {
     padding: 0;
     margin: 0 5px 0 0;
     transform: translateY(1.5px);
 }
 
 .externalLink:link {
+    text-decoration: underline;
     color: var(--secondaryButton);
 }
 
 .externalLink:visited {
+    text-decoration: underline;
     color: var(--primaryText);
 }
 
@@ -202,7 +234,8 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;   
+    align-items: center;
+    text-align: center;   
 }
 
 .primaryButton {
@@ -233,5 +266,14 @@ body {
     margin: 30px;
 }
 
+@media (min-width: 435px) {
+    .progressBar__image--welcome {
+        left: 16svw;
+    }
+}
 
-
+@media (min-width: 890px) {
+    .background__city {
+        transform: translateX(28svw) translateY(20svh);
+    }
+}
