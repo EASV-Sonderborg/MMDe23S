@@ -8,11 +8,67 @@
     <link rel="stylesheet" href="https://use.typekit.net/vnr1nmp.css">
 </head>
 <body>
-    <img class="background__sky background__sky--normalPage" src="" alt="">
+    <img class="background__sky background__sky--normalPage" src="../Images/Background_Sky_home.png" alt="a light blue sky with some clouds">
     <header class="header">
-        <p>klar til <br> afhentning & aflevering</p>
+        <p class="header__headline">klar til <br> afhentning & aflevering</p>
+        <nav class="header__menu">
+            <span class="menu__bar  menu__bar--1"></span>
+            <span class="menu__bar  menu__bar--2"></span>
+            <span class="menu__bar  menu__bar--3"></span>
+        </nav>
     </header>
     <main class="mainContent  mainContent--home">
-        <section class="pageContent  pageComtent--home">
+        <select class="content__description  content__description--select">
+            <option>mest aktuel</option>
+            <option>adresse</option>
+        </select>
+        <section class="homeParcel homeParcel__return--reserved">
+            <h1 class="homeParcel__headline">Zalando bukser</h1>
+            <a href=""><img src="../Icons/rediger.png" alt="an icon of a pencil"></a>
+            <section class="homeParcel__infoBox   infoBox  infoBox__parcel--return">
+                <p class="homeParcel__address  homeParcel__address--return">Kegnæsvej 52 <br>6470 Sydals</p>
+                <img class="infoBox__icon" src="../Icons/location.png" alt="little blue location icon">
+                <p class="notice  notice--alert">50 m fra dig</p>
+                <a href="" class="secondaryButton  secondaryButton--small">find</a>
+            </section>
+            <p class="notice  notice--info">kasse reserveret</p>
+            <section class="notice--alertTimeline"></section>
+            <p class="notice  notice--alert">11 min tilbage</p>
+        </section>
+        <section class="homeParcel  homeParcel__pickUp">
+            <p class="content__description">hent</p>
+            <h1 class="homeParcel__headline">Ringbakken 1 <br>6400 Sønderborg</h1>
+            <section class="homeParcel__infoBox  infoBox  infoBox__parcel--pickUp">
+                <img class="infoBox__icon" src="../Icons/location.png" alt="little blue location icon">
+                <p class="notice">10 km fra dig</p>
+                <a href="" class="secondaryButton  secondaryButton--small">find</a>
+            </section>
+            <section class="notice--warningTimeline"></section>
+            <p class="notice  notice--warning">7 dage tilbage</p>
+        </section>
+        <section class="homeParcel  homeParcel__pickUp">
+            <p class="content__description">hent</p>
+            <h1 class="homeParcel__headline">Kegnæsvej 52 <br>6470 Sydals</h1>
+            <section class="homeParcel__infoBox  infoBox infoBox__parcel--pickUp">
+                <img class="infoBox__icon" src="../Icons/location.png" alt="little blue location icon">
+                <p class="notice  notice--alert">50m fra dig</p>
+                <a href="" class="secondaryButton  secondaryButton--small">find</a>
+            </section>
+            <section class="notice--infoTimeline"></section>
+            <p class="notice  notice--info">12 dage tilbage</p>
+        </section>
+        <section class="homeParcel homeParcel__return--reserved">
+            <h1 class="homeParcel__headline">Zalando bukser</h1>
+            <a href="" class="homeParcel__edit"><img src="../Icons/rediger.png" alt="an icon of a pencil"></a>
+            <section class="homeParcel__infoBox  infoBox  infoBox__parcel--return">
+                <p class="infoBox--homeReturn">Kegnæsvej 52 <br>6470 Sydals</p>
+                <img src="../Icons/location.png" alt="little blue location icon">
+                <p class="notice  notice--alert">50 m fra dig</p>
+                <a href="" class="secondaryButton  secondaryButton--small">find</a>
+            </section>
+            <p class="notice  notice--info">kasse reserveret</p>
+            <section class="notice--alertTimeline"></section>
+            <p class="notice  notice--alert">11 min tilbage</p>
         </section>
    </main>
+</body>

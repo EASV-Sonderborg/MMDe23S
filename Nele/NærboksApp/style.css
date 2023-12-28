@@ -6,12 +6,13 @@
     --white: #fff ;
     --secondaryContainer: #F1F4FF ;
     --tertiaryContainer: #FAF5ED ;
+    --notice--alert: #D93044; 
 }
 
 html {
     overflow: auto;
-    font-family: "proxima-nova", sans-serif;
-    font-weight: 500;
+    font-family: "nunito-sans", sans-serif;
+    font-weight: 400;
     font-style: normal;
     color: var(--primaryText);
 }
@@ -21,10 +22,26 @@ body {
     height: 100svh;
     overflow: hidden;
     margin: 0;
+    position: relative;
 }
 
 a {
     text-decoration: none;
+}
+
+button {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 24px;
 }
 
 .background__sky {
@@ -32,12 +49,23 @@ a {
     height: 60svh;
     left: 0;
     top: 0;
+    z-index: -3;
+}
+
+.background__sky--normalPage {
+    position: fixed;
+    height: 100svh;
+    left: 0;
+    top: 0;
     z-index: -1;
 }
 
 .background__city {
-    height: 38svh;
-    transform: translateX(35svw) translateY(20svh);
+    height: 35svh;
+    position: fixed;
+    left: 35svw;
+    top: 18svh;
+    z-index: -2;
  }
 
 .background__ground {
@@ -46,7 +74,7 @@ a {
     position: fixed;
     bottom: -1px;
     left: -1px;
-    z-index: 1;
+    z-index: -1;
 }
 
 .header {
@@ -56,7 +84,16 @@ a {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 5svh 5svw;
+    justify-content: space-between;
+    padding: 5svh 5svw;
+    box-sizing: border-box;
+    overflow: hidden;
+    /* header__menu has a display:flex, therefore isn't considered like a normal child
+     -> overflow: hidden is forcing the parent (header) to contain the child normally.  */
+}
+
+.header--language {
+    justify-content: flex-start;
 }
 
 .languageSelect__icon {
@@ -72,6 +109,33 @@ a {
     font-size: 16px;
 }
 
+.header__headline {
+    font-size: 20px;
+}
+
+.header__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 40px;
+}
+
+.menu__bar {
+    display: block;
+    height: 2px;
+    width: 100%;
+    margin-bottom: 7px;
+    background-color: var(--primaryText);
+}
+
+.menu__bar--2 {
+    width: 30px;
+}
+
+.menu__bar--3 {
+    width: 20px;
+} 
+
 .logo {
     height: 5svh;
     position: fixed;
@@ -86,13 +150,33 @@ a {
     /* position fixed because i wanted the white mainbox to be at the same place 
     (right under the first cloud), no matter which format the device has */
     left: 50svw;
-    transform: translateX(-50%);
-    top: 21svh;
-    height: calc(100svh - 21svh - 5svw);
+    transform: translateX(-50%) translateY(0);
+    top: 18svh;
+    height: calc(100svh - 18svh - 5svw);
     width: 90svw;
     max-width: 500px;
     border-radius: 16px; 
-    z-index: 3; 
+}
+
+.mainContent--welcome {
+    background-color: transparent;
+    top: auto;
+    bottom: 24svh;
+    width: 80svw;
+    height: fit-content;
+    transform: translateX(-50%) translateY(50%);
+}
+
+.mainContent--progress {
+    position: fixed;
+    left: 50svw;
+    transform: translateX(-50%) translateY(0);
+    top: 21svh;
+    height: calc(100svh - 21svh - 5svw);
+}
+
+.mainContent--home {
+    background-color: transparent;
 }
 
 .progressBar {
@@ -108,12 +192,21 @@ a {
     left: calc(12% + 9.5px);
     transform: translateX(-50%);
     /* to get the image right above the dot -> __elements has 12% margin and the dot is 19px */
+    transition: ease-in-out 0.5s;
+}
+
+.progressBar__image--position2 {
+    left: 50%;
+}
+
+.progressBar__image--position3 {
+    left: calc(88% - 9.5px);
 }
 
 .progressBar__image--welcome {
     height: 20svh;
     position: absolute;
-    bottom: 38svh;
+    bottom: 42svh;
     left: 4svw;
     transform: rotate(-5deg);
     z-index: 4;
@@ -152,30 +245,42 @@ a {
     font-size: 16px;
 }
 
-.pageContent {
+.pageContent--progress {
     height: calc(100% - 70px - 64px);
     padding: 40px 7%;
     box-sizing: border-box;
     /* borders are part of height */
+    display: block;
+    transform: translateX(0);
+    overflow-y: auto;  
+    overflow-x: hidden;  
+    transition: ease-out 1s;
+}
+
+.registrationStep1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-y: auto;  
-    overflow-x: hidden;  
 }
 
 .pageContent--inactive {
     display: none;
 }
 
-.telephone {
+.pageContent__inputAndLabel {
+    margin: 50px 5px 0 5px;
+    position: relative
+}
+
+.pageContent__inputAndLabel--telephone {
     display: grid;
     grid-template-columns: 1fr 4fr;
     gap: 15px;
-    margin: 50px 0px 0 00px;
+    margin: 50px 0 0 0;
 }
 
 .pageContent__input {
+    background-color: transparent;
     padding-bottom: 3px;
     border: none;
     border-bottom: solid 1px var(--primaryText);
@@ -183,25 +288,29 @@ a {
     width: 100%;
     max-width: 250px;
 }
-
-.pageContent__inputAndLabel {
-    display: block;
-}
  
 .telephone__number {
     position: relative;
 }
+
 .pageContent__label {
     font-size: 18px;
     position: absolute;
+    left: 2px;
+    bottom: 3px;
     height: fit-content;
-    transform: translateY(-3px) translateX(2px);
+    pointer-events: none;
+    transition: 0.4s;
+}
+
+.pageContent__input:focus ~ .pageContent__label {
+    bottom: 110%;
 }
 
 .infoBox {
     background-color: var(--secondaryContainer);
     padding: 15px;
-    margin: 30px 0;
+    margin: 25px 0;
     font-size: 16px;
 }
 
@@ -238,22 +347,45 @@ a {
     text-align: center;   
 }
 
+.actions__primaryChoice {
+    margin-top: 50px;
+}
+
+.actions__choice {
+    width: 80%;
+    font-size: 20px;
+    margin: 12px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    align-items: center;
+    gap: 10px;
+}
+
+.actions__line {
+    border-bottom: solid 1px var(--primaryText);
+}
+
 .primaryButton {
-    min-height: 50px;
-    max-height: 100px;
-    /* longer text will be shown in 2 lines with enough space */
     width: 100%;
     font-size: 20px;
     color:var(--primaryText);
-    padding: 10px;
+    padding: 13px 17px;
     border: solid 1px var(--primaryButton);
     border-radius: 16px;
+    box-sizing: border-box;
 }
 
 .primaryButton--filled {
     background-color: var(--primaryButton);
     box-shadow: inset 0px -5px 14px 0px rgba(203,140,4,1);   
     /* i generated the shadow with cssmatic.com/boxshadow */
+}
+
+.primaryButton--filled--white {
+    background-color: var(--white);
+    box-shadow: inset 0px -5px 14px 0px var(--secondaryContainer);
+    border: none;
+    margin-top: 40px;
 }
 
 .backstepButton {
@@ -266,6 +398,48 @@ a {
     margin: 30px;
 }
 
+.notice {
+    font-size: 16px;
+    margin: 0 3px;
+}
+
+.notice--alert {
+    color: var(--notice--alert);
+    margin-bottom: 60px;
+}
+
+.homeParcel {
+    width: 100%;
+    height: fit-content;
+    background-color: var(--white);
+    padding: 40px 7%;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    box-shadow:  0px -1px 25px 4px rgba(233,234,240,1);
+}
+
+.homeParcel__headline {
+    margin: 0 0 10px 0;
+}
+
+.content__description {
+    background-color: var(--tertiaryContainer);
+    font-size: 18px;
+    font-weight: 200;
+    padding: 7px 16px;
+    border: none;
+    border-radius: 9px;
+    box-sizing: border-box;
+}
+
+.content__description--select {
+    position: absolute;
+    left: 95%;
+    transform: translateX(-100%) translateY(-50%);
+
+}
+
 @media (min-width: 435px) {
     .progressBar__image--welcome {
         left: 16svw;
@@ -274,6 +448,7 @@ a {
 
 @media (min-width: 890px) {
     .background__city {
-        transform: translateX(28svw) translateY(20svh);
+        left: 50svw;
+        transform: translateX(-50%);
     }
 }
