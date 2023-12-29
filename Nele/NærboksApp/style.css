@@ -7,6 +7,7 @@
     --secondaryContainer: #F1F4FF ;
     --tertiaryContainer: #FAF5ED ;
     --notice--alert: #D93044; 
+    --notice--info: #169E00; 
 }
 
 html {
@@ -38,6 +39,7 @@ button {
 h1 {
     font-size: 28px;
     font-weight: 500;
+    margin: 0;
 }
 
 h2 {
@@ -52,12 +54,28 @@ h2 {
     z-index: -3;
 }
 
-.background__sky--normalPage {
-    position: fixed;
+.background__normalPage {
+    background-color: #E7F4F8;
     height: 100svh;
+    width: 100svw;
+    position: fixed;
     left: 0;
     top: 0;
     z-index: -1;
+    transition: ease-in-out 1s;
+}
+
+.background__clouds {
+    position: fixed;
+    height: 15svh;
+    left: 0;
+    top: 20px;
+    transition: ease 0.3s;
+}
+
+.background__sky--menu {
+    filter: hue-rotate(-322deg) brightness(0.2) saturate(37);
+    /* class gets toggled on (js) */
 }
 
 .background__city {
@@ -79,18 +97,24 @@ h2 {
 
 .header {
     width: 100svw;
+    max-width: 500px;
     position: absolute;
     top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /* position should remain over the mainContent */
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 5svh 5svw;
+    padding: 5svh 30px;
+    /* fixed sidepadding, because the padding becomes too big with fx 5svw when the screen is wider */
     box-sizing: border-box;
     overflow: hidden;
     /* header__menu has a display:flex, therefore isn't considered like a normal child
      -> overflow: hidden is forcing the parent (header) to contain the child normally.  */
-}
+    transition: ease-in-out 0.5s;
+    }
 
 .header--language {
     justify-content: flex-start;
@@ -130,11 +154,58 @@ h2 {
 
 .menu__bar--2 {
     width: 30px;
+    transition: ease-in-out 0.5s;
 }
 
 .menu__bar--3 {
     width: 20px;
+    transition: ease-in-out 0.5s;
 } 
+
+.menu--active .header {
+    justify-content: flex-end;
+    top: 80px;
+}
+
+.menu--active .menu__bar--1, .menu--active .header__headline, .menu--active .mainContent--home, .menu--active .contentDescription--select {
+    display: none;
+}
+
+.menu--active .menu__bar--2 {
+    background-color: var(--white);
+    transform: rotate(45deg) translateY(7px) translateX(6px);
+}
+
+.menu--active .menu__bar--3 {
+    background-color: var(--white);
+    width: 30px;
+    transform: rotate(-45deg);   
+}
+
+.menu--active .menu {
+    display: block;
+    animation: menuSlide 1s;
+}
+
+@keyframes menuSlide {
+    from {
+        left: 200%;
+    }
+    to {
+        left: 50svw;
+    }
+}
+
+.menu--active .background__normalPage {
+    background-color: var(--primaryText);
+    background: radial-gradient(circle, rgba(76,88,207,1) 19%, rgba(42,49,107,1) 49%, rgba(24,26,50,1) 100%);
+    width: 400svw;
+    /* https://cssgradient.io/ */
+}  
+
+.menu--active .background__clouds {
+    opacity: 20%;
+}
 
 .logo {
     height: 5svh;
@@ -177,6 +248,10 @@ h2 {
 
 .mainContent--home {
     background-color: transparent;
+    overflow-y: auto;
+    overflow-x: hidden;
+    top: 20svh;
+    height: calc(100svh - 20svh - 5svw);
 }
 
 .progressBar {
@@ -388,6 +463,22 @@ h2 {
     margin-top: 40px;
 }
 
+.secondaryButton {
+    color: var(--white);
+    background-color: var(--secondaryButton);
+    box-shadow: inset 0px -5px 14px 0px var(--primaryText);
+    height: fit-content;
+    width: fit-content;
+    padding: 8px 17px ;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.secondaryButton--small {
+    padding: 3px 17px 5px 17px;
+}
+
 .backstepButton {
     height: fit-content;
     font-size: 20px;
@@ -398,51 +489,216 @@ h2 {
     margin: 30px;
 }
 
+.backstepButton--alone {
+    margin: 20px 0 0 0;
+}
+
 .notice {
+    font-size: 18px;
+    margin: 0 3px 10px 3px;
+    color: #959292;
+}
+
+.notice--small {
     font-size: 16px;
-    margin: 0 3px;
+    margin-bottom: 60px;
 }
 
 .notice--alert {
     color: var(--notice--alert);
-    margin-bottom: 60px;
 }
 
-.homeParcel {
+.notice--warning {
+    color: var(--primaryButton);
+}
+
+.notice--info {
+    color: var(--notice--info);
+}
+
+.notice__timeline {
+    display: flex;
+    width: 100%;
+    height: 5px;
+    margin-bottom: 8px;
+}
+
+.notice__timeline--alertLight {
+    width: 82%;
+    /* 11 min from 60 minutes = ca. 18% --> time gone = 82% */
+    background-color: #FBE7E9;
+}
+
+.notice__timeline--alert {
+    width: 18%;
+    background-color: var(--notice--alert);
+}
+
+.notice__timeline--warningLight {
+    width: 50%;
+    background-color: #FCE2BA;
+}
+
+.notice__timeline--warning {
+    width: 50%;
+    background-color: var(--primaryButton);
+}
+
+.notice__timeline--infoLight {
+    width: 14%;
+    background-color: #C5E7BF;
+}
+
+.notice__timeline--info {
+    width: 86%;
+    background-color: var(--notice--info);
+}
+
+.parcel {
     width: 100%;
     height: fit-content;
     background-color: var(--white);
-    padding: 40px 7%;
+    padding: 40px 7% 30px 7%; 
+    /* 30px at the bottom because of notice-margin */
     border-radius: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     box-sizing: border-box;
-    box-shadow:  0px -1px 25px 4px rgba(233,234,240,1);
+    position: relative;
 }
 
-.homeParcel__headline {
-    margin: 0 0 10px 0;
+.parcel__headline {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 0 15px 0;
 }
 
-.content__description {
+.parcel__locationBox {
+    background-color: var(--secondaryContainer);
+    padding: 15px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 0.8fr;
+    align-items: center;
+}
+
+.parcel__locationBox--return {
+    grid-template-rows: 2fr 1fr;
+  
+}
+
+.parcel__address--return {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin: 0;
+}
+
+.parcel__distance {
+    margin: 0;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    font-size: 20px;
+}
+
+.parcel__button {
+    grid-column-start: 3;
+    grid-row-start: 2;
+}
+
+.contentDescription {
     background-color: var(--tertiaryContainer);
     font-size: 18px;
-    font-weight: 200;
+    font-weight: 300;
     padding: 7px 16px;
     border: none;
     border-radius: 9px;
     box-sizing: border-box;
 }
 
-.content__description--select {
-    position: absolute;
-    left: 95%;
+.contentDescription--select {
+    position: fixed;
+    left: 90%;
+    top: 20svh;
     transform: translateX(-100%) translateY(-50%);
+    z-index: 1;
+}
 
+.contentDescription--parcel {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: fit-content;
+    padding: 5px 25px;
+    margin: 0;
+}
+
+.icon {
+    height: 25px;
+    width: 25px;
+}
+
+.icon__location {
+    width: 17px;
+    grid-row-start: 2;
+    margin: 0 5px;
+}
+
+.icon__return {
+    height: 35px;
+}
+
+.icon__history {
+    height: 20px;
+}
+
+.icon__logOut {
+    width: 20px;
+    margin-left: 20px;
+}
+
+.menu {
+    display: none;
+    background-color: transparent;
+    top: 20svh;
+    font-size: 24px;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+
+.menu__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: var(--white);
+}
+
+.menu__icon {
+    margin: 0 20px 0 15px;
+}
+
+.menu__line {
+    background-color: var(--white);
+    width: 200px;
+    height: 1px;
+    opacity: 50%;
+    margin: 15px;
 }
 
 @media (min-width: 435px) {
     .progressBar__image--welcome {
         left: 16svw;
+    }
+}
+
+@media (min-width:580px) {
+    .contentDescription--select {
+        left: 50svw;
+        transform: translateX(50%) translateY(-50%);
+        /* without the media the description moves to the left side of the screen
+        mainContent has max-width: 500px, ca. 40px margin --> from here stick the description to the middle of the screen
+        and adjust the position via transform */
     }
 }
 
