@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="dk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naerboks Retur</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/vnr1nmp.css">
+    <script src="../main.js"></script>
+</head>
+<body>
+    <section class="background">
+        <img class="background__ground" src="../Images/Background_Ground.png" alt="dark blue background symbolizing the ground">
+        <img class="background__sky" src="../Images/Background_Sky.png" alt="a light blue sky with some clouds">
+    </section>
+    <main class="mainContent mainContent--progress">
+        <img src="../Images/Bring_logo.png" alt="bring logo" class="logo__bring">
+        <section class="progressBar">
+            <img class="progressBar__image  progressBar__image--return" src="../Images/girl with parcel vector.png" alt="a girl carrying a big cardboard box">
+            <section class="progressBar__elements">
+                <span class="progressBar__dot progressBar__dot--active" description="1. Registrering"></span>
+                <span class="progressBar__line"></span>
+                <span class="progressBar__dot" description="2. Aktiveringskode"></span>
+                <span class="progressBar__line"></span>
+                <span class="progressBar__dot" description="3. Pinkode"></span>
+            </section>
+        </section>
+        <section class="pageContent  pageContent--return  returnStep1">
+            <section class="returnStepContent  returnStep1__primaryChoice">
+                <section class="actions  actions__primaryChoice">
+                    <a href="" class="primaryButton  primaryButton--filled  h3">scan QR-Kode</a>
+                    <section class="actions__choice  h3">
+                        <span class="actions__line"></span>
+                        <span class="actions__word">eller</span>
+                        <span class="actions__line"></span>
+                    </section>
+                    <button onclick="changeReturnStepContent(0)" href="" class="primaryButton  h3">indtast pakkenummer</button>
+                </section>
+                <p class="infoBox  infoBox--return  h5">Du kan enten scanne din pakkes QR-Kode eller indtaste pakkenummeret.</p>
+                <section class="actions  actions__single">
+                    <a href="home.html" class="backstepButton  backstepButton--alone  h3">annuller</a>
+                </section>
+            </section>
+            <section class="returnStepContent  returnStep1__parcelID  returnStepContent--inactive">
+                <section class="pageContent__inputAndLabel  pageContent__inputAndLabel--parcelID">
+                    <input type="number" name="input--parcelID" class="pageContent__input  pageContent__input--parcelID  h4">
+                    <label for="input--parcelID" class="pageContent__label  h4">Pakkenummer</label>
+                </section>
+                <a class="primaryButton  primaryButton--small  primaryButton--light" href="">QR-Kode</a>
+                <section class="actions  actions__secondaryChoice  actions__secondaryChoice--return">
+                    <button onclick="changeReturnStepContent(1)" class="primaryButton  primaryButton--filled  h3">OK</button>
+                    <a class="backstepButton  h3" href="home.html">anuller</a>
+                </section>
+            </section>
+            <section class="returnStepContent  returnStep1__naming  returnStepContent--inactive">
+                <h1 class="returnStep1__headline">SB503811937595</h1>
+                <input type="text" class="pageContent__input  pageContent__input--parcelName  h4" name="input--parcelName" placeholder="Vil du give din pakke et navn?">
+                <p class="infoBox  infoBox--parcelName  h5">Du har mulighed for at give din pakke et navn. Du kan til enhver tid ændre navnet.</p>
+                <section class="actions  actions__secondaryChoice">
+                    <button onclick="changePageContent(0)" class="primaryButton  primaryButton--filled  h3">registrer</button>
+                    <a class="backstepButton  h3" href="home.html">anuller</a>
+                </section>
+            </section>
+        </section>
+        <section class="pageContent  pageContent--return  returnStep2  pageContent--inactive">
+            <p class="returnStep2__headline  h3">Hvor vil du aflevere din pakke?</p>
+            <section class="return__input  return__input--expandable  return__input--savedAdresses">
+                <p class="contentDescription  contentDescription--return  h4">Gemte nærbokse</p>
+                <section onclick="returnInputExpand(0)" class="return__input--currentAdress">
+                    <span class="input__expandDown  input__expandDown--1"></span>
+                    <span class="input__expandDown  input__expandDown--2"></span>
+                </section>
+                <p onclick="changeCurrentAdress(1)" class="input__item  input__adress h3">Havbogade 6 <br>6400 Sønderborg</p>
+                <section class="input__line"></section>
+                <p onclick="changeCurrentAdress(2)" class="input__item  input__adress  input__item--inactive  h3">Ringbakken 1 <br>6400 Sønderborg</p>
+                <section class="input__line"></section>
+                <p onclick="changeCurrentAdress(3)" class="input__item  input__adress  input__item--inactive  h3">Kegnæsvej 52 <br>6470 Sydals</p>
+                <section class="input__line input__line--inactive"></section>
+                <p onclick="changeCurrentAdress(4)" class="input__item  input__adress  input__item--inactive  h3">Kærvej 16b <br>6400 Sønderborg</p>
+            </section>
+            <section onclick="showMap()" class="return__input  return__input--addAdress">
+                <p class="contentDescription  contentDescription--return  h4">Tilføj en ny nærboks</p>
+                <input type="text" placeholder="søg postnummer" class="return__input--searchAdress  h4">
+            </section>
+            <section class="returnStep2__addAdress">
+                <section onclick="showMapAdress()" class="returnStep2__fullMap">
+                    <img class="returnStep2__map" src="../Images/map.png" alt="a streetmap that shows the parcelstations in the vacinity">
+                    <img class="icon  returnStep2__location  returnStep2__location--1" src="../Icons/location__map.png" alt="little blue location icon">
+                    <img class="icon  returnStep2__location  returnStep2__location--2" src="../Icons/location__map.png" alt="little blue location icon">
+                    <img class="icon  returnStep2__location  returnStep2__location--3" src="../Icons/location__map.png" alt="little blue location icon">
+                </section>
+                <section class="returnStep2__mapAdress  h3">
+                    <p class="">Kærvej 16b <br> 6400 Sønderborg</p>
+                    <button onclick="addAdress()" class="primaryButton  primaryButton--filled  primaryButton--small  h4">tilføj</button>
+                </section>
+            </section>
+            <section class="actions  actions__single  actions__single--primary">
+                <button onclick="changePageContent(1)" class="primaryButton  primaryButton--filled  h3">OK</button>
+            </section>
+        </section>
+        <section class="pageContent  pageContent--return  returnStep3  pageContent--inactive">
+            <section class="returnStepContent  returnStep3__primaryChoice">
+                <p class="infoBox  h5">Du har mulighed for at reservere en kasse for din pakke</p>
+                <section class="notice  notice--alert  notice--returnStep3  h5">
+                    <p class="notice__exclamation">!</p>
+                    <p class="notice__remember">Husk: <br>Reservationen er kun gyldig i 1 time.</p>
+                </section>
+                <section class="actions  actions__primaryChoice">
+                    <a href="" class="primaryButton  primaryButton--filled  h3">mål din pakke</a>
+                    <section class="actions__choice  h3">
+                        <span class="actions__line"></span>
+                        <span class="actions__word">eller</span>
+                        <span class="actions__line"></span>
+                    </section>
+                    <button onclick="changeReturnStepContent(3)" class="primaryButton  h3">vælg box size</button>
+                </section>
+                <section class="actions  actions__single actions__single--backstep">
+                    <a href="home.html" class="backstepButton  backstepButton--alone  h3">reserver senere</a>
+                </section>
+            </section>
+            <section class="returnStepContent  returnStep3__chooseBoxSize  returnStepContent--inactive">
+                <section class="return__input  return__input--expandable  return__input--boxSize">
+                    <section onclick="returnInputExpand(1)" class="return__input--currentBoxSize">
+                        <span class="input__expandDown  input__expandDown--1"></span>
+                        <span class="input__expandDown  input__expandDown--2"></span>
+                        <p class="input__item  input__boxSize--headline h3">Box Size</p>
+                    </section>
+                    <section onclick="boxSizeAvailability('S')" class="input__item input__boxSize">
+                        <p class="input__item  input__boxSize--size h3">S</p>
+                        <p class="input__item  input__boxSize--measurements  h5"><b>H 10cm,</b> B 50cm, D 50cm</p>
+                    </section>
+                    <section class="input__line"></section>
+                    <section onclick="boxSizeAvailability('M')" class="input__item input__boxSize  input__item--inactive">
+                        <p  class="input__item  input__boxSize--size h3">M</p>
+                        <p class="input__item  input__boxSize--measurements  h5"><b>H 30cm,</b> B 50cm, D 50cm</p>
+                    </section>
+                    <section class="input__line"></section>
+                    <section onclick="boxSizeAvailability('L')" class="input__item input__boxSize  input__item--inactive">
+                        <p class="input__item  input__boxSize--size h3">L</p>
+                        <p class="input__item  input__boxSize--measurements  h5"><b>H 60cm,</b> B 50cm, D 50cm</p>
+                    </section>
+                </section>
+                <a class="primaryButton  primaryButton--small  primaryButton--light  h4" href="">mål din pakke</a>
+                <section class="boxSize__availability  boxSize__available">
+                    <section class="boxSize__info">
+                        <img class="icon  icon__check  boxSize__icon" src="../Icons/check.png" alt="a tick with a circel around it">
+                        <p class="boxSize__text  h3">Der findes en fri kasse</p>
+                    </section>
+                    <section class="actions  actions__secondaryChoice  actions__secondaryChoice--return">
+                        <button class="primaryButton  primaryButton--filled  h3">reserver i 1 time</button>
+                        <button class="backstepButton  h3">reserver senere</button>
+                    </section>
+                </section>
+                <section class="boxSize__availability  boxSize__notAvailable  boxSize__availability--inactive">
+                    <section class="notice  notice--alert  notice--returnStep3  h3">
+                        <p class="notice__exclamation">!</p>
+                        <p class="notice__alert">Der findes desværre ingen fri kasse i din vælgte boks</p>
+                    </section>
+                    <p class="infoBox  h5">Du kan enten modtage en notifikation når der findes en fri kasse eller valg en anden nærboks.</p>
+                    <section class="actions  actions__primaryChoice">
+                        <a href="home.html" class="primaryButton  primaryButton--filled  h3">modtag notification</a>
+                        <section class="actions__choice  h3">
+                            <span class="actions__line"></span>
+                            <span class="actions__word">eller</span>
+                            <span class="actions__line"></span>
+                        </section>
+                        <button href="home.html" class="primaryButton  h3">vælg en anden nærboks</button>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </main>    
+</body>

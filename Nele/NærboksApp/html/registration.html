@@ -32,54 +32,53 @@
                 <span class="progressBar__dot" description="3. Pinkode"></span>
             </section>
         </section>
-        <section class="pageContent  pageContent--progress  registrationStep1">
+        <section class="pageContent  registrationStep1">
             <section class="pageContent__inputAndLabel--telephone">
-                <select name="" class="pageContent__input  pageContent__input--countryCode">
+                <select name="" class="pageContent__input  pageContent__input--countryCode  h4">
                     <option value="danisch">+45</option>
                     <option value="englisch">+44</option>
                     <option value="german">+49</option>
                 </select>
                 <section class="telephone__number">
-                    <input type="number" name="input--telephone" class="pageContent__input  pageContent__input--telephone" required>
-                    <label for="input--telephone" class="pageContent__label  pageContent__label--telephone">Telefonnummer</label>
+                    <input type="number" name="input--telephone" class="pageContent__input  pageContent__input--telephone  h4" required>
+                    <label for="input--telephone" class="pageContent__label  pageContent__label--telephone  h4">Telefonnummer</label>
                 </section>
             </section>  
-            <p class="infoBox">Opret din konto med dit telefonnummer. Du modtager en aktiveringskode via sms.</p>
-            <section class="pageContent__conditions">
+            <p class="infoBox  h5">Opret din konto med dit telefonnummer. Du modtager en aktiveringskode via sms.</p>
+            <section class="pageContent__conditions  h5">
                 <input type="checkbox" class="pageContent__checkbox" name="checkbox" required>
                 <label for="checkbox" class="pageContent__label--checkbox ">Jeg accepterer Nærboks' <a class="externalLink" href="https://www.xn--nrboks-pua.dk/app-privacy-policy/">betingelser</a></label>
             </section>
             <section class="actions  actions__secondaryChoice">
-                <button onclick="changePageContent(0)" class="primaryButton  primaryButton--filled">send aktiveringskode</button>
-                <a href="index.html" class="backstepButton">tilbage</a>
+                <button onclick="changePageContent(0)" class="primaryButton  primaryButton--filled  h3">send aktiveringskode</button>
+                <a href="index.html" class="backstepButton  h3">tilbage</a>
             </section>  
         </section>
-        <section class="pageContent  pageContent--progress  registrationStep2  pageContent--inactive">
+        <section class="pageContent  registrationStep2  pageContent--inactive">
             <section class="pageContent__inputAndLabel">
-                <input type="number" name="input--activation" class="pageContent__input  pageContent__input--activation" required>
-                <label for="input--activation" class="pageContent__label  label">Aktiveringskode</label>
+                <input type="number" name="input--activation" class="pageContent__input  pageContent__input--activation  h4" required>
+                <label for="input--activation" class="pageContent__label  h4">Aktiveringskode</label>
             </section>
-            <p class="infoBox">Venligst indtast koden du har modtaget via sms.</p>
-            <p class="notice  notice--alert  notice--small">Din kode udløber om 38 sekunder</p>
+            <p class="infoBox  h5">Venligst indtast koden du har modtaget via sms.</p>
+            <p class="notice  notice--alert  notice--small  h5">Din kode udløber om 38 sekunder</p>
             <section class="actions  actions__secondaryChoice">
-                <button onclick="changePageContent(1)" class="primaryButton  primaryButton--filled">OK</button>
-                <button class="backstepButton">send koden igen</button>
+                <button onclick="changePageContent(1)" class="primaryButton  primaryButton--filled  h3">OK</button>
+                <button class="backstepButton  h3">send koden igen</button>
             </section>
         </section>
-        <section class="pageContent  pageContent--progress registrationStep3  pageContent--inactive">
+        <section class="pageContent registrationStep3  pageContent--inactive">
             <section class="pageContent__inputAndLabel  pageContent__inputAndLabel--pincode">
-                <input type="number" name="input--pincode" class="pageContent__input  pageContent__input--pincode">
-                <label for="input--pincode" class="pageContent__label  label">Pinkode (4 cifre)</label>
+                <input type="number" name="input--pincode" placeholder="Pinkode (4 cifre)" class="pageContent__input  pageContent__input--pincode  h4">
             </section>
-            <p class="infoBox">Du har mulighed for at oprette en personlig pinkode. Du kan også fortsætte uden pinkode.</p>
+            <p class="infoBox  h5">Du har mulighed for at oprette en personlig pinkode. Du kan også fortsætte uden pinkode.</p>
             <section class="actions  actions__primaryChoice">
-                <a href="home.html" class="primaryButton  primaryButton--filled">opret pinkode</a>
-                <section class="actions__choice">
+                <a href="home.html" class="primaryButton  primaryButton--filled  h3">opret pinkode</a>
+                <section class="actions__choice  h3">
                     <span class="actions__line"></span>
                     <span class="actions__word">eller</span>
                     <span class="actions__line"></span>
                 </section>
-                <a href="home.html" class="primaryButton">fortsæt uden pinkode</a>
+                <a href="home.html" class="primaryButton  h3">fortsæt uden pinkode</a>
             </section>
         </section>
    </main>
