@@ -20,9 +20,6 @@ function changePageContent(currentPageNumber) { // 0
 function menuActive() {
     var body = document.body
     body.classList.toggle("menu--active")
-
-    var backgroundMenu = document.getElementsByClassName("background__sky")
-    backgroundMenu [0].classList.toggle("background__sky--menu")
 }
 
 function changeReturnStepContent(currentPageNumber) {
