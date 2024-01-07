@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/navbar.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,300&family=Roboto:ital,wght@1,300&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/fad0c0357f.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Login</title>
+  </head>
+  <body>
+    <header class="header">
+      <p class="header__title">Log På</p>
+      <nav class="header__help">
+        <i class="fa-regular fa-circle-question fa-2xl"></i>
+      </nav>
+      <nav class="header__language">
+        <i class="fa-solid fa-globe fa-xl"></i>
+        <select class="languageSelector">
+          <option>Dansk</option>
+          <option value="">English</option>
+        </select>
+      </nav>
+    </header>
+
+    <dialog>
+      <main class="helpNav">
+        <section class="helpNav__container">
+          <nav class="helpNav__item">
+            <a href="#">Glemt din pinkode?</a>
+            <i class="fa-solid fa-arrow-right"></i>
+          </nav>
+          <nav class="helpNav__item">
+            <a href="create_user.html">Opret bruger</a>
+            <i class="fa-solid fa-arrow-right"></i>
+          </nav>
+          <nav class="helpNav__item">
+            <a href="#">Ring til Kunderservice</a>
+            <i class="fa-solid fa-arrow-right"></i>
+          </nav>
+          <nav class="helpNav__item">
+            <a href="#">Betingelser</a>
+            <i class="fa-solid fa-arrow-right"></i>
+          </nav>
+        </section>
+      </main>
+    </dialog>
+
+    <script>
+      const dialog = document.querySelector("dialog");
+      const showButton = document.querySelector(
+        ".fa-regular.fa-circle-question"
+      );
+
+      document.addEventListener("click", function (e) {
+        if (showButton.contains(e.target)) {
+          dialog.showModal();
+        } else {
+          dialog.close();
+        }
+      });
+    </script>
+
+    <section class="signUpPic">
+      <img src="images/login.png" alt="Man with activation login " />
+    </section>
+    <main class="signUp">
+      <section class="formGroup">
+        <p>Indsæt din Telefonnummer</p>
+        <input type="text" name="sms_code" />
+      </section>
+      <section class="formGroup">
+        <p>Indsæt din pinkoden</p>
+        <input type="text" name="sms_code" />
+      </section>
+      <button class="mainButton">Ok</button>
+    </main>
+  </body>
+</html>

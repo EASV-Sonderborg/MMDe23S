@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="dk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naerboks Registrering</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/vnr1nmp.css">
+    <script src="../main.js"></script>
+</head>
+<body>
+    <section class="background">
+        <img class="background__ground" src="../Images/Background_Ground.png" alt="dark blue background symbolizing the ground">
+        <img class="background__sky" src="../Images/Background_Sky.png" alt="a light blue sky with some clouds">
+    </section>
+    <header class="header  header--language">
+        <img class="header__languageSelect  languageSelect__icon" src="../Icons/language.png" alt="globe icon">
+        <select class="header__languageSelect  languageSelect__options">
+            <option class="languageSelect__option" value="danish">Dansk</option>
+            <option class="languageSelect__option" value="english">English</option>
+            <option class="languageSelect__option" value="german">Deutsch</option>
+        </select>
+    </header>
+    <main class="mainContent mainContent--progress">
+        <section class="progressBar">
+            <img class="progressBar__image" src="../Images/Delivery man vector.png" alt="delivery man on a scooter, transporting 3 cardboard boxes">
+            <section class="progressBar__elements">
+                <span class="progressBar__dot progressBar__dot--active" description="1. Registrering"></span>
+                <span class="progressBar__line"></span>
+                <span class="progressBar__dot" description="2. Aktiveringskode"></span>
+                <span class="progressBar__line"></span>
+                <span class="progressBar__dot" description="3. Pinkode"></span>
+            </section>
+        </section>
+        <section class="pageContent  registrationStep1">
+            <section class="pageContent__inputAndLabel--telephone">
+                <select name="" class="pageContent__input  pageContent__input--countryCode  h4">
+                    <option value="danisch">+45</option>
+                    <option value="englisch">+44</option>
+                    <option value="german">+49</option>
+                </select>
+                <section class="telephone__number">
+                    <input type="number" name="input--telephone" class="pageContent__input  pageContent__input--telephone  h4" required>
+                    <label for="input--telephone" class="pageContent__label  pageContent__label--telephone  h4">Telefonnummer</label>
+                </section>
+            </section>  
+            <p class="infoBox  h5">Opret din konto med dit telefonnummer. Du modtager en aktiveringskode via sms.</p>
+            <section class="pageContent__conditions  h5">
+                <input type="checkbox" class="pageContent__checkbox" name="checkbox" required>
+                <label for="checkbox" class="pageContent__label--checkbox ">Jeg accepterer Nærboks' <a class="externalLink" href="https://www.xn--nrboks-pua.dk/app-privacy-policy/">betingelser</a></label>
+            </section>
+            <section class="actions  actions__secondaryChoice">
+                <button onclick="changePageContent(0)" class="primaryButton  primaryButton--filled  h3">send aktiveringskode</button>
+                <a href="index.html" class="backstepButton  h3">tilbage</a>
+            </section>  
+        </section>
+        <section class="pageContent  registrationStep2  pageContent--inactive">
+            <section class="pageContent__inputAndLabel">
+                <input type="number" name="input--activation" class="pageContent__input  pageContent__input--activation  h4" required>
+                <label for="input--activation" class="pageContent__label  h4">Aktiveringskode</label>
+            </section>
+            <p class="infoBox  h5">Venligst indtast koden du har modtaget via sms.</p>
+            <p class="notice  notice--alert notice--small h5">Din kode udløber om 60 sekunder</p>
+            <section class="actions  actions__secondaryChoice">
+                <button onclick="changePageContent(1)" class="primaryButton  primaryButton--filled  h3">OK</button>
+                <button class="backstepButton  h3">send koden igen</button>
+            </section>
+        </section>
+        <section class="pageContent registrationStep3  pageContent--inactive">
+            <section class="pageContent__inputAndLabel  pageContent__inputAndLabel--pincode">
+                <input type="number" name="input--pincode" placeholder="Pinkode (4 cifre)" class="pageContent__input  pageContent__input--pincode  h4">
+            </section>
+            <p class="infoBox  h5">Du har mulighed for at oprette en personlig pinkode. Du kan også fortsætte uden pinkode.</p>
+            <section class="actions  actions__primaryChoice">
+                <a href="home.html" class="primaryButton  primaryButton--filled  h3">opret pinkode</a>
+                <section class="actions__choice  h3">
+                    <span class="actions__line"></span>
+                    <span class="actions__word">eller</span>
+                    <span class="actions__line"></span>
+                </section>
+                <a href="home.html" class="primaryButton  h3">fortsæt uden pinkode</a>
+            </section>
+        </section>
+   </main>
+</body>
+</html>

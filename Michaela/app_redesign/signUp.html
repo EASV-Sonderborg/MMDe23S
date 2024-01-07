@@ -6,7 +6,7 @@
     <title>Nærboks</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="background">
     <section class="card">
         <section class="pageIndicator">
             <span class="pageIndicator__dot pageIndicator__dot--active"></span>
@@ -17,14 +17,16 @@
             Opret bruger
         </h1>
         <form class="signUp">
-        <label for="phoneNumber" class="signUp__text label__text text">
+        <label for="phoneNumber" class="signUp__labelText label__text text">
             Telefonnummer
         </label>
         <input id="phoneNumber" class="signUp__input input" type="text">
-        <input class="signUp__checkBox" type="radio">
-        <p class="signUp__text text"> Jeg accepterer nærboks'</p>
+        <section class="checkbox">
+        <input class="checkbox__box" type="checkbox">
+        <p class="signUp__text text">Jeg accepterer nærboks'</p>
         <a class="signUp__text text signUp__text--link" href="">betingelser</a>
-        <p class="signUp__Text text">Du modtager en aktiveringskode via sms</p>
+        </section>
+        <p class="signUp__text text">Aktiveringskoden sendes via sms</p>
         <button class="signUp__button button button--primary">Send aktiveringskode</button>
     </form>
     </section>

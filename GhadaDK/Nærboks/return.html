@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/navbar.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,300&family=Roboto:ital,wght@1,300&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/fad0c0357f.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="main navBar package__header">
+      <div class="package__backButton">
+        <i class="fa-solid fa-arrow-left fa-xl"></i>
+      </div>
+      <section class="main__title package__titleText">Send retur pakke</section>
+    </section>
+    <div class="return">
+      <h2>Returner din pakke med:</h2>
+      <img src="images/bring-logo.png" alt="" />
+      <button class="mainButton">Registrer pakke</button>
+    </div>
+
+    <script>
+      const dialog = document.querySelector("dialog");
+      const showButton = document.querySelector(".mainButton--transfer");
+      const closeButton = document.querySelector("dialog button");
+
+      showButton.addEventListener("click", () => {
+        dialog.showModal();
+      });
+
+      closeButton.addEventListener("click", () => {
+        dialog.close();
+      });
+    </script>
+  </body>
+</html>
