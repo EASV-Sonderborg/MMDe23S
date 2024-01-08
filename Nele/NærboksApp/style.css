@@ -1,0 +1,1203 @@
+:root {
+    --primaryBackground: #E7F4F8 ;
+    --primaryText: #181A32 ;
+    --primaryButton: #E1A72A ;
+    --secondaryButton: #2A316B ;
+    --white: #fff ;
+    --secondaryContainer: #F1F4FF ;
+    --tertiaryContainer: #FAF5ED ;
+    --notice--alert: #D93044; 
+    --notice--info: #169E00; 
+}
+
+html {
+    overflow: auto;
+    font-family: "nunito-sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--primaryText);
+}
+
+body {
+    width: 100svw;
+    height: 100svh;
+    overflow: hidden;
+    margin: 0;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.h2 {
+    font-size: 24px;
+}
+
+.h3 {
+    font-size: 20px;
+}
+
+.h4 {
+    font-size: 18px;
+}
+
+.h5 {
+    font-size: 16px;
+}
+
+.background__sky {
+    position: fixed;
+    height: 60svh;
+    left: 0;
+    top: 0;
+    z-index: -3;
+}
+
+.background__normalPage {
+    background: #E7F4F8;
+    height: 100svh;
+    width: 100svw;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.background__menuPage {
+    opacity: 0;
+    height: 100svh;
+    width: 100svw;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    /* extra section with menuPage, because otherwise i couldn't animate the background color change on the way back */
+    animation-name: background__menu;
+}
+
+.background__clouds {
+    position: fixed;
+    height: 15svh;
+    left: 0;
+    top: 25px;
+    transition: ease 0.3s;
+}
+
+.background__city {
+    height: 35svh;
+    position: fixed;
+    left: 35svw;
+    top: 18svh;
+    z-index: -2;
+ }
+
+.background__ground {
+    width: 101vw;
+    height: 55svh;
+    position: fixed;
+    bottom: -1px;
+    left: -1px;
+    z-index: -1;
+}
+
+.header {
+    width: 100svw;
+    max-width: 500px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /* position should remain over the mainContent */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5svh 30px;
+    /* fixed sidepadding, because the padding becomes too big with fx 5svw when the screen is wider */
+    box-sizing: border-box;
+    overflow: hidden;
+    /* header__menu has a display:flex, therefore isn't considered like a normal child
+     -> overflow: hidden is forcing the parent (header) to contain the child normally.  */
+    transition: ease-in-out 0.5s;
+    }
+
+.header--language {
+    justify-content: flex-start;
+}
+
+.languageSelect__icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+}
+
+.languageSelect__options {
+    border: none;
+    -webkit-appearance: none;
+    background: none;
+}
+
+.header__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 40px;
+}
+
+.menu__bar {
+    display: block;
+    height: 2px;
+    width: 100%;
+    margin-bottom: 7px;
+    background-color: var(--primaryText);
+}
+
+.menu__bar--2 {
+    width: 30px;
+    transition: ease-in-out 0.5s;
+}
+
+.menu__bar--3 {
+    width: 20px;
+    transition: ease-in-out 0.5s;
+} 
+
+.menu--active .header {
+    justify-content: flex-end;
+    top: 80px;
+}
+
+.menu--active .menu__bar--1, .menu--active .header__headline, .menu--active .contentDescription--select {
+    display: none;
+}
+
+.menu--active .menu__bar--2 {
+    background-color: var(--white);
+    transform: rotate(45deg) translateY(7px) translateX(6px);
+}
+
+.menu--active .menu__bar--3 {
+    background-color: var(--white);
+    width: 30px;
+    transform: rotate(-45deg);   
+}
+
+.menu--active .mainContent {
+    left: -200svw;
+}
+
+.menu--active .menu {
+    left: 50svw;
+}
+
+/* mainContent and menu should fly in, therefore left and not display:none */
+
+.menu--active .menu__item, .menu--active .menu__icon{
+    color: var(--white);
+    filter: none;
+}
+
+.menu--active .background__menuPage {
+    opacity: 1;
+    background: radial-gradient(circle, rgba(76,88,207,1) 19%, rgba(42,49,107,1) 49%, rgba(24,26,50,1) 100%);
+    width: 400svw;
+    /* https://cssgradient.io/ */
+    animation-name: background__menu;
+    animation-duration: 1.5s;
+}  
+
+@keyframes background__menu {
+    0% {
+        opacity: 0;
+        width: 100svw;
+    }
+    1% { 
+        opacity: 0.1,;
+    }
+    100% { 
+        opacity: 1;
+        width: 400svw;
+    }
+}
+
+.menu--active .background__clouds {
+    opacity: 20%;
+}
+
+.logo {
+    height: 5svh;
+    position: fixed;
+    left: 49%;
+    transform: translateX(-50%);
+    top: 12svh;
+}
+
+.mainContent {
+    background-color: var(--white);
+    position: fixed;
+    /* position fixed because i wanted the white mainbox to be at the same place 
+    (right under the first cloud), no matter which format the device has */
+    left: 50svw;
+    transform: translateX(-50%) translateY(0);
+    top: 18svh;
+    height: calc(100svh - 18svh - 5svw);
+    width: 90svw;
+    max-width: 500px;
+    border-radius: 16px; 
+    transition: ease 1s;
+}
+
+.mainContent--welcome {
+    background-color: transparent;
+    top: auto;
+    bottom: 24svh;
+    width: 80svw;
+    height: fit-content;
+    transform: translateX(-50%) translateY(50%);
+}
+
+.mainContent--progress {
+    position: fixed;
+    left: 50svw;
+    transform: translateX(-50%) translateY(0);
+    top: 21svh;
+    height: calc(100svh - 21svh - 5svw);
+}
+
+.mainContent--home {
+    background-color: transparent;
+    overflow-y: auto;
+    overflow-x: hidden;
+    top: 20svh;
+    height: calc(100svh - 20svh - 5svw);
+}
+
+.progressBar {
+    width: 100%;
+    margin: 40px 0 70px 0;
+    position: relative;
+}
+
+.progressBar__image {
+    height: 15svh;
+    position: absolute;
+    bottom: 100%;
+    left: calc(12% + 9.5px);
+    transform: translateX(-50%);
+    /* to get the image right above the dot -> __elements has 12% margin and the dot is 19px */
+    transition: ease-in-out 0.5s;
+}
+
+.progressBar__image--position2 {
+    left: 50%;
+}
+
+.progressBar__image--position3 {
+    left: calc(88% - 9.5px);
+}
+
+.progressBar__image--welcome {
+    height: 20svh;
+    position: absolute;
+    bottom: 42svh;
+    left: 4svw;
+    transform: rotate(-5deg);
+    z-index: 4;
+}
+
+.progressBar__image--return {
+    transform: translateX(-50%) translateY(-10px);
+    height: 17svh;
+}
+
+.progressBar__elements {
+    display: grid;
+    grid-template-columns: 21px auto 21px auto 21px;
+    column-gap: 10px; 
+    align-items: center;
+    margin: 0 12%;
+}
+
+.progressBar__dot {
+    width: 15px;
+    height: 15px;
+    border: solid 3px var(--primaryButton);
+    border-radius: 100%;
+}
+
+.progressBar__line {
+    border-bottom: solid 1px var(--primaryText);
+}
+
+.progressBar__dot--active {
+    background-color: var(--primaryButton);
+}
+
+.progressBar__dot::after {
+    content: attr(description);
+    display: block;
+    transform: translateY(22px) translateX(calc(-50% + 10px));
+    /* adjust boxsize to content, center (-50%) was 50% from the left border, therefore adjust the startingpoint to the middle of the box (-10.5px)*/
+    width: fit-content;
+    text-align: center;
+    font-size: 16px;
+}
+
+.pageContent {
+    height: calc(100% - 70px - 64px);
+    padding: 40px 7%;
+    box-sizing: border-box;
+    /* borders are part of height */
+    display: block;
+    overflow-y: auto;  
+    overflow-x: hidden;  
+    animation: pageContentSlide ease-in-out 0.6s;
+}
+
+@keyframes pageContentSlide {
+    from {
+        transform: translateX(200%);
+    }
+    to{
+        transform: translateX(0);
+    } 
+} 
+
+.pageContent--return {
+    height: calc(100% - 70px - 64px - 40px);
+    /* -40px because of bring logo */
+}
+
+.registrationStep1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pageContent--inactive {
+    display: none !important;
+}
+
+.pageContent__inputAndLabel {
+    margin: 50px 5px 0 5px;
+    position: relative
+}
+
+.pageContent__inputAndLabel--telephone {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 15px;
+    margin: 50px 0 0 0;
+}
+
+.pageContent__input {
+    background-color: transparent;
+    padding-bottom: 3px;
+    border: none;
+    border-bottom: solid 1px var(--primaryText);
+    border-radius: 0;
+    max-width: 250px;
+}
+ 
+.pageContent__input--parcelID, .pageContent__input--parcelName {
+    width: 100%;
+}
+
+.telephone__number {
+    position: relative;
+}
+
+.pageContent__label {
+    position: absolute;
+    left: 2px;
+    bottom: 3px;
+    height: fit-content;
+    pointer-events: none;
+    transition: 0.4s;
+}
+
+.pageContent__input:focus ~ .pageContent__label {
+    bottom: 110%;
+}
+
+.infoBox {
+    background-color: var(--secondaryContainer);
+    padding: 15px;
+    margin: 25px 0;
+}
+
+.infoBox--return {
+    margin: 40px 0;
+}
+
+.infoBox--parcelName {
+    margin-bottom: 90px;
+}
+
+.pageContent__conditions {
+    margin: 30px 0  40px 0;
+}
+
+.pageContent__checkbox {
+    padding: 0;
+    margin: 0 5px 0 0;
+    transform: translateY(1.5px);
+}
+
+.externalLink:link {
+    text-decoration: underline;
+    color: var(--secondaryButton);
+}
+
+.externalLink:visited {
+    text-decoration: underline;
+    color: var(--primaryText);
+}
+
+.externalLink:active {
+    color: var(--primaryButton);
+}
+
+.actions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;   
+}
+
+.actions__primaryChoice {
+    margin-top: 50px;
+}
+
+.actions__choice {
+    width: 80%;
+    margin: 12px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    align-items: center;
+    gap: 10px;
+}
+
+.actions__secondaryChoice--return {
+    margin-top: 100px;
+}
+
+.actions__line {
+    border-bottom: solid 1px var(--primaryText);
+}
+
+.actions__single--primary {
+    margin: 40px 0 0 0;
+}
+
+.actions__single--backstep {
+    margin-top: 50px;
+}
+
+.primaryButton {
+    width: 100%;
+    color:var(--primaryText);
+    padding: 13px 17px;
+    border: solid 1px var(--primaryButton);
+    border-radius: 16px;
+    box-sizing: border-box;
+}
+
+.primaryButton--filled {
+    background-color: var(--primaryButton);
+    box-shadow: inset 0px -5px 14px 0px rgba(203,140,4,1);   
+    /* i generated the shadow with cssmatic.com/boxshadow */
+    transition: linear;
+}
+
+.primaryButton--filled:active {
+    box-shadow: inset 5px 5px 6px 0px rgba(96,66,4,1);
+    transform: translateX(-2px) translateY(2px);
+}
+
+.primaryButton--filled--white {
+    background-color: var(--white);
+    box-shadow: inset 0px -5px 14px 0px var(--secondaryContainer);
+    border: none;
+    margin-top: 40px;
+}
+
+.primaryButton--small {
+    padding: 7px 17px;
+    border-radius: 9px;
+    width: fit-content;
+}
+
+.primaryButton--light {
+    background-color: #FCE2BA;
+    margin: 30px 0;
+    display: block;
+}
+
+.secondaryButton {
+    color: var(--white);
+    background-color: var(--secondaryButton);
+    box-shadow: inset 0px -5px 14px 0px var(--primaryText);
+    height: fit-content;
+    width: fit-content;
+    padding: 8px 17px ;
+    border-radius: 5px;
+    font-weight: 300;
+}
+
+.secondaryButton--small {
+    padding: 3px 17px 5px 17px;
+}
+
+.backstepButton {
+    height: fit-content;
+    color: var(--primaryText);
+    text-decoration: none;
+    padding: 0 5px;
+    border-bottom: solid 2px var(--primaryText);
+    margin: 30px;
+}
+
+.backstepButton--alone {
+    margin: 20px 0 0 0;
+}
+
+.notice {
+    margin: 0 3px 10px 3px;
+    color: #959292;
+}
+
+.notice--small {
+    margin-bottom: 60px;
+}
+
+.notice--alert {
+    color: var(--notice--alert);
+}
+
+.notice--warning {
+    color: var(--primaryButton);
+}
+
+.notice--info {
+    color: var(--notice--info);
+}
+
+.notice--returnStep3 {
+    display: grid;
+    grid-template-columns: 35px auto;
+    align-items: center;
+}
+
+.notice__timeline {
+    display: flex;
+    width: 100%;
+    height: 5px;
+    margin-bottom: 8px;
+}
+
+.notice__timeline--alertLight {
+    width: 82%;
+    /* 11 min from 60 minutes = ca. 18% --> time gone = 82% */
+    background-color: #FBE7E9;
+}
+
+.notice__timeline--alert {
+    width: 18%;
+    background-color: var(--notice--alert);
+}
+
+.notice__timeline--warningLight {
+    width: 50%;
+    background-color: #FCE2BA;
+}
+
+.notice__timeline--warning {
+    width: 50%;
+    background-color: var(--primaryButton);
+}
+
+.notice__timeline--infoLight {
+    width: 14%;
+    background-color: #C5E7BF;
+}
+
+.notice__timeline--info {
+    width: 86%;
+    background-color: var(--notice--info);
+}
+
+.notice__exclamation {
+    display: flex;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    padding-bottom: 2px;
+    border: solid 1px;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+.parcel {
+    width: 100%;
+    height: fit-content;
+    background-color: var(--white);
+    padding: 40px 7% 30px 7%; 
+    /* 30px at the bottom because of notice-margin */
+    border-radius: 16px;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.parcel__headline {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 0 15px 0;
+}
+
+.parcel__locationBox {
+    background-color: var(--secondaryContainer);
+    padding: 15px;
+    margin-bottom: 15px;
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 0.8fr;
+    align-items: center;
+}
+
+.parcel__locationBox--return {
+    grid-template-rows: 2fr 1fr;
+  
+}
+
+.parcel__address--return {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin: 0;
+}
+
+.parcel__distance {
+    margin: 0;
+    grid-row-start: 2;
+    grid-column-start: 2;
+}
+
+.parcel__button {
+    grid-column-start: 3;
+    grid-row-start: 2;
+}
+
+.contentDescription {
+    background-color: var(--tertiaryContainer);
+    font-weight: 300;
+    padding: 7px 16px;
+    border: none;
+    border-radius: 9px;
+    box-sizing: border-box;
+}
+
+.contentDescription--select {
+    position: fixed;
+    left: 90%;
+    top: 20svh;
+    transform: translateX(-100%) translateY(-50%);
+    z-index: 1;
+}
+
+.contentDescription--parcel {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: fit-content;
+    padding: 5px 25px;
+    margin: 0;
+}
+
+.contentDescription--parcel1 {
+    display: none;
+}
+
+.icon {
+    height: 25px;
+    width: 25px;
+}
+
+.icon__location {
+    width: 17px;
+    grid-row-start: 2;
+    margin: 0 5px;
+}
+
+.icon__return {
+    height: 35px;
+}
+
+.icon__history {
+    height: 20px;
+}
+
+.icon__logOut {
+    width: 20px;
+    margin-left: 20px;
+}
+
+.icon__check {
+    margin-right: 10px;
+}
+
+.menu {
+    display: block;
+    background-color: transparent;
+    top: 20svh;
+    left: 200svw;
+    font-weight: 200;
+    letter-spacing: 1px;
+    overflow-y: auto;
+    transition: ease 1s;
+}
+
+.menu__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: var(--primaryText);
+}
+
+.menu__icon {
+    margin: 0 20px 0 15px;
+    filter: invert();
+}
+
+.menu__line {
+    background-color: var(--white);
+    width: 200px;
+    height: 1px;
+    opacity: 50%;
+    margin: 15px;
+}
+
+.logo__bring {
+    height: 25px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.returnStepContent {
+    display: block;
+    animation: ContentSlide 0.6s;
+}
+
+.returnStepContent--inactive {
+    display: none !important;
+}
+
+@keyframes ContentSlide {
+    from {
+        transform: translateX(200%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.returnStep1__naming, .returnStep2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.returnStep1__headline {
+    margin-bottom: 70px;
+}
+
+.returnStep2__headline {
+    margin: 0 0 60px 0;
+}
+
+.return__input {
+    background-color: var(--white);
+    width: 100%;
+    padding: 20px 30px;
+    border-radius: 16px;
+    margin-bottom: 60px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px 4px rgba(233,234,240,1);
+    position: relative;
+    transition: ease-in-out 0.6s;
+}
+
+.contentDescription--return {
+    position: absolute;
+    margin: 0;
+    top: 0;
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+.return__input--savedAdresses {
+    background-color: #DAEFE5;
+    padding: 30px 30px 20px 30px;
+}
+
+.input__expandDown {
+    height: 2px;
+    width: 18px;
+    background-color: var(--primaryText);
+    display: block;
+    position: absolute;
+    right: 15%;
+    top: 50px;
+
+}
+
+.input__expandDown--1 {
+    transform: rotate(45deg);
+}
+
+.input__expandDown--2 {
+    transform: rotate(-45deg) translateX(8.2px) translateY(8px);
+}
+
+.input__item {
+    display: block;
+    font-weight: 320;
+    height: fit-content;
+    margin: 0;
+    /* because default <p> has a margin */
+}
+
+.input__item--inactive {
+    display: none;
+}
+
+.input__boxSize--headline {
+    margin-bottom: 7px;
+}
+
+.input__boxSize--measurements {
+    opacity: 50%;
+    margin: 3px 0;
+}
+
+.return__input--boxSize {
+    padding: 5px 30px 10px 30px;
+    margin-bottom: 30px;
+}
+
+.return__input--active {
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    gap: 20px;
+    background-color: var(--white);
+} 
+
+.return__input--active .input__expandDown--1 {
+    transform: rotate(-45deg);
+}
+
+.return__input--active .input__expandDown--2 {
+    transform: rotate(45deg) translateX(8px) translateY(-8px);
+}
+
+.return__input--active .input__line {
+    display: block;
+    height: 1px;
+    width: 80%;
+    background-color: var(--primaryText);
+}
+
+.input__line--inactive {
+    display: none !important;
+}
+
+.return__input--addAdress {
+    margin-bottom: 20px;
+}
+
+.return__input--searchAdress {
+    border: none;
+    margin-top: 10px;
+}
+
+.returnStep2__addAdress {
+    display: none;
+    animation: showMap ease-in-out 0.6s;
+}
+
+@keyframes showMap {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 100;
+    }
+}
+
+.returnStep2__addAdress--active {
+    display: block;
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    background-color: transparent;
+}
+
+.returnStep2__map {
+    width: 100%;
+    border-radius: 15px;
+    transition: ease 0.5s;
+}
+
+.map--active {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.returnStep2__location {
+    height: 35px;
+    position: absolute;
+}
+
+.returnStep2__location--1 {
+    left: 7%;
+    top: 34%;
+}
+
+.returnStep2__location--2 {
+    left: 49%;
+    top: 30%;
+}
+
+.returnStep2__location--3 {
+    left: 75%;
+    top: 52%;
+}
+
+.returnStep2__mapAdress {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    transform: translateY(-100%);
+    opacity: 0;
+    background-color: var(--white);
+    box-shadow: 0px 0px 25px 4px rgba(233,234,240,1);
+    padding: 0 30px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    transition: ease-out 0.6s;
+}
+
+.returnStep2__mapAdress--active {
+    transform: translateY(-5px);
+    opacity: 100;
+}
+
+.boxSize__info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transform: translateX(5px);
+}
+
+.boxSize__availability--inactive {
+    display: none ;
+}
+
+@media (min-width: 435px) {
+    .progressBar__image--welcome {
+        left: 16svw;
+    }
+}
+
+@media (min-width:580px) {
+    .contentDescription--select {
+        left: 50svw;
+        transform: translateX(50%) translateY(-50%);
+        /* without the media the description moves to the left side of the screen
+        mainContent has max-width: 500px, ca. 40px margin --> from here stick the description to the middle of the screen
+        and adjust the position via transform */
+    }
+}
+
+@media (min-width: 890px) {
+    .background__city {
+        left: 50svw;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-height: 500px) {
+    /* chose max-height instead of orientation:landscape, because the tablet-landscape fits fine with the original design */
+    body {
+        overflow-y: scroll;
+    }
+    h1 {
+        font-size: 24px;
+    }
+
+    .h5 {
+        font-size: 14px;
+    }
+
+    .background__clouds {
+        scale: 2;
+    }
+    
+    .header {
+        max-width: 95svw;
+        position: relative;
+        height: fit-content;
+    }
+    
+    .header--language {
+        top: 1svh;
+    }
+
+    .contentDescription--select{
+        display: none;
+    }
+
+    .contentDescription--parcel1 {
+        display: block;
+    }
+
+    .mainContent--home {
+        max-width: 95svw;
+        position: relative;
+        top: 0;
+        height: fit-content;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 20px;
+        overflow: visible;
+    }
+
+    .mainContent--progress {
+        max-width: 850px;
+        background-color: transparent;
+        top: 12svh;
+        height: calc(100svh - 15svh);
+        display: grid;
+        grid-template-columns: 140px auto;
+        column-gap: 25px;
+        align-items: center;
+    }
+
+    .pageContent, .progressBar {
+        height: 100%;
+        background-color: var(--white);
+        border-radius: 16px;
+        margin: 0;
+    }
+    /* change mainContent--progress to grid and pageContent to have the possibility to see the content properly */
+
+    .progressBar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .progressBar__image {
+        display: none;
+    } 
+
+    .progressBar__elements {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 5px 10px 40px 10px;
+        width: fit-content;
+        height: 100%;
+    }
+
+    .progressBar__dot::after {
+        max-width: 130px;
+    }
+
+    .pageContent__inputAndLabel {
+        margin: 0;
+    }
+
+    .logo__bring {
+        transform: translateY(170%);
+    }
+
+    .icon__location, .parcel__distance {
+        display: none;
+    } 
+    
+    .parcel {
+        min-width: 300px;
+        max-width: 500px;
+    }
+
+    .parcel__locationBox--pickUp {
+        background-color: transparent;
+        position: absolute;
+        top: 20%;
+        right: 7%;
+        
+    }
+
+    .parcel__locationBox--return {
+        padding: 7px 15px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .menu {
+        top: 10svh;
+        height: 85svh;
+    }
+    
+    .menu--active .header {
+        top: 30px;
+    }
+
+    .menu--active .background__clouds {
+        display: none;
+    }
+    
+    .actions__primaryChoice {
+        margin: 0;
+    }
+}
+
+@media (min-width: 1600px) {
+    .mainContent--home {
+        max-width: 95svw;
+        top: 35svh;
+        height: calc(100svh - 30svh - 2svh);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 20px;
+    }
+}
+    
