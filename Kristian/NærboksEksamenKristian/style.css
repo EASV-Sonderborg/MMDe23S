@@ -539,7 +539,7 @@ body {
 .loader__text {
   position: relative;
   color: #578ef8;
-  font-size: larger;
+  font-size: x-large;
   text-align: center;
   margin-top: 200px;
 }
