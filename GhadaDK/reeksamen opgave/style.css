@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(rgba(0, 137, 192, 0.49), rgba(75, 146, 72, 0.54));
+  background-repeat: no-repeat;
+  margin: 20px;
+  padding: 30px;
+  font-family: "Roboto", sans-serif;
+  min-height: 100vw;
+}
+
+.packages {
+  background: rgba(245, 252, 255, 0.79);
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+}
+
+.packages__package {
+  background: rgba(110, 172, 65, 0.39);
+
+  height: auto;
+  border-radius: 16px;
+  margin: 10px;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  width: 90%;
+  margin: 0 auto;
+  padding: 4px;
+  margin-top: 50px;
+  box-shadow: 5px 5px 2px #8a8787;
+}
+
+.packageItem {
+  grid-column: ;
+}
+img {
+  max-width: 50px;
+}
+
+.headerText--primary {
+  align-items: center;
+}
+
+.headerText--secondary {
+  align-items: center;
+}
+
+.primaryButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  border-radius: 10px;
+  width: 100px;
+  height: 50px;
+  font-weight: bold;
+  border-bottom: 5px solid #b46436;
+  transition: 0.3s;
+  background-color: #eb8b54;
+}
+
+.primaryButton:hover {
+  border-bottom-width: 0;
+  transform: translateY(5px);
+}
+
+.circle-check-svg-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -62.5px;
+  margin-top: -62.5px;
+  width: 600px;
+  height: 500px;
+}
+
+.success-svg {
+  display: block;
+  stroke-width: 2;
+  stroke: #fff;
+  box-shadow: inset 0px 0px 0px #ccc;
+  animation: scale 0.3s ease-in-out 0.9s both;
+  animation: fill 0.4s ease-in-out 0.4s forwards,
+    scale 0.3s ease-in-out 0.9s both;
+}
+
+.success-circle {
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  stroke-width: 5;
+  stroke: #cccccc;
+  fill: none;
+  animation: stroke 0.6s forwards;
+  -webkit-animation: stroke 0.6s forwards;
+}
+
+.success-checkmark {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 146;
+  stroke-dashoffset: 146;
+  animation: stroke 0.3s 0.8s forwards infinite;
+  -webkit-animation: stroke 0.3s 0.8s forwards infinite;
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 292;
+  }
+}
+
+@keyframes scale {
+  0%,
+  100% {
+    transform: none;
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 60px #cccccc;
+  }
+}
