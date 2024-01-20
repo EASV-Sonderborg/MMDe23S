@@ -11,9 +11,9 @@
       <a class="header__arrow" href="navigation.html"
         ><svg
           xmlns="http://www.w3.org/2000/svg"
-          height="24"
+          height="45"
           viewBox="0 -960 960 960"
-          width="24"
+          width="45"
           fill="#FFFFFF"
         >
           <path
@@ -25,18 +25,7 @@
     </header>
     <main class="searching">
       <section class="bluetooth">
-        <svg
-          class="bluetooth__icon"
-          xmlns="http://www.w3.org/2000/svg"
-          height="230"
-          viewBox="0 -960 960 960"
-          width="300"
-          fill="#FFFFFF"
-        >
-          <path
-            d="M440-80v-304L256-200l-56-56 224-224-224-224 56-56 184 184v-304h40l228 228-172 172 172 172L480-80h-40Zm80-496 76-76-76-74v150Zm0 342 76-74-76-76v150Z"
-          />
-        </svg>
+        <img class="bluetooth__icon" src="Images/bluetooth.png" alt="" />
       </section>
       <h2 class="searching__heading">
         Vi søger nu efter forbindelse til pakke boksen vent venlist...
@@ -47,4 +36,10 @@
       </p>
     </main>
   </body>
+  <script>
+    /*Taget fra Malene https://github.com/EASV-Sonderborg/MMDe23S/tree/main/Malene/js_setTimeout */
+    setTimeout(() => {
+      document.location.href = "åben_boks.html";
+    }, 5000);
+  </script>
 </html>
