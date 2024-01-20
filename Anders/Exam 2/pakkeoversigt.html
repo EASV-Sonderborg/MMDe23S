@@ -8,7 +8,7 @@
   </head>
   <body>
     <header class="header">
-      <h1 class="header__heading"></h1>
+      <h1 class="header__heading">PAKKE OVERSIGT</h1>
       <div class="hamburger">
         <span class="hamburger__bar"></span>
         <span class="hamburger__bar"></span>
@@ -18,18 +18,18 @@
     <main class="parcelBoxs">
       <section class="parcelBox">
         <section class="parcelOverwiev">
-          <p class="parceloverwiev__tekst">Din pakke er leveret</p>
-          <p class="parceloverwiev__tekst">Pakkenr SB448745296740</p>
-          <p class="parceloverwiev__tekst">Provider: Amazon</p>
-          <p class="parceloverwiev__tekst--red">Udløber: lørdag 1/12</p>
+          <p class="parceloverwiev__text">Din pakke er leveret</p>
+          <p class="parceloverwiev__text">Pakkenr SB448745296740</p>
+          <p class="parceloverwiev__text">Provider: Amazon</p>
+          <p class="parceloverwiev__text--red">Udløber: lørdag 1/12</p>
         </section>
         <section class="overwievContinue">
           <a class="overwievContinue__arrow" href="navigation.html"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
-              height="24"
+              height="40"
               viewBox="0 -960 960 960"
-              width="24"
+              width="40"
               fill="#FFFFFF"
               transform="rotate(180)"
             >
@@ -42,18 +42,18 @@
       </section>
       <section class="parcelBox">
         <section class="parcelOverwiev">
-          <p class="parceloverwiev__tekst">Din pakke er leveret</p>
-          <p class="parceloverwiev__tekst">Pakkenr SB448745296740</p>
-          <p class="parceloverwiev__tekst">Provider: Amazon</p>
-          <p class="parceloverwiev__tekst--red">Udløber: lørdag 1/12</p>
+          <p class="parceloverwiev__text">Din pakke er leveret</p>
+          <p class="parceloverwiev__text">Pakkenr SB448745296740</p>
+          <p class="parceloverwiev__text">Provider: Amazon</p>
+          <p class="parceloverwiev__text--red">Udløber: lørdag 1/12</p>
         </section>
         <section class="overwievContinue">
           <a class="overwievContinue__arrow" href="navigation.html"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
-              height="24"
+              height="40"
               viewBox="0 -960 960 960"
-              width="24"
+              width="40"
               fill="#FFFFFF"
               transform="rotate(180)"
             >
@@ -66,18 +66,18 @@
       </section>
       <section class="parcelBox">
         <section class="parcelOverwiev">
-          <p class="parceloverwiev__tekst">Din pakke er leveret</p>
-          <p class="parceloverwiev__tekst">Pakkenr SB448745296740</p>
-          <p class="parceloverwiev__tekst">Provider: Amazon</p>
-          <p class="parceloverwiev__tekst--red">Udløber: lørdag 1/12</p>
+          <p class="parceloverwiev__text">Din pakke er leveret</p>
+          <p class="parceloverwiev__text">Pakkenr SB448745296740</p>
+          <p class="parceloverwiev__text">Provider: Amazon</p>
+          <p class="parceloverwiev__text--red">Udløber: lørdag 1/12</p>
         </section>
         <section class="overwievContinue">
           <a class="overwievContinue__arrow" href="navigation.html"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
-              height="24"
+              height="40"
               viewBox="0 -960 960 960"
-              width="24"
+              width="40"
               fill="#FFFFFF"
               transform="rotate(180)"
             >
@@ -89,6 +89,25 @@
         </section>
       </section>
     </main>
-    <script></script>
+    <script>
+      const hamburger = document.querySelector(".hamburger"); //div
+      const navMenu = document.querySelector(".navbar__menu"); //ul with all menu links
+      const navLink = document.querySelectorAll(".menuItem__link"); //a: all links in menu
+
+      hamburger.addEventListener("click", mobileMenu);
+      navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+      function mobileMenu() {
+        //open and close menu in mobile
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      }
+
+      function closeMenu() {
+        //when a menu item (a) is clicked, the mobile menu is deactivated
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+      }
+    </script>
   </body>
 </html>
