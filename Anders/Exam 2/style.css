@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700&family=Lato:wght@700&family=Nunito:wght@200&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+/* Bodies*/
+body {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: "Nunito", sans-serif;
+}
+.indexBody {
+  background-image: url(Images/index-boks.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+/* Media query for dark mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #2b2b2b;
+    color: #ffffff;
+  }
+}
+/*header*/
+.header {
+  background: rgb(54, 58, 96);
+  background: linear-gradient(
+    90deg,
+    rgba(54, 58, 96, 1) 0%,
+    rgba(0, 113, 195, 0.14674373167235644) 100%
+  );
+  min-height: 100px;
+  max-width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 4px 4px 10px #00000034, -4px -4px 10px #00000034;
+}
+.header__arrow {
+  position: absolute;
+  left: 20px;
+  top: 25px;
+}
+.header__heading {
+  font-size: 1.5rem;
+}
+/*Index Elementer*/
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.logo__logo {
+  animation: slideIn 1s ease-in-out, bounce 2s 1s;
+  max-width: 80vw;
+}
+/*Index animation*/
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+/*navigation*/
+.packet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.packet__map {
+  max-width: 100%;
+  max-height: 90vw;
+  margin-top: 10px;
+  box-shadow: 4px 4px 10px #00000034, -4px -4px 10px #00000034;
+}
+.packet__text {
+  font-size: 1.3rem;
+  margin-top: 27px;
+}
+.packetButtons {
+  margin-top: 27px;
+  display: flex;
+  gap: 10px;
+}
+.packetButtons--highlight {
+  background: rgb(28, 54, 73);
+  background: linear-gradient(
+    90deg,
+    rgba(28, 54, 73, 1) 0%,
+    rgba(0, 113, 195, 1) 100%
+  );
+  width: 142px;
+  height: 48px;
+  border-radius: 15px;
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  box-shadow: 4px 4px 10px #00000034, -4px -4px 10px #00000034,
+    inset 4px 4px 10px #00000034, inset -4px -4px 10px #00000034;
+}
+.packetButtons--toned {
+  background: rgb(67, 67, 67);
+  background: linear-gradient(
+    90deg,
+    rgba(67, 67, 67, 1) 0%,
+    rgba(0, 113, 195, 0.2475840678068102) 100%
+  );
+  width: 142px;
+  height: 48px;
+  border-radius: 15px;
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  box-shadow: 4px 4px 10px #00000034, -4px -4px 10px #00000034,
+    inset 4px 4px 10px #00000034, inset -4px -4px 10px #00000034;
+}
