@@ -521,10 +521,10 @@ input[type="checkbox"]:checked:after {
   box-shadow: 4px 4px 10px #00000034, -4px -4px 10px #00000034,
     inset 4px 4px 10px #00000034, inset -4px -4px 10px #00000034;
 }
-.parceloverwiev__text {
+.parcelOverwiev__text {
   font-weight: bold;
 }
-.parceloverwiev__text--red {
+.parcelOverwiev__text--red {
   color: rgb(118, 27, 27);
   font-weight: bold;
   margin-top: 40px;
