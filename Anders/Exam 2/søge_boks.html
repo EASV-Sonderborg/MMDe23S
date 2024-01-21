@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Nærboks</title>
+  </head>
+  <body>
+    <header class="header">
+      <a class="header__arrow" href="navigation.html"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="45"
+          viewBox="0 -960 960 960"
+          width="45"
+          fill="#FFFFFF"
+        >
+          <path
+            d="m142-480 294 294q15 15 14.5 35T435-116q-15 15-35 15t-35-15L57-423q-12-12-18-27t-6-30q0-15 6-30t18-27l308-308q15-15 35.5-14.5T436-844q15 15 15 35t-15 35L142-480Z"
+          />
+        </svg>
+      </a>
+      <h1 class="header__heading">SØGER BOKS</h1>
+    </header>
+    <main class="searching">
+      <section class="bluetooth">
+        <img class="bluetooth__icon" src="Images/bluetooth.png" alt="" />
+      </section>
+      <h2 class="searching__heading">
+        Vi søger nu efter forbindelse til pakke boksen vent venlist...
+      </h2>
+      <p class="searching__text">
+        Hvis den bliver ved med, at søge bedes du gå nærmere til pakke boksen
+        eller check om dit bluetooth er tændt
+      </p>
+    </main>
+  </body>
+  <script>
+    /*Taget fra Malene https://github.com/EASV-Sonderborg/MMDe23S/tree/main/Malene/js_setTimeout */
+    setTimeout(() => {
+      document.location.href = "åben_boks.html";
+    }, 5000);
+  </script>
+</html>
