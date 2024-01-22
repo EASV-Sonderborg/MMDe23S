@@ -225,7 +225,7 @@ h1 {
         width: 100svw;
     }
     1% { 
-        opacity: 0.1,;
+        opacity: 0.1;
     }
     100% { 
         opacity: 1;
@@ -780,7 +780,6 @@ h1 {
 
 .menu__icon {
     margin: 0 20px 0 15px;
-    filter: invert();
 }
 
 .menu__line {
@@ -1061,7 +1060,7 @@ h1 {
     }
 
     .background__clouds {
-        scale: 2;
+        transform:scale(2);
     }
     
     .header {
