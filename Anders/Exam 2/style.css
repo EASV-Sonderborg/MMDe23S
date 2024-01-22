@@ -409,7 +409,7 @@ input[type="checkbox"]:checked:after {
   align-items: center;
 
   font-family: "Nunito", sans-serif;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
   color: white;
 }
@@ -474,9 +474,9 @@ input[type="checkbox"]:checked:after {
   width: 225px;
   margin-top: 45px;
   border-radius: 180px;
-  animation: pulse-blue 2s infinite;
+  animation: beat-blue 2s infinite;
 }
-@keyframes pulse-blue {
+@keyframes beat-blue {
   0% {
     transform: scale(0.97);
     box-shadow: 0 0 0 0 rgba(52, 172, 224, 0.7);
@@ -484,7 +484,7 @@ input[type="checkbox"]:checked:after {
 
   70% {
     transform: scale(1);
-    box-shadow: 0 0 0 10px rgba(52, 172, 224, 0);
+    box-shadow: 0 0 0 15px rgba(52, 172, 224, 0);
   }
 
   100% {
@@ -544,6 +544,7 @@ input[type="checkbox"]:checked:after {
   box-shadow: 4px 4px 10px #00000034, -4px -4px 10px #00000034,
     inset 4px 4px 10px #00000034, inset -4px -4px 10px #00000034;
 }
+
 /*taget fra et former projekt kan ikke finde navn på personen der lavede koden*/
 .hamburger {
   display: none;
