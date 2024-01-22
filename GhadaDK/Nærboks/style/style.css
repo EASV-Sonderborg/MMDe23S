@@ -458,6 +458,7 @@ input[type="tel"] {
   }
 
   input[type="text"] {
+    padding: 0px 18px;
     width: 500px;
     height: 65px;
     border-radius: 50px;
@@ -539,6 +540,7 @@ input[type="tel"] {
 
   input[type="text"],
   input[type="tel"] {
+    padding: 0px 18px;
     width: 290px;
     height: 50px;
     font-size: 20px;
