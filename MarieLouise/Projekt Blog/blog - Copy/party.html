@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Studiebyen Sønderborg Blog</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html"><img src="images/logo.png" alt="" class="logo" /></a>
+      <nav class="menu">
+        <ul>
+          <li>
+            <a href="#"
+              ><img
+                class="menu__burger"
+                src="images/Hamburger_icon.svg.png"
+                alt=""
+            /></a>
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="index.html" class="menu__link">Hjem</a>
+              </li>
+              <li class="menu__item">
+                <script type="text/javascript">
+                  function randomlinks() {
+                    var myrandom = Math.round(Math.random() * 5);
+                    var links = new Array();
+                    links[0] = "bolig.html";
+                    links[1] = "bus.html";
+                    links[2] = "borgen.html";
+                    links[3] = "jul.html";
+                    links[4] = "party.html";
+                    links[5] = "mørkeland.html";
+
+                    window.location = links[myrandom];
+                  }
+                </script>
+                <form>
+                  <input
+                    class="menu__link"
+                    type="button"
+                    value="Blog"
+                    onClick="randomlinks()"
+                  />
+                </form>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Studieby Sønderborg</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="post post--small">
+      <span class="tape tape--left"></span>
+      <img class="post__img" src="images/heidis_beerpong.jpg" alt="apartment" />
+      <section class="post__text">
+        <h3 class="post__header">Beerpong på Heidis</h3>
+      </section>
+    </section>
+    <section class="post">
+      <img class="post__img" src="images/uak fest1.png" alt="party" />
+      <section class="post__text">
+        <h3 class="post__header">Gang i Sønderborg!</h3>
+      </section>
+    </section>
+    <section class="post post--small post--rotateLeft">
+      <span class="tape tape--right"></span>
+      <img class="post__img" src="images/auk_fest.jpg" alt="apartment" />
+      <section class="post__text">
+        <h3 class="post__header">Ude af Kontrol i Sønderborg</h3>
+      </section>
+    </section>
+    <section class="post__description">
+      <h4>
+        Hej alle festglade sjæle derude! I dag tager vi en tur til den skønne
+        festby Sønderborg, hvor vi dykker ned i nogle af de mest spændende og
+        underholdende festaktiviteter byen har at byde på. Sønderborg er kendt
+        for sin festlige atmosfære, og her er der aldrig mangel på sjove
+        arrangementer og uforglemmelige øjeblikke. Hvis du er i humør til at
+        udfordre dine venner i en intens beerpong-turnering, så er Heidis stedet
+        at være hver torsdag aften. <br />
+
+        Statsskolefester er kun for de unge studerende, her kan du kan forvente,
+        god musik og en festlig stemning. Blå Gymnasiet fester er også et
+        must-visit, især hvis du er fan af live musik. Her optræder kendte
+        musikere ofte, hvilket giver dig mulighed for at danse natten væk til
+        nogle fantastiske toner. <br />
+
+        Hvis du er mere til en afslappet fredagsaften, er Hygge På Toppen et
+        skønt sted at mødes med venner og nyde en fredags-øl. Her kan du tage
+        det stille og roligt, slappe af og bare nyde selskabet. Men det er ikke
+        kun i lukkede rum, at festen finder sted i Sønderborg. <br />
+
+        Byens gader oser af liv, farver og glæde, især i weekenderne. Der er
+        altid noget spændende i vente, og du kan forvente at blive trukket ind i
+        den pulserende energi, der fylder gaderne. Så hvis du er på udkig efter
+        en by, der aldrig sover, og hvor festen aldrig slutter, så er Sønderborg
+        det rette sted for dig. Med gratis beerpong, studenterfester, kendte
+        musikere og hyggelige mødesteder, er der altid noget at opleve i denne
+        festlige by. Så lad os raise glasset og skåle i Sønderborgs festlige
+        atmosfære!
+      </h4>
+    </section>
+    <section class="imageSlider">
+      <input type="radio" id="i1" name="images" checked />
+      <input type="radio" id="i2" name="images" />
+      <input type="radio" id="i3" name="images" />
+      <input type="radio" id="i4" name="images" />
+      <input type="radio" id="i5" name="images" />
+      <input type="radio" id="i6" name="images" />
+      <section class="imageSlider__item" id="one">
+        <section class="imageSlider__polaroid">
+          <a href="party.html"
+            ><img
+              src="images/380636309_653786386949644_7326473961304961058_n.png"
+              alt=""
+          /></a>
+          <h2>Gang i Sønderborg</h2>
+        </section>
+      </section>
+      <section class="imageSlider__item" id="two">
+        <section class="imageSlider__polaroid">
+          <a href="jul.html"><img src="images/julehygge1.jpg" alt="" /></a>
+          <h2>Jul i Sønderborg</h2>
+        </section>
+      </section>
+      <section class="imageSlider__item" id="three">
+        <section class="imageSlider__polaroid">
+          <a href="bolig.html"><img src="images/studiebolig.jpg" alt="" /></a>
+          <h2>Studiebolig eller alm?</h2>
+        </section>
+      </section>
+      <section class="imageSlider__item" id="four">
+        <section class="imageSlider__polaroid">
+          <a href="bus.html"><img src="images/insidebus.png" alt="" /></a>
+          <h2>Tag bussen!</h2>
+        </section>
+      </section>
+      <section class="imageSlider__item" id="five">
+        <section class="imageSlider__polaroid">
+          <a href="borgen.html"
+            ><img src="images/borgenshopping.PNG" alt=""
+          /></a>
+          <h2>Borgen shoppetur?</h2>
+        </section>
+      </section>
+      <section class="imageSlider__item" id="six">
+        <section class="imageSlider__polaroid">
+          <a href="mørkeland.html"><img src="images/mørkeland.png" alt="" /></a>
+          <h2>Mørkeland i Sønderborg</h2>
+        </section>
+      </section>
+      <section id="nav_slide">
+        <label for="i1" class="dots" id="dot1"></label>
+        <label for="i2" class="dots" id="dot2"></label>
+        <label for="i3" class="dots" id="dot3"></label>
+        <label for="i4" class="dots" id="dot4"></label>
+        <label for="i5" class="dots" id="dot5"></label>
+        <label for="i6" class="dots" id="dot6"></label>
+      </section>
+    </section>
+    <footer class="footer">
+      <p class="footer__description">
+        Studieby Sønderborg fungerer som bindeled mellem studerende,
+        uddannelsesinstitutioner, virksomheder og kommune med det formål at
+        understøtte og markedsføre Sønderborg som uddannelses- og studieby. Vi
+        er med til at udvikle nye koncepter og initiativer, der kan gøre en
+        forskel i Sønderjylland med henblik på at skabe en region i bedre
+        balance – uddannelsesmæssigt, økonomisk og geografisk.
+      </p>
+      <p class="footer__social">
+        <img
+          src="images/icons8-linkedin.svg"
+          alt=""
+          class="footer__icon footer__icon--linkedIn"
+        />
+        <img
+          src="images/Facebook-f_Logo-Blue-Logo.wine.svg"
+          alt=""
+          class="footer__icon footer__icon--facebook"
+        />
+        <img
+          src="images/Instagram-Logo.wine.svg"
+          alt=""
+          class="footer__icon footer__icon--instagram"
+        />
+      </p>
+      <p class="footer_copyright">&copy; 2023 Studieby Sønderborg</p>
+    </footer>
+  </body>
+</html>
