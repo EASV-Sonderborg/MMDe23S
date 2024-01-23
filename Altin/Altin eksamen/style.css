@@ -1,0 +1,402 @@
+body {
+  background-color: #e1eaf4;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/*første side*/
+.logo__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 56vh;
+}
+
+.logo {
+  width: 244px;
+  height: 39px;
+}
+
+.arrow__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.forward__arrow {
+  width: 84.1px;
+  height: 83.3px;
+}
+
+/*pakker side*/
+.header {
+  background-color: #12a0d6;
+}
+
+.back__button {
+  width: 46px;
+  height: 46px;
+}
+
+.main__packages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px 0 20px;
+}
+
+.primary__text {
+  font-size: 30px;
+  color: #12a0d6;
+}
+
+.secondary__text {
+  font-weight: lighter;
+  padding-top: 2.5rem;
+  font-size: larger;
+  color: #12a0d6;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: space-around;
+  align-items: center;
+  height: 50vh;
+  margin: 2rem;
+}
+
+.box {
+  width: 200px;
+  height: 58px;
+  background-color: #12a0d6;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 19px;
+  box-shadow: 0 1px 5px rgba(105, 105, 105, 0.885);
+}
+
+.box__link {
+  text-decoration: none;
+  font-size: 22px;
+}
+
+/*tilslut side*/
+.main__connect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.opened__parcelbox {
+  height: 200px;
+  padding-top: 3rem;
+  padding-right: 2rem;
+}
+
+.closed__parcelbox {
+  height: 200px;
+  padding-top: 3rem;
+}
+
+.connect__headline {
+  margin: 130px auto -180px auto;
+}
+
+.connect__bottomline {
+  text-align: center;
+  color: #12a0d6;
+  font-size: 20px;
+}
+
+.button {
+  margin: 217px auto 250px auto;
+}
+
+.connect__button {
+  text-decoration: none;
+  width: 139px;
+  height: 139px;
+  display: block;
+  background: #12a0d6;
+  border-radius: 50%;
+  line-height: 140px;
+  text-align: center;
+  font-size: 23px;
+  color: #fff;
+  border: 1px solid #2980b9;
+}
+
+/*tilslutning side*/
+.bluetooth__connector {
+  width: 139px;
+  height: 139px;
+  background: #12a0d6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.waves {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.outline {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 2px solid #12a0d6;
+  position: absolute;
+  animation: waveAnimation 2.5s linear infinite; /*her har jeg brugte animation */
+}
+
+.outline:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.outline:nth-child(3) {
+  animation-delay: 1s;
+}
+
+/*bluetooth animation*/
+@keyframes waveAnimation {
+  0% {
+    transform: scale(0.1);
+  }
+  50% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+/*tilsluttet side*/
+.connected__button {
+  text-decoration: none;
+  width: 139px;
+  height: 139px;
+  display: block;
+  background: #05c323;
+  border-radius: 50%;
+  line-height: 140px;
+  text-align: center;
+  font-size: 23px;
+  color: #fff;
+}
+
+.connected__button:active {
+  background-color: #12a0d6;
+}
+
+/*tablet størrelse*/
+@media (min-width: 700px) {
+  /*første side*/
+  .logo__image {
+    height: 70vh;
+  }
+
+  .logo {
+    width: 260px;
+    height: 40px;
+  }
+
+  .arrow__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .forward__arrow {
+    width: 84.1px;
+    height: 83.3px;
+  }
+
+  .back__button {
+    width: 64px;
+    height: 64px;
+  }
+
+  .main__packages {
+    padding: 0 20px 0 20px;
+  }
+
+  .primary__text {
+    font-size: 45px;
+  }
+
+  .secondary__text {
+    font-size: xx-large;
+  }
+
+  .container {
+    height: 70vh;
+    margin: 3rem;
+  }
+
+  .box {
+    width: 290px;
+    height: 80px;
+  }
+
+  .box__link {
+    font-size: 33px;
+  }
+
+  /*tilslut side*/
+  .opened__parcelbox {
+    height: 300px;
+  }
+
+  .closed__parcelbox {
+    height: 300px;
+  }
+
+  .connect__headline {
+    margin: 130px auto -180px auto;
+  }
+
+  .connect__bottomline {
+    font-size: xx-large;
+  }
+
+  /*tilslutning side*/
+  .button {
+    margin: 217px auto 250px auto;
+  }
+
+  .connect__button {
+    width: 159px;
+    height: 159px;
+    line-height: 160px;
+    font-size: 29px;
+  }
+
+  .bluetooth__connector {
+    width: 159px;
+    height: 159px;
+  }
+
+  .outline {
+    width: 180px;
+    height: 180px;
+  }
+
+  /*tilsluttet side*/
+  .connected__button {
+    width: 169px;
+    height: 169px;
+    line-height: 160px;
+    font-size: 29px;
+  }
+}
+
+/*desktop størrelse*/
+@media (min-width: 1000px) {
+  /*første side*/
+  .logo__image {
+    height: 70vh;
+  }
+
+  .logo {
+    width: 260px;
+    height: 40px;
+  }
+
+  .arrow__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .forward__arrow {
+    width: 84.1px;
+    height: 83.3px;
+  }
+
+  /*pakker side*/
+  .back__button {
+    width: 64px;
+    height: 64px;
+  }
+
+  .main__packages {
+    padding: 0 20px 0 20px;
+  }
+
+  .primary__text {
+    font-size: 50px;
+  }
+
+  .secondary__text {
+    font-size: xx-large;
+  }
+
+  .container {
+    height: 70vh;
+    margin: 3rem;
+  }
+
+  .box {
+    width: 300px;
+    height: 90px;
+  }
+
+  .box__link {
+    font-size: 36px;
+  }
+
+  /*tilslut side*/
+  .opened__parcelbox {
+    height: 320px;
+  }
+
+  .closed__parcelbox {
+    height: 320px;
+  }
+
+  .connect__headline {
+    margin: 130px auto -180px auto;
+  }
+
+  .connect__bottomline {
+    font-size: xx-large;
+  }
+
+  /*tilslutning side*/
+  .button {
+    margin: 217px auto 250px auto;
+  }
+
+  .connect__button {
+    width: 169px;
+    height: 169px;
+    line-height: 160px;
+    font-size: 29px;
+  }
+
+  .bluetooth__connector {
+    width: 169px;
+    height: 169px;
+  }
+
+  .outline {
+    width: 200px;
+    height: 200px;
+  }
+
+  /*tilsluttet side*/
+  .connected__button {
+    width: 169px;
+    height: 169px;
+    line-height: 160px;
+    font-size: 29px;
+  }
+}

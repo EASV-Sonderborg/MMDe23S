@@ -1,0 +1,249 @@
+.body {
+  background-image: url(images/backgroundImageWide.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  height: 30vh;
+}
+/*logo*/
+.header {
+  display: grid;
+  place-content: center;
+}
+.logo {
+  max-width: 100%;
+}
+/*Talebobbel*/
+.bubble {
+  position: absolute;
+  font-family: sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 24px;
+  width: 300px;
+  background: #eb64b2;
+  border-radius: 40px;
+  padding: 24px;
+  text-align: center;
+  z-index: 1;
+  opacity: 0;
+  left: 20%;
+}
+.bubble--right {
+  left: -20%;
+  top: -10%;
+  transform: rotate(-10deg);
+}
+/*trekant under bobbel*/
+.bubble__bottomLeft:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 25px solid #eb64b2;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #eb64b2;
+  border-bottom: 20px solid transparent;
+  left: 32px;
+  bottom: -24px;
+}
+.bubble__bottomRight:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 25px solid #eb64b2;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #eb64b2;
+  border-bottom: 20px solid transparent;
+  left: 273px;
+  bottom: -24px;
+  transform: scaleX(-1);
+}
+
+/*Polaroids*/
+.polaroids {
+  display: grid;
+  gap: 2rem;
+}
+.polaroids__container {
+  position: relative;
+}
+.polaroids__polaroidImage {
+  max-width: 100%;
+  margin-inline: auto;
+}
+.polaroids__polaroid {
+  position: relative;
+  background-color: white;
+  padding: 20px 15px 15px 15px;
+  box-shadow: 5px 10px 27px rgba(0, 0, 0, 0.5);
+  width: 14rem;
+  margin: 20px 40px 50px 40px;
+  transform: rotate(-5deg);
+}
+.polaroids__container--right {
+  place-self: end;
+  transform: rotate(10deg);
+}
+.polaroids__header {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+.polaroids__description {
+  margin: 5px 6px 10px 6px;
+  text-align: center;
+  font-size: 20px;
+}
+/*vinyl albums*/
+.vinyls {
+  display: grid;
+  place-content: center;
+  gap: 2rem;
+}
+.vinyls__albumCover {
+  width: 220px;
+  position: relative;
+  z-index: 5;
+}
+.vinyls__vinyl {
+  position: absolute;
+  width: 210px;
+  z-index: 1;
+  left: 5px;
+  top: 5px;
+}
+.vinyls__album {
+  position: relative;
+}
+.vinyls__album:hover > .vinyls__vinyl {
+  animation: spin 2s forwards;
+}
+.vinyls__albumCover--girlsGetBusy {
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #0c7a11, 0 0 20px #0c7a11,
+    0 0 40px #51ca0b, 0 0 50px #0c7a11;
+}
+.vinyls__vinyl--girlsGetBusy {
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #0c7a11, 0 0 20px #0c7a11,
+    0 0 40px #51ca0b, 0 0 50px #0c7a11;
+  border-radius: 50%;
+}
+.vinyls__albumCover--ladies {
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #ef0d0d, 0 0 20px #ef0d0d,
+    0 0 40px #ef0d0d, 0 0 50px #ef0d0d;
+}
+.vinyls__vinyl--ladies {
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #ef0d0d, 0 0 20px #ef0d0d,
+    0 0 40px #ef0d0d, 0 0 50px #ef0d0d;
+  border-radius: 50%;
+}
+.vinyls__albumCover--pottymouth {
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #e36bac, 0 0 20px #e36bac,
+    0 0 40px #e36bac, 0 0 50px #e36bac;
+}
+.vinyls__vinyl--pottymouth {
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #e36bac, 0 0 20px #e36bac,
+    0 0 40px #e36bac, 0 0 50px #e36bac;
+  border-radius: 50%;
+}
+.vinyls__albumCover--realJanelle {
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #a9e61a, 0 0 20px #a9e61a,
+    0 0 40px #a9e61a, 0 0 50px #a9e61a;
+}
+.vinyls__vinyl--realJanelle {
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #a9e61a, 0 0 20px #a9e61a,
+    0 0 40px #a9e61a, 0 0 50px #a9e61a;
+  border-radius: 50%;
+}
+.vinyls__albumCover--thePeel {
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #ffffff, 0 0 20px #ffffff,
+    0 0 40px #ffffff, 0 0 50px #ffffff;
+}
+.vinyls__vinyl--thePeel {
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #ffffff, 0 0 20px #ffffff,
+    0 0 40px #ffffff, 0 0 50px #ffffff;
+  border-radius: 50%;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+    left: 5px;
+  }
+  to {
+    transform: rotate(360deg);
+    left: 110px;
+  }
+}
+
+@media (min-width: 575px) {
+  .polaroids__container:hover > .bubble {
+    opacity: 1;
+    transition: 0.4s;
+  }
+  .polaroids__description {
+    display: none;
+  }
+  .polaroids__polaroid {
+    width: 320px;
+  }
+  .vinyls__albumCover {
+    width: 300px;
+  }
+  .vinyls__vinyl {
+    width: 260px;
+    top: 10px;
+  }
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+      left: 3px;
+    }
+    to {
+      transform: rotate(360deg);
+      left: 150px;
+    }
+  }
+}
+@media (min-width: 1000px) {
+  .polaroids {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .polaroids__container--right {
+    transform: rotate(5deg);
+  }
+  .vinyls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+  }
+  .vinyls__album--ladies {
+    grid-row-start: 2;
+    grid-column-start: 2;
+  }
+  .vinyls__album--pottymouth {
+    grid-row-start: 3;
+    grid-column-start: 1;
+  }
+  .vinyls__album--realJanelle {
+    grid-row-start: 4;
+    grid-column-start: 2;
+  }
+  .vinyls__album--thePeel {
+    grid-row-start: 5;
+    grid-column-start: 1;
+  }
+  .polaroids__polaroid--1 {
+    transform: rotate(5deg);
+    margin-left: 90px;
+    margin-right: 0;
+  }
+  .polaroids__polaroid--2 {
+    margin-top: 50px;
+  }
+  .bubble--right {
+    top: 5%;
+  }
+}
