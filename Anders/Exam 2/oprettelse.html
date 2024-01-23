@@ -10,9 +10,9 @@
     <a class="backArrow" href="logon.html"
       ><svg
         xmlns="http://www.w3.org/2000/svg"
-        height="24"
+        height="45"
         viewBox="0 -960 960 960"
-        width="24"
+        width="45"
         fill="#FFFFFF"
       >
         <path
@@ -20,15 +20,27 @@
         />
       </svg>
     </a>
-    <main>
-      <input class="phonenumber" type="number" placeholder="Telefonnummer" />
-      <input class="password" type="password" placeholder="Opret Pinkode" />
-      <input class="password" type="password" placeholder="Bekærft Pinkode" />
-      <section>
-        <p>Jeg accepter Nærboks´s betingelsers</p>
-        <input type="checkbox" />
+    <main class="signup">
+      <input
+        class="signup__phonenumber"
+        type="number"
+        placeholder="Telefonnummer"
+      />
+      <input
+        class="signup__password signup__pin"
+        type="password"
+        placeholder="Opret Pinkode"
+      />
+      <input
+        class="signup__password signup__repeatpin"
+        type="password"
+        placeholder="Bekærft Pinkode"
+      />
+      <section class="condition">
+        <p class="condition__text">Jeg accepter Nærboks´s betingelsers</p>
+        <input class="condition__checkbox" type="checkbox" />
       </section>
-      <a class="signupButton" href="pakkeoversigt.html">Bekærft</a>
+      <a class="signup__button" href="logon.html">Bekærft</a>
     </main>
   </body>
 </html>
