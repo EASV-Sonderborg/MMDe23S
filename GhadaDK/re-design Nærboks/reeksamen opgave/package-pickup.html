@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>package pick up</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="openedCloset">
+      <img class="closetImage" src="images/open.png" alt="" />
+      <section class="buttonsWrapper">
+        <div class="primaryButton open">
+          <a>Åben igen</a>
+        </div>
+        <div class="primaryButton cancel">
+          <a>Annullere</a>
+        </div>
+      </section>
+    </section>
+    <dialog class="notification">
+      <h2>Luk venligst Lågen</h2>
+      <h3>Lågen er ikke lukket ordentligt</h3>
+      <div class="notification__closeButton">
+        <button class="primaryButton">OK</button>
+      </div>
+    </dialog>
+  </body>
+  <script>
+    const dialog = document.querySelector("dialog");
+    const closeButton = document.querySelector("dialog button");
+    closeButton.addEventListener("click", () => {
+      dialog.close();
+    });
+    setTimeout(() => dialog.showModal(), 3000);
+  </script>
+  <script>
+    setTimeout(() => {
+      document.location.href = "packagefetch.html";
+    }, 7000);
+  </script>
+</html>

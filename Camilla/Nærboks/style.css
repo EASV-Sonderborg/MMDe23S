@@ -26,6 +26,10 @@ body {
   padding-top: 15px;
   box-shadow: 0 4px 7px rgba(0, 0, 0, 0.375);
 }
+.primaryButton--small {
+  margin-top: 40px;
+  width: 248px;
+}
 .primaryText {
   font-size: 24px;
   color: var(--text);
@@ -71,10 +75,6 @@ body {
   color: var(--text);
   text-align: left;
   font-weight: lighter;
-}
-.primaryButton--small {
-  margin-top: 40px;
-  width: 248px;
 }
 
 /*validering*/
@@ -383,6 +383,10 @@ body {
   .primaryButton {
     width: 400px;
     font-size: 25px;
+  }
+  .primaryButton--small {
+    margin-top: 40px;
+    width: 300px;
   }
   .frontpage__image {
     max-width: 50%;
