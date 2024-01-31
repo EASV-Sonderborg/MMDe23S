@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Nærboks</title>
+  </head>
+  <body>
+    <header class="header">
+      <a class="header__arrow" href="søge_boks.html"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="45"
+          viewBox="0 -960 960 960"
+          width="45"
+          fill="#FFFFFF"
+        >
+          <path
+            d="m142-480 294 294q15 15 14.5 35T435-116q-15 15-35 15t-35-15L57-423q-12-12-18-27t-6-30q0-15 6-30t18-27l308-308q15-15 35.5-14.5T436-844q15 15 15 35t-15 35L142-480Z"
+          />
+        </svg>
+      </a>
+      <h1 class="header__heading">ÅBEN LÅGE</h1>
+    </header>
+    <main class="openBox">
+      <h2 class="openBox__heading">Du kan nu hente din pakke</h2>
+      <h3 class="openBox__text">Træk slideren for, at åbne boksen</h3>
+    </main>
+    <!-- https://codepen.io/arjunkalburgi/pen/QWWamxW -->
+    <div id="outerContainer">
+      <div class="track_drag animate">
+        <div id="item"></div>
+        <p class="track_text track_text--end animate">Åben</p>
+        <p class="track_text track_text--after animate">ÅBNER...</p>
+        <p class="track_text track_text--before animate">ÅBEN LÅGE</p>
+      </div>
+    </div>
+    <script>
+      var dragItem = document.querySelector("#item");
+      var container = document.querySelector(".track_drag");
+      var dragWidth = container.clientWidth - dragItem.clientWidth - 20;
+
+      var before = document.querySelector(".track_text--before");
+      var after = document.querySelector(".track_text--after");
+      var end = document.querySelector(".track_text--end");
+
+      var active = false;
+      var currentX;
+      var initialX;
+      var xOffset = 0;
+
+      container.addEventListener("touchstart", dragStart, false);
+      container.addEventListener("touchend", dragEnd, false);
+      container.addEventListener("touchmove", drag, false);
+
+      container.addEventListener("mousedown", dragStart, false);
+      container.addEventListener("mouseup", dragEnd, false);
+      container.addEventListener("mousemove", drag, false);
+
+      function dragStart(e) {
+        dragWidth = container.clientWidth - dragItem.clientWidth - 20;
+        if (e.type === "touchstart") {
+          initialX = e.touches[0].clientX - xOffset;
+        } else {
+          initialX = e.clientX - xOffset;
+        }
+
+        if (e.target === dragItem) {
+          active = true;
+        }
+      }
+
+      function dragEnd(e) {
+        if (currentX < dragWidth - 5) {
+          animateBack();
+        } else {
+          completed();
+        }
+        initialX = currentX;
+        active = false;
+      }
+
+      function drag(e) {
+        if (active) {
+          e.preventDefault();
+
+          if (e.type === "touchmove") {
+            currentX = e.touches[0].clientX - initialX;
+          } else {
+            currentX = e.clientX - initialX;
+          }
+
+          // xOffset = currentX;
+
+          if (currentX > 0 && currentX < dragWidth) {
+            setTranslate(currentX, dragItem);
+          }
+        }
+      }
+
+      function setTranslate(xPos, el) {
+        el.style.transform = "translate3d(" + xPos + "px, " + 0 + "px, 0)";
+        end.style.opacity = 0;
+        if (xPos > dragWidth / 2) {
+          after.style.opacity = 1;
+          before.style.opacity = 0;
+          container.style.backgroundColor = "rgb(25, 233, 118)";
+        } else {
+          after.style.opacity = 0;
+          before.style.opacity = 1;
+          container.style.backgroundColor = "rgb(66, 79, 227)";
+        }
+      }
+
+      function animateBack() {
+        // turn off/on animations to speed up the fallback
+        dragItem.classList.toggle("animate");
+        container.classList.toggle("animate");
+        before.classList.toggle("animate");
+        after.classList.toggle("animate");
+        setTranslate(0, dragItem);
+        setTimeout(() => {
+          // wait for the animation is done before turning animations back on/off
+          dragItem.classList.toggle("animate");
+          container.classList.toggle("animate");
+          before.classList.toggle("animate");
+          after.classList.toggle("animate");
+        }, 600);
+      }
+
+      function completed() {
+        end.style.opacity = 1;
+        after.style.opacity = 0;
+        before.style.opacity = 0;
+        // hint from chat-gtp
+        window.location.href = "luk_boks.html";
+      }
+    </script>
+  </body>
+</html>
