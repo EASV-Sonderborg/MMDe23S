@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Henter pakker</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/fad0c0357f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <img src="images/balloon.png" alt="Flying balloon with box" />
+    </header>
+    <main class="myPackages">
+      <section class="packages">
+        <h1>Dine pakker</h1>
+        <article class="package">
+          <div class="package__image">
+            <img src="images/package.png" alt="A box image" />
+          </div>
+          <section class="package__info">
+            <h2>Din pakker fra zalando</h2>
+            <a href="#">Nærboks Allegade 1 udendøres N:345334</a>
+          </section>
+
+          <section class="package__details">
+            <h3>udløbet dato</h3>
+            <h4>20/10 Om 5 dag</h4>
+          </section>
+          <section class="package__state">
+            <h5>Status</h5>
+            <h6>Klar til afhent</h6>
+          </section>
+          <div class="fetchButton">
+            <i class="arrow fas fa-arrow-right"></i>
+          </div>
+        </article>
+      </section>
+
+      <section>
+        <h1>Kommende pakker</h1>
+        <article class="upcomingPackage">
+          <img src="images/package.png" alt="A Box image" />
+          <section>
+            <h2>#121982342323</h2>
+            <h3>på vej</h3>
+          </section>
+          <div class="primaryButton fetch">
+            <a>spore</a>
+          </div>
+        </article>
+      </section>
+    </main>
+    <script>
+      setTimeout(() => {
+        document.location.href = "bluetooth-aktivation.html";
+      }, 5000);
+    </script>
+  </body>
+</html>
