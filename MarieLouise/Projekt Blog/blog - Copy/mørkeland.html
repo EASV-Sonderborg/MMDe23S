@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Studiebyen Sønderborg Blog</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html"><img src="images/logo.png" alt="" class="logo" /></a>
+      <nav class="menu">
+        <ul>
+          <li>
+            <a href="#"
+              ><img
+                class="menu__burger"
+                src="images/Hamburger_icon.svg.png"
+                alt=""
+            /></a>
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="index.html" class="menu__link">Hjem</a>
+              </li>
+              <li class="menu__item">
+                <script type="text/javascript">
+                  function randomlinks() {
+                    var myrandom = Math.round(Math.random() * 5);
+                    var links = new Array();
+                    links[0] = "bolig.html";
+                    links[1] = "bus.html";
+                    links[2] = "borgen.html";
+                    links[3] = "jul.html";
+                    links[4] = "party.html";
+                    links[5] = "mørkeland.html";
+
+                    window.location = links[myrandom];
+                  }
+                </script>
+                <form>
+                  <input
+                    class="menu__link"
+                    type="button"
+                    value="Blog"
+                    onClick="randomlinks()"
+                  />
+                </form>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Studieby Sønderborg</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="post post--small">
+      <span class="tape tape--left"></span>
+      <img class="post__img" src="images/mugshot.jpg" alt="apartment" />
+      <section class="post__text">
+        <h3 class="post__header">Luigi Longhi</h3>
+      </section>
+    </section>
+    <section class="post">
+      <img class="post__img" src="images/mørkeland.png" alt="party" />
+      <section class="post__text">
+        <h3 class="post__header">Mørkeland i Sønderborg</h3>
+      </section>
+    </section>
+    <section class="post post--small post--rotateLeft">
+      <span class="tape tape--right"></span>
+      <img class="post__img" src="images/newspaper.jpg" alt="apartment" />
+      <section class="post__text">
+        <h3 class="post__header">Avis Artikel</h3>
+      </section>
+    </section>
+    <section class="post__description">
+      <h4>
+        Mørkeland er en utrolig populær podcast, som jeg lytter til dagligt. Den
+        har en spændende og beroligende kvalitet, der gør den til den perfekte
+        følgesvend i min hverdag. For nylig bemærkede jeg, at Mørkeland nævnte
+        Sønderborg Kommune hele to gange i deres podcast, hvilket fangede min
+        opmærksomhed. <br />
+        Første gang, de nævnte vores kommune, var i forbindelse med en historie
+        om en person, der blev kaldt "The Shampoo Killer." Historien var både
+        uhyggelig og fascinerende, men det var alligevel lidt overraskende at
+        høre vores kommunes navn i denne sammenhæng. The Shampoo killer, er en
+        facinerende mord sag fra 1987. Det handler om en mand der var besat af
+        at vaske kvinders hår. En dag stødte han på en blaffer. Som gerne ville
+        til København fra Tyskland. Han spurgte om lov til at vaske hendes hår,
+        til gengæld ville han betale for en tog billet til København. Hun sagde
+        desværre ja. Hun kommer ind i hans lejlighed som er på anden sal. Hun
+        bliver placeret i en stol hvor han begynder at vaske hendes hår. Hun
+        begynder at blive urolig og spørger om at hun må gå. Derefter binder han
+        hende til stolen. Hvor han bliver ved, og ved, og ved med at vaske
+        hendes hår. På et tidspunkt stopper fordi han var løbet tør for shampoo,
+        så vaskede han hendes hår med honning. Flere timer efter prøvede hun at
+        flygte med uden held. Han ender med at kvæle hende indtil hun ligger
+        helt stille. Derefter gemte han hende inde i vægen og lyttede ud. Det
+        gav en uvirkelig følelse af, at noget så mørkt og skræmmende kunne finde
+        sted så tæt på hjemmet. <br />
+        Anden gang, Sønderborg Kommune blev nævnt, var i forbindelse med en ung
+        journalist kaldet Marie Engmark, på vej hjem efter arbejde havde hun
+        tænkt sig at tage ud og drikke lidt med nogle veninder, det bliver sent
+        og hun beslutter sig for at gå hjem. Der holdte der en bil og samlede
+        hende op og kørte afsted med hende. Ingen ved nøjagtig hvad der skete
+        med hende men, man fandt hende 10 dage efter i en grøft voldtaget og
+        skået halsen over. Det sker næsten aldrig noget i Sønderborg og slet
+        ikke sådan noget grotesk. det spillede en vigtig rolle i podcastens
+        indhold. Marie Engmark historie var rørende og tankevækkende, og det var
+        interessant at høre, at hun kom fra vores kommune. Det mindede mig om,
+        at selv i vores lokale samfund kan der være dybtgående og komplekse
+        historier. <br />
+        Mørkeland har uden tvivl kastet lys over Sønderborg Kommune på en måde,
+        jeg aldrig havde forventet. Det har givet mig stof til eftertanke og har
+        vakt min nysgerrighed over for de begivenheder, der kan udspille sig
+        lige uden for vores dør. Dog er Sønderborg blot nævnt 2 gange ud af 300
+        episoder så, Der sker sku ik så mange mord i Sønderborg, heldigvis
+      </h4>
+    </section>
+    <section class="imageSlider">
+      <input type="radio" id="i1" name="images" checked />
+      <input type="radio" id="i2" name="images" />
+      <input type="radio" id="i3" name="images" />
+      <input type="radio" id="i4" name="images" />
+      <input type="radio" id="i5" name="images" />
+      <input type="radio" id="i6" name="images" />
+      <section class="imageSlider__item" id="one">
+        <section class="imageSlider__polaroid">
+          <a href="party.html"
+            ><img
+              src="images/380636309_653786386949644_7326473961304961058_n.png"
+              alt=""
+          /></a>
+          <h2>Gang i Sønderborg</h2>
+        </section>
+      </section>
+      <section class="imageSlider__item" id="two">
+        <section class="imageSlider__polaroid">
+          <a href="jul.html"><img src="images/julehygge1.jpg" alt="" /></a>
+          <h2>Jul i Sønderborg</h2>
+        </section>
+      </section>
+      <section class="imageSlider__item" id="three">
+        <section class="imageSlider__polaroid">
+          <a href="bolig.html"><img src="images/studiebolig.jpg" alt="" /></a>
+          <h2>Studiebolig eller alm?</h2>
+        </section>
+      </section>
+      <section class="imageSlider__item" id="four">
+        <section class="imageSlider__polaroid">
+          <a href="bus.html"><img src="images/insidebus.png" alt="" /></a>
+          <h2>Tag bussen!</h2>
+        </section>
+      </section>
+      <section class="imageSlider__item" id="five">
+        <section class="imageSlider__polaroid">
+          <a href="borgen.html"
+            ><img src="images/borgenshopping.PNG" alt=""
+          /></a>
+          <h2>Borgen shoppetur?</h2>
+        </section>
+      </section>
+      <section class="imageSlider__item" id="six">
+        <section class="imageSlider__polaroid">
+          <a href="mørkeland.html"><img src="images/mørkeland.png" alt="" /></a>
+          <h2>Mørkeland i Sønderborg</h2>
+        </section>
+      </section>
+      <section id="nav_slide">
+        <label for="i1" class="dots" id="dot1"></label>
+        <label for="i2" class="dots" id="dot2"></label>
+        <label for="i3" class="dots" id="dot3"></label>
+        <label for="i4" class="dots" id="dot4"></label>
+        <label for="i5" class="dots" id="dot5"></label>
+        <label for="i6" class="dots" id="dot6"></label>
+      </section>
+    </section>
+    <footer class="footer">
+      <p class="footer__description">
+        Studieby Sønderborg fungerer som bindeled mellem studerende,
+        uddannelsesinstitutioner, virksomheder og kommune med det formål at
+        understøtte og markedsføre Sønderborg som uddannelses- og studieby. Vi
+        er med til at udvikle nye koncepter og initiativer, der kan gøre en
+        forskel i Sønderjylland med henblik på at skabe en region i bedre
+        balance – uddannelsesmæssigt, økonomisk og geografisk.
+      </p>
+      <p class="footer__social">
+        <img
+          src="images/icons8-linkedin.svg"
+          alt=""
+          class="footer__icon footer__icon--linkedIn"
+        />
+        <img
+          src="images/Facebook-f_Logo-Blue-Logo.wine.svg"
+          alt=""
+          class="footer__icon footer__icon--facebook"
+        />
+        <img
+          src="images/Instagram-Logo.wine.svg"
+          alt=""
+          class="footer__icon footer__icon--instagram"
+        />
+      </p>
+      <p class="footer_copyright">&copy; 2023 Studieby Sønderborg</p>
+    </footer>
+  </body>
+</html>
