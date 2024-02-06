@@ -1,0 +1,108 @@
+body{
+    background: #ffffff;
+    margin: 0;
+  }
+  svg {
+    overflow: visible;
+}
+.text{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f3561;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    padding-top: 30px;
+}
+h1.connected__text {
+    margin: 0;
+}
+.smiley{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%)
+} 
+  .smiley__loading{
+    stroke-dasharray: 314;
+    transform-origin: center center;
+    animation: loading 3.5s linear infinite;
+  }
+  .smiley__mouth {
+    fill: none;
+    stroke: #274C77;
+    stroke-width: 5px;
+    stroke-linecap: round;
+  }
+    .smiley__eye{
+        animation: blink 2s linear infinite;
+        transform-origin: center;
+    }
+    .connecting__button {
+      box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25), -5px -5px 10px 0px #fff;
+      width: 80%;
+      position: absolute;
+      top: 150%;
+      left: 0%;
+    }
+    .button {
+      width: 100%;
+      height: 56px;
+      border-radius: 20px;
+      box-shadow: 3px 3px 5px 0px #a5b7c1, -3px -3px 5px 0px #e4eff6;
+      border: none;
+      font-size: 24px;
+      box-shadow: 3px 3px 5px 0px #a5b7c1, -3px -3px 5px 0px #e4eff6;
+    }
+    .button--secondary {
+      background: #ffffff;
+      color: #274c77;
+    }
+
+    @keyframes loading{
+      0%{
+        stroke-dashoffset: 600;
+        transform: rotate(-360deg);
+      }
+      100%{
+        stroke-dashoffset: 0;
+        transform: rotate(360deg);
+      }
+      
+    }
+  @keyframes blink {
+    0% { scale: 1;}
+          95% { scale: 1;}
+          100% { scale: 1 0.5; }
+  }
+  .connected__smiley{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)scale(1.4);
+    
+  }
+  .connected__mouth{
+    position: absolute;
+    width: 50px;
+    height: 70px;
+    border: 6px solid transparent;
+    left: 124.5px;
+    top: 25px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border-bottom-color:#274C77;
+  }
+  .connected__eye{
+    animation: blink 2s linear infinite;
+    transform-origin: center;
+}
+.connected__loading{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  @keyframes blink {
+    0% { scale: 1;}
+          95% { scale: 1;}
+          100% { scale: 1 0.5; }
+  }

@@ -12,13 +12,17 @@ body {
 header {
   align-items: center;
 }
+main {
+  display: flex;
+  align-items: center;
+  flex-dircetion: column;
+}
 
 h2 {
   margin: 100px;
   padding: 0px;
   font-size: 40px;
   color: #edeae7;
-  position: relative;
 }
 
 .connect {
@@ -67,7 +71,8 @@ h2 {
   animation: blink 0, 2s infinite alternate, grow 2s infinite;
 }
 .info {
-  margin: 6px;
+  margin-top: 1.5rem;
+  margin-left: 0.3rem;
 }
 /*Connected (Connected.html) Slut-*/
 
