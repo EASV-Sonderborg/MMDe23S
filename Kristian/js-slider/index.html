@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slider example with JavaScript</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <section class="slider">
+      <button class="slider__arrow slider__arrow--prev">&#8249;</button>
+      <button class="slider__arrow slider__arrow--next">&#8250;</button>
+      <ul class="slider__container">
+        <li class="slide"></li>
+        <li class="slide"></li>
+        <li class="slide"></li>
+        <li class="slide"></li>
+      </ul>
+    </section>
+    <script src="script.js"></script>
+
+    <!-- Referencer:
+        Opbygning af slider: (OBS: Der benyttes ældre kodestandarder) 
+            https://webdesign.tutsplus.com/tutorials/how-to-build-a-simple-carousel-with-vanilla-javascript--cms-41734 
+        
+        'scrollLeft' property: 
+            https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollLeft
+        
+        addition assignment (+=):
+            https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition_assignment 
+        
+        W3C documentation - carousel structure and accessibility:
+            https://www.w3.org/WAI/tutorials/carousels/structure/
+        
+        CSS Scroll snap:
+            https://web.dev/articles/css-scroll-snap
+        
+        KeyboardEvent - code:
+            https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code
+    -->
+  </body>
+</html>

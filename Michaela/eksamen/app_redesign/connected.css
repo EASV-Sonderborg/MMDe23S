@@ -1,0 +1,129 @@
+/*connected we have borrowed from this codepen: https://codepen.io/Qualley/pen/jvZMJy*/
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh; }
+    body .svg-wrap {
+      width: 300px;
+      height: 300px;
+      border-radius: 200px; }
+      body .svg-wrap #circle {
+        fill: none;
+        position: absolute;
+        height: inherit;
+        opacity: 1;
+        transform: rotate(-33deg);
+        animation: circle 1.8s ease-in 2s infinite;
+        animation-direction: alternate;
+        stroke-linecap: round;
+        stroke-dasharray: 291, 943;
+        stroke-dashoffset: -943; }
+        body .svg-wrap #circle .st0 {
+          stroke: #274C77;
+          animation: fill 1.8s ease-in-out 2s infinite; }
+      body .svg-wrap #check {
+        fill: none;
+        position: absolute;
+        height: inherit;
+        opacity: 0;
+        stroke-dasharray: 290, 9000;
+        stroke-dashoffset: -290;
+        animation: check 1.8s ease-out 2s infinite;
+        animation-direction: alternate;
+        stroke-linecap: round; }
+      body .svg-wrap #button {
+        fill: none;
+        position: absolute;
+        height: inherit;
+        opacity: 1;
+        stroke-dasharray: 943, 9000;
+        stroke-dashoffset: 0;
+        animation: button 1.8s ease-in-out 2s infinite;
+        animation-direction: alternate;
+        stroke-linecap: round;
+        stroke: green;
+        transform: scale(1); }
+        #circle > .st0 {
+          fill: none;
+          stroke-width: 4;
+          stroke-miterlimit: 10;
+        }
+        
+        #check > .st0 {
+          fill: none;
+          stroke: #000000;
+          stroke-width: 4;
+          stroke-miterlimit: 10;
+        }
+        
+        #button > .st0 {
+          fill: none;
+          stroke: #274C77;
+          stroke-width: 8;
+          stroke-miterlimit: 10;
+        }
+  
+  @keyframes circle {
+    0% {
+      opacity: 0;
+      stroke-dasharray: 40, 943;
+      stroke-dashoffset: 0;
+      transform: rotate(-73deg); }
+    40% {
+      opacity: .5; }
+    50% {
+      stroke-dasharray: 200, 943;
+      transform: rotate(-33deg); }
+    51% {
+      opacity: 1; }
+    58% {
+      stroke-dasharray: 0,943;
+      stroke-dashoffset: -943;
+      opacity: 1; }
+    59% {
+      opacity: 0; }
+    100% {
+      opacity: 0; } }
+  
+  @keyframes check {
+    0% {
+      stroke-dasharray: 290, 9000;
+      stroke-dashoffset: -294;
+      opacity: 0; }
+    50% {
+      stroke-dasharray: 290, 9000;
+      stroke-dashoffset: -294;
+      opacity: 0; }
+    50% {
+      opacity: 1; }
+    63% {
+      opacity: 1; }
+    63% {
+      stroke-dasharray: 291, 9000;
+      stroke-dashoffset: 55;
+      opacity: 1; }
+    100% {
+      stroke-dasharray: 291, 9000;
+      stroke-dashoffset: 43;
+      opacity: 1; } }
+  
+  @keyframes button {
+    0% {
+      opacity: 0;
+      transform: scale(1); }
+    60% {
+      opacity: 0; }
+    80% {
+      opacity: 1; }
+    100% {
+      opacity: 1;
+      transform: scale(1); } }
+
+      .connected__text{
+        margin-bottom: 100px;
+      }

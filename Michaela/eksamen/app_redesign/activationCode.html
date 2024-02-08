@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nærboks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="background">
+    <section class="card">
+        <section class="pageIndicator">
+            <span class="pageIndicator__dot pageIndicator__dot--inactive"></span>
+            <span class="pageIndicator__dot pageIndicator__dot--active"></span>
+            <span class="pageIndicator__dot pageIndicator__dot--inactive"></span>
+        </section>
+        <form class="activationCode">
+            <label class="activationCode__labelText label__text text" for="code">Aktiveringskode</label>
+            <input class="activationCode__input input" id="code" type="text">
+            <section class="activationCode__texts">
+                <p class="activationCode__inform text">Send igen</p>
+                <p class="activationCode__timer text">00:54</p>
+            </section>
+        </form>
+        <a href="createAccount.html">
+            <button class="activationCode__button button button--primary">
+                Ok
+            </button>
+        </a>
+    </section>
+</body>
+</html>
