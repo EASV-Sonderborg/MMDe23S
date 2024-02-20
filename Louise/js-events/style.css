@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+}
+
+.navbar__hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+.navbar__menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menuItem {
+    margin-left: 5rem;
+    list-style: none;
+}
+
+.menuItem__link {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #475569;
+    text-decoration: none;
+}
+
+.menuItem__link:hover{
+    color: #C00C0D;
+}
+
+.navbar__logo {
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: #C00C0D;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar__menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar__menu.active {
+        left: 0;
+    }
+
+    .menuItem {
+        margin: 2.5rem 0;
+    }
+
+    .navbar__hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navbar__hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar__hamburger.active .bar:nth-child(1) {
+        -webkit-transform: translateY(8px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .navbar__hamburger.active .bar:nth-child(3) {
+        -webkit-transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+.mainContent {
+    padding: 1rem;
+}
+.assignmentOne {
+    margin: 2rem 0 2rem;
+}

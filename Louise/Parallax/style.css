@@ -1,0 +1,11 @@
+body {
+    height: 2000px;
+    background-color: #1F2138;
+}
+
+.parallax__image {
+    position: absolute;
+    width: 100%;
+    transform: translateY(var(--translateY, 0));
+    will-change: transform;
+}
