@@ -1,11 +1,19 @@
 body {
-    height: 2000px;
-    background-color: #1F2138;
+    margin: 0;
+    padding: 0;
+    height: 200vh; /* Make the body tall to enable scrolling */
+}
+
+.parallax {
+    position: relative;
+    height: 100vh; /* Set the height of the parallax container */
+    overflow: hidden;
 }
 
 .parallax__image {
     position: absolute;
     width: 100%;
-    transform: translateY(var(--translateY, 0));
-    will-change: transform;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-out;
 }
