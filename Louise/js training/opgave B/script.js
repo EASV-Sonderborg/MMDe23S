@@ -65,8 +65,8 @@ headerElement.appendChild(newHeading);
  */
 
 const firstName = "Louise";
-const textString = `Her laver "${Louise}" JS opgaver`;
 const newH2 = document.createElement("h2");
+const textString = `Her laver "${Louise}" JS opgaver`;
 newH2.textContent = textString; 
 
 const mainElement = document.querySelector("main");
