@@ -15,7 +15,7 @@ carImage.setAttribute("alt", "en ny alt tekst");
 //carImage.className = "test"; // OBS: den fjerner evt. allerede definerede navne
 carImage.classList.add("test");
 
-
+    
 
 
 /**
@@ -46,7 +46,11 @@ carImage.classList.add("test");
 const carImages = [
     "https://images.unsplash.com/photo-1489824904134-891ab64532f1?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1541443131876-44b03de101c5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "https://images.unsplash.com/photo-1541443131876-44b03de101c5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1566933293069-b55c7f326dd4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1536667842290-7602f6a43a2b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1518779379-675cc1cfc554?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1604410869154-3c16714cd476?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   ];
 
 // 3: EventListener for button
@@ -71,21 +75,47 @@ function changeCarImage() {
 
 // eventlistener til .cards__button: 
 
+const cardsButton = document.querySelector('.cards__button');
+cardsButton.addEventListener('click', createCard);
+
+
 
 // funktionen som kører, når knappen er blevet trykket 
-
-
-    //oprette alle elementer til et card: section, h3, p
-
-    // appende de nye elementer til .cardbox
+function createCard() {
+    // Opret alle elementer til et card: section, h3, p
+    const newCard = document.createElement('section');
+    const cardHeading = document.createElement('h3');
+    const cardText = document.createElement('p');
 
     // OPG. 1: Tilføj class navne til de tre nyoprettede elementer
-
-    // OPG. 2: Få en tekststreng ind i et nyt card (hard coded)
+    newCard.classList.add('card');
+    cardHeading.classList.add('card__heading');
+    cardText.classList.add('card__text');
 
     // OPG. 3: I HTML lav to inputfelter med labels. Indholdet fra input felterne
-    //         skal sættes ind i det enkelte card ved hjælp af textContent. 
+    // skal sættes ind i det enkelte card ved hjælp af textContent.
+    const input1 = document.getElementById('input1').value;
+    const input2 = document.getElementById('input2').value;
+    cardHeading.textContent = input1;
+    cardText.textContent = input2;
+
+    // OPG. 2: Få en tekststreng ind i et nyt card (hardcoded)
+    // Flyt dette op i OPG. 1, hvis du vil have hardkodede værdier
+    // cardHeading.textContent = 'Ny Titel';
+    // cardText.textContent = 'Ny tekst';
+
+    // Append de nye elementer til .cardbox
+    const cardbox = document.querySelector('.cardbox');
+    cardbox.appendChild(newCard);
+    newCard.appendChild(cardHeading);
+    newCard.appendChild(cardText);
 
     // OPG. 4: Få indholdet fra de to inputfelter slettet, når der er oprettet et card
+    document.getElementById('input1').value = '';
+    document.getElementById('input2').value = '';
 
     // OPG. 5: Få kun oprettet et nyt card, hvis begge inputfelt indeholder noget tekst
+    if (input1.trim() !== '' && input2.trim() !== '') {
+        cardbox.appendChild(newCard);
+    }
+}

@@ -1,13 +1,13 @@
-document.addEventListener("DOMContentLoaded", function () {
-    var parallaxImages = document.querySelectorAll(".parallax__image");
+document.addEventListener("DOMContentLoaded", () => {
+    const parallaxImages = document.querySelectorAll(".parallax__image");
 
     function updateParallax() {
-        var scrollY = window.scrollY || window.pageYOffset;
+        const scrollY = window.scrollY
 
-        parallaxImages.forEach(function (image) {
-            var modifier = parseFloat(image.getAttribute("data-modifier"));
-            var translateY = scrollY * modifier / 100;
-            image.style.transform = "translateY(" + translateY + "px)";
+        parallaxImages.forEach(image => {
+            const modifier = parseFloat(image.getAttribute("data-modifier"));
+            const translateY = scrollY * modifier / 100;
+            image.style.transform = `translateY(${translateY}px)`;
         });
     }
 
