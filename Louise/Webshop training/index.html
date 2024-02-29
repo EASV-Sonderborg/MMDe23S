@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <article class="product" itemscope itemtype="https://schema.org/Product">
+        <img class="product__image" itemprop="image" src="https://www.sport24.dk/_next/image/?url=https%3A%2F%2Fd9k6g0fi21yil.cloudfront.net%2F343-622845_GREYM_01.jpg&w=750&q=75" alt="Kari Traa Kari Joggingbukser Dame">
+        <h2 class="product__name" itemprop="name">Kari Traa Kari Joggingbukser Dame</h2>
+        <h3 class="product__price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+          <span itemprop="price" content="399.00">399</span>
+          <span itemprop="priceCurrency" content="DKK">kr</span>
+        </h3>
+        <button class="product__addToCart button button--primary">Add to cart</button>
+      </article>
+      
+      <article class="product" itemscope itemtype="https://schema.org/Product">
+        <img class="product__image" itemprop="image" src="https://www.sport24.dk/_next/image/?url=https%3A%2F%2Fd9k6g0fi21yil.cloudfront.net%2F16-1372111_010_20.jpg&w=750&q=75" alt="Columbia Benton Springs Full Zip Fleecetrøje Dame">
+        <h2 class="product__name" itemprop="name">Columbia Benton Springs Full Zip Fleecetrøje Dame</h2>
+        <h3 class="product__price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+          <span itemprop="price" content="899.00">899</span>
+          <span itemprop="priceCurrency" content="DKK">kr</span>
+        </h3>
+        
+        <button class="product__addToCart button button--primary">Add to cart</button>
+      </article>
+      
+      <article class="product" itemscope itemtype="https://schema.org/Product">
+        <img class="product__image" itemprop="image" src="https://www.sport24.dk/_next/image/?url=https%3A%2F%2Fd9k6g0fi21yil.cloudfront.net%2F11-219087_3365_01.jpg&w=750&q=75" alt="DBU hue">
+        <h2 class="product__name" itemprop="name">DBU hue</h2>
+        <h3 class="product__price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+          <span itemprop="price" content="99.00">99</span>
+          <span itemprop="priceCurrency" content="DKK">kr</span>
+        </h3>
+        <button class="product__addToCart button button--primary">Add to cart</button>
+      </article>
+      
+      <aside class="cart --empty">
+        <section class="cart__items">
+          <!-- Cart items should appear here -->
+        </section>
+        <h3 class="cart__isEmptyNotice">Your cart is empty!</h3>
+        <h3 class="cart__deliveryLabel">Levering:</h3>
+        <h2 class="cart__deliveryPrice">60kr</h2>
+        <h3 class="cart__discountLabel">Rabatkode: </h3>
+        <h2 class="cart__discountValue">0kr</h2>
+        <h3 class="cart__totalPriceLabel">Total: </h3>
+        <h2 class="cart__totalPrice">399kr</h2>
+      </aside>
+      <script src="script.js"></script>
+</body>
+</html>
