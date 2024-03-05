@@ -19,7 +19,11 @@
  * The number of iterations in the for loop is defined by the 'arrayName.length' property.
  * Make a console.log of all the students' names in the loop.
  */
+const students = ["Michaela", "Kristian", "Emma", "Camilla", "Marie Louise" , "Ghada", "Louise", "Anders" , "Samantha" , "Maria" , "Nele"];
 
+for (let i = 0; i < students.length; i++) {
+    console.log(students[i]); 
+}
 
 /**
  * 3 : Array, loop and DOM manipulation:
@@ -28,6 +32,20 @@
  * Loop through the array with the new for...of loop. 
  * Create list items for each student name and insert into the DOM in the <ul class="students">.
  */
+
+const Studentlist = document.querySelector('.students');
+
+for (const student of students) {
+// Create a new li element for each student
+const listItem = document.createElement("li");
+
+// Set the text content of the li element to the current student name
+listItem.textContent = student;
+
+// Append the li element to the ul element in the DOM
+Studentlist.appendChild(listItem);
+}
+
 
 
 
@@ -46,9 +64,28 @@
  * 
  */
 
+const studentScores = [
+    ['Bill', 73], 
+    ['Andy', 80],
+    ['Kate', 75],
+    ['Ruth', 89],
+    ['Joe', 88]
+];
+//get the sum of studentscores
+let totalScore = 0;
+
 // First, create an array with the students and their score with this notation:
 // const arrrayName = [['studentname', score], ['studentname', score]...]
 
+// Loop through the array of students and add their scores together
+for (const studentScore of studentScores){
+console.log(studentScore)
+
+totalScore += studentScore[1];
+console.log(totalScore)
+}
+totalScore /= studentScores.length;
+console.log(totalScore);
 
 // Next, write a for loop that loops through the array of students. The code to 
 // execute during the loop (between the { } ) should add the scores together 
@@ -67,7 +104,14 @@
  * image: '8-tabel.png' here in the folder:
  */
 
+const multiplier = 8;
 
+console.log()
+
+for (let i = 1; i <= 10; i++) {
+    const result = multiplier * i;
+    console.log(`${multiplier} * ${i} = ${result}`);
+}
 
 
 /**
@@ -77,9 +121,14 @@
  * 
  * Loop through the object and console.log the propeties' names and values of the object.
  */
-
-
-
+const ObjectPerson = {
+    name: "Louise",
+    lastname: "Thomsen",
+    age: "21",
+};
+for (const key in ObjectPerson) {
+    console.log(`${key}: ${ObjectPerson[key]}`);
+  }
 
 /**
  * 7 : Object, for loop and DOM manipulation
@@ -90,7 +139,6 @@
  * Loop through the object and create elements with the content from the obejct.
  * Finally append the elements to the DOM. 
  */
-
 
 
 /**
