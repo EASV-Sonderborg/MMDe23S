@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lets try</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header__halloween-movie"><h1>Haunted Family Spooktacular</h1></header>
+    <main>
+        <h2 class="welcome">Family Halloween Movies</h2>
+    <section class="can__watch">
+            <h3 class="can__watch-headline">What movies can we watch:</h3>
+            <h5 class="can__watch-describe">Enters the age of the youngest member</h5>
+        <section class="age__confirm-submit">
+            <input class="age" id="myAge" type="number" name="yourAge" min="0" max="120" step="1" placeholder="Your age"> 
+            <button class="age__confirm" id="confirmAge" type="submit" name="submitAge" onclick="checkAge()">OK</button>
+        </section>
+        <section class="age__allowed" id="allowedMovies">
+        </section>
+    </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
