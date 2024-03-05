@@ -1,0 +1,54 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.header__halloween-movie {
+    display: flex;
+    text-align: center;
+    font-family: "Creepster", system-ui;
+    font-size: 1.5rem;
+}
+.can__watch {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   max-width: 350px;
+   background-color: rgb(243, 240, 240);
+   padding: 0.5rem;
+   border-radius: 1rem;
+   box-shadow: 4px 4px 6px rgb(188, 187, 187, 0.6);
+}
+.can__watch-headline {
+    grid-column: 1 / span 2;
+    font-size: 1.1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 0.5rem;
+}
+.can__watch-describe {
+    grid-column: 1 / span 2;
+}
+.age__confirm-submit {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+.age {
+    width: 6.25rem;
+    height: 3rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+}
+.age__confirm {
+    min-height: 1.5rem;
+    width: 3rem;
+    border-radius: 0.5rem;
+    box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.8), 4px 4px 6px rgb(188, 187, 187, 0.6);
+    border: none;
+}
+.age__allowed {
+    grid-column: 1 / span 2;
+}
+.age__allowed h3 {
+    font-size: 0.9rem;
+}
+.age__allowed ul {
+    font-size: 0.8rem;
+}
