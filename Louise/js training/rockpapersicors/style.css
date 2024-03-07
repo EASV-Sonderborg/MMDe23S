@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #ff69b4;
+    margin-top: 50px;
+}
+
+.choices {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.choices button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 15px;
+    background-color: #ff69b4; /* Pink color */
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.choices button:hover {
+    background-color: #d6448c; /* Darker pink on hover */
+}
+
+.playerDisplay, .computerDisplay, .resultDisplay, .scores {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.scores {
+    margin-top: 10px;
+}
+
+.scores p {
+    margin: 5px;
+}
