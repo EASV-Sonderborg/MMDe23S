@@ -1,0 +1,103 @@
+.navbar {
+    background-color: #E2875F;
+    overflow: hidden;
+
+}
+.navbar-left {
+    float: left;
+    padding: 5px;
+}
+.navbar-logo {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+
+}
+.navbar__logo{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.navbar-text {
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+    padding-bottom: 35px;
+    font-size: 150%;
+    font-family: 'Pacifico', cursive;
+
+}
+.navbar-right {
+    float: right;
+    padding: 10px;
+    padding-top: 30px;
+    font-size: 115%;
+}
+
+.navbar-link {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-family: 'Pacifico', cursive;
+
+}
+.hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+  }
+  
+  .hero__h1 {
+    position: absolute;
+    z-index: 1;
+    font-size: 55px;
+    text-align: left;
+    color: white;
+    top: 25%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+  
+  .hero-image {
+    position: relative;
+  }
+  
+  .hero__image {
+    width: 100%; 
+    display: block;
+  }
+  
+  .bigroundcircle {
+    position: absolute;
+    z-index: 2;
+    width: 250px;
+    height: auto;
+    right: 20px;
+    top: 50%; 
+    transform: translateY(-50%);
+}
+.centertext__h2{
+text-align: center;
+font-family: 'Josefin Slab', serif;
+font-size: 30px;
+margin: 7%;
+border-bottom: 2px solid #6CD771;
+}
+
+.undersections__image *{
+  width: 250px; 
+  height: auto; 
+}
+.clickablesections{
+  display: flex;
+  justify-content: space-around; 
+  align-items: center;
+
+}

@@ -609,29 +609,24 @@ body {
   text-decoration: none;
   width: 200px;
   height: 200px;
-  display: block;
   background: #00a0d6;
   border-radius: 50%;
   line-height: 200px;
   text-align: center;
   font-size: 30px;
   color: rgb(255, 255, 255);
-  display: block;
   margin: 100px auto 250px auto;
 }
 .buttons__action:active {
   transform: scale(0.9);
 }
 .buttons__return {
-  display: block;
   text-decoration: none;
   width: 250px;
   height: 80px;
-  display: block;
   background: #00a0d6;
   border-radius: 10px;
   line-height: 80px;
-  text-align: center;
   font-size: 30px;
   color: rgb(255, 255, 255);
 }
