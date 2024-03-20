@@ -1,0 +1,98 @@
+.animation__image{
+max-width: 100%;
+animation: reveal linear both;
+animation-timeline: view(block);
+animation-range: entry 25% cover 50%;
+}
+@keyframes reveal{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.animation {
+    text-align: center;
+    padding: 20px;
+}
+
+.animation__headline, .animation__subHeadline {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.animation__section {
+    display: inline-block;
+    margin: 0 0.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.animation__image {
+    max-width: 100%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Add animate.css classes */
+.animate__animated {
+    animation-duration: 1s;
+}
+
+.animate__fadeIn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Apply the initial animation state */
+.animate__animated.animate__fadeIn {
+    animation-fill-mode: both;
+}
+
+/* Swing animation */
+@keyframes swing {
+    20% {
+        transform: rotate3d(0, 0, 1, 5deg);
+    }
+    40% {
+        transform: rotate3d(0, 0, 1, -5deg);
+    }
+    60% {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+    80% {
+        transform: rotate3d(0, 0, 1, -5deg);
+    }
+    100% {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+}
+
+/* Hover effect */
+.animation__headline:hover,
+.animation__subHeadline:hover,
+.animation__section:hover,
+.animation__image:hover {
+    animation: swing 1s ease;
+}
+.scroll-triggered {
+    animation: fadeInLeft 1s ease-in-out forwards;
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

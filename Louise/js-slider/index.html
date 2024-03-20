@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider example with JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="slider">
+        <button class="slider__arrow slider__arrow--prev">
+            &#8249;
+        </button>
+        <button class="slider__arrow slider__arrow--next">
+            &#8250;
+        </button>
+        <ul class="slider__container">
+            <li class="slide">
+                <h1 class="header">Opgave 1</h1>
+                <h2 class="description">Få slideren til at scrolle tilbage til start (1. slide)</h2>
+                <p class="paragraph">Vi har fået de til at gå tilbage til start, da den regner ud hvor mange slides der er + at bruge funktionen if hvor vi har sagt "number og slides -1"</p>
+            </li>
+            <li class="slide">
+                <h1 class="header">Opgave 2</h1>
+                <h2 class="description">Anvend CSS Scroll Snap, så slideren 'snapper' til at vise en hel slide på touch devices (og ikke stopper midt i mellem to slides).</h2>
+                <p class="paragraph">vi har anvendt "scroll-snap-align: start;" og "scroll-snap-type: x mandatory;" i css</p>
+                <img class="image" src="/images/53625763671.png" alt="Tom Blyth">
+            </li>
+            <li class="slide">
+                <h1 class="header">Opgave 3</h1>
+                <h2 class="description">Få slideren til at reagere på venstre og højre pil</h2>
+                <p class="paragraph">svar på linje 73 - 83 i JavaScript</p>
+            <li class="slide">
+                <h1 class="header">Coda</h1>
+                <h2 class="description">Louise's søde hund</h2>
+                <img class="image" src="/images/Codabeach.png" alt="">
+            </li>
+        </ul>
+    </section>
+    <script src="script.js"></script>
+
+    <!-- Referencer:
+        Opbygning af slider: (OBS: Der benyttes ældre kodestandarder) 
+            https://webdesign.tutsplus.com/tutorials/how-to-build-a-simple-carousel-with-vanilla-javascript--cms-41734 
+        
+        'scrollLeft' property: 
+            https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollLeft
+        
+        addition assignment (+=):
+            https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition_assignment 
+        
+        W3C documentation - carousel structure and accessibility:
+            https://www.w3.org/WAI/tutorials/carousels/structure/
+        
+        CSS Scroll snap:
+            https://web.dev/articles/css-scroll-snap
+        
+        KeyboardEvent - code:
+            https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code
+    -->
+</body>
+
+</html>
