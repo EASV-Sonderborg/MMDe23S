@@ -1,0 +1,25 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    transition: background-color 0.5s ease;
+  }
+  
+  .middle {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ColorChangeButton {
+    position: absolute;
+    z-index: 1;
+}
+
+.middle__bear {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+}
