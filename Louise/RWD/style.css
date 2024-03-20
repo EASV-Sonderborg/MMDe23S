@@ -1,0 +1,234 @@
+.header {
+    background-color: #ffffff; 
+  }
+  
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; 
+  }
+  
+  .navigation__link {
+    text-decoration: none;
+    color: rgb(61, 181, 255);
+    margin: 0 10px;
+
+  }
+  
+  .navigation__image {
+    max-width: 25%; 
+  }
+  .aside {
+    padding: 20px; 
+    background-color: #ffffff;
+    
+  }
+  
+  .aside__h2 {
+    font-size: 1.5rem; 
+    display: flex;
+    justify-content: center ;
+  }
+  
+  .aside__text {
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .aside__image {
+    max-width: 100%; 
+  }
+
+  .article{
+    padding: 20px;
+  }
+
+  .article__text {
+    font-size: 1.2rem;
+  }
+  .section {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    text-align: center;
+  }
+  .section img {
+    max-width: 100%;
+  }
+  .section p{
+    font-size: 2rem;
+  }
+  .footer {
+    background-color: #c0dff1; 
+    color: white; 
+    padding: 10px; 
+    text-align: center;
+  }
+  @media (min-width: 820px){
+    .body{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1fr;
+    }
+    .header {
+        background-color: #ffffff;
+        grid-column: span 2;
+      }
+      
+      .navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px; 
+      }
+      
+      .navigation__link {
+        text-decoration: none;
+        color: rgb(61, 181, 255);
+        margin: 0 10px;
+    
+      }
+      
+      .navigation__image {
+        max-width: 45%; 
+      }
+      .aside {
+        padding: 20px; 
+        background-color: #ffffff;
+        
+      }
+      
+      .aside__h2 {
+        font-size: 1.5rem; 
+        display: flex;
+        justify-content: center ;
+      }
+      
+      .aside__text {
+        font-size: 1rem;
+        text-align: center;
+      }
+      
+      .aside__image {
+        max-width: 100%; 
+      }
+    
+      .article{
+        padding: 20px;
+        font-size: 25px;
+        
+      }
+    
+      .article__text {
+        font-size: 25px;
+      }
+      .section {
+        text-align: center;
+        padding: 20px;
+        background-color: #ffffff;
+        text-align: center;
+        grid-column: span 2;
+      }
+      .section img {
+        max-width: 70%;
+      }
+      .section p{
+        font-size: 2rem;
+      }
+      .footer {
+        background-color: #c0dff1; 
+        color: white; 
+        padding: 10px; 
+        text-align: center;
+        grid-column: span 2;
+      }
+      .footer__text{
+        font-size: 30px;
+      }
+  }
+  @media (min-width: 1200px){
+    .body{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1fr;
+    }
+    .header {
+        background-color: #ffffff;
+        grid-column: span 3;
+      }
+      
+      .navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px; 
+      }
+      
+      .navigation__link {
+        text-decoration: none;
+        color: rgb(61, 181, 255);
+        margin: 0 10px;
+        font-size: 35px;
+    
+      }
+      
+      .navigation__image {
+        max-width: 45%; 
+      }
+      .aside {
+        padding: 20px; 
+        background-color: #ffffff;
+        grid-column: span 1;
+        
+      }
+      
+      .aside__h2 {
+        font-size: 1.5rem; 
+        display: flex;
+        justify-content: center ;
+      }
+      
+      .aside__text {
+        font-size: 1rem;
+        text-align: center;
+      }
+      
+      .aside__image {
+        max-width: 100%; 
+      }
+    
+      .article{
+        padding: 20px;
+        font-size: 25px;
+      grid-column: span 2;
+        
+      }
+    
+      .article__text {
+        font-size: 25px;
+      }
+      .section {
+        text-align: center;
+        padding: 20px;
+        background-color: #ffffff;
+        text-align: center;
+        grid-column: span 1;
+      }
+      .section img {
+        max-width: 70%;
+      }
+      .section p{
+        font-size: 2rem;
+      }
+      .footer {
+        background-color: #c0dff1; 
+        color: white; 
+        padding: 10px; 
+        text-align: center;
+        grid-column: span 3;
+      }
+      .footer__text{
+        font-size: 30px;
+      }
+  }
