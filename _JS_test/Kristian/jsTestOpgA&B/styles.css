@@ -1,0 +1,44 @@
+.body {
+  margin-top: 40vh;
+  background-color: blue;
+}
+
+.button__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.colorButton {
+  padding: 20px;
+  padding-left: 80px;
+  padding-right: 80px;
+  color: black;
+  background-color: #a0018b;
+  font-weight: 800;
+  font-size: large;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+  box-shadow: 0px 10px 0px #6d005e;
+}
+
+.colorButton:hover {
+  background-color: #cf10b6;
+}
+
+.colorButton:active {
+  transform: translateY(9px); /* falder sammen når der trykkes */
+  box-shadow: none; /* fjerner skyggen når der trykkes */
+}
+
+.textContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
