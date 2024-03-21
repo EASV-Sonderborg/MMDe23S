@@ -1,4 +1,4 @@
-// Create 100 eggs:
+
 
 const width = window.innerWidth;
 const height = window.innerHeight;
@@ -6,7 +6,8 @@ const section = document.querySelector('.eggs');
 
 const colors = ['#f9ceee', '#e0cdff', '#c1f0fb', '#dcf9a8', '#ffebaf'];
 
-for(let i = 0; i <= 5; i++) {
+// Create 20 eggs:
+for(let i = 0; i < 20; i++) {
     const newEgg = document.createElement('div');
     // creating the look of the egg
     newEgg.classList.add('egg');
@@ -23,7 +24,7 @@ for(let i = 0; i <= 5; i++) {
     newEgg.style.background = color;
 
     // random size: 1.40625
-    const eggWidth = (Math.random() * 40) + 25;
+    const eggWidth = (Math.random() * 140) + 25;
     console.log(eggWidth);
     const eggHeight = eggWidth * 1.40625;
 
