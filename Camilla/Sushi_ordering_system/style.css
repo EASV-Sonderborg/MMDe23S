@@ -97,7 +97,7 @@ body {
   background-color: #f5f5f595;
   height: 140px;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   z-index: 999;
 }
 .navbar__menu {
@@ -182,7 +182,7 @@ body {
   background-image: url(images/cherryblossom_background.png);
   background-size: 100%;
 }
-.orders .active {
+.active {
   left: 0;
 }
 
@@ -226,6 +226,9 @@ body {
 }
 .section--big {
   width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   & .button__reorder {
     display: none;
@@ -262,12 +265,55 @@ body {
     border-radius: 50px;
   }
 }
+.orderButton{
+  order: 5;
+  margin: 20px;
+  background-color: white;
+  border: solid 4px #e29296;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  padding: 5px 20px 5px 20px;
+}
 .section__heading {
   font-size: 2rem;
   margin: 0;
   font-weight: 300;
 }
-
+@media (max-width: 1180px){
+  .product{
+    font-size: 1.5rem;
+    width: 280px;
+    height: 350px;
+  }
+  .product__img{
+    width:200px ;
+  }
+  .menuItem__link{
+    font-size: 1rem;
+    & svg{
+      height: 60px;
+    }
+  }
+  .ordersIcon{
+    font-size: 1rem;
+    & svg{
+      height: 60px;
+    }
+  }
+  .header{
+    height:120px ;
+  }
+  .navbar__menu{
+    height: 120px;
+  }
+  .section {
+    width: 460px;
+    height: 580px;
+  }
+  .section--big{
+    width: 500px;
+  }
+}
 @media (max-width: 600px) {
   .splashscreen__main {
     display: flex;
@@ -331,10 +377,16 @@ body {
   .navbar__menu.active {
     left: 0;
   }
+  .header{
+    display: grid;
+  }
   .hamburger {
     display: block;
     padding: 8px 0 8px 0;
     place-self: start;
+    padding-left: 30px;
+    padding-top: 16px;
+
   }
   .hamburger.active .hamburger__bar:nth-child(2) {
     opacity: 0;
@@ -368,5 +420,45 @@ body {
   .products {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+  .product{
+    width:250px;
+    height: 350px;
+    font-size: 1.5rem;
+  }
+  .orders{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    background-repeat: no-repeat;
+    background-position: 10%;
+    gap: 2rem;
+  }
+  .section{
+    width: 350px;
+    & .product{
+      width: 90%;
+    }
+    & .product__name{
+      font-size: 1rem;
+    }
+    & .product__img{
+      width: 100px;
+    }
+    & .counter__display{
+      font-size: 1rem;
+    }
+    & .counter__minus {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    & .counter__plus{
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  }
+  .section--big{
+    order:-1;
   }
 }
