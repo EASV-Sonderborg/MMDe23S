@@ -1,0 +1,141 @@
+.body {
+  background-color: #8dacb7;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container__wavesTop {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  margin: 0;
+}
+
+.container__wavesBottom {
+  position: fixed;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+}
+
+.splashScreen__text {
+  font-size: xx-large;
+  font-weight: bold;
+  color: #202020;
+}
+
+.container {
+  margin-top: 15%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  max-width: 100%;
+}
+
+.splashScreen__logo {
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.splashScreen__waves {
+  width: 230px;
+}
+
+.sushiIcons__img {
+  width: 80px;
+  margin-top: 12px;
+}
+
+.categories__container {
+  position: fixed;
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 150px;
+  background-color: #3d626e;
+  border-right: 4px solid #0d3a4b;
+}
+
+.category__text {
+  margin: 0;
+  font-size: large;
+}
+
+.orderingScreenLogo__container {
+  margin-top: -30%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.orderingScreen__logo {
+  margin-left: 12.1%;
+  margin-bottom: 25%;
+  width: 550px;
+  opacity: 0.1;
+  display: flex;
+  position: fixed;
+}
+
+.productCard__container {
+  width: 100%;
+  text-align: center;
+  justify-content: right;
+  display: flex;
+  position: relative;
+}
+
+.productCard__heading {
+  height: 5vh;
+}
+
+.product__card {
+  margin-top: 5vh;
+  margin-right: 8.5vh;
+  width: 250px;
+  height: 400px;
+  background-color: #bdcfd5;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.productCard__img {
+  width: 100px;
+}
+
+.productCard__button {
+  font-size: x-large;
+  margin-top: 30px;
+  padding: 25px;
+  padding-left: 50px;
+  padding-right: 50px;
+  height: 10vh;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  background-color: #16627d;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+  box-shadow: 0px 8px 0px #0f4356;
+}
+
+.productCard__button:active {
+  transform: translateY(8px); /* falder sammen når der trykkes */
+  box-shadow: none; /* fjerner skyggen når der trykkes */
+}
