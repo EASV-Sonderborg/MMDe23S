@@ -17,7 +17,7 @@ function makeOrderItem(product) {
   //where to place the items
   const orderItems = document.querySelector(".section--big");
   orderItems.appendChild(orderItem);
-  orderItem.classList.toggle('order__item');
+  orderItem.classList.toggle("order__item");
 }
 
 //Navigation, open the orders
@@ -39,21 +39,17 @@ function closeMenu() {
   orders.classList.remove("active");
 }
 
+const orderButton = document.querySelector(".orderButton");
+const historySection = document.querySelector(".section"); // Select the section where you want to move the removed items
 
+orderButton.addEventListener("click", () => {
+  const historyItems = document.querySelectorAll(".order__item");
 
-const orderButton = document.querySelector('.orderButton');
-const historySection = document.querySelector('.section'); // Select the section where you want to move the removed items
-
-orderButton.addEventListener('click', () =>{
-  const historyItems = document.querySelectorAll('.order__item');
-  
-  historyItems.forEach(historyItem => {
+  historyItems.forEach((historyItem) => {
     historySection.appendChild(historyItem); // Append each removed item to the history section
-    historyItem.classList.toggle('history__item');
+    historyItem.classList.toggle("history__item");
   });
 });
-
-
 
 //nav burger bar
 
