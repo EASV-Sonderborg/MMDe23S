@@ -1,10 +1,13 @@
-    /* Splash Screen */
-  .Splash__body {
+/* Splash Screen */
+.Splash__body {
     font-size: 14px;
     margin: 0;
-  }
-  
-  .logo {
+}
+.Splash__clickable {
+    text-decoration: none;
+}
+
+.logo {
     height: 834px;
     background: #101010;
     display: flex;
@@ -12,42 +15,72 @@
     justify-content: center;
     align-items: center;
 }
-
 .logo__image {
     width: 6rem;
-    height: 7rem;
+    height: auto;
     flex-shrink: 0;
 }
-
 .logo__text, .logo__undertext {
     color: #FFF;
     font-family: "Jacques Francois", serif;
     text-align: center;
 }
-
 .logo__text {
     font-size: 4.375rem;
     font-weight: 600;
 }
-
 .logo__undertext {
     font-size: 1.5625rem;
     font-weight: 400;
 }
 
 /* Sushi screen */
-
 .sushi__body {
-    margin: 0;
+    display: grid;
+    grid-template-columns: 5.6875rem repeat(4, 1fr);
+    grid-template-rows: 124px auto;
+    gap: 20px;
     background-color: #EBBB55;
+    margin: 0;
 }
 
 .sidebar {
     padding: 10px;
-    background: var(--Brown, #211818); /* Apply brown background only to the sidebar */
-    width: max-content; /* Adjust width to content */
-    position: relative;
+    background: #211818;
+    width: max-content;
+    position: fixed;
     z-index: 1;
+}
+.red__circle { 
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    top: 67%;
+}
+.red__circle.visible {
+    visibility: visible;
+}
+.header {
+    grid-column: 1 / span 5;
+}
+.header__text{
+    position: absolute;
+    top: 0%;
+    left: 54.5%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    font-size: 70px;
+    font-family: "Jacques Francois";
 }
 
 .sidebar__logo {
@@ -69,7 +102,9 @@
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
-    margin-bottom: 10px;
+}
+.sidebar__categories li {
+    margin-bottom: 4px;
 }
 
 .container-1 {
@@ -161,6 +196,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .round-image {
@@ -190,16 +226,27 @@
     background: #ECC798;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     margin-top: 0.5rem;
-    outline: none;
+    border: none;
+    position: absolute;
+    bottom: 10px;
 }
-
-.text {
-    color: var(--Black, #000);
-    text-align: center;
-    font-family: "Jacques Francois";
-    font-size: 1.5625rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-top: 0.5rem; 
+.button:active {
+    display: inline-flex;
+    padding: 0.1875rem 1.75rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 0.3125rem;
+    background: var(--Beige_clicked, #AF9676);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+.button__remove{
+    border-radius: 0.3125rem;
+    background: var(--Red, #FF2929);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.button__remove:active {
+    border-radius: 0.3125rem;
+    background: var(--Red, #FF2929);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
 }
