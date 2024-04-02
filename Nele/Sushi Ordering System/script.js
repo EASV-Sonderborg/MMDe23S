@@ -49,7 +49,7 @@ addToCartButton.forEach((button) => {
 const currentOrders = document.querySelector('.currentOrders');
 const cartFooter = document.querySelector('.cart__footer');
 
-function addToCart(productCard) {
+function addToCart(productCard, addAgainButton) {
     // 1. clone the productCard
     const newOrder = productCard.cloneNode(true);
     newOrder.classList.add('currentOrder__productCard'); 
@@ -101,8 +101,14 @@ function decreaseProductNumber(newOrder, quantity) {
         if (quantityNumber === 0) {
             newOrder.remove();
         }
-        // call calculateCart to ensure number is included in totalSum
-        calculateCart();
+        //check if there are any products in cart left
+        if (currentOrders.hasChildNodes(false)) {
+            cartFooter.classList.remove('active');
+        }
+        else {
+            // call calculateCart to ensure number is included in totalSum
+            calculateCart();
+        }
     } 
 
 function increaseProductNumber(quantity) {
@@ -265,6 +271,20 @@ function completeOrder() {
             const addAgainButton = document.createElement('button');
             addAgainButton.classList.add('button__secondary')
             addAgainButton.textContent = '+';
+            addAgainButton.addEventListener('click', (event) => {
+                const productCard = event.target.parentNode;
+                //check duplicity in cart 
+                const keyDuplicate = currentOrders.querySelectorAll(`.productCard[productKey="${productKey}"]`)
+                if (keyDuplicate.length == 0) {  
+                    newRecentOrder.classList.remove('recentOrder__productCard');
+                    addToCart(productCard);
+                }
+                else {
+                    const quantity = keyDuplicate[0].querySelector('.quantity__number');
+                    increaseProductNumber(quantity);
+                }
+            })
+
             newRecentOrder.appendChild(addAgainButton);
 
             recentOrders.appendChild(newRecentOrder);
@@ -275,28 +295,11 @@ function completeOrder() {
     })
     
     cartFooter.classList.remove('active');
-
-    checkDuplicity();
 }
 
-/**  if the product already exists in recentOrders -> don't clone
- * 1. textContent of the name
- * if there is another element with the same text content -> dont clone
-*/
+function addOrderAgain() {
 
-function checkDuplicity() {
-    const productKey = productCard.getAttribute('productKey');
-        const keyDuplicate = currentOrders.querySelectorAll(`.productCard[productKey="${productKey}"]`)
-        if (keyDuplicate.length == 0) {   
-            addToCart(productCard);
-        }
-        else {
-            const quantity = keyDuplicate[0].querySelector('.quantity__number');
-            increaseProductNumber(quantity);
-        }
-    
 }
-
 
 // -------------------------- recentOrder fold --------------------
 
