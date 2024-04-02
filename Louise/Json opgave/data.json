@@ -1,0 +1,27 @@
+[
+    {
+        "firstName": "Michaela",
+        "lastName": "Thomsen",
+        "age": 49,
+        "hobby": ["Drinking", "Reading", "Gaming", "Watching Alene i Vildmarken/Matador"]
+    },
+    {
+        "firstName": "Louise",
+        "lastName": "Thomsen",
+        "age": 21,
+        "hobby": ["Gaming", "Drawing", "Hanging with friends"]
+        
+    },
+    {
+        "firstName": "Kim",
+        "lastName": "Thomsen",
+        "age": 47,
+        "hobby": ["Gaming","Fixing pcs", "Gambling" ]
+    },
+    {
+        "firstName": "Emely",
+        "lastName": "Thomsen",
+        "age": 24,
+        "hobby": ["Podcasts", "DF", "Drinking","Painting", "Være sådan en rigtig dansker"]
+    }
+]
