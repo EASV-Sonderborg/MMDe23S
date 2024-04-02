@@ -217,17 +217,18 @@ h3 {
 .navBar__item::after {
     content: "";
     position: absolute;
-    top: 150%;
-    left: -20%;
+    top: 151%;
+    left: -30%;
     width: 0;
-    height: 3px;
+    height: 4px;
     border-radius: 4px;
     background: linear-gradient(90deg, rgba(181,142,130,1) 0%, rgba(252,196,178,1) 50%, rgba(181,142,130,1) 100%);
     transition: ease-in-out 0.5s;
+    z-index: 1;
 }
 
 .navBar__item.active::after {
-    width: 140%;
+    width: 146%;
 }
 
 .navBar__trackBar {
@@ -452,6 +453,10 @@ h3 {
 
 .currentOrder__productCard {
     background-color: var(--Container__secondary);
+
+    & .button__secondary {
+    display: none;
+    }
 }
 
 .cart__footer {
