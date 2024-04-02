@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chopsticks Order</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body class="home">
+    <header class="header">
+        <img class="header__logo" src="./images/LogoDark.png" alt="Chopsticks Logo">
+        <section class="header__search">
+            <label class="header__searchIcon" for="searchInput">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="11" cy="11" r="6" stroke="#383838"/>
+                <path d="M20 20L17 17" stroke="#383838" stroke-linecap="round"/>
+                </svg>
+            </label>
+            <input class="header__searchInput" type="text" name="searchInput" placeholder="Hvad leder du efter?">
+        </section>
+        <nav class="navBar">
+            <section class="navBar__items">
+                <p class="navBar__item">Sushi</p>
+                <p class="navBar__item">Menuer</p>
+                <p class="navBar__item">Børnemenuer</p>
+                <p class="navBar__item">Varme retter</p>
+                <p class="navBar__item">Ekstras</p>
+                <p class="navBar__item">Drikkevarer</p>
+                <p class="navBar__item">Dessert</p>
+            </section>
+            <span class="navBar__trackBar"></span>
+        </nav>
+        <section class="header--mobile">
+            <h1 class="header__headline--mobile">Sushi</h1>
+            <nav class="header__menu--mobile">
+                <span class="menuBar"></span>
+                <span class="menuBar"></span>
+                <span class="menuBar"></span>
+            </nav>
+        </section>
+    </header>
+    <main class="products">
+        <section class="products__category">
+            <h2 class="products__headline">Sashimi</h2>
+            <section class="products__cards">
+                <article class="productCard" productKey="Sashimi-1">
+                    <img class="productCard__image" src="./images/Hiramasa Sashimi.png" alt="plate with sushi">
+                    <section class="productCard__description">
+                        <h3 class="productCard__name">Hirasama Sashimi</h3>
+                        <p class="productCard__ingredients">makrel og supreme soja wasabi</p>
+                    </section>
+                    <section class="productCard__order">
+                        <p class="productCard__number">5 stk.</p>
+                        <button class="productCard__addtoCart button  button__primary">+</button>
+                    </section>
+                </article>
+                <article class="productCard" productKey="Sashimi-2">
+                    <img class="productCard__image" src="./images/Shake Sashimi.png" alt="plate with sushi">
+                    <section class="productCard__description">
+                        <h3 class="productCard__name">Shake Sashimi</h3>
+                        <p class="productCard__ingredients">laks og supreme soja wasabi</p>
+                    </section>
+                    <section class="productCard__order">
+                        <p class="productCard__number">5 stk.</p>
+                        <button class="productCard__addtoCart button  button__primary">+</button>
+                    </section>
+                </article>
+                <article class="productCard" productKey="Sashimi-3">
+                    <img class="productCard__image" src="./images/Maguro Sashimi.png" alt="plate with sushi">
+                    <section class="productCard__description">
+                        <h3 class="productCard__name">Maguro Sashimi</h3>
+                        <p class="productCard__ingredients">tunfisk og supreme soja wasabi</p>
+                    </section>
+                    <section class="productCard__order">
+                        <p class="productCard__number">5 stk.</p>
+                        <button class="productCard__addtoCart button  button__primary">+</button>
+                    </section>
+                </article>
+            </section>
+        </section>
+        <section class="products__category">
+            <h2 class="products__headline">House Maki</h2>
+            <section class="products__cards" productKey="HouseMaki-1">
+                <article class="productCard">
+                    <img class="productCard__image" src="./images/Black Cod Maki.png" alt="plate with sushi">
+                    <section class="productCard__description">
+                        <h3 class="productCard__name">Black Cod Maki</h3>
+                        <p class="productCard__ingredients">miso black cod med rødder og løg</p>
+                    </section>
+                    <section class="productCard__order">
+                        <p class="productCard__number">4 stk.</p>
+                        <button class="productCard__addtoCart button  button__primary">+</button>
+                    </section>
+                </article>
+                <article class="productCard" productKey="HouseMaki-2">
+                    <img class="productCard__image" src="./images/Maguro Tempura.png" alt="plate with sushi">
+                    <section class="productCard__description">    
+                        <h3 class="productCard__name">Maguro Tempura</h3>
+                        <p class="productCard__ingredients">tempura rejer, tunfisk, forårsløg og sauce</p>
+                    </section>
+                    <section class="productCard__order">
+                        <p class="productCard__number">4 stk.</p>
+                        <button class="productCard__addtoCart button  button__primary">+</button>
+                    </section>
+                </article>
+                <article class="productCard" productKey="HouseMaki-3">
+                    <img class="productCard__image" src="./images/Red'n'Green.png" alt="plate with sushi">
+                    <section class="productCard__description">
+                        <h3 class="productCard__name">Red'n'Green</h3>
+                        <p class="productCard__ingredients">peberfrugt, avocado, agurk, shiso tsume soja</p>
+                    </section>
+                    <section class="productCard__order">
+                        <p class="productCard__number">5 stk.</p>
+                        <button class="productCard__addtoCart button  button__primary">+</button>
+                    </section>
+                </article>
+                <article class="productCard" productKey="HouseMaki-4">
+                    <img class="productCard__image" src="./images/Black Cod Maki.png" alt="plate with sushi">
+                    <section class="productCard__description">
+                        <h3 class="productCard__name">Black Cod Maki</h3>
+                        <p class="productCard__ingredients">miso black cod med rødder og løg</p>
+                    </section>
+                    <section class="productCard__order">
+                        <p class="productCard__number">4 stk.</p>
+                        <button class="productCard__addtoCart button  button__primary">+</button>
+                    </section>
+                </article>
+                <article class="productCard" productKey="HouseMaki-5">
+                    <img class="productCard__image" src="./images/Maguro Tempura.png" alt="plate with sushi">
+                    <section class="productCard__description">    
+                        <h3 class="productCard__name">Maguro Tempura</h3>
+                        <p class="productCard__ingredients">tempura rejer, tunfisk, forårsløg og sauce</p>
+                    </section>
+                    <section class="productCard__order">
+                        <p class="productCard__number">4 stk.</p>
+                        <button class="productCard__addtoCart button  button__primary">+</button>
+                    </section>
+                </article>
+                <article class="productCard" productKey="HouseMaki-6">
+                    <img class="productCard__image" src="./images/Red'n'Green.png" alt="plate with sushi">
+                    <section class="productCard__description">
+                        <h3 class="productCard__name">Red'n'Green</h3>
+                        <p class="productCard__ingredients">peberfrugt, avocado, agurk, shiso tsume soja</p>
+                    </section>
+                    <section class="productCard__order">
+                        <p class="productCard__number">5 stk.</p>
+                        <button class="productCard__addtoCart button  button__primary">+</button>
+                    </section>
+                </article>
+            </section>
+        </section>
+    </main>
+    <aside class="cart">
+        <img class="cart__logo" src="./images/LogoIcon.png" alt="Chopsticks logo">
+        <section class="cart__recentOrders">
+            <section class="cart__label cart__label--dropdown">
+                <h2 class="cart__headline">Tidligere ordrer</h2>
+                <img class="cart__dropdown outfolded" src="./images/arrowDown.png" alt="downwards arrow to show content">
+                <span class="cart__divider"></span>
+            </section>
+            <section class="recentOrders">
+                <!-- all recent orders here -->
+            </section>
+        </section>
+        <section class="cart__currentOrders">
+            <section class="cart__label">
+                <h2 class="cart__headline">I kurven</h2>
+                <span class="cart__divider"></span>
+            </section>
+            <section class="currentOrders">
+                <!-- all new orders here -->
+            </section>
+        </section>
+        <section class="cart__footer">
+            <span class="cart__divider cart__divider--footer"></span>
+            <section class="cart__sum">
+                <p class="cart__sum--label">Styks i alt:</p>
+                <p class="cart__sum--number">0</p>
+            </section>
+        </section>
+        <button content="bestilt!" class="cart__button button button__swipe ">
+            <section class="swipe__swiper"></section>
+            <img class="swipe__arrows" src="./images/--arrows.png" alt="two arrows pointing to the right">
+            <p class="swipe__text">swipe for at bestille</p>
+        </button>
+    </aside>
+    <section class="alert">
+        <p class="alert__tableNumber"><strong>Bord 12</strong></p>
+        <p class="alert__ordered">Din ordre er bestilt!</p>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
