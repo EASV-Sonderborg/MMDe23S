@@ -78,8 +78,8 @@ function formatData(data) {
 
 function populateDOM(item) {
   // Create elements for the lake
-  const lakeArticle = document.createElement('article'); // Create <article> element for lake
-  lakeArticle.classList.add('lake'); // Add 'lake' class to <article>
+  const lakeArticle = document.createElement('article'); // Create the <article> element for lake
+  lakeArticle.classList.add('lake'); // Add the 'lake' class to <article>
 
   const lakeName = document.createElement('h2'); // Create <h2> element for lake name
   lakeName.classList.add('lake__name'); // Add 'lake__name' class to <h2>
