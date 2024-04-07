@@ -1,0 +1,184 @@
+/*stylings til alle sider*/
+
+:root {
+    --text: #565c77;
+    --bg: #d9ddf1;
+    --altText: #000720;
+    --footer: white;
+    --footerIcon: #d9ddf1;
+    --footerActive: #00a0d6;
+  }
+  body {
+    margin: 0;
+    background-color: var(--bg);
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /*Pakke side med pakker*/
+.displayImage__img {
+    height: 95px;
+  }
+  .displayImage__wrapper {
+    display: inline;
+    position: relative;
+    perspective: 1000px;
+  }
+  .displayImage {
+    display: flex;
+    justify-content: center;
+  }
+  .displayImage__gate {
+    position: absolute;
+    background-image: url(images/nærboks-gate.png);
+    background-size: 173px;
+    width: 170px;
+    height: 95px;
+    animation: open 3s forwards;
+    animation-delay: 3s;
+    transform-origin: left;
+  }
+  
+  @keyframes open {
+    to {
+      transform: rotateY(-140deg);
+    }
+  }
+  .main__packages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px 0 20px;
+  }
+  .packages {
+    background-color: white;
+    height: 292px;
+    width: 310px;
+    border-radius: 15px;
+    margin-inline: auto;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.375);
+    padding: 0px 15px 0 15px;
+    overflow: auto;
+    margin-bottom: 30px;
+  }
+  
+  .package {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid;
+    border-color: #d9d9d9;
+  }
+  .package__number {
+    margin-left: 15px;
+    font-size: 24px;
+  }
+  .package__button {
+    border-radius: 10px;
+    background-color: #00a0d6;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 20px 10px 0 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  .returnButton {
+    font-weight: bold;
+    text-align: center;
+    color: #54555f;
+    text-decoration: none;
+    background-color: #f3f4ff;
+    padding: 20px 20px 20px 20px;
+    border-radius: 15px;
+    width: 292px;
+    place-self: center;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.375);
+    margin-bottom: 80px;
+  }
+  /*scrollbar fra https://dev.to/xtrp/how-to-create-a-beautiful-custom-scrollbar-for-your-site-in-plain-css-1mjg */
+  ::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
+  }
+
+
+/*footer*/
+.footer {
+    margin-top: 20px;
+    background-color: var(--footer);
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 999;
+  }
+  .footer__icon {
+    fill: var(--footerIcon);
+  }
+  .footer__icon--active {
+    fill: var(--footerActive);
+  }
+
+
+
+  .header{
+    font-weight: bold;
+    color: #54555f;
+  }
+
+.content{
+    margin: 5px 0 26px 0;
+    color: #54555f;
+  }
+
+  .all{
+    display: grid;
+    justify-items: center;
+  }
+
+  .image{
+    position: relative;
+    max-width: 100%;
+  }
+  
+  .image .image-hover{
+    position: absolute;
+    top: 0;
+    
+    left: 0;
+    
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity .2s;
+  }
+  
+  .image:hover .image-hover {
+    opacity: 1;
+  }
+
+  .image--small{
+    width: 160px;
+  }
+
+  .image--medium{
+    width: 220px;
+  }
+
+  .image--large{
+    width: 300px;
+  }
+

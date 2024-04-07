@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Agbalumo', sans-serif;
+    overflow: hidden; /* This prevents scrolling if the image is larger than the viewport */
+}
+
+.h1 {
+    text-align: center;
+    padding: 20px;
+}
+
+.h1__text {
+    font-size: 2em;
+    color: white;
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.buttons__button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.buttons__button:hover {
+    background-color: #45a049;
+    color: #fff;
+    animation: bounce 1s infinite; /* Add bounce animation on hover */
+}
+
+.background__image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Send the image to the background */
+}
+
+/* Animation styles from Animate.css */
+@keyframes bounce {
+    from, 20%, 53%, 80%, to {
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        transform: translate3d(0,0,0);
+    }
+
+    40%, 43% {
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        transform: translate3d(0, -30px, 0);
+    }
+
+    70% {
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        transform: translate3d(0, -15px, 0);
+    }
+
+    90% {
+        transform: translate3d(0,-4px,0);
+    }
+}

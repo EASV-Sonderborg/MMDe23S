@@ -1,0 +1,34 @@
+.dogImages{
+height: 200px;
+}
+.catImages{
+    height: 200px;
+}
+.birdImages{
+    height: 200px;
+}
+
+.--hidden{
+    display: none;
+}
+
+.assignmentTwo{
+    display: flex;
+    align-items: center;
+}
+
+.counter__minus{
+    order: -1;
+    height: 20px;
+    margin: 8px;
+}
+
+.counter__plus{
+    height: 20px;
+    margin: 8px;
+}
+
+.counter__reset{
+    height: 20px;
+    margin: 8px;
+}
