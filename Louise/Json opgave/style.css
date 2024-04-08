@@ -1,0 +1,43 @@
+body {
+    background-color: #ffd1dc; /* Light Pink */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ff69b4; /* Hot Pink */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+button {
+    background-color: #ff69b4; /* Hot Pink */
+    color: white;
+    padding: 15px 30px; /* Larger padding for bigger button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 2em;
+    transition: background-color 0.3s ease;
+    display: block; /* To center the button */
+    margin: 0 auto; /* To center the button */
+    box-shadow: 0px 5px 15px rgba(255, 105, 180, 0.4); /* Shadow effect */
+}
+button:hover {
+    background-color: #ff1493; /* Deep Pink */
+}
+
+.container {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffc0cb; /* Pink */
+    border-radius: 10px;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

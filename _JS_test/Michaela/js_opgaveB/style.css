@@ -1,0 +1,16 @@
+body{
+    background: rgba(244, 245, 246, 0.7);
+    margin: 32px;
+}
+.input{
+    border-style: none;
+  margin-bottom: 18px;
+  width: 500px;
+  border-radius: 4px;
+  background: rgba(244, 245, 246, 0.67);
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25) inset,
+    -5px -5px 10px 0px #fff inset;
+  font-size: 20px;
+  box-sizing: border-box;
+  padding: 16px;
+}
