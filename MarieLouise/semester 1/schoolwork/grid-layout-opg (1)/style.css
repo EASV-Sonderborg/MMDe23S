@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display:grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+img {
+    max-width: 100%;
+}
+.mainHeader {
+	border-bottom: 1px dotted #999;
+    grid-column:span 3;
+}
+.mainHeader__logo {
+    max-width: 100px;
+}
+.mainHeader__nav {
+    display: inline;
+}
+.holidayIdeas {
+	background-color: #efefef;
+    padding: 10px;
+}
+.mainFooter {
+	background-color: #666;
+	color: #fff;
+    padding: 10px;
+    grid-column:span 3;
+}

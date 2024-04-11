@@ -1,0 +1,110 @@
+body{
+    max-width: 1600px;
+    margin: auto;
+}
+
+img{
+    height: 330px;
+    display: block;
+    margin: auto;
+    border-radius: 1rem;
+}
+.main{
+    display: grid;
+    gap: 0.5rem;
+    padding: 0 0.5rem 0 0.5rem;
+}
+
+.section{
+    background-color: #d0312d;
+    color: white;
+    border-radius: 1rem;
+    padding: 0.1rem 1rem 1rem 1rem;
+    min-width: 360px;
+    font-size: 1.15rem;
+}
+
+.article{
+    background-color: #d0302d63;
+    border-radius: 1rem;
+    padding: 0.1rem 1rem 1rem 1rem;
+    min-width: 360px;
+    font-size: 1.15rem;
+}
+
+.header{
+    color: #d0312d;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+h2{
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.footer{
+    background-color: grey;
+    border-radius: 1rem;
+    padding: 5px;
+    min-width: 380px;
+    font-size: 1.15rem;
+    text-align: center;
+    color: white;
+}
+
+h3{
+    margin: 0.2rem;}
+
+@media (min-width: 690px) {
+    .main{
+        grid-template-columns: 1fr 1fr;}
+    .article{
+        height: 330px;
+        padding: 0.1rem 1rem 0rem 1rem;
+    }
+    .section{
+        grid-column: span 2;
+    }
+    .header{
+        font-size: 2.5rem;
+    }
+    img{
+        align-self: center;
+    }
+    h2{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .footer{
+        grid-column: span 2;
+    }
+}
+
+@media(min-width:1000px) {
+    .main{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .article{
+        grid-column: span 2;
+        font-size: 1.5rem;
+    }
+    .section{
+        grid-column: span 1;
+        font-size: 1.5rem;
+    }
+    .footer{
+        grid-column: span 3;
+        font-size: 1.5rem;
+    }
+    .header{
+        font-size: 3rem;
+    }
+    img{
+        align-self: center;
+    }
+    h2{
+        font-size: 1.7rem;
+        text-align: center;
+    }
+}

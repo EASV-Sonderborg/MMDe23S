@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair:opsz,wght@5..1200,300&family=Roboto:wght@100&display=swap');
+
+.all{
+    border: 15px outset;
+    border-color: rgb(125, 125, 125);
+    max-width: 50ch;
+    padding: 2rem;
+    margin: 4rem auto 0 auto;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgb(169, 222, 200);
+    align-items: center;
+}
+
+h1{
+    border-bottom: dotted;
+    border-color: rgb(65, 144, 117);
+}
+
+img{
+    width: 11rem;
+    border-radius: 100%;
+    border:solid;
+    border-color:rgb(65, 144, 117) ;
+}
+.not-all{
+    font-family: 'Playfair', serif;
+font-family: 'Roboto', sans-serif;
+}

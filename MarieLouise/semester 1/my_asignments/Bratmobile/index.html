@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bratmobile</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+  </head>
+  <body class="body">
+    <!--Glitched logo-->
+    <header class="header">
+      <img src="images/logo-glitch.gif" alt="Bratmobile Logo" class="logo" />
+    </header>
+    <!--Polaroids and speech bubbles-->
+    <section class="polaroids">
+      <section class="polaroids__container">
+        <div class="bubble bubble__bottomLeft" contenteditable>
+          "I will not be silenced and I will not let anyone distort my words"
+        </div>
+        <section class="polaroids__polaroid polaroids__polaroid--1">
+          <img
+            src="images/AllisonImage.png"
+            alt="billede af Allison Wolfe"
+            class="polaroids__polaroidImage"
+          />
+          <p class="polaroids__header">Allison Wolfe</p>
+          <p class="polaroids__description">
+            "I will not be silenced and I will not let anyone distort my words"
+          </p>
+        </section>
+      </section>
+      <section class="polaroids__container polaroids__container--right">
+        <div class="bubble bubble__bottomRight bubble--right" contenteditable>
+          "Know your worth; Don't undervalue your creativity"
+        </div>
+        <section class="polaroids__polaroid polaroids__polaroid--2">
+          <img
+            src="images/mollyImage.png"
+            alt="billede af Molly Newman"
+            class="polaroids__polaroidImage"
+          />
+          <p class="polaroids__header">Molly Newman</p>
+          <p class="polaroids__description">
+            "Know your worth; Don't undervalue your creativity"
+          </p>
+        </section>
+      </section>
+      <section class="polaroids__container">
+        <div class="bubble bubble__bottomLeft" contenteditable>
+          "Riot not diet"
+        </div>
+        <section class="polaroids__polaroid">
+          <img
+            src="images/ErinImage.png"
+            alt="billede af Erin Smith"
+            class="polaroids__polaroidImage"
+          />
+          <p class="polaroids__header">Erin Smith</p>
+          <p class="polaroids__description">"Riot not diet"</p>
+        </section>
+      </section>
+    </section>
+    <!--Vinyl Albums-->
+    <section class="vinyls">
+      <section class="vinyls__album vinyls__album--girlsGetBusy">
+        <img
+          src="images/album/girls-get-busy.png"
+          alt="Girls get busy album cover"
+          class="vinyls__albumCover vinyls__albumCover--girlsGetBusy"
+        />
+        <img
+          src="images/vinyls/vinyl-girls.png"
+          alt="Girls get busy vinyl"
+          class="vinyls__vinyl vinyls__vinyl--girlsGetBusy"
+        />
+        <audio id="girlsGetBusy" preload="auto">
+          <source src="audio/Bratmobile_-_Whats_wrong_with_you.mp3" />
+        </audio>
+      </section>
+      <section class="vinyls__album vinyls__album--ladies">
+        <img
+          src="images/album/ladies-women-and-girls.jpg"
+          alt="Ladies women and girls album cover"
+          class="vinyls__albumCover vinyls__albumCover--ladies"
+        />
+        <img
+          src="images/vinyls/vinyl-ladies.png"
+          alt="Ladies women and girls vinyl"
+          class="vinyls__vinyl vinyls__vinyl--ladies"
+        />
+        <audio id="ladies" preload="auto">
+          <source src="audio/Bratmobile_-_Gimmie_Brains.mp3" />
+        </audio>
+      </section>
+      <section class="vinyls__album vinyls__album--pottymouth">
+        <img
+          src="images/album/pottymouth.jpg"
+          alt="Pottymouth album cover"
+          class="vinyls__albumCover vinyls__albumCover--pottymouth"
+        />
+        <img
+          src="images/vinyls/vinyl-pottymouth.png"
+          alt="Pottymouth vinyl"
+          class="vinyls__vinyl vinyls__vinyl--pottymouth"
+        />
+        <audio id="pottymouth" preload="auto">
+          <source src="audio/Bratmobile_-_Cool_Schmool_from_Pottymouth.mp3" />
+        </audio>
+      </section>
+      <section class="vinyls__album vinyls__album--realJanelle">
+        <img
+          src="images/album/real-janelle.jpg"
+          alt="Real Janelle album cover"
+          class="vinyls__albumCover vinyls__albumCover--realJanelle"
+        />
+        <img
+          src="images/vinyls/vinyl-real-janette.png"
+          alt="Real Janelle vinyl"
+          class="vinyls__vinyl vinyls__vinyl--realJanelle"
+        />
+        <audio id="realJanelle" preload="auto">
+          <source src="audio/Bratmobile_-_Brat_Girl.mp3" />
+        </audio>
+      </section>
+      <section class="vinyls__album vinyls__album--thePeel">
+        <img
+          src="images/album/the-peel-session.jpg"
+          alt="The peel session album cover"
+          class="vinyls__albumCover vinyls__albumCover--thePeel"
+        />
+        <img
+          src="images/vinyls/vinyl-thepeel.png"
+          alt="The peel session vinyl"
+          class="vinyls__vinyl vinyls__vinyl--thePeel"
+        />
+        <audio id="thePeel" preload="auto">
+          <source src="audio/Bratmobile_-_Theres_no_other_way.mp3" />
+        </audio>
+      </section>
+    </section>
+    <!--Audio Script for hover-->
+    <script>
+      var soundOne = $("#girlsGetBusy")[0];
+      var albumCover = $(".vinyls__albumCover--girlsGetBusy");
+
+      albumCover.mouseenter(function () {
+        soundOne.play();
+      });
+
+      albumCover.mouseleave(function () {
+        soundOne.pause();
+        soundOne.currentTime = 0; // Rewind to the beginning of the audio
+      });
+    </script>
+    <script>
+      var soundTwo = $("#ladies")[0];
+      var albumCover = $(".vinyls__albumCover--ladies");
+
+      albumCover.mouseenter(function () {
+        soundTwo.play();
+      });
+
+      albumCover.mouseleave(function () {
+        soundTwo.pause();
+        soundTwo.currentTime = 0; // Rewind to the beginning of the audio (optional)
+      });
+    </script>
+    <script>
+      var soundThree = $("#pottymouth")[0];
+      var albumCover = $(".vinyls__albumCover--pottymouth");
+
+      albumCover.mouseenter(function () {
+        soundThree.play();
+      });
+
+      albumCover.mouseleave(function () {
+        soundThree.pause();
+        soundThree.currentTime = 0; // Rewind to the beginning of the audio (optional)
+      });
+    </script>
+    <script>
+      var soundFour = $("#realJanelle")[0];
+      var albumCover = $(".vinyls__albumCover--realJanelle");
+
+      albumCover.mouseenter(function () {
+        soundFour.play();
+      });
+
+      albumCover.mouseleave(function () {
+        soundFour.pause();
+        soundFour.currentTime = 0; // Rewind to the beginning of the audio (optional)
+      });
+    </script>
+    <script>
+      var soundFive = $("#thePeel")[0];
+      var albumCover = $(".vinyls__albumCover--thePeel");
+
+      albumCover.mouseenter(function () {
+        soundFive.play();
+      });
+
+      albumCover.mouseleave(function () {
+        soundFive.pause();
+        soundFive.currentTime = 0; // Rewind to the beginning of the audio (optional)
+      });
+    </script>
+  </body>
+</html>
