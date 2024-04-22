@@ -102,7 +102,7 @@ function populateDOM(item) {
     lastUpdated.textContent = `Sidst opdateret ${item.lastUpdatedInHoursAgo} timer og ${item.lastUpdatedInMinutesAgo} minutter siden`;
   }
 
-  // Add modifier class based on temperature range
+  // Add modifier class based on temperature range (optimer måske)
   if (item.temperature < 4) {
     lakeArticle.classList.add('--frozen'); // Add '--frozen' class for temperatures below 4°C
   } else if (item.temperature >= 4 && item.temperature < 12) {

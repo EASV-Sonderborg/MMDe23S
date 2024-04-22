@@ -29,11 +29,9 @@
   margin-top: 15%;
   display: flex;
   flex-direction: column;
-  width: 100%;
   justify-content: center;
   text-align: center;
   align-items: center;
-  max-width: 100%;
 }
 
 .splashScreen__logo {
@@ -54,11 +52,12 @@
 
 .categories__container {
   position: fixed;
+  justify-content: center;
   text-align: center;
   top: 0;
   bottom: 0;
   left: 0;
-  width: 150px;
+  width: 180px;
   background-color: #3d626e;
   border-right: 4px solid #0d3a4b;
 }
@@ -66,6 +65,7 @@
 .category__text {
   margin: 0;
   font-size: large;
+  color: white;
 }
 
 .orderingScreenLogo__container {
@@ -92,7 +92,6 @@
   text-align: center;
   justify-content: right;
   display: flex;
-  position: relative;
 }
 
 .productCard__heading {
@@ -108,7 +107,7 @@
   border-radius: 10px;
   padding: 20px;
   box-sizing: border-box;
-  color: white;
+  color: rgb(0, 0, 0);
   font-family: Arial, sans-serif;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -153,6 +152,6 @@ a {
 }
 
 .productCard__button:active {
-  transform: translateY(8px); /* falder sammen når der trykkes */
+  transform: translateY(6px); /* falder sammen når der trykkes */
   box-shadow: none; /* fjerner skyggen når der trykkes */
 }
