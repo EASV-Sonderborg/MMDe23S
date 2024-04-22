@@ -1,0 +1,25 @@
+[
+    {
+        "firstName": "Marie Louise",
+        "lastName": "Simonsen",
+        "age": 21,
+        "hobbies": ["køkkenhave", "male", "tegne"]
+    }
+    ,
+    {
+        "firstName": "Sofie",
+        "lastName": "Hansen",
+        "age": 25,
+        "hobbies": ["strikning", "hækling", "læsning"]
+    }
+    ,
+    {
+        "firstName": "Peter",
+        "lastName": "Madsen",
+        "age": 22,
+        "hobbies": ["fodbold","computerspil", "se fodbold"]
+        
+
+    }
+
+]

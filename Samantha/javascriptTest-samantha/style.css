@@ -1,0 +1,17 @@
+body {
+    background-color: #66b860;
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+}
+.changeColor_button {
+    min-width: 4rem;
+    max-width: 10rem;
+    padding: 2rem;
+    border-radius: 50px;
+    border: none;
+    background-color: rgb(16, 16, 16, 0.6);
+    color: azure;
+    box-shadow: 2px 2px 4px rgb(34, 34, 34, 0.5), 2px 2px 4px rgb(228, 227, 227, 0.4);
+    font-size: 1.5rem;
+}

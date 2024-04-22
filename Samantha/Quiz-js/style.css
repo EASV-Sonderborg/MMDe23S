@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(124, 124, 157);
+}
+.headline {
+    font-size: 2rem;
+    text-align: center;
+}
+.text-small {
+    font-size: 1rem;
+}
+.category_overview {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+.button__category {
+    display: flex;
+    max-width: 300px;
+    min-width: 150px;
+    max-height: 200px;
+    min-height: 100px;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    gap: 1rem;
+    align-items: center;
+    font-size: 1.5rem;
+    color: black;
+    border-radius: 1rem;
+    margin: auto 0.5rem;
+}
+.button__category:hover {
+    background-color: rgb(152, 152, 195);
+    font-size: 1.75rem;
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+.button__category svg {
+    max-height: 70px;
+    min-height: 50px;
+    max-width: 70px;
+    min-width: 50px;
+}
+.start__quiz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.button__start {
+    border-radius: 4rem;
+    padding: 2rem 0.5rem;
+    max-width: 200px;
+    min-width: 100px;
+    min-height: auto;
+    text-align: center;
+    background-color: rgb(77, 142, 142);
+    margin: 1rem;
+    color: aliceblue;
+    font-size: 1.75rem;
+    text-decoration: none;
+    box-shadow: 4px 4px 8px rgb(67, 67, 67, 0.5), inset 2px 2px 4px rgb(247, 244, 244, 0.4);
+}
+.question {
+    grid-column: span 2;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+.quiz__container {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    border-top: solid 1px whitesmoke;
+    padding-top: 1rem;
+}
+.choice {
+    max-width: auto;
+    min-width: 130px;
+    max-height: auto;
+    min-height: 45px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    padding: 0.4rem;
+    background-color: rgb(192, 192, 227);
+    color: black;
+    border: none;
+    box-shadow: 4px 4px 8px rgb(117, 116, 116), inset 2px 2px 4px whitesmoke;
+}
+.choices {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem;
+    min-width: 300px;
+    margin-bottom: 2rem;
+}
+.score {
+    grid-column: span 2;
+    font-size: 1.2rem;
+    color: whitesmoke;
+}
+.scoreValue {
+    color: rgb(165, 225, 165);
+}
+

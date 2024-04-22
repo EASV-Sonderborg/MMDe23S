@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Water temperature in lakes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="fetch.js"></script>
+    <script>
+      const urls = [
+        "https://tmsensordata.azurewebsites.net/api/almindsoevandtemp",
+        "https://tmsensordata.azurewebsites.net/api/bryruplangsoevandtemp",
+        "https://tmsensordata.azurewebsites.net/api/thorsoevandtemp",
+        "https://tmsensordata.azurewebsites.net/api/tangesoevandtemp",
+        "https://tmsensordata.azurewebsites.net/api/desmaafisksoevandtemp",
+        "https://tmsensordata.azurewebsites.net/api/langsoevandtemp",
+      ];
+
+      // Loop through all of the urls and get the json from each
+      for (const url of urls) {
+        console.log("loading", url);
+        getJSON(url);
+      }
+    </script>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="__title">Badevand i Silkeborg Søerne</h1>
+    </header>
+    <main class="lakes">
+      <!--<article class="lake">
+        <h2 class="lake__name">Navn på søen</h2>
+        <h3 class="lake__temperature">14°C</h3>
+        <p class="lake__updated">Sidst opdateret 3 minutter siden</p>
+      </article>
+      <article class="lake">
+        <h2 class="lake__name">Navn på søen</h2>
+        <h3 class="lake__temperature">7,4°C</h3>
+        <p class="lake__updated">
+          Sidst opdateret 4 timer og 19 minutter siden
+        </p>
+      </article>-->
+    </main>
+    <footer class="footer">
+      <p class="footer__description">
+        This examples uses data from
+        <a
+          href="https://www.opendata.dk/silkeborg-kommune/badevandstemperaturer-for-soerne-i-silkeborg-kommune"
+          >Open Data</a
+        >
+        and is provided by Silkeborg Kommune.
+      </p>
+      <p class="footer_disclaimer">
+        Notice: This is a school project and does not officially represent none
+        of the resources and/or entities used in this project.
+      </p>
+    </footer>
+  </body>
+</html>
