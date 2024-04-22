@@ -41,7 +41,7 @@ productTitle.classList.add('product__title');
 productCard.appendChild(productTitle);
 
 const productPrice = document.createElement('p');
-productPrice.textContent=`Current Price: ${item.startPrice}`;
+productPrice.textContent=`Current Price: ${item.startPrice}DKK`;
 productPrice.classList.add('product__price');
 productCard.appendChild(productPrice);
 
