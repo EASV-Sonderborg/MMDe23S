@@ -45,8 +45,10 @@ productPrice.textContent=`Current Price: ${item.startPrice}DKK`;
 productPrice.classList.add('product__price');
 productCard.appendChild(productPrice);
 
+const timeOnly = item.expires.split('T') [1].split('.')[0];
+
 const productDuration = document.createElement('p');
-productDuration.textContent=`Expires: ${item.expires}`;
+productDuration.textContent=`Expires at: ${timeOnly}`;
 productDuration.classList.add('product__duration')
 productCard.appendChild(productDuration);
 })

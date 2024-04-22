@@ -38,6 +38,7 @@ font-family: Pokemon Pixel Font Regular;
 }
 .product__image{
     max-width: 45%;
+    cursor: pointer;
 }
 .product__image:hover{
     
@@ -85,4 +86,16 @@ font-family: Pokemon Pixel Font Regular;
 }
 .logo{
     width: 20%;
+}
+.backgroundBox{
+    position: fixed;
+    width: calc(100% + 160px);
+    height: 165px;
+    margin-left: 100px;
+    background-color: #84A5DE;
+    z-index: -999;
+    box-shadow: -50px 95px 0px -79px #84A5DE,-50px 110px 0px -79px #84A5DE;
+}
+.backgroundBox--flipped{
+    transform: scaleY(-1);
 }
