@@ -355,14 +355,13 @@ h3 {
         padding: 16px 16px 32px 8svw;
         margin-left: 20px;
         margin-bottom: 48px;
-        background-color: var(--Container__tertiary);
         color: var(--onContainer__tertiary);
     }
     
     & .productCard__image {
         width: 11svw;
         left: -12%;
-        top: -20%;
+        top: -21%;
     }
    
     & .productCard__name {
@@ -381,13 +380,6 @@ h3 {
 
     & .button__primary {
         display: none;
-    }
-
-    & .button__secondary {
-        position: absolute;
-        right: 20px;
-        bottom: -22px;
-        border: none;
     }
 
     & .button__quantity {
@@ -445,19 +437,33 @@ h3 {
 
 .recentOrders {
     transition: ease-in-out 0.5s;
+
+    & .productCard {
+        background-color: var(--Container__tertiary);
+    }
+
+    & .button__secondary {
+        position: absolute;
+        right: 20px;
+        bottom: -22px;
+        border: none;
+    }
 }
 
 .recentOrders.hidden {
     display: none;
 }
 
-.currentOrder__productCard {
-    background-color: var(--Container__secondary);
-
+.currentOrders {
+    
+    & .productCard {
+        background-color: var(--Container__secondary);
+    }
     & .button__secondary {
-    display: none;
+        display: none;
     }
 }
+
 
 .cart__footer {
     display: none;
