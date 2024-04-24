@@ -6,7 +6,39 @@
     <title>Auction</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="newItem__body">
+    <header class="header"><h2 class="newItem__title">Create New Item</h2></header>
+    <main class="newItem__main">
+
+        <form class="newItem__form" action="https://web-auction-backend-production.up.railway.app/api/item" method="post" enctype="multipart/form-data">
+            <section class="input__container">
+            <label class="inputLabel" for="title">Title:</label>
+            <input class="inputField" type="text" id="title" name="title" />
+          
+            <label class="inputLabel" for="description">Description:</label>
+            <textarea class="textArea" id="description" name="description"></textarea>
+
+        </section>
+        <section class="input__container">
+            <label class="inputLabel" for="startPrice">Start Price:</label>
+            <input class="inputField" type="text" id="startPrice" name="startPrice" />
+          
+            <label class="inputLabel" for="img">Upload image:</label>
+            <input type="file" id="imageSrc" name="imageSrc" accept="image/png, image/jpeg" />
+
+            <div class="button__container">
+                <img class="button__mascot" src="images/Vulpix.svg" alt="vulpix pixel art">
+                <input class="button button--submit" type="image" src="images/Button.svg" alt="submit">
+                <span class="button__text">Create</span>
+            </div>
+        </section>
+          </form>
+          
+
+        
+
+    </main>
+    <footer class="footer"></footer>
     <script src="script.js"></script>
 </body>
 </html>
