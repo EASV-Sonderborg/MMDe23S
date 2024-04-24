@@ -1,0 +1,95 @@
+body {
+    margin: 0px;
+      padding-top: 100vh;
+  }
+  .paragraph{
+      padding-top: 1rem;
+  }
+  .header{
+      width: 100%;
+      background-image: url(https://media.istockphoto.com/id/1130636356/photo/sunset-over-mountain-with-cosmos-blooming.jpg?s=612x612&w=0&k=20&c=0fK0C07rR3kqX4C9PLhqNjxSs6d6vSTMPTkPlD-CybQ=);
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      z-index: 999;
+  
+      position: fixed;
+      top: 0;
+      animation: header linear forwards;
+      animation-timeline: scroll();
+      animation-range: 0vh 90vh;
+      background-blend-mode: soft-light;
+  }
+  @keyframes header {
+      from{
+          background-position: 50% 0;
+          height: 100vh;
+          font-size: 2.5em;
+          color: white;
+      }
+      to{
+          background-position: 50% 100%;
+          background-color: #ffc89e;
+          height: 10vh;
+          font-size: 1.5em;
+          color: #f65f00;
+      }
+  }
+  
+  .progressBar {
+      top: 0;
+      position: fixed;
+      padding: 5px;
+      animation: progress linear;
+      animation-timeline: scroll();
+      z-index: 9999;
+  }
+  
+  @keyframes progress {
+      from{
+          width: 1vw;
+          background-color: #ffc89e;
+      }
+      to{
+          width: 100vw;
+          background-color: #f65f00;
+      }
+  }
+  
+
+  .slide > img {
+	object-fit: cover;
+	object-position: 100% 0;
+}
+
+@keyframes scroll-image {
+	0% {
+		object-position: 100% 0;
+	}
+	100% {
+		object-position: 0 0;
+	}
+}
+
+.slide > img {
+	animation: scroll-image linear both;
+	animation-timeline: view(x);
+}
+.slides{
+    list-style: none;
+    overflow: scroll;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    outline: 1px solid #333;
+    background: #000;
+    padding: 0;
+    margin: 0;
+    touch-action: pan-x;
+}
+.image{
+    height: 300px;
+}
