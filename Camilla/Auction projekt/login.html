@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auction Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body__login">
+    <section class="overlay"></section>
+    <main class="login__main">
+
+<h2 class="login__header">Login</h2>
+<form action="https://web-auction-backend-production.up.railway.app/api/login" method="post">
+    <label class="inputLabel" for="email">Your email:</label>
+    <input class="inputField" type="text" id="email" name="email" />
+    <div class="button__container">
+        <img class="button__mascot" src="images/Vulpix.svg" alt="vulpix pixel art">
+        <input class="button button--submit" type="image" src="images/Button.svg" alt="submit">
+        <span class="button__text">Login</span>
+    </div>
+ </form>
+    </main>
+    <script src="login.js"></script>
+</body>
+</html>

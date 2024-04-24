@@ -19,7 +19,7 @@ function getJSON(url) {
 
 getJSON(url);
 
-const main = document.querySelector('.main')
+const main = document.querySelector('.products__main')
 
 function addData(data){
   console.log(data);
@@ -28,10 +28,15 @@ const productCard = document.createElement('section');
 productCard.classList.add('product');
 main.appendChild(productCard);
   
+const productLink = document.createElement('a');
+productLink.href =`productpage.html?Id=${item.itemId}`;
+productLink.classList.add('product__link')
 const productImg = document.createElement('img');
 productImg.src = item.imageSrc;
 productImg.classList.add('product__image');
-productCard.appendChild(productImg);
+productCard.appendChild(productLink);
+productLink.appendChild(productImg);
+
 
 
 

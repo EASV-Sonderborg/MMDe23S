@@ -8,7 +8,7 @@
 body{
     margin: 0;
     background: #528CD6;
-font-family: Pokemon Pixel Font Regular;
+    font-family: Pokemon Pixel Font Regular;
 }
 .header{
     position: fixed;
@@ -30,7 +30,7 @@ font-family: Pokemon Pixel Font Regular;
     top:90%;
     box-shadow: 50px -95px 0px -79px #294AA5,50px -110px 0px -79px #294AA5;
 }
-.main{
+.products__main{
     height: 100vh;
     display: flex;
     justify-content: space-around;
@@ -39,9 +39,11 @@ font-family: Pokemon Pixel Font Regular;
 .product__image{
     max-width: 45%;
     cursor: pointer;
+    z-index: 999;
+    border-radius: 8px;
 }
 .product__image:hover{
-    
+    margin-top: -64px;
     max-width: 60%;
     transition: 0.5s ease-in-out;
 }
@@ -68,6 +70,11 @@ font-family: Pokemon Pixel Font Regular;
     font-size: 2.2rem;
     margin-block-end: 0;
 }
+.product__link{
+    display: flex;
+    z-index: 9999;
+    justify-content: center;
+}
 .nav{
     display: flex;
     justify-content: space-around;
@@ -87,15 +94,136 @@ font-family: Pokemon Pixel Font Regular;
 .logo{
     width: 20%;
 }
-.backgroundBox{
-    position: fixed;
-    width: calc(100% + 160px);
-    height: 165px;
-    margin-left: 100px;
-    background-color: #84A5DE;
-    z-index: -999;
-    box-shadow: -50px 95px 0px -79px #84A5DE,-50px 110px 0px -79px #84A5DE;
+
+.newItem__main{
+    margin-block-start: 120px;
+    
+    & .backgroundBox{
+        margin-left: -30px;
+        top: 38%;
+    }
+    & .backgroundBox--flipped{
+        margin-left: -30px;
+    }
 }
-.backgroundBox--flipped{
-    transform: scaleY(-1);
+
+.newItem__title{
+    font-size: 8rem;
+    margin: 0 0 -20px 0;
+    color: white;
+    
+}
+.newItem__body{
+    & .header {
+        justify-content: center;
+    }
+}
+
+
+.button__container {
+    position: relative;
+    display: inline-block;
+}
+
+.button {
+    width: 150px;
+}
+
+.button--submit {
+    position: absolute;
+    top: 0;
+    left: 90%;
+    
+}
+
+.button__text {
+    position: absolute;
+    color: white;
+    font-size: 3rem;
+    margin-inline-start: 25px;
+    line-height: 4.5rem;
+    pointer-events: none;
+    left: 90%;
+    
+}
+.button__mascot{
+    width: 90px;
+    position: absolute;
+    z-index: 1000;
+    left: 100%;
+    top: -72px;
+    pointer-events: none;
+}
+.inputLabel{
+    font-size: 3rem;
+    color:white;
+    display: flex;
+    flex-direction: column;
+}
+.inputField{
+    width: 350px;
+    height: 50px;
+    border: solid 4px white;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-block-end: 110px;
+    font-family:Pokemon Pixel Font Regular ;
+    font-size: 2rem;
+
+}
+.textArea{
+    height: 150px;
+    border: solid 4px white;
+    background-color: rgba(255, 255, 255, 0.5);
+    resize: none;
+}
+.newItem__form{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 200px 0 200px;
+}
+.input__container{
+    display: flex;
+    height: 60vh;
+    flex-direction: column;
+}
+
+.body__login{
+    background-image: url(images/BackgroundImg.png);
+    background-size: cover;
+    
+}
+.overlay{
+    background: linear-gradient(180deg, rgba(82, 140, 214, 0.79) 0%, rgba(176, 198, 226, 0.79) 100%);
+    height: 100vh;
+    width: 100vw;
+}
+.login__main{
+    position: absolute;
+    top: 1%;
+    left: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+height: 100vh;
+
+    & .inputField{
+        border-color: black;
+        margin: 0;
+    }
+    .button__container{
+        top: 100%;
+        left: -70%;
+    }
+    & .button__mascot{
+        left: 30px;
+    }
+    & .button__text{
+        margin-inline-start: 35px;
+        margin-block-start: -2px;
+    }
+
+}
+.login__header{
+    font-size: 8rem;
+    color: white;
 }
