@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auction Sculptures</title>
+    <link rel="stylesheet" href="user.css">
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header header--sculptures">
+        <nav class="navBar">
+            <a href="" class="navBar__item"><strong>home</strong></a>
+            <a href="" class="navBar__item"><strong>paintings</strong></a>
+            <a href="#" class="myBids navBar__item"><strong>my bids</strong></a>
+        </nav>
+        <img class="header__profilePicture" src="" alt=""> 
+        <!-- image: by clicking -> "my page" with settings etc. (theoretically, we don't do this) -->
+        <h1 class="header__headline">Sculptures</h1>
+    </header>
+    <main class="products  products__sculptures">
+        <section class="products__filter">
+            <select name="filter--select" class="products__filter--select">
+                <option value="" class="products__filter--option">newest</option>
+                <option value="" class="products__filter--option">closest to expiry</option>
+                <option value="" class="products__filter--option">your bids</option>
+            </select>
+        </section>
+        <article class="productCard">
+            <img class="productCard__image" src="" alt="">
+            <h2 class="productCard__title"></h2>
+            <h3 class="productCard__prize"></h3>
+            <p class="productCard__countdown"></p>
+        </article>
+    </main>
+    <aside class="cart">
+        <img class="close" src="images/close.png" alt="close">
+        <h2 class="cart__header">All your bids</h2>
+        <span class="cart__line"></span>
+        <section class="listCart">
+            <section class="item">
+                <img class="item__image" src="images/painting1.png" alt="painting">
+                <h2 class="item__title">Salvador Dali</h2>
+                <h3 class="item__subtitle">“The persistence of memory”</h3>
+                <p class="item__price">10.200$</p>
+                <p class="yourPrice">Your bid: 10.000$</p>
+                <p class="item__countdown">Time left: 2 hours 46 minutes</p>
+            </section>
+        </section>
+    </aside>
+    
+    <footer class="footer  footer--sculptures">
+        <!-- adresse, kontakt ... -->
+    </footer>
+    <script src="script-myBids.js"></script>
+</body>
+</html>

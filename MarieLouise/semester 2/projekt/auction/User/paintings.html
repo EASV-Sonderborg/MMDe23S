@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auction Paintings</title>
+    <link rel="stylesheet" href="user.css">
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body class="paintingsBody">
+    <header class="header header--paintings">
+        <a href="" class="header__logoLink">
+            <img class="header__logo" src="images/Logo 1.png" alt="logo"> <!--har indsat logo-->
+        </a>
+        <nav class="navBar">
+            <a href="" class="navBar__item">Home</a>
+            <a href="" class="navBar__item">Sculptures</a>
+            <a href="#" class="myBids navBar__item">My bids</a>
+        </nav>
+        <!--<img class="header__profilePicture" src="" alt=""> -->
+        <!-- image: by clicking -> "my page" with settings etc. (theoretically, we don't do this) -->
+    </header>
+    <section class="products__headlineContainer">
+        <span class="line1"></span>
+        <h1 class="products__headline">Paintings</h1>
+        <span class="line2"></span>
+    </section>
+    <main class="products  products__paintings">
+        <span class="line3"></span>
+
+        <section class="Products">
+                <img class="productCard__image" src="images/painting1.png" alt="Salvador Dali, The Persistence of Memory">
+                <img class="productCard__imageFrame" src="images/Rectangle 45.png" alt="">
+                <button class="productCard__button">See details</button>
+        </section>
+    
+    
+       <!--
+        <span class="line4"></span>
+        <span class="line5"></span>
+    
+            <img class="productCard__image productCard__image--left" src="images/painting3.png" alt="Salvador Dali, The Persistence of Memory">
+            <img class="productCard__imageFrame productCard__imageFrame--left" src="images/Rectangle 45.png" alt="">
+
+
+            <button class="productCard__button productCard__button--left">See details</button>
+        -->
+    </main>
+
+    <aside class="cart">
+        <img class="close" src="images/close.png" alt="close">
+        <h2 class="cart__header">All your bids</h2>
+        <span class="cart__line"></span>
+        <section class="listCart">
+            <section class="item">
+                <img class="item__image" src="images/painting1.png" alt="painting">
+                <h2 class="item__title">Salvador Dali</h2>
+                <h3 class="item__subtitle">“The persistence of memory”</h3>
+                <p class="item__price">10.200$</p>
+                <p class="yourPrice">Your bid: 10.000$</p>
+                <p class="item__countdown">Time left: 2 hours 46 minutes</p>
+            </section>
+        </section>
+    </aside>
+    
+
+    <footer class="footer  footer--paintings"> <!--har tilføjet de ting vi skal bruge i vore footer-->
+        <!-- adresse, kontakt ... -->
+        <address class="adress">
+            <p class="adress__text">THE GILDED GAVEL A/S</p>
+            <p class="adress__text">Jagtvej 129</p>
+            <p class="adress__text">2200 København</p>
+        </address>
+        <address class="contact">
+            <p class="contact__text">CONTACT</p>
+            <p class="contact__text">Tel: 38 50 16 43</p>
+            <p class="contact__text">Email: gildedgavel@info.dk</p>
+        </address>
+    </footer>
+    <script src="script-myBids.js"></script>
+</body>
+</html>
