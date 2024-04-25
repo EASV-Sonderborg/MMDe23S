@@ -9,6 +9,12 @@ body{
     margin: 0;
     background: #528CD6;
     font-family: Pokemon Pixel Font Regular;
+    background-image: url(images/Backgroundline.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: contain;
+    
 }
 .header{
     position: fixed;
@@ -204,7 +210,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-height: 100vh;
+    height: 100vh;
 
     & .inputField{
         border-color: black;
@@ -213,6 +219,7 @@ height: 100vh;
     .button__container{
         top: 100%;
         left: -70%;
+        margin-block-start: 80px;
     }
     & .button__mascot{
         left: 30px;
@@ -226,4 +233,5 @@ height: 100vh;
 .login__header{
     font-size: 8rem;
     color: white;
+    margin-block-end: 30px;
 }

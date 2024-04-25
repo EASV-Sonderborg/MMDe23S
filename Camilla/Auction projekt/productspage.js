@@ -22,7 +22,7 @@ getJSON(url);
 const main = document.querySelector('.products__main')
 
 function addData(data){
-  console.log(data);
+console.log(data);
 data.forEach((item) =>{
 const productCard = document.createElement('section');
 productCard.classList.add('product');
@@ -36,9 +36,6 @@ productImg.src = item.imageSrc;
 productImg.classList.add('product__image');
 productCard.appendChild(productLink);
 productLink.appendChild(productImg);
-
-
-
 
 const productTitle = document.createElement('h2');
 productTitle.textContent = item.title;
