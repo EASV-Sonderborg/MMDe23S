@@ -1,0 +1,69 @@
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    padding: 20px 15%;
+    background-color: lightgray;
+    font-family: 'PT Serif', serif;
+}
+
+h1,
+h2 {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 1rem;
+}
+
+section {
+    background-color: white;
+
+    padding: 20px;
+}
+
+#capetown {
+    background-color: lightgreen;
+    grid-column: span 1;
+}
+
+#capetown p {
+    font-size: 1.5em;
+}
+
+#london {
+    background-color: yellow;
+    grid-row: span 2;
+}
+
+#newyork {
+    background-color: violet;
+    grid-column: span 2;
+}
+
+#paris {
+    background-color: orange;
+    grid-column: span 3;
+}
+
+#hanoi {
+    background-color: greenyellow;
+}
+
+footer p {
+    text-align: center;
+    font-size: 0.8em;
+}
+
+
+/* Styling navigation */
+
+
+/* Styling the city cards */

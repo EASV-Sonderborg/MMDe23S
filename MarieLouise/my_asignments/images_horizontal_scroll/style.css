@@ -1,0 +1,13 @@
+.slider {
+    display: flex;
+    gap: 1rem;
+    width: 100vw;
+    overflow-x: scroll;
+}
+.slider__img{
+width: 70%;
+}
+
+.slider__img--last {
+    padding-right: 1.5rem;
+}

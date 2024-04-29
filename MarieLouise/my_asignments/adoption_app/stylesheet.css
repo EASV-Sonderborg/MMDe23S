@@ -1,0 +1,66 @@
+
+
+
+
+.body{
+    background-image: url(images/background.png);
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    max-height: 829px;
+    max-width: 393px;
+}
+.header__pawsadoption{
+    grid-column: span 2;
+    text-align: center;
+    margin: 0;
+}
+.header__helpthehelpless{
+    grid-column: span 2;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.button__adopt{
+    width: 90px;
+    height: 36px;
+    border-radius: 5px;
+    background-color:#45A935;
+    color: white;
+    border: solid #45A935;
+    grid-column: span 2;
+    justify-self: center;
+}
+
+.article__intro{
+    grid-column: span 2;
+}
+
+.button__donate{
+    max-width: 9ch;
+    max-height: 4ch;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+
+    
+}
+.image__mascot{
+    border-radius: 50%;
+    max-width: 19ch;
+
+}
+.footer__icon{
+max-width: 7ch;
+}
+.heading__link{
+    color: white;
+    text-decoration: none;
+}
+
+
+footer{
+    grid-column: span 2;
+    padding-top: 139px;
+   
+}

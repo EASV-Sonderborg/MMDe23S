@@ -1,0 +1,62 @@
+[
+    {
+      "id": 101,
+      "name": "GroovyBot",
+      "description":  "Step right up and let yourself be dazzled by our GroovyBot - the one-of-a-kind dance master who can turn any party into a groovy affair!\n\nWith its cool disco ball head and moves that even the stiffest wallflower can't resist, our GroovyBot is ready to light up any event with its funky beats.\n\nWith its stylish flair and sparkling charisma, the GroovyBot steals the show and creates unforgettable moments on the dance floor. It's more than just a robot - it's the life of the party and the key to smiles all around.\n\nBid now for our GroovyBot and bring the disco back to town! Let's dance!",
+      "price": 150,
+      "image": "GroovyBot.jpg",
+      "start_time": "2024-05-01T08:00:00",
+      "end_time": "2024-05-03T12:00:00",
+      "active": true
+    },
+    {
+      "id": 102,
+      "name": "ChessMasterBot",
+      "description": "Dive into the fascinating world of chess with our ChessMasterBot - the ultimate opponent for any chess enthusiast! This state-of-the-art robot is equipped with powerful AI that challenges and captivates even the most seasoned chess players\n\nThe ChessMasterBot is not just an outstanding player, but also an elegant piece of art. With its sophisticated design and precise movement capabilities, it captivates not only on the chessboard but also as a centerpiece in any room.\n\nWhether you're a chess master seeking a new challenge or a lover of technological wonders, the ChessMasterBot will elevate your game to new heights.\n\nBid now for the ChessMasterBot and secure the ultimate partner for endless chess matches and intellectual challenges! Make the first move and experience the future of chess!",
+      "price": 100,
+      "image": "ChessMasterBot.jpg",
+      "start_time": "2024-04-27T08:00:00",
+      "end_time": "2024-04-30T12:00:00",
+      "active": true
+    },
+    {
+      "id": 103,
+      "name": "TalkieBot",
+      "description": "The TalkieBot is more than just a robot - it's a trustworthy companion who always has an open ear for you. With its advanced speech recognition and friendly personality, the TalkieBot is ready to make every conversation an unforgettable experience.\n\nWhether you want to talk about your thoughts, feelings, or the latest gossip, the TalkieBot is always there for you. It can tell jokes, read stories, or simply listen - just like a real friend.\n\nWith its charming smile and empathetic nature, the TalkieBot quickly becomes the centerpiece of your home or office. It's not just a robot, but a faithful companion on your journey through life.\n\nMake friends with the TalkieBot now and experience the magic of conversations on a whole new level!",
+      "price": 200,
+      "image": "TalkieBot.png",
+      "start_time": "2024-04-29T08:00:00",
+      "end_time": "2024-05-01T12:00:00",
+      "active": true
+    },
+    {
+        "id": 104,
+        "name": "GroovyBot",
+        "description":  "Step right up and let yourself be dazzled by our GroovyBot - the one-of-a-kind dance master who can turn any party into a groovy affair!\n\nWith its cool disco ball head and moves that even the stiffest wallflower can't resist, our GroovyBot is ready to light up any event with its funky beats.\n\nWith its stylish flair and sparkling charisma, the GroovyBot steals the show and creates unforgettable moments on the dance floor. It's more than just a robot - it's the life of the party and the key to smiles all around.\n\nBid now for our GroovyBot and bring the disco back to town! Let's dance!",
+        "price": 150,
+        "image": "GroovyBot.jpg",
+        "start_time": "2024-04-24T08:00:00",
+        "end_time": "2024-05-03T12:00:00",
+        "active": true
+      },
+      {
+        "id": 105,
+        "name": "ChessMasterBot",
+        "description": "Dive into the fascinating world of chess with our ChessMasterBot - the ultimate opponent for any chess enthusiast! This state-of-the-art robot is equipped with powerful AI that challenges and captivates even the most seasoned chess players\n\nThe ChessMasterBot is not just an outstanding player, but also an elegant piece of art. With its sophisticated design and precise movement capabilities, it captivates not only on the chessboard but also as a centerpiece in any room.\n\nWhether you're a chess master seeking a new challenge or a lover of technological wonders, the ChessMasterBot will elevate your game to new heights.\n\nBid now for the ChessMasterBot and secure the ultimate partner for endless chess matches and intellectual challenges! Make the first move and experience the future of chess!",
+        "price": 100,
+        "image": "ChessMasterBot.jpg",
+        "start_time": "2024-04-25T08:00:00",
+        "end_time": "2024-04-30T12:30:00",
+        "active": true
+      },
+      {
+        "id": 106,
+        "name": "TalkieBot",
+        "description": "The TalkieBot is more than just a robot - it's a trustworthy companion who always has an open ear for you. With its advanced speech recognition and friendly personality, the TalkieBot is ready to make every conversation an unforgettable experience.\n\nWhether you want to talk about your thoughts, feelings, or the latest gossip, the TalkieBot is always there for you. It can tell jokes, read stories, or simply listen - just like a real friend.\n\nWith its charming smile and empathetic nature, the TalkieBot quickly becomes the centerpiece of your home or office. It's not just a robot, but a faithful companion on your journey through life.\n\nMake friends with the TalkieBot now and experience the magic of conversations on a whole new level!",
+        "price": 200,
+        "image": "TalkieBot.png",
+        "start_time": "2024-04-24T08:00:00",
+        "end_time": "2024-05-01T12:00:00",
+        "active": true
+      }
+  ]

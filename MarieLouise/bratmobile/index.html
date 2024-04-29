@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <img class="logoImage" src="images/batmobileGlitch.gif" alt="logo" />
+    </header>
+    <section class="allPolaroids">
+    <div class="polaroid__container">
+      <div class="bubble bubble-bottom-left" contenteditable>
+        “I will not be silenced and I will not let anyone distort my words.”
+      </div>
+      <section class="polaroid">
+        <img
+          class="polaroid__image"
+          src="images/aaaa.jpg"
+          alt="billede af aaa"
+        />
+        <p class="polaroid__description--header">Allison Wolfe:</p>
+        <p class="polaroid__description">
+          “I will not be silenced and I will not let anyone distort my words.”
+        </p>
+      </section>
+    </div>
+    <div class="polaroid__container polaroid__container--right">
+      <div class="bubble bubble-bottom-right bubble--right" contenteditable>
+        “Know Your Worth; Don't Undervalue Your Creativity”
+      </div>
+      <section class="polaroid polaroid--two">
+        <img
+          class="polaroid__image"
+          src="images/molly.jpg"
+          alt="billede af aaa"
+        />
+        <p class="polaroid__description--header">Molly Neuman</p>
+        <p class="polaroid__description">
+          “Know Your Worth; Don't Undervalue Your Creativity.”
+        </p>
+      </section>
+    </div>
+    <div class="polaroid__container polaroid__container--left">
+      <div class="bubble bubble-bottom-left" contenteditable>
+        “Riot not diet”
+      </div>
+      <section class="polaroid">
+        <img
+          class="polaroid__image"
+          src="images/erin.jpg"
+          alt="billede af aaa"
+        />
+        <p class="polaroid__description--header">Erin Smith</p>
+        <p class="polaroid__description">“Riot not diet!”</p>
+      </section>
+    </div>
+  </section>
+
+
+
+    <section class="allVinyls">
+      <div class="vinylAlbum">
+        <img
+          class="albumCover albumCover--1 vinylAlbum--one"
+          src="images/album/girls-get-busy.png"
+          alt="albumCover"
+        />
+        <img
+          class="vinyl vinyl--1"
+          src="images/vinyls/vinyl-girls.png"
+          alt="vinyl"
+        />
+        <audio id="girlsGetBusy" preload="auto">
+          <source src="audio/Bratmobile_-_Whats_wrong_with_you.mp3" />
+        </audio>
+      </div>
+
+      <div class="vinylAlbum">
+        <img
+          class="albumCover albumCover--2 vinylAlbum--two"
+          src="images/album/ladies-women-and-girls.jpg"
+          alt="albumCover"
+        />
+        <img
+          class="vinyl vinyl--2"
+          src="images/vinyls/vinyl-ladies.png"
+          alt="vinyl"
+        />
+        <audio id="ladies" preload="auto">
+          <source src="audio/Bratmobile_-_Gimmie_Brains.mp3" />
+        </audio>
+      </div>
+
+      <div class="vinylAlbum">
+        <img
+          class="albumCover albumCover--3 vinylAlbum--three"
+          src="images/album/pottymouth.jpg"
+          alt="albumCover"
+        />
+        <img
+          class="vinyl vinyl--3"
+          src="images/vinyls/vinyl-pottymouth.png"
+          alt="vinyl"
+        />
+        <audio id="pottymouth" preload="auto">
+          <source src="audio/Bratmobile_-_Cool_Schmool_from_Pottymouth.mp3" />
+        </audio>
+      </div>
+
+      <div class="vinylAlbum">
+        <img
+          class="albumCover albumCover--4 vinylAlbum--four"
+          src="images/album/real-janelle.jpg"
+          alt="albumCover"
+        />
+        <img
+          class="vinyl vinyl--4"
+          src="images/vinyls/vinyl-real-janette.png"
+          alt="vinyl"
+        />
+        <audio id="realJanette" preload="auto">
+          <source src="audio/Bratmobile_-_Brat_Girl.mp3" />
+        </audio>
+      </div>
+
+      <div class="vinylAlbum">
+        <img
+          class="albumCover albumCover--5 vinylAlbum--five"
+          src="images/album/the-peel-session.jpg"
+          alt="albumCover"
+        />
+        <img
+          class="vinyl vinyl--5"
+          src="images/vinyls/vinyl-thepeel.png"
+          alt="vinyl"
+        />
+        <audio id="thePeel" preload="auto">
+          <source src="audio/Bratmobile_-_Theres_no_other_way.mp3" />
+        </audio>
+      </div>
+    </section>
+    <script>
+      var soundOne = $("#girlsGetBusy")[0];
+      $(".vinylAlbum--one").mouseenter(function () {
+        soundOne.play();
+      });
+    </script>
+    <script>
+      var soundTwo = $("#ladies")[0];
+      $(".vinylAlbum--two").mouseenter(function () {
+        soundTwo.play();
+      });
+    </script>
+    <script>
+      var soundThree = $("#pottymouth")[0];
+      $(".vinylAlbum--three").mouseenter(function () {
+        soundThree.play();
+      });
+    </script>
+    <script>
+      var soundFour = $("#realJanette")[0];
+      $(".vinylAlbum--four").mouseenter(function () {
+        soundFour.play();
+      });
+    </script>
+    <script>
+      var soundFive = $("#thePeel")[0];
+      $(".vinylAlbum--five").mouseenter(function () {
+        soundFive.play();
+      });
+    </script>
+  </body>
+</html>

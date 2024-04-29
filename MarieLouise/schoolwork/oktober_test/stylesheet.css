@@ -1,0 +1,203 @@
+body{
+    background-color: #403D3D;
+}
+
+.navi{
+    background-color: white;
+    border-radius: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.navi__logo{
+    height: 100px;
+    width: 290px;
+    padding-top: 6px;
+    padding-left: 21px;
+}
+
+.navi__online{
+    font-weight: lighter;
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+}
+
+.navi__omos{
+font-weight: lighter;
+text-decoration: none;
+color: black;  
+font-size: 22px; 
+}
+
+.navi__kontakt{
+    font-weight: lighter;
+    text-decoration: none;
+    color: black; 
+    font-size: 22px;
+}
+
+.navi__cart{
+    width: 73px;
+    height: 64px;
+    padding-right: 21px;
+}
+
+.hero{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero__img{
+max-width: 1550px;
+margin-left: -40px;
+}
+
+.hero__header{
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    font-size: 60px;
+    font-weight: lighter;
+    padding-bottom: 140px;
+    padding-left: 29px;
+}
+
+.hero__info{
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    font-size: 44px;
+    font-weight: lighter;
+    padding-bottom: 60px;
+    padding-left: 29px;
+}
+
+.intro{
+    background-color: #C71F1F;
+    color: white;
+    font-size: 16px;
+    font-weight: light;
+    padding: 28px;
+    border-radius: 36px;
+    text-align: center;
+    line-height: 1.6;
+    margin: 21px;
+}
+
+.udvalg__header1{
+    color: white;
+    font-weight: lighter;
+    padding-top: 54px;
+    grid-column: span 3;
+    font-size: 22px;
+}
+
+.udvalg{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr ;
+    margin-left: 40px;
+    margin-right: 40px;
+
+}
+
+.udvalg__img{
+    height: 226px;
+    width: 319px;
+    border-radius: 46px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+}
+
+.udvalg__header{
+    font-size: 26px;
+    font-weight: lighter;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.udvalg__info{
+    font-size: 16px;
+    font-weight: lighter;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 1.6;
+}
+
+.udvalg__price{
+    background-color: #C71F1F;
+    height: 38px;
+    width: 124px;
+    color: white;
+    border-radius: 17px;
+    font-size: 22px;
+    margin-left: 200px;
+    text-align: center;
+    padding-top: 10px;
+
+}
+
+.udvalg__card{
+    background-color: white;
+    border-radius: 46px;
+    width: 362px;
+    height: 583px;
+}
+
+.card1{
+    padding-top: 58px;
+}
+
+.card2{
+    padding-top: 9px;
+}
+
+.card3{
+    padding-top: 111px;
+}
+
+.footer__img{
+    display: flex;
+    max-width: 1550px;
+    margin-top: 40px;
+    grid-column: span 4;
+    position: absolute;
+    justify-content: baseline;
+}
+
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr ;
+}
+
+.footer__open{
+    color: white;
+    font-size: 32px;
+    font-weight: lighter;
+}
+
+.footer__info{
+    color: white;
+    font-size: 18px;
+    font-weight: lighter;
+
+}
+
+.footer1{
+    position: absolute;
+    padding-left: 40px;
+    padding-top: 100px;
+    
+}
+
+.footer2{
+    position: absolute;
+    padding-left: 300px;
+    padding-top: 100px;
+}

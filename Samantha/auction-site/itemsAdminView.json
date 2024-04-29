@@ -1,0 +1,9 @@
+[
+    {
+        "name": "Robot",
+        "discription": "bla bla bla",
+        "originalPrice": 50,
+        "currentPrice": 50,
+        "active": true
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Robot",
+        "discription": "bla bla bla",
+        "originalPrice": 80,
+        "currentPrice": 80,
+        "startDate": "2024-04-23T08:00:00",
+        "endDate": "2024-04-25T10:00:00",
+        "auctionWinner": true,
+        "auctionLost": false  
+    },
+    {
+        "name": "Robotic",
+        "discription": "blob blob blob",
+        "originalPrice": 50,
+        "currentPrice": 50,
+        "startDate": "2024-04-23T08:00:00",
+        "endDate": "2024-04-26T10:00:00",
+        "auctionWinner": true,
+        "auctionLost": false  
+    }
+]
