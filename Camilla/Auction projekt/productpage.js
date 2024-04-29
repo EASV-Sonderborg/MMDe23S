@@ -6,5 +6,5 @@ console.log(queryString);
 const urlParams = new URLSearchParams(queryString);
 
 // STEP 3 – Find the "id" part
-const id = urlParams.get('id')
+const id = urlParams.get('itemid')
 console.log(id);

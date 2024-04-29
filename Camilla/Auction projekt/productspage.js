@@ -29,7 +29,7 @@ productCard.classList.add('product');
 main.appendChild(productCard);
   
 const productLink = document.createElement('a');
-productLink.href =`productpage.html?Id=${item.itemId}`;
+productLink.href =`productpage.html?Itemid=${item.itemId}`;
 productLink.classList.add('product__link')
 const productImg = document.createElement('img');
 productImg.src = item.imageSrc;
