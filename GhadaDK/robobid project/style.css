@@ -1,0 +1,150 @@
+body {
+  background-color: rgba(18, 17, 34, 1);
+}
+.main__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 16rem;
+}
+.grid__item1 {
+  display: grid;
+  align-content: space-evenly;
+  gap: 5rem;
+  margin-left: 8rem;
+  margin-top: 4rem;
+}
+.grid__item2 {
+}
+.primary__button {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  background: #46364e;
+  box-shadow: 6px 6px 10px 0px rgba(202, 122, 231, 0.3) inset;
+  color: white;
+  text-align: center;
+  font-family: "Inria Sans";
+  font-size: 40px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.secondary__button {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  background: #46364e;
+  font-family: "Inria Sans";
+  font-size: 40px;
+  font-weight: 700;
+  box-shadow: 6px 6px 10px 0px rgba(202, 122, 231, 0.3) inset;
+  cursor: pointer;
+  color: white;
+}
+.surface__img {
+  max-width: 350px;
+  margin-top: 20px;
+}
+.grid__container {
+  width: 550px;
+  height: 600px;
+  border-radius: 16px;
+  opacity: 0.5;
+  background: linear-gradient(156deg, #121122 0%, #1d1b36 100%);
+  box-shadow: 4px 4px 6px 0px rgba(121, 25, 169, 0.5),
+    4px 4px 6px 0px rgba(70, 54, 78, 0.5) inset;
+}
+
+.logo__img {
+  max-width: 25%;
+}
+.Management {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 100px;
+  width: 1100px;
+  height: 600px;
+  border-radius: 16px;
+
+  background: var(--Product-card-background-color, rgba(34, 34, 34, 0.5));
+
+  box-shadow: 4px 4px 6px 0px rgba(70, 54, 78, 0.5),
+    4px 4px 6px 0px rgba(70, 54, 78, 0.5) inset;
+}
+
+.header {
+  color: #fff;
+
+  font-family: "Inria Sans";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+h2 {
+  color: #fff;
+
+  font-family: "Inria Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+input {
+  width: 566px;
+
+  height: 47px;
+  background: #d9d9d9;
+  margin-left: 15px;
+  padding-left: 7px;
+  font-family: "Inria Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.main__input {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  width: 634px;
+  height: 76px;
+  border-radius: 8px;
+  background: #d9d9d9;
+}
+.management__img {
+  max-width: 300px;
+  padding-right: 60px;
+}
+.main__management {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.buttonPrimary {
+  width: 250px;
+  height: 65px;
+  border-radius: 50px;
+  background: var(--button-bid-primary-and-box, #46364e);
+
+  box-shadow: 6px 6px 10px 0px rgba(160, 102, 181, 0.5) inset;
+}
+.button {
+  display: flex;
+  width: 134px;
+  height: 45px;
+  flex-direction: column;
+  justify-content: center;
+}
