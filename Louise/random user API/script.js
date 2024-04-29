@@ -24,9 +24,12 @@ document.addEventListener("DOMContentLoaded", function() {
         const fullName = `${user.name.title} ${user.name.first} ${user.name.last}`;
         const email = user.email;
         const username = user.login.username;
+        const picture = user.picture.large;
+
 
         const userDataHTML = `
             <p><strong>Name:</strong> ${fullName}</p>
+            <img src="${picture}" alt="${fullName}'s picture" style="max-width: 200px;">
             <p><strong>Email:</strong> ${email}</p>
             <p><strong>Username:</strong> ${username}</p>
         `;

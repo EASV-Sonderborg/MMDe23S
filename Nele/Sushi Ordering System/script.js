@@ -49,7 +49,7 @@ addToCartButton.forEach((button) => {
 const currentOrders = document.querySelector('.currentOrders');
 const cartFooter = document.querySelector('.cart__footer');
 
-function addToCart(productCard, addAgainButton) {
+function addToCart(productCard) {
     // 1. clone the productCard
     const newOrder = productCard.cloneNode(true);
     newOrder.classList.add('currentOrder__productCard'); 

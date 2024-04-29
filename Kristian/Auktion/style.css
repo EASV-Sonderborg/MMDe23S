@@ -1,0 +1,195 @@
+body {
+  background-color: #dfdcc9;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.createUser__box {
+  background-color: #212126;
+  width: 500px;
+  height: 350px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgb(47, 47, 47);
+  margin-bottom: 150px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.createUser__title {
+  color: #dfdcc9;
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.card__input {
+  width: 60%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 16px;
+  background-color: #dfdcc9;
+}
+
+.create__button {
+  margin: auto;
+  display: block;
+  font-size: 18px;
+  width: 40%;
+  padding: 10px;
+  margin-top: 45px;
+  text-align: center;
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.car__image {
+  z-index: 1000;
+  width: 800px;
+  height: 320px;
+  position: absolute;
+  position: fixed;
+  bottom: 0;
+  right: -12%;
+  animation: slideInRight; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+footer {
+  background-color: #212126;
+  padding-top: 150px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+.auction__headerImg {
+  position: absolute;
+  top: -120px;
+  left: 0;
+  width: 100%;
+}
+
+.h1 {
+  font-size: 70px;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  color: #dfdcc9;
+  margin-left: 40px;
+  margin-top: 160px;
+  letter-spacing: 0.05em;
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+}
+
+.navbar {
+  padding: 10px 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 550px;
+  margin-right: 50px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  font-family: "Abril Fatface", serif;
+}
+
+.navbar ul li {
+  display: inline;
+  margin-left: 100px;
+  font-size: 20px;
+}
+
+.navbar ul li:first-child {
+  margin-left: 0;
+}
+
+.navbar ul li a {
+  color: #212126;
+  text-decoration: none;
+}
+
+.navbar ul li a:hover {
+  text-decoration: underline;
+}
+
+.underline {
+  margin-left: 38px;
+  width: 95%;
+  height: 2px;
+  background-color: #333;
+  position: absolute;
+  top: 630px;
+  left: 0;
+  display: block;
+}
+
+.icon {
+  font-size: 1.5em;
+}
+
+.product__card {
+  margin-top: 40px; /* Remove the top margin */
+  margin-right: 70px; /* Add some spacing between the cards */
+  margin-left: 70px;
+  width: 602px; /* Set the width of the product card */
+  height: 416px; /* Set the height of the product card */
+  border-radius: 20px; /* Add rounded corners */
+  background: #28272f; /* Set background color */
+}
+.h2 {
+  left: 0;
+  margin-top: 650px;
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+.productcard__Container {
+  margin-top: 1700px;
+  display: flex;
+  position: absolute;
+  flex-wrap: wrap; /* Allow flex items to wrap into multiple lines */
+  justify-content: space-between; /* Distribute items evenly along the main axis */
+}
+
+.productImage {
+  position: relative;
+  margin-left: -45px;
+  margin-top: 85px;
+  width: 350px;
+  border-radius: 4.705px;
+  border: 2px solid #dfdcc9;
+}
+
+.h3 {
+  position: relative;
+  top: 0;
+  margin-left: 330px;
+  margin-top: -260px;
+  color: #dfdcc9;
+  font-size: 35px;
+}
+
+.item__description {
+  position: absolute;
+  margin-top: 1200px;
+  left: 0;
+  font-size: 50px;
+  z-index: 99999;
+}
