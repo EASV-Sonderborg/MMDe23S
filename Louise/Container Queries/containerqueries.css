@@ -1,0 +1,22 @@
+
+/* INSERT YOUR CONTAINER QUERIES HERE */
+
+.main {
+    container-type: inline-size;
+    container-name: main;
+  }
+
+@container main (min-width: 600px){
+    .navbar__button {
+        flex-grow: 1;
+      }
+.navbar__button--filter{
+    color: white;
+    padding-left: 2rem;
+}
+.navbar__button--search{
+    color: gray;
+    padding-left: 2rem;
+}
+}
+
