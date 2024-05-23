@@ -8,3 +8,32 @@ const urlParams = new URLSearchParams(queryString);
 // STEP 3 – Find the "id" part
 const id = urlParams.get('itemid')
 console.log(id);
+
+const url = "https://web-auction-backend-production.up.railway.app/api/items";
+
+function getJSON(url) {
+  fetch(url)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP Error! Status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then((data) => {
+      console.log("Data received:", data);
+      addData(data);
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+}
+
+getJSON(url);
+
+const productCard = document.querySelector('.product');
+
+function addData (data) {
+
+
+
+}
