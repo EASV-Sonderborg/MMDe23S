@@ -1,6 +1,10 @@
 body {
     font-family: "Montserrat", sans-serif;
 }
+.body__quiz {
+    background: linear-gradient(to bottom right, rgba(30, 107, 218, 1) 0%, rgba(179, 205, 242, 1) 68%, rgba(19, 100, 216, 1) 100% );
+}
+
 
 /*typography*/
 .herosection__headline {
@@ -26,6 +30,18 @@ body {
     font-size: 0.65rem;
     font-weight: bold;
 }
+.text__link {
+    color: rgba(8, 53, 117, 1);
+    font-weight: bold;
+}
+.text-bold {
+    font-weight: bold;
+}
+.text-marginTop {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
 /*----*/
 
 /*header*/
@@ -90,7 +106,6 @@ body {
     cursor: pointer;
 }
 
-
 .menu-list {
     list-style: none;
     padding: 0;
@@ -110,9 +125,6 @@ body {
 }
 /*----*/
 
-.section__space {
-    width: 100%;
-}
 
 /*herosection*/
 .herosection {
@@ -158,6 +170,31 @@ body {
 }
 /*----*/
 
+/*svg container*/
+.svg-container {
+    width: 100%;
+    height: 50px; 
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    margin-bottom: 0px;
+  }
+
+  .svg-container svg {
+    width: 100%;
+    height: auto;
+  }
+/*----*/
+
+.process__slider {
+    justify-content: center;
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+}
+
 /*category cards*/
 
 .category__card {
@@ -197,7 +234,7 @@ body {
     color: white;
     padding: 10px;
     box-sizing: border-box;
-    min-height: 50px;
+    min-height: 60px;
     border-radius: 8px;
 }
 
@@ -220,13 +257,19 @@ body {
     margin-bottom: 20px;
 }
 
+/*button*/
 .button {
+    display: inline-block;
     min-width: 180px;
     min-height: 65px;
     border: 1px solid black;
     border-radius: 50px;
     margin-bottom: 20px;
+    align-content: center;
+    text-align: center;
+    padding: 5px 20px;
 }
+/*----*/
 
 .placeholder {
     justify-content: center;
@@ -236,9 +279,137 @@ body {
 }
 
 .text__link {
-    right: 0;
-    left: auto;
-    margin: auto 10px auto auto;
-    position: absolute;
-    
+    margin: auto 5px auto auto;
+    display: flex;
+    justify-content: flex-end;
 }
+
+.space__line {
+    margin: 65px auto;
+}
+
+/* kids banner */
+.kids__area {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    min-height: 390px;
+    width: 100%;
+    color: white;
+    background: linear-gradient(to bottom right, rgba(201, 91, 98, 1), rgba(247, 166, 62, 1));
+}
+.kids__areaButton {
+    background-color: white;
+    color: rgba(246, 147, 35, 1);
+    align-self: flex-end;
+    border: 1px solid rgba(209, 125, 51, 1);
+    box-shadow: 4px 4px 6px rgba(82, 157, 184, 0.25);
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 5px;
+}
+.kids__areaDiscription {
+    display: flex;
+    align-items: center;
+}
+/*----*/
+
+
+/*footer*/
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+.footer__link {
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+.footer__contact {
+    max-width: 165px;
+}
+/*----*/
+
+/*quiz*/
+.quiz__discription {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Answers {
+    color: rgba(246, 147, 35, 1);
+    font-weight: bold;
+}
+.question {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+
+  .question-number {
+    font-size: 65px;
+    margin-bottom: 10px;
+  }
+
+  .question-text {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .guiz__map {
+    max-width: 340px;
+    margin-top: 40px;
+  }
+  .question-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .question-subtitle {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+  }
+
+  .question-mark {
+    color: red;
+    font-size: 24px;
+    margin-left: 10px;
+  }
+
+  .options {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .option {
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+  
+  .option button {
+    min-width: 340px;
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    background-color: rgba(29, 52, 99, 1);
+    cursor: pointer;
+    color: white;
+  }
+
+  .option button.correct {
+    background-color: rgba(24, 129, 101, 1);
+    color: white;
+  }
+
+  .option button.incorrect {
+    background-color: #f44336;
+    color: white;
+  }
