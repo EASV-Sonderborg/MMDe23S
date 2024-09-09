@@ -35,6 +35,37 @@ searchButton.addEventListener('click', () => {
     weatherInfo.innerHTML = "";
     weatherAirInfo.innerHTML = "";
 
+    if (data.weather[0].main == "Clear"){
+      const weatherImg = document.createElement('img');
+      weatherImg.src = "images/clear.png";
+      weatherImg.classList.add('weatherInfo__img');
+      weatherInfo.appendChild(weatherImg);
+    }
+    else if (data.weather[0].main == "Clouds") {
+      const weatherImg = document.createElement('img');
+      weatherImg.src = "images/clouds.png";
+      weatherImg.classList.add('weatherInfo__img');
+      weatherInfo.appendChild(weatherImg);
+    }
+    else if (data.weather[0].main == "Rain") {
+      const weatherImg = document.createElement('img');
+      weatherImg.src = "images/rain.png";
+      weatherImg.classList.add('weatherInfo__img');
+      weatherInfo.appendChild(weatherImg);
+    }
+    else if (data.weather[0].main == "Drizzle") {
+      const weatherImg = document.createElement('img');
+      weatherImg.src = "images/drizzle.png";
+      weatherImg.classList.add('weatherInfo__img');
+      weatherInfo.appendChild(weatherImg);
+    }
+    else if (data.weather[0].main == "Mist") {
+      const weatherImg = document.createElement('img');
+      weatherImg.src = "images/mist.png";
+      weatherImg.classList.add('weatherInfo__img');
+      weatherInfo.appendChild(weatherImg);
+    }
+
     const tempature = document.createElement('h2');
     tempature.classList.add("weatherTempature");
     tempature.textContent = Math.round(data.main.temp) + "°C"
