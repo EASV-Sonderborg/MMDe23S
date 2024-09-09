@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app with API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="card">
+        <section class="search">
+            <input class="searchBar" type="text" placeholder="Write city here">
+            <button class="searchButton"><svg width="25" height="25" viewBox="0 0 95 95" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M77.5833 83.125L52.6458 58.1875C50.6667 59.7708 48.3906 61.0243 45.8177 61.9479C43.2448 62.8715 40.5069 63.3333 37.6042 63.3333C30.4132 63.3333 24.3273 60.8429 19.3464 55.862C14.3655 50.8811 11.875 44.7951 11.875 37.6042C11.875 30.4132 14.3655 24.3273 19.3464 19.3464C24.3273 14.3655 30.4132 11.875 37.6042 11.875C44.7951 11.875 50.8811 14.3655 55.862 19.3464C60.8429 24.3273 63.3333 30.4132 63.3333 37.6042C63.3333 40.5069 62.8715 43.2448 61.9479 45.8177C61.0243 48.3906 59.7708 50.6667 58.1875 52.6458L83.125 77.5833L77.5833 83.125ZM37.6042 55.4167C42.5521 55.4167 46.7578 53.6849 50.2214 50.2214C53.6849 46.7578 55.4167 42.5521 55.4167 37.6042C55.4167 32.6563 53.6849 28.4505 50.2214 24.987C46.7578 21.5234 42.5521 19.7917 37.6042 19.7917C32.6563 19.7917 28.4505 21.5234 24.987 24.987C21.5234 28.4505 19.7917 32.6563 19.7917 37.6042C19.7917 42.5521 21.5234 46.7578 24.987 50.2214C28.4505 53.6849 32.6563 55.4167 37.6042 55.4167Z" fill="grey"/>
+                </svg>
+                </button>
+                </section>
+                <section class="weatherInfo">
+                    <img class="weatherInfo__img" src="images/clear.png" alt="clear sky">
+                    <!--temp info from JSON goes here-->
+                    <!--city name from JSON goes here-->
+                </section>
+                <section class="weatherAirInfo">
+                    <!--wind info from JSON goes here-->
+                    <!--humidity info from JSON goes here-->
+                </section>
+        </section>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
