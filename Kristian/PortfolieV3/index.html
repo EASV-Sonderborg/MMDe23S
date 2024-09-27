@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="#about">Om mig</a></li>
+        <li><a href="#projects">Projekter</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero__content">
+        <div class="hero__image-container">
+          <img
+            src="images/me.png"
+            alt="Kristian Petersen"
+            class="hero__image"
+          />
+        </div>
+        <div class="hero__text">
+          <h1 class="hero__name">UX/UI Designer</h1>
+          <p class="hero__title">Kristian Petersen</p>
+          <p class="hero__description">
+            Praktiksøgende multimediedesigner, studerende på 3. semester.
+          </p>
+        </div>
+      </div>
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator">
+        <span class="scroll-arrow">↓</span>
+      </div>
+    </section>
+
+    <!-- New Section Title: My Projects -->
+    <h1 class="projects-title" id="projects">Mine Projekter</h1>
+
+    <!-- Pong Game Section -->
+    <section class="project-section">
+      <h2>Pong Spil</h2>
+      <div class="project-content">
+        <div class="project-item">
+          <img
+            src="images/FirstPongGame.jpeg"
+            alt="Pong game screenshot 1"
+            class="project-image"
+          />
+          <div class="project-text">
+            <h3>Arbejdsprocess og målsætning</h3>
+            <p>
+              Mit mål var at genskabe det klassiske 'Pong' spil med HTML5, CSS
+              og JavaScript. Jeg havde ikke meget forstand på spil udvikling via
+              JavaScript, så fik AI-værktøjet "ChatGPT" til at hjælpe mig med at
+              skabe den første version af spillet.
+            </p>
+            <p>
+              Jeg lavede selv alt visuelt indhold som bolden, spillerne og
+              scoreboardet. Senere hjalp AI med at udvikle koden til
+              AI-modstanderen.
+            </p>
+          </div>
+        </div>
+        <div class="project-item">
+          <img
+            src="images/PongImprovements.png"
+            alt="Pong game screenshot 2"
+            class="project-image"
+          />
+          <div class="project-text">
+            <h3>Videreudvikling af spillet</h3>
+            <p>
+              Spillet var stadig upoleret og havde brug for forbedringer. Jeg
+              moderniserede det ved at bruge nye teknikker, som ikke var
+              tilgængelige i det originale spil, og udforskede gradienter og
+              blødere kanter i Figma for et mere attraktivt design.
+            </p>
+          </div>
+        </div>
+        <div class="project-item">
+          <img
+            src="images/PongMenu.png"
+            alt="Pong game screenshot 3"
+            class="project-image"
+          />
+          <div class="project-text">
+            <h3>Testing og forbedringer</h3>
+            <p>
+              Jeg fortsatte med tests, redesigns og forbedringer, indtil spillet
+              føltes komplet. Den nye version fik et redesign, en menu og
+              spilleinstruktioner.
+            </p>
+          </div>
+        </div>
+        <div class="project-item">
+          <img
+            src="images/Animation.gif"
+            alt="Pong game screenshot 4"
+            class="project-image"
+          />
+          <div class="project-text">
+            <h3>Version 1.0</h3>
+            <p>
+              Spillet havde nu alle de nødvendige funktioner, som musik,
+              lydeffekter, pause, mute og restart. Se en demo til højre, eller
+              prøv spillet ved at klikke på knappen nedenfor.
+            </p>
+            <!-- Button Link to Pong Game -->
+            <a href="pong.html" class="btn-primary"> Prøv Spillet! </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cerberis App Design Section -->
+    <section class="project-section">
+      <h2>Cerberis App Design</h2>
+      <div class="project-content">
+        <div class="project-item">
+          <img
+            src="images/WireframesCerberis.png"
+            alt="Cerberis app screenshot 1"
+            class="project-image"
+          />
+          <div class="project-text">
+            <h3>Idéudvikling & wireframing</h3>
+            <p>
+              Vi hjalp Maacks-IT med at udvikle en varmestyringsapp til
+              husejere, kaldet Cerberis. Opgaven startede med at finde
+              designinspiration til en app, der var både moderne og let at bruge
+              for den gennemsnitlige dansker.
+            </p>
+            <p>
+              Med nok inspiration begyndte vi at lave wireframes og
+              eksperimentere med designet.
+            </p>
+          </div>
+        </div>
+        <div class="project-item">
+          <img
+            src="images/Naming&Autolayout.png"
+            alt="Cerberis app screenshot 2"
+            class="project-image"
+          />
+          <div class="project-text">
+            <h3>Arbejdsprocess</h3>
+            <p>
+              Her arbejdede vi med vores navngivning, hvor vi besluttede os for
+              at køre CSS "BEM", da det gør det nemmere at håndtere, når
+              designet skal kodes.
+            </p>
+            <p>
+              Ud over det, brugte vi også Figmas AutoLayout system, for at
+              garantere præcision og gennemgående kvalitet på hele appen.
+            </p>
+          </div>
+        </div>
+        <div class="project-item">
+          <img
+            src="images/VectorNames.png"
+            alt="Cerberis app screenshot 3"
+            class="project-image"
+          />
+          <div class="project-text">
+            <h3>Struktur & overblik</h3>
+            <p>
+              Da alle former (vectors) på appen er hjemmelavet, kan man hurtigt
+              miste overblikket i sine ikoner og figurer.
+            </p>
+            <p>
+              Derfor bliver alle ikoner grupperet, og hver figur får et unikt
+              navn. Dette gør det meget nemmere at navigere imellem og redigere
+              hvis det bliver nødvendigt.
+            </p>
+          </div>
+        </div>
+        <div class="project-item">
+          <img
+            src="images/MockupCerberis.png"
+            alt="Cerberis app screenshot 4"
+            class="project-image"
+          />
+          <div class="project-text">
+            <h3>Seneste version af appen</h3>
+            <p>
+              I appens seneste version, legede vi også rundt med flere hverdags
+              features som fx en vejrudsigt. Dette kunne hjælpe appen til at
+              blive mere til et værktøj der bruges hver dag, frem for bare en
+              varmestyrrings app. Ud over det, fik den også en start/loading
+              skærm
+            </p>
+            <p>
+              Appen er stadig kun et prototype koncept og bør derfor stadig
+              vidreudvikles ved at tiføje flere funktioner mm.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visit Sønderjylland Section -->
+    <section class="project-section">
+      <h2>Visit Sønderjylland</h2>
+      <div class="project-content">
+        <div class="project-item">
+          <img
+            src="images/StickyNotes.png"
+            alt="Visit Sønderjylland screenshot 1"
+            class="project-image"
+          />
+          <div class="project-text">
+            <h3>Dataindsamling & userstories</h3>
+            <p>
+              Visit Sønderjylland ønskede en opdatering af deres hjemmeside med
+              fokus på børn, familier og natur. Vi lavede userstories for
+              målgruppen og udforskede idéer med sticky notes.
+            </p>
+            <p>
+              Her noterede vi adskillige funktioner og features der kunne være
+              relevante for siden, både sjove og praktiske. Én af problemerne
+              fra vores userstories, var at folk følte de brugte for lang tid på
+              siden for at finde relevante oplevelser.
+            </p>
+          </div>
+        </div>
+        <div class="project-item">
+          <img
+            src="images/DSSJWireframes.png"
+            alt="Visit Sønderjylland screenshot 2"
+            class="project-image"
+          />
+          <div class="project-text">
+            <h3>Wireframing & Mobile version</h3>
+            <p>
+              Her startede vores arbejdsprocess også med wireframing, hvor vi
+              eksperimenterede med hvordan vi kunne implementere nogle af vores
+              idéer, på en måde der gav mening for brugerne,
+            </p>
+            <p>
+              Her var én af udfordringerne også, at disse funktioner skulle
+              kunne implementeres på telefonen, da siden skulle kunne bruges "on
+              the go" og folk ikke lige render rundt med en computer når de er
+              på ferie.
+            </p>
+          </div>
+        </div>
+        <div class="project-item">
+          <img
+            src="images/AktivNatur.png"
+            alt="Visit Sønderjylland screenshot 3"
+            class="project-image"
+          />
+          <div class="project-text">
+            <h3>Aktiv natur</h3>
+            <p>
+              Som nævnt tidligere, var naturomgivelserne en stor del af turismen
+              i Sønderborg. Her har vi udvalgt interresante lokationer omkring
+              Sønderborg, samt en beskrivelse af stedet. Der er oven i købet et
+              interaktivt kort, der kan vise brugeren præcis hvor stedet findes
+              og hvad man kan finde i nærområdet.
+            </p>
+            <p>
+              På denne måde kan folk nemmere planlægge deres ture i forhold til
+              transport, se rejsetider osv.
+            </p>
+          </div>
+        </div>
+        <div class="project-item">
+          <img
+            src="images/AnimationSlider.gif"
+            alt="Visit Sønderjylland screenshot 4"
+            class="project-image"
+          />
+          <div class="project-text">
+            <h3>Unikke funktioner</h3>
+            <p>
+              Et stort problem fra vores userstories var, at folk brugte for
+              lang tid på at finde relevante oplevelser. Til dem skabte vi
+              "Aktivitets testen".
+            </p>
+            <p>
+              Brugeren præsenteres for billeder og vælger blot, hvilken kategori
+              de foretrækker. Hjemmesiden finder derefter forslag baseret på
+              deres valg.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Me Section -->
+    <section class="about-me" id="about">
+      <div class="about-me__content">
+        <h1 class="about-me__title">Kort om mig</h1>
+        <p class="about-me__description">
+          Som UX/UI designer skaber jeg intuitive og brugervenlige oplevelser.
+          Jeg er ikke låst fast i en bestemt arbejdsmetode eller opgave, men
+          nyder at udforske forskellige tilgange, og tilpasser mig de krav og
+          behov, der opstår i hvert enkelt projekt.
+        </p>
+        <p class="catchPhrase">
+          Selvom mit speciale er UI/UX, er jeg meget interesseret i alle opgaver
+          inden for faget, hvilket jeg håber mine projekter kan afspejle.
+        </p>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
