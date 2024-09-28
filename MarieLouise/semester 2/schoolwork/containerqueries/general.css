@@ -1,0 +1,48 @@
+/* 
+    General Styling
+    Not really relevant for this assignment
+ */
+html {
+    display: grid;
+    justify-content: center;
+  }
+body {
+  min-width: 90vw;
+  max-width: 1000px;
+}
+h1,h2,h3,h4,h5,h6,p {
+  margin:0;padding:0;
+}
+.header {
+  display:flex;
+  justify-content: space-between;
+  padding-right: 1rem;
+  background: #e1e1e1;
+  min-width: 485px;
+}
+.logo {
+  max-width: 150px;
+}
+.menu {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.menu__item {
+  width: 80px;
+  height: 10px;
+  background-color: darkgrey;
+  list-style-type: none;
+}
+
+.order__title {
+  margin-block: 1rem;
+}
+
+
+/* LAYOUT */
+
+.main {
+  display: grid;
+  grid-template-columns: 45ch 1fr;
+}

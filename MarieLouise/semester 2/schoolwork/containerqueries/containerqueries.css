@@ -1,0 +1,19 @@
+
+/* INSERT YOUR CONTAINER QUERIES HERE */
+.main {
+    container-type: inline-size;
+    container-name: main;
+  }
+   
+  @container main (min-width: 600px) {
+    .navbar__button {
+      flex: 1;
+      padding-inline-start: 30px;
+    }
+    .navbar__button--search{
+        color: black;
+    }
+    .navbar__button--filter{
+        color: white;
+    }
+  }
