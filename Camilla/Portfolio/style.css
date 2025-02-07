@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root{
+    --background__dark:#1f1f1f;
+    --text__yellow:#D7BA5F;
+    --text__lightYellow:#DCDCAA;
+    --text__orange:#CE9178;
+    --text__blue:#9CDCFE;
+    --text__green:#B5CE89;
+    --text__commentGreen: #6A9955;
+    --text__pink:#DA70B3;
+    --text__darkBlue:#1E68F1;
+}
+body{
+    font-family:monospace;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.herosection{
+    position: relative;
+    background-color: var(--background__dark);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-inline: 200px;
+    height: 100vh;
+}
+.herosection__introduction{
+    width: 527px;
+    height: 251px;
+}
+.herosection__description{
+    color: white;
+    margin-inline-start: 70px;
+    font-size: 1rem;
+}
+.herosection__description:first-of-type{
+    margin-inline-start: 30px;
+}
+.herosection__description:last-of-type{
+    margin-inline-start: 30px;
+}
+.herosection__description--yellow{
+    color: var(--text__yellow);
+}
+.herosection__description--green{
+    color: var(--text__green);
+}
+.herosection__description--orange{
+    color: var(--text__orange);
+}
+.herosection__description--blue{
+    color: var(--text__blue);
+}
+.herosection__description--commentGreen{
+    color: var(--text__commentGreen);
+}
+.herosection__description--darkBlue{
+    color: var(--text__darkBlue);
+}
+.herosection__description--pink{
+    color: var(--text__pink);
+}
+.herosection__description--lightYellow{
+    color: var(--text__lightYellow);
+}
+.herosection__img{
+    height: 80vh;
+    border-radius: 12px;
+}
+.goLive__button{
+    position: absolute;
+    bottom: 20%;
+    left: 40%;
+    color: white;
+    cursor: pointer;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    font-size: 1.5rem;
+}
+.goLive__icon{
+    padding-inline-end: 0.5rem;
+}
+.goLive__button:hover{
+    background-color: rgba(128, 128, 128, 0.192);
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5rem;
+    position: absolute;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    top: 100%;
+    left: 100%;
+    transition:0.7s;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.main.active{
+    left:0;
+    top: 0;
+}
+.main::-webkit-scrollbar {
+    display: none;
+  }
+.navBar{
+    position: fixed;
+    width: 100vw;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #c6c6c6;
+    z-index: 10;
+}
+
+.navBar__adressBar{
+    width: 1200px;
+    height: 60%;
+    border-radius: 40px;
+    border: none;
+    padding-inline: 20px;
+    cursor:default;
+}
+
+.navBar__button{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    margin-inline: 20px;
+}
+.navBar__icons{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.aboutMe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.503);
+    width: 95vw;
+}
+.aboutMe__wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100vw;
+    padding-inline-start: 12rem;
+}
+.aboutMe__title{
+    font-size: 3rem;
+    margin-block-end: 1rem;
+    margin-block-start: 4rem ;
+}
+.aboutMe__subTitle{
+    margin-block-start: 0;
+    margin-block-end: 1rem;
+    color: grey;
+}
+.aboutMe__introduction{
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.aboutMe__description{
+    grid-row-start: 3;
+    width: 50%;
+}
+.aboutMe__images{
+    width: 50%;
+    position: relative;
+    transform: scale(0.8);
+}
+.aboutMe__image{
+    position: absolute;
+    width: 400px;
+    border-radius: 10px;
+}
+.aboutMe__image:first-of-type{
+    z-index: 2;
+    width: 320px;
+    left: 200px;
+    top: 70px;
+}
+.aboutMe__image:nth-of-type(2){
+    left: 370px;
+    width: 290px;
+    transform: rotate(15deg);
+    filter: grayscale(100%);
+    transition: 0.5s ease-in-out;
+}
+.aboutMe__image:nth-of-type(2):hover{
+    transform: scale(1.5);
+    z-index: 3;
+    filter: grayscale(0);
+}
+.aboutMe__image:nth-of-type(3){
+    width: 250px;
+    z-index: 1;
+    top: 200px;
+    left: 50px;
+    transform: rotate(-15deg);
+    filter: grayscale(100%);
+    transition: 0.5s ease-in-out;
+}
+.aboutMe__image:nth-of-type(3):hover{
+    transform: scale(1.5);
+    z-index: 3;
+    filter: grayscale(0);
+}
+.aboutMe__image:nth-of-type(4){
+    transform: scaleX(-1);
+    width: 300px;
+    top: -50px;
+    left: 50px;
+    filter: grayscale(100%);
+    transition: 0.5s ease-in-out;
+}
+.aboutMe__image:nth-of-type(4):hover{
+    width: 400px;
+    z-index: 3;
+    filter: grayscale(0);
+}
+.aboutMe__image:nth-of-type(5){
+    transform: scaleX(-1);
+    top:300px;
+    left:300px;
+    filter: grayscale(100%);
+    transition: 0.5s ease-in-out;
+}
+.aboutMe__image:nth-of-type(5):hover{
+    width: 500px;
+    transform-origin: center;
+    z-index: 3;
+    filter: grayscale(0);
+}
+.project__title{
+    font-size: 2rem;
+    margin-block-end: 3rem;
+    text-decoration: underline;
+}
+.project{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 95vw;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.503);
+    padding-block-end: 2rem ;
+}
+
+@keyframes reveal{
+    from{
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.project__titles{
+    display: flex;
+}
+.project__preTitle{
+    color: rgba(91, 84, 84, 0.463);
+    font-size: 2rem;
+    margin-inline-end: 1rem ;
+}
+.creativity{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0px auto;
+    gap: 3rem;
+    margin-block-end: 2rem;
+    animation: reveal linear both ;
+    animation-timeline: view(block);
+    animation-range: cover 0% cover 30%;
+}
+.creativity__img{
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.118) 0px 8px 16px -8px;
+}
+.creativity__img--flipped{
+    order: 1;
+}
+.creativity__text{
+    width: 50%;
+}
+.creativity__title{
+    font-size: 2rem;
+    margin-block-start: 0;
+    border-bottom: 2px solid;
+    padding-block-end: 8px;
+    color: var(--text__pink);
+    border-image: linear-gradient(to right, var(--text__pink) 50%, transparent 50%) 100% 1
+}
+.technicality{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0px auto;
+    gap: 3rem;
+    margin-block-end: 2rem;
+    animation: reveal linear both ;
+    animation-timeline: view(block);
+    animation-range: cover 0% cover 30%;
+}
+.technicality__img{
+    height: 400px;
+}
+.technicality__title{
+    font-size: 2rem;
+    padding-block-end: 8px;
+    margin-block-start: 0;
+    border-bottom: 2px solid;
+    color: var(--text__commentGreen);
+    border-image: linear-gradient(to right, var(--text__commentGreen) 50%, transparent 50%) 100% 1
+}
+.technicality__text{
+    width: 50%;
+}
+.technicality__img--flipped{
+    order: 1;
+    height: 300px;
+}
+.adaptability{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    margin-block-end: 2rem;
+    animation: reveal linear both ;
+    animation-timeline: view(block);
+    animation-range: cover 0% cover 30%;
+}
+.adaptability__title{
+    font-size: 2rem;
+    margin-block-start: 0;
+    border-bottom: 2px solid;
+    padding-block-end: 8px;
+    color: var(--text__darkBlue);
+    border-image: linear-gradient(to right, var(--text__darkBlue) 50%, transparent 50%) 100% 1
+}
+.adaptability__description{
+    margin-block-end: 5rem;
+}
+.adaptability__img{
+    height: 300px;
+    margin-inline-end: 2rem;
+}
+.adaptability__descriptionImg{
+    width: 300px;
+}
+.adaptability__img--flipped{
+    order: 1;
+}
+.adaptability__text{
+    width: 50%;
+}

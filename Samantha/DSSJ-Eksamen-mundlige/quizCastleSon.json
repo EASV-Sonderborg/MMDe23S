@@ -1,0 +1,132 @@
+[
+    {
+      "questionNumber": "1.",
+      "questionText": "Find skulpturen i nærheden af slottet",
+      "imageUrl": "images/rytterstatue.png",
+      "questionSubtitle": "Hvad hedder Skulpturen?",
+      "mapUrl": "images/mapQuestion1.png",
+      "options": [
+        {
+          "optionLetter": "A",
+          "optionText": "Pige på hest"
+        },
+        {
+          "optionLetter": "B",
+          "optionText": "Rytterstaue",
+          "isCorrect": true
+        },
+        {
+          "optionLetter": "C",
+          "optionText": "Ridder"
+        },
+        {
+          "optionLetter": "D",
+          "optionText": "Pigens hest"
+        }
+      ]
+    },
+    {
+      "questionNumber": "2.",
+      "questionText": "Tæl kanonerne omkring slottet",
+      "imageUrl": "images/Kanon-ved-Sønderborg-Slot-credit-Comwell-Hotels-kopi.jpg",
+      "questionSubtitle": "Hvor mange kanoner stå omkring slottet?",
+      "mapUrl": "images/mapQuestion2.png",
+      "options": [
+        {
+          "optionLetter": "A",
+          "optionText": "3 Kanoner",
+          "isCorrect": true
+        },
+        {
+          "optionLetter": "B",
+          "optionText": "5 Kanoner"
+        },
+        {
+          "optionLetter": "C",
+          "optionText": "4 Kanoner"
+        },
+        {
+          "optionLetter": "D",
+          "optionText": "0 Kanoner"
+        }
+      ]
+    },
+    {
+      "questionNumber": "3.",
+      "questionText": "Find ud hvad der gemmer sig her",
+      "imageUrl": "images/fangehulet.png",
+      "questionSubtitle": "Hvad gemmer sig her?",
+      "mapUrl": "images/mapQuestion3.png",
+      "options": [
+        {
+          "optionLetter": "A",
+          "optionText": "En have"
+        },
+        {
+          "optionLetter": "B",
+          "optionText": "Fangehulet",
+          "isCorrect": true
+        },
+        {
+          "optionLetter": "C",
+          "optionText": "Ingeting"
+        },
+        {
+          "optionLetter": "D",
+          "optionText": "En Skulptur"
+        }
+      ]
+    },
+    {
+      "questionNumber": "4.",
+      "questionText": "Undersøg vejen på bagsiden",
+      "imageUrl": "images/anker.png",
+      "questionSubtitle": "Hvad ligger her?",
+      "mapUrl": "images/mapQuestion4.png",
+      "options": [
+        {
+          "optionLetter": "A",
+          "optionText": "En hest"
+        },
+        {
+          "optionLetter": "B",
+          "optionText": "En Skib"
+        },
+        {
+          "optionLetter": "C",
+          "optionText": "En anker",
+          "isCorrect": true
+        },
+        {
+          "optionLetter": "D",
+          "optionText": "Ingenting"
+        }
+      ]
+    },
+    {
+      "questionNumber": "5.",
+      "questionText": "Find ud hvor mange døre der er ved indgangen",
+      "imageUrl": "images/slot-indgang.png",
+      "questionSubtitle": "Hvor mange dør er der?",
+      "mapUrl": "images/mapQuestion5.png",
+      "options": [
+        {
+          "optionLetter": "A",
+          "optionText": "1 Dør"
+        },
+        {
+          "optionLetter": "B",
+          "optionText": "3 Døre"
+        },
+        {
+          "optionLetter": "C",
+          "optionText": "0 Dør"
+        },
+        {
+          "optionLetter": "D",
+          "optionText": "2 Døre",
+          "isCorrect": true
+        }
+      ]
+    }
+  ]

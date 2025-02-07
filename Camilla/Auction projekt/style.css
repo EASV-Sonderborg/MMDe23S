@@ -228,12 +228,16 @@ body{
         margin-inline-start: 35px;
         margin-block-start: -2px;
     }
+    & .inputLabel{
+        margin-block-end: -30px;
+    }
 
 }
 .login__header{
     font-size: 8rem;
     color: white;
     margin-block-end: 30px;
+    margin-block-start: 50px;
 }
 
 .product__main{
@@ -411,4 +415,57 @@ display: block;
     color: #ffffff;
     -webkit-text-stroke: 2px #ffffff;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.link{
+    position: absolute;
+    color: white;
+    font-size: 3rem;
+    width: 200px;
+    top: 80%;
+    left: 27%;
+    
+}
+.body__create{
+    background-image: url(images/BackgroundImg.png);
+    background-size: cover;
+    
+}
+.create__main{
+    position: absolute;
+    top: 1%;
+    left: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+
+    & .inputField{
+        border-color: black;
+        margin: 0;
+    }
+    .button__container{
+        top: 100%;
+        left: -75%;
+        margin-block-start: 80px;
+    }
+    & .button__mascot{
+        left: 30px;
+    }
+    & .button__text{
+        margin-inline-start: 25px;
+        margin-block-start: -2px;
+    }
+    & .inputLabel{
+        margin-block-end: -30px;
+    }
+    & .link{
+        left: 38%;
+    }
+
+}
+.create__header{
+    font-size: 8rem;
+    color: white;
+    margin-block-end: 30px;
+    margin-block-start: 50px;
 }

@@ -1,0 +1,98 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url("images/Grid\ 2.jpg"); /* Make sure to use the correct path to the image */
+  background-size: cover; /* Cover the entire background */
+  background-position: center; /* Center the background */
+  background-repeat: no-repeat; /* Do not repeat the background image */
+  color: #00ffc3;
+  font-family: "Orbitron", sans-serif;
+}
+
+#startScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #00ff44;
+  text-align: center;
+}
+
+#startScreen h1 {
+  margin-bottom: 20px;
+  font-size: 36px;
+  text-shadow: 0 0 10px #00ff44;
+}
+
+#startScreen p {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #00ffc3;
+}
+
+#startButton {
+  margin: 20px 0;
+  padding: 10px 20px;
+  font-size: 20px;
+  color: #00ff44;
+  background-color: #1d1f21;
+  border: 2px solid #00ff44;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#startButton:hover {
+  background-color: #00ff44;
+  color: #1d1f21;
+  transform: scale(1.05);
+}
+
+#startButton:active {
+  transform: scale(1);
+}
+
+#pongCanvas {
+  border: 2px solid #00ff44;
+}
+
+button {
+  margin: 10px 0; /* Mellemrum mellem knap og titel */
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #00ff44;
+  background-color: #1d1f21;
+  border: 2px solid #00ff44;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Add space between the buttons */
+}
+
+button:hover {
+  background-color: #00ff44;
+  color: #1d1f21;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(1);
+}
+
+#gameTitle {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #00ff44;
+  text-align: center;
+  text-shadow: 0 0 10px #00ff44; /* Glow effekten */
+}

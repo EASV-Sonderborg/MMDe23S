@@ -1,0 +1,197 @@
+/* General Body Styles */
+body {
+  background-color: #121212; /* Dark gray background */
+  color: #e0e0e0; /* Light text color */
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Hero Section Styles */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #1a1a1a; /* Darker background for hero */
+  background-image: url(images/Desktop\ -\ 1.2.png);
+  background-size: cover;
+  color: #ffffff; /* White text */
+  padding: 20px;
+}
+
+.hero__content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  gap: 40px;
+  margin-bottom: 220px;
+}
+
+.hero__image-container {
+  flex-shrink: 0;
+}
+
+.hero__image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Darker shadow */
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
+  border: 5px solid #333; /* Darker outline */
+}
+
+.hero__image:hover {
+  filter: grayscale(0%);
+}
+
+.hero__text {
+  max-width: 600px;
+}
+
+.hero__name {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 2px;
+  color: #f0f0f0; /* Light gray for better contrast */
+}
+
+.hero__title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 10px 0;
+  letter-spacing: 1px;
+  color: #f0f0f0; /* Light gray */
+}
+
+.hero__description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #b0b0b0; /* Softer gray for description */
+}
+
+/* About Me Section Styles */
+.about-me {
+  background-color: #1a1a1a; /* Dark gray background */
+  background-image: url(images/iconsBackground.png);
+  color: #e0e0e0; /* Light text color */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.about-me__content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-me__title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ffffff; /* White title */
+}
+
+.catchPhrase {
+  font-weight: bold;
+  text-align: left;
+  font-size: large;
+}
+
+.about-me__description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #cccccc; /* Softer gray for the description */
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+/* New Projects Title */
+.projects-title {
+  text-align: center;
+  font-size: 3rem;
+  color: #ffffff; /* White color */
+  margin-top: 40px;
+  margin-bottom: 40px; /* Space below the title */
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+/* Project Sections */
+.project-section {
+  padding: 60px 20px;
+  background-color: #1a1a1a; /* Dark gray section background */
+  background-image: url(images/Grid\ Gray.png);
+  margin-top: 40px;
+}
+
+.project-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #ffffff; /* White section title */
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-item {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.project-item img {
+  width: 50%;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Darker shadow for images */
+}
+
+.project-text {
+  max-width: 50%;
+}
+
+.project-text h3 {
+  font-size: 1.8rem;
+  color: #ffffff; /* White text for project headers */
+}
+
+.project-text p {
+  font-size: 1.1rem;
+  color: #dadada; /* Softer gray for paragraph text */
+  line-height: 1.6;
+}
+
+/* Reverse Layout for alternating sections */
+.project-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* Button Styles */
+.btn-primary {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #000000;
+  background-color: #00ff44;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #009227; /* Darken on hover */
+  transform: scale(1.05); /* Slight growth effect */
+}
