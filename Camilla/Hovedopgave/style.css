@@ -31,21 +31,43 @@
     font-family: 'Myriad Pro regular';
     background-color: white;
     height: 100vh;
-    width: 70px;
+    width: 85px;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: fixed;
     padding-block-start: 60px;
     z-index: 1;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
     
 }
 .navBar:hover{
     width: 250px;
+    transition: 0.5s ease-in-out;
 }
 
 .navBar:hover .menu__title{
     display: block;
+    animation: fade-in 1s forwards;
+}
+.menu__title{
+    font-size: 16px;
+    font-family: 'Myriad Pro light';
+    color: #7B7B7B ;
+    white-space: nowrap;
+    width: 0;
+    overflow: hidden;
+}
+
+@keyframes fade-in {
+    from{
+        opacity: 0;
+        width: 0;
+    }
+    to{
+        opacity: 1;
+        width: 100%;
+    }
 }
 
 .navBar:hover .menu__link{
@@ -61,10 +83,13 @@
 
 .breadcrumb{
     text-decoration: none;
-    color: #e2000f ;
-    font-family: 'Myriad Pro light';
+    color: #C6C6C6 ;
+    font-family: 'Myriad Pro regular';
     font-size: 16px;
     margin: 0;
+}
+.breadcrumb.active{
+color: #E2000F;
 }
 .breadcrumbs__icon{
     width: 25px;
@@ -83,18 +108,13 @@
     flex-direction: column ;
     gap: 20px;
 }
-.menu__title{
-    font-size: 16px;
-    font-family: 'Myriad Pro light';
-    color: #7B7B7B ;
-    display: none;
-}
 .menu__dropdown{
-    list-style: none;
+    list-style: circle;
     display: flex;
     flex-direction: column;
     gap: 10px;
     display: none;
+    padding-inline-start: 70px;
 }
 .menu__dropdown.active{
     display: flex;
@@ -111,6 +131,8 @@
 }
 .menu__icon{
     fill: #7B7B7B;
+    width: 44px;
+    min-width: 44px;
 }
 .menu__icon.active{
     fill:#E2000F;
@@ -128,6 +150,7 @@
     align-items: center;
     position: fixed;
     z-index: 2;
+    box-shadow: rgba(100, 100, 111, 0.2) 94px 7px 29px 0px;;
 }
 .breadcrumbs__title{
     font-family: 'Myriad Pro light';
@@ -163,7 +186,7 @@
 }
 .button__wrapper.residential{
     top: 40%;
-    left: 80%;
+    left: 78%;
 }
 .button__wrapper.commercial{
     top: 60%;
@@ -242,4 +265,96 @@
 .button__wrapper.thermostat{
     top: 57%;
     left: 53%;
+}
+
+/*components page*/
+
+.components__body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.components__main{
+    height: 100vh;
+    padding-block-start: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline-start: 70px;
+}
+
+.components__title{
+    font-family: Myriad Pro light;
+    font-size: 32px;
+}
+
+/*Product slider*/
+
+.productSlider{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-block-start: 24px;
+}
+.productSlider__card{
+    width: 266px;
+    height: 450px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block-start: 24px;
+    padding-inline: 24px;
+    font-family: myriad pro light;
+    margin-inline: 20px;
+}
+.productSlider__cardImage{
+    width: 100%;
+}
+.productSlider__cardTitle{
+    font-size: 20px;
+}
+.productSlider__cardDescription{
+    font-size: 16px;
+    margin: 0;
+}
+.productSlider__cardFooter{
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    padding-block-end: 24px;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.productSlider__cardButton{
+    width: 107px;
+    height: 31px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    border: solid 1px black;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.productSlider__cardDetail{
+    margin-block: 5px;
+}
+.radioButtons{
+    flex-grow: 1;
+    margin-block-start: 70px;
+}
+
+/*component page*/
+
+.componentPage__body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
