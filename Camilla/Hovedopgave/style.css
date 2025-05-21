@@ -1,0 +1,245 @@
+@font-face {
+    font-family: 'Myriad Pro regular';
+    src: url('fonts/myriad-pro/MYRIADPRO-REGULAR.OTF') format('truetype');
+}
+@font-face {
+    font-family: 'Myriad Pro bold';
+    src: url('fonts/myriad-pro/MYRIADPRO-BOLD.OTF') format('truetype');
+}
+@font-face {
+    font-family: 'Myriad Pro italic';
+    src: url('fonts/myriad-pro/MYRIADPRO-ITALIC.OTF') format('truetype');
+}
+@font-face {
+    font-family: 'Myriad Pro bold light';
+    src: url(fonts/myriad-pro/MyriadPro-Light.otf) format('truetype');
+}
+.home__body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: url(images/ai_generated_cityScape.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: top;
+}
+
+/*Navigation bar*/
+.navBar{
+    font-family: 'Myriad Pro regular';
+    background-color: white;
+    height: 100vh;
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    padding-block-start: 60px;
+    z-index: 1;
+    
+}
+.navBar:hover{
+    width: 250px;
+}
+
+.navBar:hover .menu__title{
+    display: block;
+}
+
+.navBar:hover .menu__link{
+    display: block;
+}
+
+.breadcrumbs{
+    display: flex;
+    align-items: center;
+    place-self: center;
+    gap: 10px;
+}
+
+.breadcrumb{
+    text-decoration: none;
+    color: #e2000f ;
+    font-family: 'Myriad Pro light';
+    font-size: 16px;
+    margin: 0;
+}
+.breadcrumbs__icon{
+    width: 25px;
+}
+
+.menu__itemWrapper{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.menu{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column ;
+    gap: 20px;
+}
+.menu__title{
+    font-size: 16px;
+    font-family: 'Myriad Pro light';
+    color: #7B7B7B ;
+    display: none;
+}
+.menu__dropdown{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    display: none;
+}
+.menu__dropdown.active{
+    display: flex;
+}
+.menu__link{
+    text-decoration: none;
+    color: #7B7B7B ;
+    display: none;
+}
+.dropdown__link{
+    text-decoration: none;
+    color: #7B7B7B ;
+    padding-inline-start: 5px;
+}
+.menu__icon{
+    fill: #7B7B7B;
+}
+.menu__icon.active{
+    fill:#E2000F;
+}
+.menu__title.active{
+    color: #E2000F;
+}
+.topNavBar{
+    height: 35px;
+    width: 100vw;
+    background-color: white;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+}
+.breadcrumbs__title{
+    font-family: 'Myriad Pro light';
+    font-size: 16px;
+    color: #e2000f ;
+    place-self: center;
+    margin: 0;
+}
+.home__main{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+/*front page buttons*/
+
+.button__wrapper{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: white;
+    border-radius: 20px;
+    padding-inline-end: 15px;
+}
+.button__wrapper.boat{
+    top: 23%;
+    left: 20%;
+}
+.button__wrapper.district{
+    top: 20%;
+    left: 50%;
+}
+.button__wrapper.residential{
+    top: 40%;
+    left: 80%;
+}
+.button__wrapper.commercial{
+    top: 60%;
+    left: 70%;
+}
+.button__wrapper.food{
+    top: 70%;
+    left: 35%;
+}
+.button__primary{
+    font-family: Myriad Pro regular;
+    text-decoration: none;
+    color: black;
+}
+.button__icon{
+    height: 15px;
+}
+
+/*application page*/
+
+.application__body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: url(images/stock_image_apartments.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: top;
+}
+
+/*application page buttons*/
+
+.button__wrapper.snowMelting{
+    top: 90%;
+    left: 30%;
+}
+.button__wrapper.floorHeating{
+    top: 70%;
+    left: 70%;
+}
+.button__wrapper.heating{
+    top: 50%;
+    left: 60%;
+}
+.button__wrapper.radiator{
+    top: 65%;
+    left: 20%;
+}
+.button__wrapper.drives{
+    top: 35%;
+    left: 40%;
+}
+
+/*product page*/
+
+.products__body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: url(images/radiator_image.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: top;
+}
+
+/*product page buttons*/
+
+.button__wrapper.valve{
+    top: 48%;
+    left: 58%;
+}
+.button__wrapper.thermostat{
+    top: 57%;
+    left: 53%;
+}
