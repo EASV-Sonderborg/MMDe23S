@@ -1,0 +1,27 @@
+[
+    
+    {
+        "id": "1",
+        "image": "images/danfoss_aveo.png",
+        "title": "Danfoss Aveo™ - The innovative pick",
+        "description": "Innovative and efficient gas thermostat with revolutionary tactile temperature setting and unique gas bellow technology for best performance and energy efficiency.",
+        "pdfs":"3",
+        "icon":"images/round_info_icon.png"
+    }, 
+    {
+      "id": "2",
+        "image": "images/danfoss_aero.png",
+        "title": "Danfoss Aero™ - The contemporary pick",
+        "description": "Premium and efficient gas thermostat wrapped in a modern and compact design with unique gas bellow technology for best performance and energy efficiency.",
+        "pdfs":"2" ,
+        "icon":"images/round_info_icon.png"
+    },
+     {
+      "id": "3",
+        "image": "images/danfoss_react.png",
+        "title": "Danfoss React™ - The reliable pick",
+        "description": "Classic and reliable liquid thermostat in a slim, solid design with the fastest reacting liquid thermostat on the market for outstanding comfort without compromise.",
+        "pdfs":"1",
+        "icon":"images/round_info_icon.png"
+    }
+]

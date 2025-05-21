@@ -41,3 +41,16 @@ if (navBar) {
         });
     });
 }
+
+
+const infoBoxbutton = document.querySelector('.specification__titleBar');
+
+document.querySelectorAll('.specification__titleBar').forEach(button => {
+    button.addEventListener('click', () => {
+            const infoBox = button.nextElementSibling;
+            infoBox.classList.toggle('active');
+            const specButton = button.lastElementChild;
+            specButton.classList.toggle('active');
+        });
+    });
+

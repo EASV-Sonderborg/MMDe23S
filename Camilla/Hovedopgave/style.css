@@ -216,7 +216,36 @@ color: #E2000F;
     background-image: url(images/stock_image_apartments.png);
     background-repeat: no-repeat;
     background-size:cover;
-    background-position: top;
+}
+
+.infoBox{
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+    display: flex;
+    flex-direction: column;
+    font-family: myriad pro light;
+
+}
+.infoBox__description{
+    width: 280px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.144);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    border-radius: 20px;
+    text-shadow: 1px 1px 2px black;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+    padding-block-end: 50px;
+    display: none;
+}
+.infoBox__icon{
+    align-self: flex-end;
+    z-index: 1;
+}
+
+.infoBox:hover .infoBox__description{
+    display: block;
 }
 
 /*application page buttons*/
@@ -349,6 +378,7 @@ color: #E2000F;
     margin-block-start: 70px;
 }
 
+
 /*component page*/
 
 .componentPage__body{
@@ -357,4 +387,57 @@ color: #E2000F;
     margin: 0;
     padding: 0;
     overflow: hidden;
+}
+.componentPage__main{
+    padding-block-start: 55px;
+    padding-inline-start: 90px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: myriad pro light;
+    height: 100vh;
+}
+.componentPage__sideBar{
+    width: 510px ;
+    margin-block-start: 68px ;
+    
+}
+.specification__titleBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 1px #C6C6C6;
+    height: 30px;
+}
+.specification__title{
+    margin: 0;
+}
+.specification__description{
+    overflow: hidden;
+    height: 0;
+}
+.specification__description.active{
+    height: auto;
+}
+.specification__icon.active{
+    transform: rotate(180deg);
+}
+.componentPage__button{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 135px;
+    background-color: white;
+    border-radius: 12px;
+    border: solid 1px black;
+}
+.componentPage__buttons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.componentPage__content{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding-block-start: 55px;
 }
