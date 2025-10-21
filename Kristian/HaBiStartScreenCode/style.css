@@ -1,0 +1,146 @@
+body.page {
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  color: #4A4A4A;
+  margin: 0;
+  padding: 0;
+}
+
+.habi {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.habi__header {
+  text-align: center;
+}
+
+.habi__logo {
+  max-width: 200px;
+  margin-bottom: 1rem;
+}
+
+.habi__title {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.habi__subtitle {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  font-weight: bold;
+}
+
+.habi__description {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.device-list__box {
+  background-color: #dddddd;
+  border: none;
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.device-card {
+  background: white;
+  border: 2px solid transparent;
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.device-card--selected {
+  background-color: #FBEFD5;
+  border-color: #F4A259;
+}
+
+.device-card__image {
+  width: 100px; 
+  height: 100px;
+  object-fit: contain;
+  flex-shrink: 0;
+   margin-right: 1rem; 
+}
+
+.device-card__text {
+  flex: 1;
+  margin-right: 2rem;
+}
+
+.device-card__title {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.device-card__desc {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.device-card__checkbox {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.device-card__checkmark {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f4a259;
+  border-radius: 4px;
+  background-color: white;
+  pointer-events: none;
+}
+
+.device-card__checkbox:checked + .device-card__checkmark {
+  background-color: #f4a259;
+}
+
+.device-list__note {
+  font-size: 0.8rem;
+  margin-top: 0.75rem;
+  text-align: center;
+}
+
+.habi__footer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.habi__button {
+  background-color: #f4a259;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.habi__button:hover {
+  background-color: #e8923f;
+}

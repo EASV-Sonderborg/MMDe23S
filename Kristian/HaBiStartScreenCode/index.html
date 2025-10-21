@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HaBi Controls</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="page">
+  <main class="habi">
+    <header class="habi__header">
+      <img src="images/HaBiLogo.png" alt="HaBi Controls Logo" class="habi__logo" />
+      <h1 class="habi__title">Welcome to HABI</h1>
+      <section class="habi__intro">
+        <h2 class="habi__subtitle">Select your device to get started</h2>
+        <p class="habi__description">
+          In just a few steps, you’ll be able to customize how HaBi looks, feels, and responds.
+        </p>
+      </section>
+    </header>
+
+    <section class="habi__device-selector">
+      <form class="device-list" action="#">
+        <fieldset class="device-list__box">
+          <label class="device-card">
+            <img src="images/HabiCore.png" alt="HABI Core" class="device-card__image" />
+            <div class="device-card__text">
+              <strong class="device-card__title">HABI Core</strong>
+              <p class="device-card__desc">
+                A simple and reliable version of HABI with essential features like basic LED control,
+                tactile feedback, and quick setup.
+              </p>
+            </div>
+            <input type="checkbox" class="device-card__checkbox" />
+            <span class="device-card__checkmark"></span>
+          </label>
+
+          <label class="device-card">
+            <img src="images/HabiFlex.png" alt="HABI Flex" class="device-card__image" />
+            <div class="device-card__text">
+              <strong class="device-card__title">HABI Flex</strong>
+              <p class="device-card__desc">
+                A fully customizable multi-button panel with advanced control of lights, sensitivity,
+                haptics, and smart behavior – all through the HABI software.
+              </p>
+            </div>
+            <input type="checkbox" class="device-card__checkbox" />
+            <span class="device-card__checkmark"></span>
+          </label>
+        </fieldset>
+
+        <p class="device-list__note">
+          Use the checkboxes to select the HaBi units you want to configure. Hold Shift and click to select multiple devices faster.
+        </p>
+      </form>
+    </section>
+
+    <footer class="habi__footer">
+      <button class="habi__button" type="submit">Begin Configuration &gt;</button>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
