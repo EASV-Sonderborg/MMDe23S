@@ -15,37 +15,60 @@
 html {
   scroll-behavior: smooth;
 }
-body{
-    margin: 0;
-    padding: 0;
+/* Make sure padding is counted correctly everywhere */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
-.menu{
-    display: flex;
-    width: 85%;
-    justify-content: space-between;
-    align-items: center;
-    padding-inline: 150px;
-    height: 70px;
-    position: fixed;
-    background-color: white;
-    z-index: 1;
-    top: 0;
+
+body {
+  margin: 0;
+  padding: 0;
 }
-.menu__img{
-    width: 50px;
+
+/* The fixed full-width menu bar */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;                /* span full viewport width */
+  height: 70px;
+  background-color: white;
+  z-index: 100;
+  display: flex;
+  justify-content: center; /* center the inner wrapper */
+  align-items: center;
 }
-.navBar{
-    display: Flex;
+
+/* Inner wrapper aligns with page padding */
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1600px;       /* optional max width */
+  padding-inline: 150px;   /* ✅ your desired alignment */
 }
-.navBar__item{
-    list-style: none;
-    margin-left: 30px;
+
+.menu__img {
+  width: 50px;
 }
-.navBar__link{
-    font-family: 'EB Garamond', serif;
-    color: black;
-    text-decoration: none;
-    font-size: 1rem;
+
+.navBar {
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navBar__link {
+  font-family: 'EB Garamond', serif;
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+}
+.navBar__link:hover{
+    color: #FF4F63;
 }
 .heroSection{
     margin-block-start: 70px;
@@ -104,6 +127,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-block: 62px;
 }
 .projects__title{
     font-family: 'Avgardo_3';
@@ -122,7 +146,7 @@ body{
     font-family: 'Avgardo_2';
     font-size: 1.5rem;
     text-decoration: none;
-    justify-self: end;
+    margin-top: auto;
 }
 .project__title{
     font-family: 'Avgardo_3';
@@ -149,9 +173,7 @@ body{
     margin-block-end: 32px;
     
 }
-.project__img{
-    margin-block: 32px;
-}
+
 .footer{
     display:flex;
     justify-content: space-between;
@@ -178,6 +200,8 @@ body{
     font-family: 'Avgardo_3';
     margin: 8px;
 }
+
+
 .intro{
     margin-block-start: 70px;
     padding-inline: 150px;
@@ -213,7 +237,7 @@ body{
 }
 .projectInfo__descriptions{
     position: relative;
-    max-width: 721px;
+    width: 600px;
     height: 450px;
     overflow: hidden;
 }
@@ -245,4 +269,139 @@ body{
 }
 .projectInfo__img{
     max-height: 553px;
+    object-fit: contain;
+}
+.grid__container{
+    height: auto;
+}
+.bentoGrid{
+    display: grid;
+	grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+.grid__item{
+    position: relative;
+    background-color: #A8C686;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/ span 2;
+    overflow: hidden;
+}
+.grid__item:nth-child(2){
+    background-color: #C6E0FF;
+    grid-column: 3/span 2;
+}
+.grid__item:nth-child(3){
+    background-color: #FFB0C4 ;
+    grid-column: 1;
+}
+.grid__item:nth-child(4){
+    background-color: #F7FFC9;
+    grid-column: 2/5;
+    
+}
+.grid__img {
+  width: 100%;          
+  height: 100%;         
+  max-width: 100%;      
+  object-fit: contain;  
+  display: block;
+  animation: fadeOne 10s linear infinite;    
+
+}
+
+.grid__img--second {
+  position: absolute;
+  opacity: 0;
+  animation: fadeTwo 10s linear infinite;
+}
+
+.video{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.video__header{
+    font-family: 'Avgardo_3';
+    font-size: 2rem;
+    font-weight: lighter;
+}
+.video__video{
+    width: 700px;
+    height: 400px;
+}
+.main{
+    padding-inline: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+@keyframes fadeOne {
+  0%, 45%   { opacity: 1; }   /* visible */
+  50%, 95%  { opacity: 0; }   /* hidden */
+  100%      { opacity: 1; }   /* loop back smoothly */
+}
+
+@keyframes fadeTwo {
+  0%, 45%   { opacity: 0; }   /* hidden while first is visible */
+  50%, 95%  { opacity: 1; }   /* visible while first is hidden */
+  100%      { opacity: 0; }   /* reset for loop */
+}
+@media (max-width: 1900px){
+    .heroSection{
+        height: 550px;
+    }
+    .heroSection__title{
+        font-size: 5rem;
+    }
+    .heroSection__img--1{
+        width: 450px;
+        top: 20%;
+    }
+      .heroSection__img--2{
+        width: 250px;
+        left: 56%;
+    }
+      .heroSection__img--3{
+        top: 20%;
+        
+    }
+      .heroSection__img--4{
+       top: 20%;
+    }
+      .heroSection__img--5{
+        width: 250px;
+        top: 75%;
+        left: 25%;
+    }
+      .heroSection__img--6{
+       left: 15%;
+       top: 20%;
+    }
+    .projects__project{
+        width: 700px;
+        height: 500px;
+    }
+    .project__img{
+        width: 400px;
+    }
+
+    .intro__heading{
+        font-size: 4rem;
+    }
+
+    .projectInfo__heading{
+        font-size: 1.4rem;
+    }
+    .projectInfo__descriptions{
+        height: 400px;
+    }
+    .projectInfo__img{
+        height: 450px;
+    }
+    
 }
